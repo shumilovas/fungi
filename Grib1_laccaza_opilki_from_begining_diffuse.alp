@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.1.201910011755" AlpVersion="8.4.9">
 <Model>
 	<Id>1574189162665</Id>
-	<Name><![CDATA[Grib1_laccaza_opilki]]></Name>
+	<Name><![CDATA[Grib1_laccaza_opilki_from_begining_diffuse]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[model]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -136,7 +136,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Smg_fer_lacc*RHO_lig/Wk_lyg]]></Formula>
+						<Formula><![CDATA[Smg_fer_lacc/Vc]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -151,7 +151,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Wk*proc_lig0]]></Formula>
+						<Formula><![CDATA[Vc*proc_lig0]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -183,7 +183,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1]]></Formula>
+						<Formula><![CDATA[0.001]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -199,7 +199,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1]]></Formula>
+						<Formula><![CDATA[100]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -354,32 +354,6 @@
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1574190138401</Id>
-					<Name><![CDATA[RHO_lig]]></Name>
-					<Description><![CDATA[Плотность лигнина в опилке?
-]]></Description>
-					<X>410</X><Y>430</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[90000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1574190138399</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1574190138405</Id>
 					<Name><![CDATA[U]]></Name>
 					<Description><![CDATA[максимально достижимая разница концентраций между мицелием и компостом]]></Description>
@@ -433,7 +407,7 @@
 					<Id>1574199016612</Id>
 					<Name><![CDATA[Vc]]></Name>
 					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
-					<X>150</X><Y>420</Y>
+					<X>440</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -443,7 +417,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.11]]></Code>
+							<Code><![CDATA[200]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574199016610</Id>
@@ -483,7 +457,7 @@
 					<Id>1574250292442</Id>
 					<Name><![CDATA[Wk_lyg]]></Name>
 					<Description><![CDATA[Обьем лигнина в  опилке?]]></Description>
-					<X>240</X><Y>440</Y>
+					<X>510</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -497,31 +471,6 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574250292440</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1574250674654</Id>
-					<Name><![CDATA[Wk]]></Name>
-					<Description><![CDATA[обьем опилки]]></Description>
-					<X>700</X><Y>400</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1574250674652</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -593,7 +542,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[0.1]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574360844870</Id>
@@ -701,21 +650,6 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1574190138401" TargetId="1574190138526" Polarity="null">
-					<Height>10.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>53</X><Y>-56</Y></Direction>
-					<Id>1574190138392</Id>
-					<Name><![CDATA[RHO_lig - Sc_fer_lac_lyg]]></Name>
-					<X>410</X><Y>430</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1574190138408" TargetId="1574190138378" Polarity="null">
 					<Height>2.2255343939652903</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -764,10 +698,10 @@
 				<Link SourceId="1574199016612" TargetId="1574190138524" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>43</X><Y>-46</Y></Direction>
+					<Direction><X>-247</X><Y>-186</Y></Direction>
 					<Id>1574199037057</Id>
 					<Name><![CDATA[Vc - Smyc0_fer_lac]]></Name>
-					<X>150</X><Y>420</Y>
+					<X>440</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -779,25 +713,10 @@
 				<Link SourceId="1574250292442" TargetId="1574190138378" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>123</X><Y>-166</Y></Direction>
+					<Direction><X>-147</X><Y>-236</Y></Direction>
 					<Id>1574248569539</Id>
 					<Name><![CDATA[Wk_lyg - U_lac_from_m_toComp]]></Name>
-					<X>240</X><Y>440</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574250292442" TargetId="1574190138526" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>223</X><Y>-66</Y></Direction>
-					<Id>1574249073841</Id>
-					<Name><![CDATA[Wk_lyg - Sc_fer_lac_lyg]]></Name>
-					<X>240</X><Y>440</Y>
+					<X>510</X><Y>510</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -813,21 +732,6 @@
 					<Id>1574250021503</Id>
 					<Name><![CDATA[k_lac1 - U_monomer_lyg]]></Name>
 					<X>590</X><Y>360</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574250674654" TargetId="1574250828972" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>20</X><Y>-50</Y></Direction>
-					<Id>1574250849345</Id>
-					<Name><![CDATA[Wk - S_lig_k]]></Name>
-					<X>700</X><Y>400</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -882,12 +786,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1574250292442" TargetId="1574251134063" Polarity="null">
-					<Height>20.0</Height>
+					<Height>-17.141</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>430</X><Y>-130</Y></Direction>
+					<Direction><X>160</X><Y>-200</Y></Direction>
 					<Id>1574251434037</Id>
 					<Name><![CDATA[Wk_lyg - S_lig]]></Name>
-					<X>240</X><Y>440</Y>
+					<X>510</X><Y>510</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1046,6 +950,36 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1574199016612" TargetId="1574190138526" Polarity="null">
+					<Height>0.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>23</X><Y>-186</Y></Direction>
+					<Id>1574805653974</Id>
+					<Name><![CDATA[Vc - Sc_fer_lac_lyg]]></Name>
+					<X>440</X><Y>560</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1574199016612" TargetId="1574250828972" Polarity="null">
+					<Height>-17.141</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>280</X><Y>-210</Y></Direction>
+					<Id>1574806727302</Id>
+					<Name><![CDATA[Vc - S_lig_k]]></Name>
+					<X>440</X><Y>560</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<AgentLinks>
 				<AgentLink>
@@ -1175,9 +1109,6 @@
 
 			<Parameters>			
 				<Parameter>
-					<ParameterName><![CDATA[RHO_lig]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[U]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -1191,9 +1122,6 @@
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Wk_lyg]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Wk]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[proc_lig0]]></ParameterName>
