@@ -167,8 +167,24 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.001]]></Formula>
+						<Formula><![CDATA[0.000001]]></Formula>
 						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1575317404943</Id>
+					<Name><![CDATA[M_W]]></Name>
+					<Description><![CDATA[масса сухоq древесины]]></Description>
+					<Unit>грамм</Unit> 
+					<X>300</X><Y>160</Y>
+					<Label><X>-10</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Vm*M_Ro]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -235,7 +251,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1574190138529" TargetId="1574190138531" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Z*Wk_lyg*(U*Smyc0_fer_lac-Sc_fer_lac_lyg)]]></Formula>
+						<Formula><![CDATA[Z*M_W*(U*Smyc0_fer_lac-Sc_fer_lac_lyg)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -349,6 +365,33 @@ Doctor of Philosophy ]]></Description>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1575317252117</Id>
+					<Name><![CDATA[M_Ro]]></Name>
+					<Description><![CDATA[плотность опилки]]></Description>
+					<Unit>грамм/метр*метр*метр</Unit> 
+					<X>210</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[520000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1575317252115</Id>
+							<Label><![CDATA[R_lHOk1]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1574190138529" TargetId="1574190138524" Polarity="null">
@@ -441,21 +484,6 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1574867369724" TargetId="1574190138378" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-137</X><Y>-166</Y></Direction>
-					<Id>1574248569539</Id>
-					<Name><![CDATA[Wk_lyg - U_lac_from_m_toComp]]></Name>
-					<X>500</X><Y>440</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1574199016612" TargetId="1574190138526" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -508,6 +536,51 @@ Doctor of Philosophy ]]></Description>
 					<Id>1575216071805</Id>
 					<Name><![CDATA[Vm - Smyc0_fer_lac]]></Name>
 					<X>120</X><Y>180</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1575216020026" TargetId="1575317404943" Polarity="null">
+					<Height>-33.215</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>180</X><Y>-20</Y></Direction>
+					<Id>1575317438246</Id>
+					<Name><![CDATA[Vm - M_W]]></Name>
+					<X>120</X><Y>180</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1575317252117" TargetId="1575317404943" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>90</X><Y>20</Y></Direction>
+					<Id>1575317538497</Id>
+					<Name><![CDATA[M_Ro - M_W]]></Name>
+					<X>210</X><Y>140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1575317404943" TargetId="1574190138378" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>63</X><Y>114</Y></Direction>
+					<Id>1575317565044</Id>
+					<Name><![CDATA[M_W - U_lac_from_m_toComp]]></Name>
+					<X>300</X><Y>160</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -655,6 +728,9 @@ Doctor of Philosophy ]]></Description>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[R_lHOW]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[M_Ro]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
