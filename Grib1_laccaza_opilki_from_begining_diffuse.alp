@@ -426,7 +426,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1575482620354</Id>
 					<Name><![CDATA[C_S]]></Name>
-					<Description><![CDATA[Площадь  компоста (опилки). Площадь  компоста (опилки).если у нас 100 микрограмм, то тогда , если плотнтность 0,54 микрограмма на микролитр, то у нас почти 2 микролитра. пусть это будет куб. ]]></Description>
+					<Description><![CDATA[Площадь  компоста (опилки). Площадь  компоста (опилки).если у нас 100 микрограмм, то тогда , если плотнтность 0,54 микрограмма на микролитр, то у нас почти 2 микролитра. 2e-9 метра кубических.
+Тогда кубический корень из этого будет 1.25992104989 в 4,5 степени. Ну или где то 0.0000398422 метра]]></Description>
 					<Unit>метр*метр*метр</Unit> 
 					<X>360</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -438,7 +439,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.000001]]></Code>
+							<Code><![CDATA[0.0000398422]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575482620352</Id>
