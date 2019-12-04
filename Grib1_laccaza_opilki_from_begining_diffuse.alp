@@ -167,7 +167,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.000001]]></Formula>
+						<Formula><![CDATA[(2/3)*Pi M_R^3 ]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -185,6 +185,37 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[M_V*M_Ro]]></Formula>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1575481709553</Id>
+					<Name><![CDATA[M_R]]></Name>
+					<Description><![CDATA[такой радиус полусферы надо взять, что бы получить 6,5 миллилитров]]></Description>
+					<X>120</X><Y>60</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.00000942477]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1575481727121</Id>
+					<Name><![CDATA[M_S]]></Name>
+					<X>400</X><Y>110</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[2*π*M_R]]></Formula>
+						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
 
@@ -251,7 +282,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1574190138529" TargetId="1574190138531" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[M_C_lyg_fer_Z*M_W*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)]]></Formula>
+						<Formula><![CDATA[M_C_lyg_fer_Z*M_S*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -574,13 +605,43 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1575317404943" TargetId="1574190138378" Polarity="null">
+				<Link SourceId="1575481709553" TargetId="1575216020026" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>63</X><Y>114</Y></Direction>
-					<Id>1575317565044</Id>
-					<Name><![CDATA[M_W - U_M_C_lyg_fer]]></Name>
-					<X>300</X><Y>160</Y>
+					<Direction><X>0</X><Y>120</Y></Direction>
+					<Id>1575481748283</Id>
+					<Name><![CDATA[M_R - M_V]]></Name>
+					<X>120</X><Y>60</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1575481709553" TargetId="1575481727121" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>280</X><Y>50</Y></Direction>
+					<Id>1575481755340</Id>
+					<Name><![CDATA[M_R - M_S]]></Name>
+					<X>120</X><Y>60</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1575481727121" TargetId="1574190138378" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-37</X><Y>164</Y></Direction>
+					<Id>1575481937227</Id>
+					<Name><![CDATA[M_S - U_M_C_lyg_fer]]></Name>
+					<X>400</X><Y>110</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>

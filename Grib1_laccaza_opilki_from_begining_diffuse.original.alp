@@ -113,7 +113,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1574190138524</Id>
 					<Name><![CDATA[Smyc0_fer_lac]]></Name>
-					<Description><![CDATA[Концентрация (грамм фермента на грамм мицелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку]]></Description>
+					<Description><![CDATA[Концентрация (грамм фермента на кубический метр) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
 					<X>193</X><Y>374</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -121,14 +121,14 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Scg_fer_lac/Vc]]></Formula>
+						<Formula><![CDATA[M_lyg_sub/M_V]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1574190138526</Id>
-					<Name><![CDATA[Sc_fer_lac_lyg]]></Name>
+					<Name><![CDATA[M_lyg_fer_C]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на грамм мицелия) ферманта лаказы внутри опилки]]></Description>
 					<X>463</X><Y>374</Y>
 					<Label><X>-10</X><Y>20</Y></Label>
@@ -136,46 +136,14 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Smg_fer_lacc/Vc]]></Formula>
+						<Formula><![CDATA[C_lyg_mon/C_V]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1574251134063</Id>
-					<Name><![CDATA[S_lig]]></Name>
-					<Description><![CDATA[концентрация лигнина в опилке]]></Description>
-					<X>670</X><Y>310</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[S_lig_k/Wk_lyg]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1574358824780</Id>
-					<Name><![CDATA[Km]]></Name>
-					<Description><![CDATA[константа михаэлиса]]></Description>
-					<X>570</X><Y>200</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.001]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
 					<Id>1574867369724</Id>
-					<Name><![CDATA[Wk_lyg]]></Name>
+					<Name><![CDATA[C_lyg_sub_W]]></Name>
 					<Description><![CDATA[масса сухоq древесины]]></Description>
 					<Unit>грамм</Unit> 
 					<X>500</X><Y>440</Y>
@@ -184,44 +152,46 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Vc*R_lHOW]]></Formula>
+						<Formula><![CDATA[C_V*C_lyg__Ro]]></Formula>
 						<Color/>
 					</Properties>
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1574936440098</Id>
-					<Name><![CDATA[S_lig_k]]></Name>
-					<X>850</X><Y>500</Y>
+					<Id>1575216020026</Id>
+					<Name><![CDATA[M_V]]></Name>
+					<Description><![CDATA[метр кубический]]></Description>
+					<X>120</X><Y>180</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[S_lig_k0-S_pro_mg]]></Formula>
+						<Formula><![CDATA[0.000001]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1574936988521</Id>
-					<Name><![CDATA[S_lig_k0]]></Name>
-					<X>870</X><Y>560</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Id>1575317404943</Id>
+					<Name><![CDATA[M_W]]></Name>
+					<Description><![CDATA[масса сухоq древесины]]></Description>
+					<Unit>грамм</Unit> 
+					<X>300</X><Y>160</Y>
+					<Label><X>-10</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[proc_lig0*Wk_lyg]]></Formula>
-						<Value><![CDATA[0]]></Value>
+						<Formula><![CDATA[M_V*M_Ro]]></Formula>
 						<Color/>
 					</Properties>
 
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1574190138529</Id>
-					<Name><![CDATA[Scg_fer_lac]]></Name>
+					<Name><![CDATA[M_lyg_sub]]></Name>
 					<Description><![CDATA[масса ферманта лаказы внутри мицелия гриба, которыая будет перетекать в опилку]]></Description>
 					<Unit>грамм</Unit> 
 					<X>193</X><Y>274</Y>
@@ -234,13 +204,13 @@
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[0.25]]></InitialValue>
+						<InitialValue><![CDATA[0.1]]></InitialValue>
 						<Color>-16711936</Color>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1574190138531</Id>
-					<Name><![CDATA[Smg_fer_lacc]]></Name>
+					<Name><![CDATA[C_lyg_mon]]></Name>
 					<Description><![CDATA[масса ферманта лаказы внутри опилки
 для параметризации используем: maobing tu  hydrolyses of lygmyncellulose
 
@@ -267,30 +237,13 @@ Doctor of Philosophy ]]></Description>
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
-						<InitialValue><![CDATA[0.01]]></InitialValue>
-						<Color>-16711936</Color>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1574249431006</Id>
-					<Name><![CDATA[S_pro_mg]]></Name>
-					<Description><![CDATA[масса разрушенного лигнина]]></Description>
-					<X>830</X><Y>270</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="false">
-					<EquationStyle>classic</EquationStyle>
-					<Width>80</Width>
-					<Height>80</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-16711936</Color>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1574190138378</Id>
-					<Name><![CDATA[U_lac_from_m_toComp]]></Name>
+					<Name><![CDATA[U_M_C_lyg_fer]]></Name>
 					<Description><![CDATA[поток ферента лакказы из мицелия в опилку]]></Description>
 					<X>193</X><Y>274</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
@@ -298,7 +251,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1574190138529" TargetId="1574190138531" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Z*Wk_lyg*(U*Smyc0_fer_lac-Sc_fer_lac_lyg)]]></Formula>
+						<Formula><![CDATA[M_C_lyg_fer_Z*M_W*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -308,31 +261,11 @@ Doctor of Philosophy ]]></Description>
 						</Points>
 					</Properties>
 				</Variable>
-				<Variable Class="Flow">
-					<Id>1574249459679</Id>
-					<Name><![CDATA[U_monomer_lyg]]></Name>
-					<Description><![CDATA[поток фермента нападает на опилку и кушает в ней лигнин?. отсюда в долях еденицы надо получить целюлозу]]></Description>
-					<X>503</X><Y>274</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1574190138531" TargetId="1574249431006" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Smg_fer_lacc*k_lac1*S_lig/(S_lig +Km)]]></Formula>
-						<Color/>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>117</X><Y>-14</Y></Point>
-							<Point><X>327</X><Y>-4</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
 				<Variable Class="Parameter">
 					<Id>1574190138405</Id>
-					<Name><![CDATA[U]]></Name>
+					<Name><![CDATA[M_C_lyg_fer_U]]></Name>
 					<Description><![CDATA[максимально достижимая разница концентраций между мицелием и компостом]]></Description>
-					<X>343</X><Y>374</Y>
+					<X>310</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -355,7 +288,7 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1574190138408</Id>
-					<Name><![CDATA[Z]]></Name>
+					<Name><![CDATA[M_C_lyg_fer_Z]]></Name>
 					<Description><![CDATA[коэффециэнт диффузии]]></Description>
 					<Unit>метр*метр*метр/(грамм*день)</Unit> 
 					<X>293</X><Y>374</Y>
@@ -368,7 +301,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[=0.0000113]]></Code>
+							<Code><![CDATA[0.000001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574190138406</Id>
@@ -381,7 +314,7 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1574199016612</Id>
-					<Name><![CDATA[Vc]]></Name>
+					<Name><![CDATA[C_V]]></Name>
 					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
 					<Unit>метр*метр*метр</Unit> 
 					<X>440</X><Y>560</Y>
@@ -394,7 +327,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.001]]></Code>
+							<Code><![CDATA[0.000001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574199016610</Id>
@@ -406,64 +339,8 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1574249995736</Id>
-					<Name><![CDATA[k_lac1]]></Name>
-					<Description><![CDATA[константа скорости для фермента лакказы
-thesis 7/2/4/1)
-
-Understanding the Relative Importance of 
-the Effects of Soluble and Insoluble 
-Inhibitors on the Enzyme Digestibility of 
-Steam Pretreated Radiata Pine ]]></Description>
-					<X>590</X><Y>360</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0004]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1574249995734</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1574250770040</Id>
-					<Name><![CDATA[proc_lig0]]></Name>
-					<Description><![CDATA[процент содержания лигнина в опилке]]></Description>
-					<X>700</X><Y>390</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.2]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1574250770038</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1574867461211</Id>
-					<Name><![CDATA[R_lHOW]]></Name>
+					<Name><![CDATA[C_lyg__Ro]]></Name>
 					<Description><![CDATA[плотность опилки]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
 					<X>550</X><Y>430</Y>
@@ -476,10 +353,37 @@ Steam Pretreated Radiata Pine ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1000]]></Code>
+							<Code><![CDATA[520000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574867461209</Id>
+							<Label><![CDATA[R_lHOk1]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1575317252117</Id>
+					<Name><![CDATA[M_Ro]]></Name>
+					<Description><![CDATA[плотность опилки]]></Description>
+					<Unit>грамм/метр*метр*метр</Unit> 
+					<X>210</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[520000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1575317252115</Id>
 							<Label><![CDATA[R_lHOk1]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -495,7 +399,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>100</Y></Direction>
 					<Id>1574190138381</Id>
-					<Name><![CDATA[Scg_fer_lac - Smyc0_fer_lac]]></Name>
+					<Name><![CDATA[M_lyg_sub - Smyc0_fer_lac]]></Name>
 					<X>193</X><Y>274</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -510,7 +414,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-100</X><Y>-100</Y></Direction>
 					<Id>1574190138383</Id>
-					<Name><![CDATA[Sc_fer_lac_lyg - U_lac_from_m_toComp]]></Name>
+					<Name><![CDATA[M_lyg_fer_C - U_M_C_lyg_fer]]></Name>
 					<X>463</X><Y>374</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -525,7 +429,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>170</X><Y>-100</Y></Direction>
 					<Id>1574190138388</Id>
-					<Name><![CDATA[Smyc0_fer_lac - U_lac_from_m_toComp]]></Name>
+					<Name><![CDATA[Smyc0_fer_lac - U_M_C_lyg_fer]]></Name>
 					<X>193</X><Y>374</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -540,7 +444,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>70</X><Y>-100</Y></Direction>
 					<Id>1574190138394</Id>
-					<Name><![CDATA[Z - U_lac_from_m_toComp]]></Name>
+					<Name><![CDATA[M_C_lyg_fer_Z - U_M_C_lyg_fer]]></Name>
 					<X>293</X><Y>374</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -555,7 +459,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-40</X><Y>100</Y></Direction>
 					<Id>1574190138396</Id>
-					<Name><![CDATA[Smg_fer_lacc - Sc_fer_lac_lyg]]></Name>
+					<Name><![CDATA[C_lyg_mon - M_lyg_fer_C]]></Name>
 					<X>503</X><Y>274</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -568,131 +472,11 @@ Steam Pretreated Radiata Pine ]]></Description>
 				<Link SourceId="1574190138405" TargetId="1574190138378" Polarity="null">
 					<Height>1.5225893495701257</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>20</X><Y>-100</Y></Direction>
+					<Direction><X>53</X><Y>-156</Y></Direction>
 					<Id>1574190138398</Id>
-					<Name><![CDATA[U - U_lac_from_m_toComp]]></Name>
-					<X>343</X><Y>374</Y>
+					<Name><![CDATA[M_C_lyg_fer_U - U_M_C_lyg_fer]]></Name>
+					<X>310</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574199016612" TargetId="1574190138524" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-247</X><Y>-186</Y></Direction>
-					<Id>1574199037057</Id>
-					<Name><![CDATA[Vc - Smyc0_fer_lac]]></Name>
-					<X>440</X><Y>560</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574867369724" TargetId="1574190138378" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-137</X><Y>-166</Y></Direction>
-					<Id>1574248569539</Id>
-					<Name><![CDATA[Wk_lyg - U_lac_from_m_toComp]]></Name>
-					<X>500</X><Y>440</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574249995736" TargetId="1574249459679" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>30</X><Y>-100</Y></Direction>
-					<Id>1574250021503</Id>
-					<Name><![CDATA[k_lac1 - U_monomer_lyg]]></Name>
-					<X>590</X><Y>360</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574250770040" TargetId="1574936988521" Polarity="null">
-					<Height>-35.957</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>170</X><Y>170</Y></Direction>
-					<Id>1574250853400</Id>
-					<Name><![CDATA[proc_lig0 - S_lig_k0]]></Name>
-					<X>700</X><Y>390</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574867369724" TargetId="1574251134063" Polarity="null">
-					<Height>-17.141</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>170</X><Y>-130</Y></Direction>
-					<Id>1574251434037</Id>
-					<Name><![CDATA[Wk_lyg - S_lig]]></Name>
-					<X>500</X><Y>440</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574251134063" TargetId="1574249459679" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-50</X><Y>-50</Y></Direction>
-					<Id>1574358807154</Id>
-					<Name><![CDATA[S_lig - U_monomer_lyg]]></Name>
-					<X>670</X><Y>310</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574358824780" TargetId="1574249459679" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>60</Y></Direction>
-					<Id>1574358934602</Id>
-					<Name><![CDATA[Km - U_monomer_lyg]]></Name>
-					<X>570</X><Y>200</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574190138531" TargetId="1574249459679" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>117</X><Y>-14</Y></Direction>
-					<Id>1574359181331</Id>
-					<Name><![CDATA[Smg_fer_lacc - U_monomer_lyg]]></Name>
-					<X>503</X><Y>274</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -705,23 +489,8 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>23</X><Y>-186</Y></Direction>
 					<Id>1574805653974</Id>
-					<Name><![CDATA[Vc - Sc_fer_lac_lyg]]></Name>
+					<Name><![CDATA[C_V - M_lyg_fer_C]]></Name>
 					<X>440</X><Y>560</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1574867369724" TargetId="1574936988521" Polarity="null">
-					<Height>-51.741</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>370</X><Y>120</Y></Direction>
-					<Id>1574806727302</Id>
-					<Name><![CDATA[Wk_lyg - S_lig_k0]]></Name>
-					<X>500</X><Y>440</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -735,7 +504,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-50</X><Y>10</Y></Direction>
 					<Id>1574867582022</Id>
-					<Name><![CDATA[R_lHOW - Wk_lyg]]></Name>
+					<Name><![CDATA[C_lyg__Ro - C_lyg_sub_W]]></Name>
 					<X>550</X><Y>430</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -750,7 +519,7 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>60</X><Y>-120</Y></Direction>
 					<Id>1574867669356</Id>
-					<Name><![CDATA[Vc - Wk_lyg]]></Name>
+					<Name><![CDATA[C_V - C_lyg_sub_W]]></Name>
 					<X>440</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -760,13 +529,13 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1574936440098" TargetId="1574251134063" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1575216020026" TargetId="1574190138524" Polarity="null">
+					<Height>-46.243</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-180</X><Y>-190</Y></Direction>
-					<Id>1574885977695</Id>
-					<Name><![CDATA[S_lig_k - S_lig]]></Name>
-					<X>850</X><Y>500</Y>
+					<Direction><X>73</X><Y>194</Y></Direction>
+					<Id>1575216071805</Id>
+					<Name><![CDATA[M_V - Smyc0_fer_lac]]></Name>
+					<X>120</X><Y>180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -775,13 +544,13 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1574249431006" TargetId="1574936440098" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1575216020026" TargetId="1575317404943" Polarity="null">
+					<Height>-33.215</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>20</X><Y>230</Y></Direction>
-					<Id>1574936560692</Id>
-					<Name><![CDATA[S_pro_mg - S_lig_k]]></Name>
-					<X>830</X><Y>270</Y>
+					<Direction><X>180</X><Y>-20</Y></Direction>
+					<Id>1575317438246</Id>
+					<Name><![CDATA[M_V - M_W]]></Name>
+					<X>120</X><Y>180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -790,13 +559,28 @@ Steam Pretreated Radiata Pine ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1574936988521" TargetId="1574936440098" Polarity="null">
-					<Height>-51.249</Height>
+				<Link SourceId="1575317252117" TargetId="1575317404943" Polarity="null">
+					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-20</X><Y>-60</Y></Direction>
-					<Id>1574937064998</Id>
-					<Name><![CDATA[S_lig_k0 - S_lig_k]]></Name>
-					<X>870</X><Y>560</Y>
+					<Direction><X>90</X><Y>20</Y></Direction>
+					<Id>1575317538497</Id>
+					<Name><![CDATA[M_Ro - M_W]]></Name>
+					<X>210</X><Y>140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1575317404943" TargetId="1574190138378" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>63</X><Y>114</Y></Direction>
+					<Id>1575317565044</Id>
+					<Name><![CDATA[M_W - U_M_C_lyg_fer]]></Name>
+					<X>300</X><Y>160</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -934,22 +718,19 @@ Steam Pretreated Radiata Pine ]]></Description>
 
 			<Parameters>			
 				<Parameter>
-					<ParameterName><![CDATA[U]]></ParameterName>
+					<ParameterName><![CDATA[M_C_lyg_fer_U]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[Z]]></ParameterName>
+					<ParameterName><![CDATA[M_C_lyg_fer_Z]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[Vc]]></ParameterName>
+					<ParameterName><![CDATA[C_V]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[k_lac1]]></ParameterName>
+					<ParameterName><![CDATA[C_lyg__Ro]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[proc_lig0]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[R_lHOW]]></ParameterName>
+					<ParameterName><![CDATA[M_Ro]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
