@@ -282,7 +282,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1574190138529" TargetId="1574190138531" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[M_C_lyg_fer_Z*M_S*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)]]></Formula>
+						<Formula><![CDATA[M_C_lyg_fer_Z*С_S*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -416,6 +416,32 @@ Doctor of Philosophy ]]></Description>
 						<ParameterEditor>
 							<Id>1575317252115</Id>
 							<Label><![CDATA[R_lHOk1]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1575482620354</Id>
+					<Name><![CDATA[C_S]]></Name>
+					<Description><![CDATA[Площадь  компоста (опилки). Площадь  компоста (опилки).если у нас 100 микрограмм, то тогда , если плотнтность 0,54 микрограмма на микролитр, то у нас почти 2 микролитра. пусть это будет куб. ]]></Description>
+					<Unit>метр*метр*метр</Unit> 
+					<X>360</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.000001]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1575482620352</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -635,13 +661,13 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1575481727121" TargetId="1574190138378" Polarity="null">
+				<Link TargetId="1574190138378" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-37</X><Y>164</Y></Direction>
-					<Id>1575481937227</Id>
-					<Name><![CDATA[M_S - U_M_C_lyg_fer]]></Name>
-					<X>400</X><Y>110</Y>
+					<Direction><X>-7</X><Y>-216</Y></Direction>
+					<Id>1575482646973</Id>
+					<Name><![CDATA[ - U_M_C_lyg_fer]]></Name>
+					<X>370</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -792,6 +818,9 @@ Doctor of Philosophy ]]></Description>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[M_Ro]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[C_S]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
