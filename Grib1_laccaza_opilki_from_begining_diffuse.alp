@@ -167,7 +167,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(2/3)*Pi M_R^3 ]]></Formula>
+						<Formula><![CDATA[(2/3)*3.14*M_R*M_R*M_R]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -192,7 +192,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1575481709553</Id>
 					<Name><![CDATA[M_R]]></Name>
-					<Description><![CDATA[такой радиус полусферы надо взять, что бы получить 6,5 миллилитров]]></Description>
+					<Description><![CDATA[такой радиус полусферы надо взять в метрах, что бы получить 6,5 миллилитров]]></Description>
 					<X>120</X><Y>60</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -214,7 +214,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[2*Pi*M_R]]></Formula>
+						<Formula><![CDATA[2*3.14*M_R]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
