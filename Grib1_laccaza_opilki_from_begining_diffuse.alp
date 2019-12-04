@@ -214,7 +214,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[2*π*M_R]]></Formula>
+						<Formula><![CDATA[2*Pi*M_R]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -282,7 +282,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1574190138529" TargetId="1574190138531" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[M_C_lyg_fer_Z*С_S*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)]]></Formula>
+						<Formula><![CDATA[M_C_lyg_fer_Z*(M_C_lyg_fer_U*Smyc0_fer_lac-M_lyg_fer_C)*C_S]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -430,7 +430,7 @@ Doctor of Philosophy ]]></Description>
 Тогда кубический корень из этого будет 1.25992104989 в 4,5 степени. Ну или где то 0.0000398422 метра]]></Description>
 					<Unit>метр*метр*метр</Unit> 
 					<X>360</X><Y>490</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>5</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -662,13 +662,13 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link TargetId="1574190138378" Polarity="null">
+				<Link SourceId="1575482620354" TargetId="1574190138378" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-7</X><Y>-216</Y></Direction>
+					<Direction><X>3</X><Y>-216</Y></Direction>
 					<Id>1575482646973</Id>
-					<Name><![CDATA[ - U_M_C_lyg_fer]]></Name>
-					<X>370</X><Y>490</Y>
+					<Name><![CDATA[C_S - U_M_C_lyg_fer]]></Name>
+					<X>360</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
