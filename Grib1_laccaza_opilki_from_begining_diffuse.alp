@@ -160,61 +160,18 @@
 				<Variable Class="AuxVariable">
 					<Id>1575216020026</Id>
 					<Name><![CDATA[M_V]]></Name>
-					<Description><![CDATA[метр кубический]]></Description>
+					<Description><![CDATA[метр кубический, если здесь 6,5 миллилитра и отсюдла выразть радиус:
+Объем полушария = (2/3)*pi R^3 
+v=(2/3)*pi R^3 
+6.5 мл= (2/3)*pi R^3
+0,0065 л=0,0065*10(-3) м=6,5*10(-6)]]></Description>
 					<X>120</X><Y>180</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(2/3)*3.14*M_R*M_R*M_R]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1575317404943</Id>
-					<Name><![CDATA[M_W]]></Name>
-					<Description><![CDATA[масса сухоq древесины]]></Description>
-					<Unit>грамм</Unit> 
-					<X>300</X><Y>160</Y>
-					<Label><X>-10</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[M_V*M_Ro]]></Formula>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1575481709553</Id>
-					<Name><![CDATA[M_R]]></Name>
-					<Description><![CDATA[такой радиус полусферы надо взять в метрах, что бы получить 6,5 миллилитров]]></Description>
-					<X>120</X><Y>60</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.00000942477]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1575481727121</Id>
-					<Name><![CDATA[M_S]]></Name>
-					<X>400</X><Y>110</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[2*3.14*M_R]]></Formula>
+						<Formula><![CDATA[0.0000065]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -332,7 +289,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.000001]]></Code>
+							<Code><![CDATA[0.0000000005]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574190138406</Id>
@@ -397,38 +354,17 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1575317252117</Id>
-					<Name><![CDATA[M_Ro]]></Name>
-					<Description><![CDATA[плотность опилки]]></Description>
-					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>210</X><Y>140</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[520000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1575317252115</Id>
-							<Label><![CDATA[R_lHOk1]]></Label>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1575482620354</Id>
 					<Name><![CDATA[C_S]]></Name>
-					<Description><![CDATA[Площадь  компоста (опилки). Площадь  компоста (опилки).если у нас 100 микрограмм, то тогда , если плотнтность 0,54 микрограмма на микролитр, то у нас почти 2 микролитра. 2e-9 метра кубических.
-Тогда кубический корень из этого будет 1.25992104989 в 4,5 степени. Ну или где то 0.0000398422 метра]]></Description>
-					<Unit>метр*метр*метр</Unit> 
+					<Description><![CDATA[Площадь  компоста (опилки). нужно 100 миллиграм.
+Площадь  компоста (опилки).если у нас 100 540 грам на литр микрограмм, то тогда , есл плотнтность 540 миллиграмм на миллилитр, то:
+1мл/54=x/10
+x=10/54=0.18518518518 милилитра= 0.18518518518*10^(-3) литра
+если принять это за  обьем куба
+Тогда кубический корень из этого будет 0.05699919822- сторона куба s
+тогда площадь куба: 6*s^2=0.01949345158 метра кв
+]]></Description>
+					<Unit>метр*метр</Unit> 
 					<X>360</X><Y>490</Y>
 					<Label><X>5</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -439,7 +375,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0000398422]]></Code>
+							<Code><![CDATA[0.01949345158]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575482620352</Id>
@@ -602,66 +538,6 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1575216020026" TargetId="1575317404943" Polarity="null">
-					<Height>-33.215</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>180</X><Y>-20</Y></Direction>
-					<Id>1575317438246</Id>
-					<Name><![CDATA[M_V - M_W]]></Name>
-					<X>120</X><Y>180</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1575317252117" TargetId="1575317404943" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>90</X><Y>20</Y></Direction>
-					<Id>1575317538497</Id>
-					<Name><![CDATA[M_Ro - M_W]]></Name>
-					<X>210</X><Y>140</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1575481709553" TargetId="1575216020026" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1575481748283</Id>
-					<Name><![CDATA[M_R - M_V]]></Name>
-					<X>120</X><Y>60</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1575481709553" TargetId="1575481727121" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>280</X><Y>50</Y></Direction>
-					<Id>1575481755340</Id>
-					<Name><![CDATA[M_R - M_S]]></Name>
-					<X>120</X><Y>60</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1575482620354" TargetId="1574190138378" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -816,9 +692,6 @@ Doctor of Philosophy ]]></Description>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[C_lyg__Ro]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[M_Ro]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[C_S]]></ParameterName>
