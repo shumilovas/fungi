@@ -192,7 +192,7 @@ v=(2/3)*pi R^3
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[200]]></InitialValue>
+						<InitialValue><![CDATA[3000]]></InitialValue>
 						<Color>-16711936</Color>
 					</Properties>
 				</Variable>
@@ -315,7 +315,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[2]]></Code>
+							<Code><![CDATA[9/0.54]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574199016610</Id>
@@ -356,7 +356,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1575482620354</Id>
 					<Name><![CDATA[C_S]]></Name>
-					<Description><![CDATA[Площадь  компоста (опилки). нужно 100 миллиграм.
+					<Description><![CDATA[Площадь  компоста (опилки). нужно киллграм.
 Площадь  компоста (опилки).если у нас 100 540 грам на литр микрограмм, то тогда , есл плотнтность 540 миллиграмм на миллилитр, то:
 1мл/54=x/10
 x=10/54=0.18518518518 милилитра= 0.18518518518*10^(-3) литра
@@ -375,7 +375,7 @@ x=10/54=0.18518518518 милилитра= 0.18518518518*10^(-3) литра
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.01949345158]]></Code>
+							<Code><![CDATA[1949.345158*3]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575482620352</Id>
