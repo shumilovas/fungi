@@ -625,7 +625,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1576168074429</Id>
 					<Name><![CDATA[MF_lyg_с]]></Name>
-					<Description><![CDATA[массовая доля лигнина в компосте ( в опилке)]]></Description>
+					<Description><![CDATA[массовая доля лигнина в компосте ( в опилке), безрамезрная]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
 					<X>960</X><Y>1260</Y>
 					<Label><X>-20</X><Y>30</Y></Label>
