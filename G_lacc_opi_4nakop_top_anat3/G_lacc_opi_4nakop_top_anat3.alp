@@ -129,7 +129,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1574190138526</Id>
 					<Name><![CDATA[C_flac_c]]></Name>
-					<Description><![CDATA[Концентрация (грамм фермента на грамм мицелия) ферманта лаказы внутри опилки]]></Description>
+					<Description><![CDATA[Концентрация (грамм фермента на кубический метр  ммцелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку  грамм/метр*метр*метр]]></Description>
 					<X>720</X><Y>970</Y>
 					<Label><X>-65</X><Y>5</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -160,6 +160,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1575216020026</Id>
 					<Name><![CDATA[V_m]]></Name>
+					<Description><![CDATA[объем мицелия, метров кубических]]></Description>
 					<X>320</X><Y>1050</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -175,7 +176,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1575837744375</Id>
 					<Name><![CDATA[W_m]]></Name>
-					<Description><![CDATA[Масса мицелия]]></Description>
+					<Description><![CDATA[[Масса мицелия, грамм]]></Description>
 					<Unit>г</Unit> 
 					<X>230</X><Y>1050</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
@@ -264,7 +265,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[k_lac2*C_flac_c]]></Formula>
+						<Formula><![CDATA[k_lac2*C_flac_c*Kerror_lyg]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-65536</Color>
 					</Properties>
@@ -289,7 +290,7 @@
 				<Variable Class="StockVariable">
 					<Id>1574190138529</Id>
 					<Name><![CDATA[W_flac_m]]></Name>
-					<Description><![CDATA[масса ферманта лаказы внутри мицелия гриба, которыая будет перетекать в опилку 11]]></Description>
+					<Description><![CDATA[масса ферманта лаказы внутри мицелия гриба, которыая будет перетекать в опилку ]]></Description>
 					<Unit>грамм</Unit> 
 					<X>320</X><Y>860</Y>
 					<Label><X>-33</X><Y>-44</Y></Label>
@@ -652,10 +653,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1576170005219</Id>
 					<Name><![CDATA[Kerror_lyg]]></Name>
-					<Description><![CDATA[константа,показывающая, сколько лигнина разрушает миллиграмм фермента. или безразмерный, или грамм  на литр в день
-
- необходимая, так как через обычные диффуры все равно не ввести концентрацию фермента, а в михаэлисе, которая получена из обычных диффурЭ её тоже нету]]></Description>
-					<X>580</X><Y>1340</Y>
+					<Description><![CDATA[константа,показывающая, наскольок отличается теоретический параметр ( статейный) от практического. безразмерный]]></Description>
+					<X>510</X><Y>1090</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -665,7 +664,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[14400]]></Code>
+							<Code><![CDATA[1/3]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1576170005217</Id>
@@ -704,7 +703,17 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1576357906230</Id>
 					<Name><![CDATA[k_lac2]]></Name>
-					<Description><![CDATA[константа прямой реакции разложения лигнина, безразмерная]]></Description>
+					<Description><![CDATA[константа прямой реакции разложения лигнина, безразмерная
+данные по роду панус, но подходят и для агарикус и споротрихум.
+
+константа скорости прямой реакции для разложения лигнина 0,02  фурсова, беру почти самую большую концетрацию, хотя это немного неправильно. Но совсем чуть чуть.
+
+размерность в статье указана в секундах в миус первой, а у меняно в подобных статьях размерностть всей формулы моль-1 c-1 !
+потому, что бы перевести в минуты, часы и сутки, надо умножить :
+0,02*60*60*24
+так как там в молях, а нам нужно в граммах, то нужно умножить на молярную массу:
+15e-6*60*60*24*1000
+]]></Description>
 					<X>510</X><Y>1170</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -715,7 +724,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[(1e-7)*60*60*24*1000*4]]></Code>
+							<Code><![CDATA[0.02*60*60*24*1000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1576357906228</Id>
@@ -1271,6 +1280,21 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[K_lyg_pol_mon - Sh_lyg]]></Name>
 					<X>330</X><Y>1420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1576170005219" TargetId="1576168632148" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>65</X><Y>80</Y></Direction>
+					<Id>1576838357104</Id>
+					<Name><![CDATA[Kerror_lyg - Vmax_lyg]]></Name>
+					<X>510</X><Y>1090</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
