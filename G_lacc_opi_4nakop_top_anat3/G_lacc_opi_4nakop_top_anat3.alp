@@ -289,15 +289,15 @@
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1578579753089</Id>
-					<Name><![CDATA[C_lyg_c1]]></Name>
-					<Description><![CDATA[Концентрация (грамм лигнина на метр кубический древесины) лигнина  внутри опилки]]></Description>
+					<Name><![CDATA[C_cell_c]]></Name>
+					<Description><![CDATA[Концентрация (грамм  на метр кубический древесины) целлюлозы  внутри опилки (компоста)]]></Description>
 					<X>910</X><Y>1590</Y>
 					<Label><X>-30</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_lyg_pol1/V_c]]></Formula>
+						<Formula><![CDATA[W_cell_pol/V_c]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
@@ -425,8 +425,8 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1578579753097</Id>
-					<Name><![CDATA[W_lyg_pol1]]></Name>
-					<Description><![CDATA[масса полимеров лигнина, грамм]]></Description>
+					<Name><![CDATA[W_cell_pol]]></Name>
+					<Description><![CDATA[масса полимеров целлюлозы, грамм]]></Description>
 					<X>910</X><Y>1740</Y>
 					<Label><X>-30</X><Y>50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -488,7 +488,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1578579753097" TargetId="1578579753095" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[V_c*Vmax_lyg1*C_lyg_c1/(Ks05_cell + C_lyg_c1)]]></Formula>
+						<Formula><![CDATA[V_c*Vmax_lyg1*C_cell_c/(Ks05_cell + C_cell_c)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1575,7 +1575,7 @@ Doctor of Philosophy ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-150</Y></Direction>
 					<Id>1578579753048</Id>
-					<Name><![CDATA[W_lyg_pol1 - C_lyg_c1]]></Name>
+					<Name><![CDATA[W_cell_pol - C_cell_c]]></Name>
 					<X>910</X><Y>1740</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1590,7 +1590,7 @@ Doctor of Philosophy ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-140</X><Y>0</Y></Direction>
 					<Id>1578579753050</Id>
-					<Name><![CDATA[MF_lyg_с1 - W_lyg_pol1]]></Name>
+					<Name><![CDATA[MF_lyg_с1 - W_cell_pol]]></Name>
 					<X>1050</X><Y>1740</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1650,7 +1650,7 @@ Doctor of Philosophy ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-250</X><Y>155</Y></Direction>
 					<Id>1578579753058</Id>
-					<Name><![CDATA[C_lyg_c1 - U_cc_lyg1]]></Name>
+					<Name><![CDATA[C_cell_c - U_cc_lyg1]]></Name>
 					<X>910</X><Y>1590</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1710,7 +1710,7 @@ Doctor of Philosophy ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-230</X><Y>550</Y></Direction>
 					<Id>1578580449583</Id>
-					<Name><![CDATA[V_c - C_lyg_c1]]></Name>
+					<Name><![CDATA[V_c - C_cell_c]]></Name>
 					<X>1140</X><Y>1040</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1740,7 +1740,7 @@ Doctor of Philosophy ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-340</X><Y>800</Y></Direction>
 					<Id>1578580716796</Id>
-					<Name><![CDATA[W_c - W_lyg_pol1]]></Name>
+					<Name><![CDATA[W_c - W_cell_pol]]></Name>
 					<X>1250</X><Y>940</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
