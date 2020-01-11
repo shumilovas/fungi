@@ -115,7 +115,7 @@
 					<Name><![CDATA[C_flac_m]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>320</X><Y>970</Y>
+					<X>320</X><Y>1770</Y>
 					<Label><X>-43</X><Y>21</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -130,7 +130,7 @@
 					<Id>1574190138526</Id>
 					<Name><![CDATA[C_flac_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр  ммцелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку  грамм/метр*метр*метр]]></Description>
-					<X>720</X><Y>970</Y>
+					<X>720</X><Y>1770</Y>
 					<Label><X>-65</X><Y>5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -146,7 +146,7 @@
 					<Name><![CDATA[W_c]]></Name>
 					<Description><![CDATA[масса сухой древесины]]></Description>
 					<Unit>грамм</Unit> 
-					<X>1250</X><Y>940</Y>
+					<X>1250</X><Y>1740</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -161,7 +161,7 @@
 					<Id>1575216020026</Id>
 					<Name><![CDATA[V_m]]></Name>
 					<Description><![CDATA[объем мицелия, метров кубических]]></Description>
-					<X>320</X><Y>1050</Y>
+					<X>320</X><Y>1850</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -178,7 +178,7 @@
 					<Name><![CDATA[W_m]]></Name>
 					<Description><![CDATA[Масса мицелия, грамм]]></Description>
 					<Unit>г</Unit> 
-					<X>230</X><Y>1050</Y>
+					<X>230</X><Y>1850</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -195,7 +195,7 @@
 					<Name><![CDATA[Sq_wood_с]]></Name>
 					<Description><![CDATA[Площадь активной поверхности опилок]]></Description>
 					<Unit>метр*метр</Unit> 
-					<X>600</X><Y>740</Y>
+					<X>600</X><Y>1540</Y>
 					<Label><X>-35</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -212,7 +212,7 @@
 					<Name><![CDATA[Sq_M]]></Name>
 					<Description><![CDATA[Площадь активной поверхности мицелия]]></Description>
 					<Unit>метр*метр</Unit> 
-					<X>400</X><Y>740</Y>
+					<X>400</X><Y>1540</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -228,7 +228,7 @@
 					<Id>1575838174417</Id>
 					<Name><![CDATA[MC_Seff]]></Name>
 					<Description><![CDATA[Эффективная площадь взаимодействия мицелия и опилок]]></Description>
-					<X>500</X><Y>740</Y>
+					<X>500</X><Y>1540</Y>
 					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -244,7 +244,7 @@
 					<Id>1576167251808</Id>
 					<Name><![CDATA[C_lyg_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм лигнина на метр кубический древесины) лигнина  внутри опилки]]></Description>
-					<X>820</X><Y>1110</Y>
+					<X>820</X><Y>1910</Y>
 					<Label><X>-30</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -259,7 +259,7 @@
 					<Id>1576168632148</Id>
 					<Name><![CDATA[Vmax_lyg]]></Name>
 					<Description><![CDATA[максимальная скорость разложения лигнина, грамм на м3  в час]]></Description>
-					<X>575</X><Y>1170</Y>
+					<X>575</X><Y>1970</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -275,7 +275,7 @@
 					<Id>1576170520661</Id>
 					<Name><![CDATA[Sh_lyg]]></Name>
 					<Description><![CDATA[share lygnin- доля разложившегося лигнина]]></Description>
-					<X>580</X><Y>1420</Y>
+					<X>580</X><Y>2220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -291,7 +291,7 @@
 					<Id>1578579753089</Id>
 					<Name><![CDATA[C_cell_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм  на метр кубический древесины) целлюлозы  внутри опилки (компоста)]]></Description>
-					<X>910</X><Y>1590</Y>
+					<X>910</X><Y>2390</Y>
 					<Label><X>-30</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -306,15 +306,30 @@
 					<Id>1578579753091</Id>
 					<Name><![CDATA[Vmax_lyg1]]></Name>
 					<Description><![CDATA[максимальная скорость разложения лигнина, грамм на м3  в час]]></Description>
-					<X>665</X><Y>1650</Y>
+					<X>665</X><Y>2450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[k_cel*C_flac_c*Kerror_cell]]></Formula>
+						<Formula><![CDATA[k_cel*C_flac_c * Kerror_cell *Sh_lyg]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-65536</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1578759592134</Id>
+					<Name><![CDATA[C_celll_mon]]></Name>
+					<Description><![CDATA[Концентрация (грамм  на метр кубический древесины) целлюлозы  внутри опилки (компоста)]]></Description>
+					<X>410</X><Y>2390</Y>
+					<Label><X>-30</X><Y>25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[W_cell_mon/V_c]]></Formula>
+						<Color>-16711936</Color>
 					</Properties>
 
 				</Variable>
@@ -323,7 +338,7 @@
 					<Name><![CDATA[W_flac_m]]></Name>
 					<Description><![CDATA[масса ферманта лаказы внутри мицелия гриба, которыая будет перетекать в опилку ]]></Description>
 					<Unit>грамм</Unit> 
-					<X>320</X><Y>860</Y>
+					<X>320</X><Y>1660</Y>
 					<Label><X>-33</X><Y>-44</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -356,7 +371,7 @@ of the requirements for the degree
 of 
 Doctor of Philosophy ]]></Description>
 					<Unit>грамм</Unit> 
-					<X>720</X><Y>860</Y>
+					<X>720</X><Y>1660</Y>
 					<Label><X>-28</X><Y>-44</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -374,7 +389,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576166245538</Id>
 					<Name><![CDATA[W_lyg_mon]]></Name>
 					<Description><![CDATA[масса мономеров, то есть разрушенного лигнина, грамм]]></Description>
-					<X>330</X><Y>1260</Y>
+					<X>330</X><Y>2060</Y>
 					<Label><X>-40</X><Y>-55</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -392,7 +407,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576167131769</Id>
 					<Name><![CDATA[W_lyg_pol]]></Name>
 					<Description><![CDATA[масса полимеров лигнина, грамм]]></Description>
-					<X>820</X><Y>1260</Y>
+					<X>820</X><Y>2060</Y>
 					<Label><X>-30</X><Y>50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -409,7 +424,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1578579753095</Id>
 					<Name><![CDATA[W_cell_mon]]></Name>
 					<Description><![CDATA[масса мономеров, то есть разрушенного лигнина, грамм]]></Description>
-					<X>420</X><Y>1740</Y>
+					<X>420</X><Y>2540</Y>
 					<Label><X>-40</X><Y>-55</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -418,7 +433,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>custom</EquationStyle>
 					<Width>80</Width>
 					<Height>80</Height>
-						<Expression><![CDATA[U_cc_cell*K_lyg_pol_mon1]]></Expression>
+						<Expression><![CDATA[U_cc_cell]]></Expression>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-65536</Color>
 					</Properties>
@@ -427,7 +442,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1578579753097</Id>
 					<Name><![CDATA[W_cell_pol]]></Name>
 					<Description><![CDATA[масса полимеров целлюлозы, грамм]]></Description>
-					<X>910</X><Y>1740</Y>
+					<X>910</X><Y>2540</Y>
 					<Label><X>-30</X><Y>50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -444,7 +459,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1574190138378</Id>
 					<Name><![CDATA[U_M_C_lyg_fer]]></Name>
 					<Description><![CDATA[поток ферента лакказы из мицелия в опилку]]></Description>
-					<X>320</X><Y>860</Y>
+					<X>320</X><Y>1660</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -463,7 +478,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1576167814273</Id>
 					<Name><![CDATA[U_cc_lyg]]></Name>
-					<X>820</X><Y>1260</Y>
+					<X>820</X><Y>2060</Y>
 					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -482,7 +497,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1578579753046</Id>
 					<Name><![CDATA[U_cc_cell]]></Name>
-					<X>910</X><Y>1740</Y>
+					<X>910</X><Y>2540</Y>
 					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -502,7 +517,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1574190138405</Id>
 					<Name><![CDATA[U__flac_mc]]></Name>
 					<Description><![CDATA[максимально достижимая разница концентраций лакказы между мицелием и компостом]]></Description>
-					<X>560</X><Y>970</Y>
+					<X>560</X><Y>1770</Y>
 					<Label><X>-35</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -528,7 +543,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[Z_flac_mc]]></Name>
 					<Description><![CDATA[коэффициент диффузии]]></Description>
 					<Unit>метр/час</Unit> 
-					<X>440</X><Y>970</Y>
+					<X>440</X><Y>1770</Y>
 					<Label><X>-45</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -554,7 +569,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[V_c]]></Name>
 					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
 					<Unit>метр*метр*метр</Unit> 
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -580,7 +595,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[Ro_с]]></Name>
 					<Description><![CDATA[плотность опилки]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>930</X><Y>860</Y>
+					<X>930</X><Y>1660</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -607,7 +622,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[Ro_m]]></Name>
 					<Description><![CDATA[плотность мицелия]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>320</X><Y>1110</Y>
+					<X>320</X><Y>1910</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -634,7 +649,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[RoSq_M]]></Name>
 					<Description><![CDATA[Поверхностная плотность мицелия. Поставил от балды как для корней пшеницы]]></Description>
 					<Unit>грамм/метр*метр</Unit> 
-					<X>400</X><Y>640</Y>
+					<X>400</X><Y>1440</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -661,7 +676,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[RoSq_C]]></Name>
 					<Description><![CDATA[Поверхностная плотность опилок. Пересчитал из обычной плотности в предположении, что одна опилка - это кубик со стороной 2 мм и все грани открыты. И получилось (8*0.52/24) * 100000 = 175000]]></Description>
 					<Unit>грамм/метр*метр</Unit> 
-					<X>600</X><Y>640</Y>
+					<X>600</X><Y>1440</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -687,7 +702,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576065168504</Id>
 					<Name><![CDATA[MF_flacc_m]]></Name>
 					<Description><![CDATA[весовой процент ферманта лакказы в мицелии]]></Description>
-					<X>200</X><Y>860</Y>
+					<X>200</X><Y>1660</Y>
 					<Label><X>-5</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -713,7 +728,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[MF_lyg_с]]></Name>
 					<Description><![CDATA[массовая доля лигнина в компосте ( в опилке), безрамезрная]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>960</X><Y>1260</Y>
+					<X>960</X><Y>2060</Y>
 					<Label><X>-20</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -739,7 +754,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576357729622</Id>
 					<Name><![CDATA[K_lyg_pol_mon]]></Name>
 					<Description><![CDATA[Стехиометрическая константа разложения лигнина (сколько граммов мономера получается из грамма полимера) , безразмерная]]></Description>
-					<X>330</X><Y>1420</Y>
+					<X>330</X><Y>2220</Y>
 					<Label><X>10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -777,7 +792,7 @@ Doctor of Philosophy ]]></Description>
 15e-6*60*60*1000
 ]]></Description>
 					<Unit>г/метр*метр*метр*час</Unit> 
-					<X>510</X><Y>1170</Y>
+					<X>510</X><Y>1970</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -802,7 +817,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576358001837</Id>
 					<Name><![CDATA[Ks05]]></Name>
 					<Description><![CDATA[Коэффициент диссипации в уравнении Михаэлиса-Ментен, или константа михаэлиса, грам на метр кубический]]></Description>
-					<X>430</X><Y>1170</Y>
+					<X>430</X><Y>1970</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -827,7 +842,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576849534264</Id>
 					<Name><![CDATA[Kerror_Ks05]]></Name>
 					<Description><![CDATA[константа,показывающая, насколько отличается теоретический параметр ( статейный) от практического. безразмерный]]></Description>
-					<X>450</X><Y>1100</Y>
+					<X>450</X><Y>1900</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -852,7 +867,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1578226734720</Id>
 					<Name><![CDATA[Kerror_new]]></Name>
 					<Description><![CDATA[в письме 4 в таблице описание]]></Description>
-					<X>650</X><Y>1100</Y>
+					<X>650</X><Y>1900</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -879,7 +894,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[MF_cell_с]]></Name>
 					<Description><![CDATA[массовая доля целлюлозы в компосте ( в опилке), безрамезрная]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>1050</X><Y>1740</Y>
+					<X>1050</X><Y>2540</Y>
 					<Label><X>-20</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -902,31 +917,6 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1578579753075</Id>
-					<Name><![CDATA[K_lyg_pol_mon1]]></Name>
-					<Description><![CDATA[Стехиометрическая константа разложения лигнина (сколько граммов мономера получается из грамма полимера) , безразмерная]]></Description>
-					<X>420</X><Y>1900</Y>
-					<Label><X>10</X><Y>-15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.5]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1578579753073</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1578579753078</Id>
 					<Name><![CDATA[k_cel]]></Name>
 					<Description><![CDATA[константа прямой реакции разложения целлюлозы, безразмерная
@@ -941,7 +931,7 @@ Doctor of Philosophy ]]></Description>
 15e-6*60*60*1000
 ]]></Description>
 					<Unit>г/метр*метр*метр*час</Unit> 
-					<X>600</X><Y>1650</Y>
+					<X>600</X><Y>2450</Y>
 					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -951,7 +941,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.02*60*1000]]></Code>
+							<Code><![CDATA[43*60*1000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1578579753076</Id>
@@ -966,7 +956,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1578579753081</Id>
 					<Name><![CDATA[Ks05_cell]]></Name>
 					<Description><![CDATA[Коэффициент диссипации в уравнении Михаэлиса-Ментен, или константа михаэлиса, грам на метр кубический]]></Description>
-					<X>520</X><Y>1650</Y>
+					<X>520</X><Y>2450</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -976,7 +966,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[14.1*1000]]></Code>
+							<Code><![CDATA[0.031*1000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1578579753079</Id>
@@ -988,10 +978,9 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1578579753087</Id>
+					<Id>1578759819040</Id>
 					<Name><![CDATA[Kerror_cell]]></Name>
-					<Description><![CDATA[в письме 4 в таблице описание]]></Description>
-					<X>740</X><Y>1580</Y>
+					<X>690</X><Y>2370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1001,11 +990,10 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[2]]></Code>
+							<Code><![CDATA[0.001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1578579753085</Id>
-							<Label><![CDATA[Kerror_new]]></Label>
+							<Id>1578759819038</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1021,7 +1009,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>110</Y></Direction>
 					<Id>1574190138381</Id>
 					<Name><![CDATA[W_flac_m - C_flac_m]]></Name>
-					<X>320</X><Y>860</Y>
+					<X>320</X><Y>1660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1036,7 +1024,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-220</X><Y>-110</Y></Direction>
 					<Id>1574190138383</Id>
 					<Name><![CDATA[C_flac_c - U_M_C_lyg_fer]]></Name>
-					<X>720</X><Y>970</Y>
+					<X>720</X><Y>1770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1051,7 +1039,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>180</X><Y>-110</Y></Direction>
 					<Id>1574190138388</Id>
 					<Name><![CDATA[C_flac_m - U_M_C_lyg_fer]]></Name>
-					<X>320</X><Y>970</Y>
+					<X>320</X><Y>1770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1066,7 +1054,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>60</X><Y>-110</Y></Direction>
 					<Id>1574190138394</Id>
 					<Name><![CDATA[Z_flac_mc - U_M_C_lyg_fer]]></Name>
-					<X>440</X><Y>970</Y>
+					<X>440</X><Y>1770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1081,7 +1069,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>110</Y></Direction>
 					<Id>1574190138396</Id>
 					<Name><![CDATA[W_flac_с - C_flac_c]]></Name>
-					<X>720</X><Y>860</Y>
+					<X>720</X><Y>1660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1096,7 +1084,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-60</X><Y>-110</Y></Direction>
 					<Id>1574190138398</Id>
 					<Name><![CDATA[U__flac_mc - U_M_C_lyg_fer]]></Name>
-					<X>560</X><Y>970</Y>
+					<X>560</X><Y>1770</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1111,7 +1099,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-420</X><Y>-70</Y></Direction>
 					<Id>1574805653974</Id>
 					<Name><![CDATA[V_c - C_flac_c]]></Name>
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1126,7 +1114,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>320</X><Y>80</Y></Direction>
 					<Id>1574867582022</Id>
 					<Name><![CDATA[Ro_с - W_c]]></Name>
-					<X>930</X><Y>860</Y>
+					<X>930</X><Y>1660</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1141,7 +1129,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>110</X><Y>-100</Y></Direction>
 					<Id>1574867669356</Id>
 					<Name><![CDATA[V_c - W_c]]></Name>
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1156,7 +1144,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-80</Y></Direction>
 					<Id>1575216071805</Id>
 					<Name><![CDATA[V_m - C_flac_m]]></Name>
-					<X>320</X><Y>1050</Y>
+					<X>320</X><Y>1850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1171,7 +1159,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>120</Y></Direction>
 					<Id>1575482646973</Id>
 					<Name><![CDATA[MC_Seff - U_M_C_lyg_fer]]></Name>
-					<X>500</X><Y>740</Y>
+					<X>500</X><Y>1540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1186,7 +1174,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-60</Y></Direction>
 					<Id>1575837807532</Id>
 					<Name><![CDATA[Ro_m - V_m]]></Name>
-					<X>320</X><Y>1110</Y>
+					<X>320</X><Y>1910</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1201,7 +1189,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>90</X><Y>0</Y></Direction>
 					<Id>1575837824827</Id>
 					<Name><![CDATA[W_m - V_m]]></Name>
-					<X>230</X><Y>1050</Y>
+					<X>230</X><Y>1850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1216,7 +1204,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>100</X><Y>0</Y></Direction>
 					<Id>1575838275920</Id>
 					<Name><![CDATA[Sq_M - MC_Seff]]></Name>
-					<X>400</X><Y>740</Y>
+					<X>400</X><Y>1540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1231,7 +1219,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-100</X><Y>0</Y></Direction>
 					<Id>1575838283400</Id>
 					<Name><![CDATA[Sq_wood_с - MC_Seff]]></Name>
-					<X>600</X><Y>740</Y>
+					<X>600</X><Y>1540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1246,7 +1234,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>170</X><Y>-310</Y></Direction>
 					<Id>1575838416096</Id>
 					<Name><![CDATA[W_m - Sq_M]]></Name>
-					<X>230</X><Y>1050</Y>
+					<X>230</X><Y>1850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1261,7 +1249,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>100</Y></Direction>
 					<Id>1575838637756</Id>
 					<Name><![CDATA[RoSq_M - Sq_M]]></Name>
-					<X>400</X><Y>640</Y>
+					<X>400</X><Y>1440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1276,7 +1264,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-650</X><Y>-200</Y></Direction>
 					<Id>1575838853176</Id>
 					<Name><![CDATA[W_c - Sq_wood_с]]></Name>
-					<X>1250</X><Y>940</Y>
+					<X>1250</X><Y>1740</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1291,7 +1279,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>100</Y></Direction>
 					<Id>1575839469589</Id>
 					<Name><![CDATA[RoSq_C - Sq_wood_с]]></Name>
-					<X>600</X><Y>640</Y>
+					<X>600</X><Y>1440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1306,7 +1294,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>90</X><Y>-190</Y></Direction>
 					<Id>1576065764884</Id>
 					<Name><![CDATA[W_m - W_flac_m]]></Name>
-					<X>230</X><Y>1050</Y>
+					<X>230</X><Y>1850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1321,7 +1309,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>120</X><Y>0</Y></Direction>
 					<Id>1576088492520</Id>
 					<Name><![CDATA[MF_flacc_m - W_flac_m]]></Name>
-					<X>200</X><Y>860</Y>
+					<X>200</X><Y>1660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1336,7 +1324,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-320</X><Y>70</Y></Direction>
 					<Id>1576167447785</Id>
 					<Name><![CDATA[V_c - C_lyg_c]]></Name>
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1351,7 +1339,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-150</Y></Direction>
 					<Id>1576167756047</Id>
 					<Name><![CDATA[W_lyg_pol - C_lyg_c]]></Name>
-					<X>820</X><Y>1260</Y>
+					<X>820</X><Y>2060</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1366,7 +1354,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-430</X><Y>320</Y></Direction>
 					<Id>1576168394997</Id>
 					<Name><![CDATA[W_c - W_lyg_pol]]></Name>
-					<X>1250</X><Y>940</Y>
+					<X>1250</X><Y>1740</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1381,7 +1369,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-140</X><Y>0</Y></Direction>
 					<Id>1576168406570</Id>
 					<Name><![CDATA[MF_lyg_с - W_lyg_pol]]></Name>
-					<X>960</X><Y>1260</Y>
+					<X>960</X><Y>2060</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1396,7 +1384,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>65</X><Y>0</Y></Direction>
 					<Id>1576168662572</Id>
 					<Name><![CDATA[k_lac2 - Vmax_lyg]]></Name>
-					<X>510</X><Y>1170</Y>
+					<X>510</X><Y>1970</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1411,7 +1399,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>90</Y></Direction>
 					<Id>1576168993608</Id>
 					<Name><![CDATA[Vmax_lyg - U_cc_lyg]]></Name>
-					<X>575</X><Y>1170</Y>
+					<X>575</X><Y>1970</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1426,7 +1414,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>145</X><Y>90</Y></Direction>
 					<Id>1576169010303</Id>
 					<Name><![CDATA[Ks05 - U_cc_lyg]]></Name>
-					<X>430</X><Y>1170</Y>
+					<X>430</X><Y>1970</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1441,7 +1429,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-250</X><Y>155</Y></Direction>
 					<Id>1576169109432</Id>
 					<Name><![CDATA[C_lyg_c - U_cc_lyg]]></Name>
-					<X>820</X><Y>1110</Y>
+					<X>820</X><Y>1910</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1456,7 +1444,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-145</X><Y>200</Y></Direction>
 					<Id>1576169184630</Id>
 					<Name><![CDATA[C_flac_c - Vmax_lyg]]></Name>
-					<X>720</X><Y>970</Y>
+					<X>720</X><Y>1770</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1471,7 +1459,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-240</X><Y>160</Y></Direction>
 					<Id>1576170608288</Id>
 					<Name><![CDATA[W_lyg_pol - Sh_lyg]]></Name>
-					<X>820</X><Y>1260</Y>
+					<X>820</X><Y>2060</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1486,7 +1474,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>250</X><Y>160</Y></Direction>
 					<Id>1576170617989</Id>
 					<Name><![CDATA[W_lyg_mon - Sh_lyg]]></Name>
-					<X>330</X><Y>1260</Y>
+					<X>330</X><Y>2060</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1501,7 +1489,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-565</X><Y>220</Y></Direction>
 					<Id>1576356627152</Id>
 					<Name><![CDATA[V_c - U_cc_lyg]]></Name>
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1516,7 +1504,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-160</Y></Direction>
 					<Id>1576357776317</Id>
 					<Name><![CDATA[K_lyg_pol_mon - W_lyg_mon]]></Name>
-					<X>330</X><Y>1420</Y>
+					<X>330</X><Y>2220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1531,7 +1519,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>250</X><Y>0</Y></Direction>
 					<Id>1576357821280</Id>
 					<Name><![CDATA[K_lyg_pol_mon - Sh_lyg]]></Name>
-					<X>330</X><Y>1420</Y>
+					<X>330</X><Y>2220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1546,7 +1534,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>125</X><Y>70</Y></Direction>
 					<Id>1576849639375</Id>
 					<Name><![CDATA[Kerror_Ks05 - Vmax_lyg]]></Name>
-					<X>450</X><Y>1100</Y>
+					<X>450</X><Y>1900</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1561,7 +1549,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-75</X><Y>70</Y></Direction>
 					<Id>1578226792880</Id>
 					<Name><![CDATA[Kerror_new - Vmax_lyg]]></Name>
-					<X>650</X><Y>1100</Y>
+					<X>650</X><Y>1900</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1576,7 +1564,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-150</Y></Direction>
 					<Id>1578579753048</Id>
 					<Name><![CDATA[W_cell_pol - C_cell_c]]></Name>
-					<X>910</X><Y>1740</Y>
+					<X>910</X><Y>2540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1591,7 +1579,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-140</X><Y>0</Y></Direction>
 					<Id>1578579753050</Id>
 					<Name><![CDATA[MF_cell_с - W_cell_pol]]></Name>
-					<X>1050</X><Y>1740</Y>
+					<X>1050</X><Y>2540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1606,7 +1594,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>65</X><Y>0</Y></Direction>
 					<Id>1578579753052</Id>
 					<Name><![CDATA[k_cel - Vmax_lyg1]]></Name>
-					<X>600</X><Y>1650</Y>
+					<X>600</X><Y>2450</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1621,7 +1609,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>90</Y></Direction>
 					<Id>1578579753054</Id>
 					<Name><![CDATA[Vmax_lyg1 - U_cc_cell]]></Name>
-					<X>665</X><Y>1650</Y>
+					<X>665</X><Y>2450</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1636,7 +1624,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>145</X><Y>90</Y></Direction>
 					<Id>1578579753056</Id>
 					<Name><![CDATA[Ks05_cell - U_cc_cell]]></Name>
-					<X>520</X><Y>1650</Y>
+					<X>520</X><Y>2450</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1651,37 +1639,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-250</X><Y>155</Y></Direction>
 					<Id>1578579753058</Id>
 					<Name><![CDATA[C_cell_c - U_cc_cell]]></Name>
-					<X>910</X><Y>1590</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1578579753075" TargetId="1578579753095" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-160</Y></Direction>
-					<Id>1578579753064</Id>
-					<Name><![CDATA[K_lyg_pol_mon1 - W_cell_mon]]></Name>
-					<X>420</X><Y>1900</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1578579753087" TargetId="1578579753091" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-75</X><Y>70</Y></Direction>
-					<Id>1578579899861</Id>
-					<Name><![CDATA[Kerror_cell - Vmax_lyg1]]></Name>
-					<X>740</X><Y>1580</Y>
+					<X>910</X><Y>2390</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1696,7 +1654,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-55</X><Y>680</Y></Direction>
 					<Id>1578580177175</Id>
 					<Name><![CDATA[C_flac_c - Vmax_lyg1]]></Name>
-					<X>720</X><Y>970</Y>
+					<X>720</X><Y>1770</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1711,7 +1669,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-230</X><Y>550</Y></Direction>
 					<Id>1578580449583</Id>
 					<Name><![CDATA[V_c - C_cell_c]]></Name>
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1726,7 +1684,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-475</X><Y>700</Y></Direction>
 					<Id>1578580593790</Id>
 					<Name><![CDATA[V_c - U_cc_cell]]></Name>
-					<X>1140</X><Y>1040</Y>
+					<X>1140</X><Y>1840</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1741,7 +1699,67 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-340</X><Y>800</Y></Direction>
 					<Id>1578580716796</Id>
 					<Name><![CDATA[W_c - W_cell_pol]]></Name>
-					<X>1250</X><Y>940</Y>
+					<X>1250</X><Y>1740</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1574199016612" TargetId="1578759592134" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-730</X><Y>550</Y></Direction>
+					<Id>1578759655598</Id>
+					<Name><![CDATA[V_c - C_celll_mon]]></Name>
+					<X>1140</X><Y>1840</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1578579753095" TargetId="1578759592134" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>-150</Y></Direction>
+					<Id>1578759684388</Id>
+					<Name><![CDATA[W_cell_mon - C_celll_mon]]></Name>
+					<X>420</X><Y>2540</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1578759819040" TargetId="1578579753091" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-25</X><Y>80</Y></Direction>
+					<Id>1578759843815</Id>
+					<Name><![CDATA[Kerror_cell - Vmax_lyg1]]></Name>
+					<X>690</X><Y>2370</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1576170520661" TargetId="1578579753091" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>85</X><Y>230</Y></Direction>
+					<Id>1578760314978</Id>
+					<Name><![CDATA[Sh_lyg - Vmax_lyg1]]></Name>
+					<X>580</X><Y>2220</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1938,6 +1956,81 @@ Doctor of Philosophy ]]></Description>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
     			</TimePlot>
+    			<TimePlot>
+					<Id>1578760528823</Id>
+					<Name><![CDATA[plot2]]></Name>
+					<X>-10</X><Y>450</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1575792000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[0.2]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>650</Width>
+					<Height>400</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>570</Width>
+						<Height>310</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>DAY</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Масса полимерной целлюлозы(г)]]></Title>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-8388608</Color>
+					<Expression2><![CDATA[W_cell_pol]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>2.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Масса мономерной целлюлозы - то есть глюкозы(г)]]></Title>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-16744320</Color>
+					<Expression2><![CDATA[W_cell_mon]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>2.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>300</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[50]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
+    			</TimePlot>
 			</Presentation>
 
 				</Level>
@@ -2074,9 +2167,6 @@ Doctor of Philosophy ]]></Description>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[MF_cell_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_lyg_pol_mon1]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[k_cel]]></ParameterName>
