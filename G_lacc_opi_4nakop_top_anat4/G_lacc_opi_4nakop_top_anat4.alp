@@ -310,7 +310,7 @@
 									<PackageName><![CDATA[model4nakArray]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[k_Vmax[Fractions]*C_flac_c*K_error[Fractions]]]></Expression>
+								<Expression><![CDATA[K0_Vmax[Fractions]*C_flac_c*K_error[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -394,6 +394,122 @@
 								<Expression><![CDATA[W_mon[Fractions]/V_c]]></Expression>
 							</CustomExpression>
 						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1579168603585</Id>
+					<Name><![CDATA[K0_diff_CM]]></Name>
+					<Description><![CDATA[константа при нулевой температуре.
+
+По хорошему, если это действительно было бы что то типа михаэлиса, то та коснтанта, которая вставлена, была бы  вставлена из:
+Use and Misuse of Sorption Kinetic Data: A Common Mistake that Should
+be Avoided
+Silvana  Canzano,  Pasquale  Iovino * ,  Vincenzo  Leone,  Stefano  Salvestrini  and  Sante
+и она безразмерна
+
+или же можно вставить такую константу:
+7,95 миллилитров на  на миллиграмм древесины
+ENZYMATIC HYDROLYSIS OF LIGNOCELLULOSE: CELLULASE ENZYME ADSORPTION AND RECYCLE
+by
+MAOBING TU таблица 22
+]]></Description>
+					<X>481</X><Y>1377.416</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.7421
+]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-256</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1579168603587</Id>
+					<Name><![CDATA[GH_diff_CM]]></Name>
+					<Description><![CDATA[энергия активации или энергия гибса реакции сорбции фермента в древесине/ Красный цвет- эта величина найдена в литературе:
+Implication off apparent  pseudo_Second_Order kinetics.
+
+На самом деле есть еще одна формула, там есть такой параметр как величина опилки. Здесь его нет. Но сюда в явставил именно это.
+
+https://bioresources.cnr.ncsu.edu/resources/implications-of-apparent-pseudo-second-order-adsorption-kinetics-onto-cellulosic-materials-a-review/
+
+так же данные есть в: ENZYMATIC HYDROLYSIS OF LIGNOCELLULOSE: CELLULASE ENZYME ADSORPTION AND RECYCLE
+by
+MAOBING TU   таблица 22
+]]></Description>
+					<X>549</X><Y>1352</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[-7.46]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-256</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1579168603589</Id>
+					<Name><![CDATA[kt_diff_CM]]></Name>
+					<Description><![CDATA[коэффециэнт диффузии (константа пропорциональности)]]></Description>
+					<X>545</X><Y>1409.91</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[K0_diff_CM*exp(-GH_diff_CM/T)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-256</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1579187746647</Id>
+					<Name><![CDATA[K0_Vmax]]></Name>
+					<X>170</X><Y>2020</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model4nakArray]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model4nakArray]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[K0_kin[Fractions]*exp(-GH_kin[Fractions]/T)]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1579212872687</Id>
+					<Name><![CDATA[error_Vmax_ph]]></Name>
+					<X>30</X><Y>2160</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[16*(1e9)*((9e-6)*(15e-6)*0.02*70*H)/((H*H*(15e-6)*0.02+(9e-6)*70)+15e-6*10*(1e-6))*
+H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-256</Color>
 					</Properties>
 
 				</Variable>
@@ -513,7 +629,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1574190138529" TargetId="1574190138531" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Z_flac_mc*(U__flac_mc*C_flac_m-C_flac_c)*MC_Seff]]></Formula>
+						<Formula><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc*C_flac_m-C_flac_c)*MC_Seff]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -544,7 +660,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[model4nakArray]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[V_c*K_lability[Fractions]*Vmax_lyg[Fractions]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])]]></Expression>
+								<Expression><![CDATA[(V_c*K_lability[Fractions]*Vmax_lyg[Fractions]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) * error_Vmax_ph]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -826,48 +942,6 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1576357906230</Id>
-					<Name><![CDATA[k_Vmax]]></Name>
-					<Description><![CDATA[константа прямой реакции разложения лигнина, безразмерная
-данные по роду панус, но подходят и для агарикус и споротрихум.
-
-константа скорости прямой реакции для разложения лигнина 0,02  фурсова, беру почти самую большую концетрацию, хотя это немного неправильно. Но совсем чуть чуть.
-
-размерность в статье указана то ли в в секундах в миус первой, то ли в минутах, посккольку там стоит "цэ"- C в минус первой степени, то пусть будет в секундах.
-
-Хотя если без секунд, тогда ошибка в макровуровне больше. а у меняно в подобных статьях размерностть всей формулы моль-1 c-1 !
-потому, что бы перевести в минуты и часы, надо умножить :
-0,02*60*60
-так как там в молях, а нам нужно в граммах, то нужно умножить на молярную массу:
-15e-6*60*60*1000
-]]></Description>
-					<Unit>г/метр*метр*метр*час</Unit> 
-					<X>510</X><Y>1970</Y>
-					<Label><X>-20</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[HyperArray]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
-						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
-							<ClassName><![CDATA[Fractions]]></ClassName>
-						</Dimension>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{15e-6*60*24*1000, 43*60*1000}]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1576357906228</Id>
-							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1576358001837</Id>
 					<Name><![CDATA[Ks05]]></Name>
 					<Description><![CDATA[Коэффициент диссипации в уравнении Михаэлиса-Ментен, или константа михаэлиса, грам на метр кубический]]></Description>
@@ -920,6 +994,111 @@ Doctor of Philosophy ]]></Description>
 							<Id>1578226734718</Id>
 							<Label><![CDATA[Kerror_new]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579178941503</Id>
+					<Name><![CDATA[T]]></Name>
+					<Description><![CDATA[температура]]></Description>
+					<X>40</X><Y>1710</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[25]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579178941501</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579181594782</Id>
+					<Name><![CDATA[GH_kin]]></Name>
+					<X>30</X><Y>2010</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[HyperArray]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>true</SdArray>
+						<Dimension>
+							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<ClassName><![CDATA[Fractions]]></ClassName>
+						</Dimension>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[{-2.07,2}]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579181594780</Id>
+							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579181801955</Id>
+					<Name><![CDATA[K0_kin]]></Name>
+					<X>30</X><Y>2040</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[HyperArray]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>true</SdArray>
+						<Dimension>
+							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<ClassName><![CDATA[Fractions]]></ClassName>
+						</Dimension>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[{0.95,1900000}]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579181801953</Id>
+							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579211337984</Id>
+					<Name><![CDATA[H]]></Name>
+					<X>30</X><Y>2110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1e-7*18*1000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579211337969</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -1303,19 +1482,19 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1576357906230" TargetId="1576168632148" Polarity="null">
+				<Link SourceId="1579187746647" TargetId="1576168632148" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>60</X><Y>0</Y></Direction>
+					<Direction><X>400</X><Y>-50</Y></Direction>
 					<Id>1576168662572</Id>
-					<Name><![CDATA[k_Vmax - Vmax_lyg]]></Name>
-					<X>510</X><Y>1970</Y>
+					<Name><![CDATA[K0_Vmax - Vmax_lyg]]></Name>
+					<X>170</X><Y>2020</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
+					<Color>-256</Color>
+					<LineWidth>4</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1576168632148" TargetId="1576167814273" Polarity="null">
@@ -1526,6 +1705,141 @@ Doctor of Philosophy ]]></Description>
 					<ShowLabel>false</ShowLabel>
 					<Color/>
 					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579168603585" TargetId="1579168603589" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>64</X><Y>33</Y></Direction>
+					<Id>1579168603582</Id>
+					<Name><![CDATA[K0_diff_CM - kt_diff_CM]]></Name>
+					<X>481</X><Y>1376.91</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579168603587" TargetId="1579168603589" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-4</X><Y>57</Y></Direction>
+					<Id>1579168629696</Id>
+					<Name><![CDATA[GH_diff_CM - kt_diff_CM]]></Name>
+					<X>549</X><Y>1352</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579168603589" TargetId="1574190138378" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-45</X><Y>251</Y></Direction>
+					<Id>1579168755898</Id>
+					<Name><![CDATA[kt_diff_CM - U_M_C_lyg_fer]]></Name>
+					<X>545</X><Y>1409</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579178941503" TargetId="1579168603589" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>505</X><Y>-301</Y></Direction>
+					<Id>1579178970257</Id>
+					<Name><![CDATA[T - kt_diff_CM]]></Name>
+					<X>40</X><Y>1710</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579181594782" TargetId="1579187746647" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>10</Y></Direction>
+					<Id>1579187824948</Id>
+					<Name><![CDATA[GH_kin - K0_Vmax]]></Name>
+					<X>30</X><Y>2010</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579181801955" TargetId="1579187746647" Polarity="null">
+					<Height>-41.745</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-20</Y></Direction>
+					<Id>1579187834950</Id>
+					<Name><![CDATA[K0_kin - K0_Vmax]]></Name>
+					<X>30</X><Y>2040</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579178941503" TargetId="1579187746647" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>310</Y></Direction>
+					<Id>1579188038840</Id>
+					<Name><![CDATA[T - K0_Vmax]]></Name>
+					<X>40</X><Y>1710</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579211337984" TargetId="1579212872687" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>50</Y></Direction>
+					<Id>1579212941714</Id>
+					<Name><![CDATA[H - error_Vmax_ph]]></Name>
+					<X>30</X><Y>2110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579212872687" TargetId="1576167814273" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>540</X><Y>-100</Y></Direction>
+					<Id>1579215731303</Id>
+					<Name><![CDATA[error_Vmax_ph - U_cc]]></Name>
+					<X>30</X><Y>2160</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-256</Color>
+					<LineWidth>4</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 			</Dependences>
@@ -1914,13 +2228,22 @@ Doctor of Philosophy ]]></Description>
 					<ParameterName><![CDATA[K_pol_mon]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[k_Vmax]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[Ks05]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[K_error]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[T]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[GH_kin]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[K0_kin]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[H]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
