@@ -134,7 +134,7 @@
 					<Name><![CDATA[C_flac_m]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>320</X><Y>1770</Y>
+					<X>310</X><Y>1640</Y>
 					<Label><X>-43</X><Y>21</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -149,7 +149,7 @@
 					<Id>1574190138526</Id>
 					<Name><![CDATA[C_flac_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр  ммцелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку  грамм/метр*метр*метр]]></Description>
-					<X>720</X><Y>1770</Y>
+					<X>710</X><Y>1640</Y>
 					<Label><X>-25</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -180,7 +180,7 @@
 					<Id>1575216020026</Id>
 					<Name><![CDATA[V_m]]></Name>
 					<Description><![CDATA[объем мицелия, метров кубических]]></Description>
-					<X>320</X><Y>1850</Y>
+					<X>310</X><Y>1720</Y>
 					<Label><X>10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -197,7 +197,7 @@
 					<Name><![CDATA[W_m]]></Name>
 					<Description><![CDATA[Масса мицелия, грамм]]></Description>
 					<Unit>г</Unit> 
-					<X>230</X><Y>1850</Y>
+					<X>220</X><Y>1720</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -214,7 +214,7 @@
 					<Name><![CDATA[Sq_wood_с]]></Name>
 					<Description><![CDATA[Площадь активной поверхности опилок]]></Description>
 					<Unit>метр*метр</Unit> 
-					<X>600</X><Y>1540</Y>
+					<X>590</X><Y>1410</Y>
 					<Label><X>-35</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -231,7 +231,7 @@
 					<Name><![CDATA[Sq_M]]></Name>
 					<Description><![CDATA[Площадь активной поверхности мицелия]]></Description>
 					<Unit>метр*метр</Unit> 
-					<X>400</X><Y>1540</Y>
+					<X>390</X><Y>1410</Y>
 					<Label><X>-15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -247,7 +247,7 @@
 					<Id>1575838174417</Id>
 					<Name><![CDATA[MC_Seff]]></Name>
 					<Description><![CDATA[Эффективная площадь взаимодействия мицелия и опилок]]></Description>
-					<X>500</X><Y>1540</Y>
+					<X>490</X><Y>1410</Y>
 					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -262,7 +262,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1576167251808</Id>
 					<Name><![CDATA[C_pol]]></Name>
-					<Description><![CDATA[Концентрация (грамм лигнина на метр кубический древесины) лигнина  внутри опилки]]></Description>
+					<Description><![CDATA[Концентрация (грамм сахаросодержащего компонента на метр кубический древесины) сахаросодержащих компонент внутри опилки]]></Description>
 					<X>820</X><Y>1950</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -289,8 +289,8 @@
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1576168632148</Id>
-					<Name><![CDATA[Vmax_lyg]]></Name>
-					<Description><![CDATA[максимальная скорость разложения лигнина, грамм на м3  в час]]></Description>
+					<Name><![CDATA[Vmax]]></Name>
+					<Description><![CDATA[максимальная скорость разложения сахаросодержащих компонент древесины, грамм на м3  в час]]></Description>
 					<X>570</X><Y>1970</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -398,72 +398,16 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579168603585</Id>
-					<Name><![CDATA[K0_diff_CM]]></Name>
-					<Description><![CDATA[константа при нулевой температуре.
-
-По хорошему, если это действительно было бы что то типа михаэлиса, то та коснтанта, которая вставлена, была бы  вставлена из:
-Use and Misuse of Sorption Kinetic Data: A Common Mistake that Should
-be Avoided
-Silvana  Canzano,  Pasquale  Iovino * ,  Vincenzo  Leone,  Stefano  Salvestrini  and  Sante
-и она безразмерна
-
-или же можно вставить такую константу:
-7,95 миллилитров на  на миллиграмм древесины
-ENZYMATIC HYDROLYSIS OF LIGNOCELLULOSE: CELLULASE ENZYME ADSORPTION AND RECYCLE
-by
-MAOBING TU таблица 22
-]]></Description>
-					<X>481</X><Y>1377.416</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.7421
-]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-256</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1579168603587</Id>
-					<Name><![CDATA[GH_diff_CM]]></Name>
-					<Description><![CDATA[энергия активации или энергия гибса реакции сорбции фермента в древесине/ Красный цвет- эта величина найдена в литературе:
-Implication off apparent  pseudo_Second_Order kinetics.
-
-На самом деле есть еще одна формула, там есть такой параметр как величина опилки. Здесь его нет. Но сюда в явставил именно это.
-
-https://bioresources.cnr.ncsu.edu/resources/implications-of-apparent-pseudo-second-order-adsorption-kinetics-onto-cellulosic-materials-a-review/
-
-так же данные есть в: ENZYMATIC HYDROLYSIS OF LIGNOCELLULOSE: CELLULASE ENZYME ADSORPTION AND RECYCLE
-by
-MAOBING TU   таблица 22
-]]></Description>
-					<X>549</X><Y>1352</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[-7.46]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-256</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
 					<Id>1579168603589</Id>
 					<Name><![CDATA[kt_diff_CM]]></Name>
 					<Description><![CDATA[коэффециэнт диффузии (константа пропорциональности)]]></Description>
-					<X>545</X><Y>1409.91</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<X>490</X><Y>1700</Y>
+					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[K0_diff_CM*exp(-GH_diff_CM/T)]]></Formula>
+						<Formula><![CDATA[K0_diff_CM*exp(-GH_diff_CM/Temperature)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -472,8 +416,8 @@ MAOBING TU   таблица 22
 				<Variable Class="AuxVariable">
 					<Id>1579187746647</Id>
 					<Name><![CDATA[K0_Vmax]]></Name>
-					<X>170</X><Y>2020</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<X>490</X><Y>1900</Y>
+					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -491,7 +435,7 @@ MAOBING TU   таблица 22
 									<PackageName><![CDATA[model4nakArray]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[K0_kin[Fractions]*exp(-GH_kin[Fractions]/T)]]></Expression>
+								<Expression><![CDATA[K0_kin[Fractions]*exp(-GH_kin[Fractions]/Temperature)]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -500,14 +444,14 @@ MAOBING TU   таблица 22
 				<Variable Class="AuxVariable">
 					<Id>1579212872687</Id>
 					<Name><![CDATA[error_Vmax_ph]]></Name>
-					<X>30</X><Y>2160</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<X>490</X><Y>2130</Y>
+					<Label><X>-40</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[16*(1e9)*((9e-6)*(15e-6)*0.02*70*H)/((H*H*(15e-6)*0.02+(9e-6)*70)+15e-6*10*(1e-6))*
-H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
+						<Formula><![CDATA[16*(1e9)*((9e-6)*(15e-6)*0.02*70*pH)/((pH*pH*(15e-6)*0.02+(9e-6)*70)+15e-6*10*(1e-6))*
+pH*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -518,7 +462,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<Name><![CDATA[W_flac_m]]></Name>
 					<Description><![CDATA[масса ферманта лаказы внутри мицелия гриба, которыая будет перетекать в опилку ]]></Description>
 					<Unit>грамм</Unit> 
-					<X>320</X><Y>1660</Y>
+					<X>310</X><Y>1530</Y>
 					<Label><X>-33</X><Y>-44</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -551,7 +495,7 @@ of the requirements for the degree
 of 
 Doctor of Philosophy ]]></Description>
 					<Unit>грамм</Unit> 
-					<X>720</X><Y>1660</Y>
+					<X>710</X><Y>1530</Y>
 					<Label><X>-28</X><Y>-44</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -568,7 +512,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="StockVariable">
 					<Id>1576166245538</Id>
 					<Name><![CDATA[W_mon]]></Name>
-					<Description><![CDATA[масса мономеров, то есть разрушенного лигнина, грамм]]></Description>
+					<Description><![CDATA[масса мономеров, то есть разрушенных сахаросодержащих компонент, грамм]]></Description>
 					<X>320</X><Y>2060</Y>
 					<Label><X>-70</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -599,7 +543,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="StockVariable">
 					<Id>1576167131769</Id>
 					<Name><![CDATA[W_pol]]></Name>
-					<Description><![CDATA[масса полимеров лигнина, грамм]]></Description>
+					<Description><![CDATA[масса полимеров сахаросодержащих компонент, грамм]]></Description>
 					<X>820</X><Y>2060</Y>
 					<Label><X>-20</X><Y>55</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -623,7 +567,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1574190138378</Id>
 					<Name><![CDATA[U_M_C_lyg_fer]]></Name>
 					<Description><![CDATA[поток ферента лакказы из мицелия в опилку]]></Description>
-					<X>320</X><Y>1660</Y>
+					<X>310</X><Y>1530</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -660,7 +604,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[model4nakArray]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(V_c*K_lability[Fractions]*Vmax_lyg[Fractions]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) * error_Vmax_ph]]></Expression>
+								<Expression><![CDATA[(V_c*K_lability[Fractions]*Vmax[Fractions]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) * error_Vmax_ph]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -675,7 +619,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1574190138405</Id>
 					<Name><![CDATA[U__flac_mc]]></Name>
 					<Description><![CDATA[максимально достижимая разница концентраций лакказы между мицелием и компостом]]></Description>
-					<X>560</X><Y>1770</Y>
+					<X>550</X><Y>1640</Y>
 					<Label><X>-35</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -701,7 +645,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[Z_flac_mc]]></Name>
 					<Description><![CDATA[коэффициент диффузии]]></Description>
 					<Unit>метр/час</Unit> 
-					<X>440</X><Y>1770</Y>
+					<X>430</X><Y>1640</Y>
 					<Label><X>-45</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -767,7 +711,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1574867461209</Id>
-							<Label><![CDATA[]]></Label>
+							<Label><![CDATA[Ro_с]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -780,7 +724,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[Ro_m]]></Name>
 					<Description><![CDATA[плотность мицелия]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>320</X><Y>1910</Y>
+					<X>310</X><Y>1780</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -794,7 +738,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575837044478</Id>
-							<Label><![CDATA[]]></Label>
+							<Label><![CDATA[Ro_m]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -807,7 +751,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[RoSq_M]]></Name>
 					<Description><![CDATA[Поверхностная плотность мицелия. Поставил от балды как для корней пшеницы]]></Description>
 					<Unit>грамм/метр*метр</Unit> 
-					<X>400</X><Y>1440</Y>
+					<X>390</X><Y>1310</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -821,7 +765,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575838453831</Id>
-							<Label><![CDATA[]]></Label>
+							<Label><![CDATA[RoSq_M]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -834,7 +778,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[RoSq_C]]></Name>
 					<Description><![CDATA[Поверхностная плотность опилок. Пересчитал из обычной плотности в предположении, что одна опилка - это кубик со стороной 2 мм и все грани открыты. И получилось (8*0.52/24) * 100000 = 175000]]></Description>
 					<Unit>грамм/метр*метр</Unit> 
-					<X>600</X><Y>1440</Y>
+					<X>590</X><Y>1310</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -848,7 +792,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575838927143</Id>
-							<Label><![CDATA[]]></Label>
+							<Label><![CDATA[RoSq_C]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -860,8 +804,8 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576065168504</Id>
 					<Name><![CDATA[MF_flacc_m]]></Name>
 					<Description><![CDATA[весовой процент ферманта лакказы в мицелии]]></Description>
-					<X>200</X><Y>1660</Y>
-					<Label><X>-5</X><Y>25</Y></Label>
+					<X>220</X><Y>1530</Y>
+					<Label><X>-30</X><Y>25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -884,7 +828,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1576168074429</Id>
 					<Name><![CDATA[MF_с]]></Name>
-					<Description><![CDATA[массовая доля лигнина в компосте ( в опилке), безрамезрная]]></Description>
+					<Description><![CDATA[массовая доля сахаросодержащих компонент в компосте ( в опилке), безрамезрная]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
 					<X>960</X><Y>2060</Y>
 					<Label><X>-20</X><Y>30</Y></Label>
@@ -904,7 +848,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1576168074427</Id>
-							<Label><![CDATA[]]></Label>
+							<Label><![CDATA[MF_с]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -915,7 +859,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1576357729622</Id>
 					<Name><![CDATA[K_pol_mon]]></Name>
-					<Description><![CDATA[Стехиометрическая константа разложения лигнина (сколько граммов мономера получается из грамма полимера) , безразмерная]]></Description>
+					<Description><![CDATA[Стехиометрическая константа разложения сахаросодержащих компонент (сколько граммов мономера получается из грамма полимера) , безразмерная]]></Description>
 					<X>320</X><Y>2220</Y>
 					<Label><X>10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -945,8 +889,8 @@ Doctor of Philosophy ]]></Description>
 					<Id>1576358001837</Id>
 					<Name><![CDATA[Ks05]]></Name>
 					<Description><![CDATA[Коэффициент диссипации в уравнении Михаэлиса-Ментен, или константа михаэлиса, грам на метр кубический]]></Description>
-					<X>430</X><Y>1970</Y>
-					<Label><X>-15</X><Y>-20</Y></Label>
+					<X>400</X><Y>2000</Y>
+					<Label><X>-20</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1002,10 +946,10 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1579178941503</Id>
-					<Name><![CDATA[T]]></Name>
+					<Name><![CDATA[Temperature]]></Name>
 					<Description><![CDATA[температура]]></Description>
-					<X>40</X><Y>1710</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<X>490</X><Y>1790</Y>
+					<Label><X>-80</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1028,8 +972,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1579181594782</Id>
 					<Name><![CDATA[GH_kin]]></Name>
-					<X>30</X><Y>2010</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<X>400</X><Y>1900</Y>
+					<Label><X>-25</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1056,8 +1000,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1579181801955</Id>
 					<Name><![CDATA[K0_kin]]></Name>
-					<X>30</X><Y>2040</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<X>490</X><Y>1970</Y>
+					<Label><X>-65</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1083,9 +1027,9 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1579211337984</Id>
-					<Name><![CDATA[H]]></Name>
-					<X>30</X><Y>2110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Name><![CDATA[pH]]></Name>
+					<X>420</X><Y>2130</Y>
+					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1105,6 +1049,78 @@ Doctor of Philosophy ]]></Description>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579444972499</Id>
+					<Name><![CDATA[GH_diff_CM]]></Name>
+					<Description><![CDATA[энергия активации или энергия гибса реакции сорбции фермента в древесине/ Красный цвет- эта величина найдена в литературе:
+Implication off apparent  pseudo_Second_Order kinetics.
+
+На самом деле есть еще одна формула, там есть такой параметр как величина опилки. Здесь его нет. Но сюда в явставил именно это.
+
+https://bioresources.cnr.ncsu.edu/resources/implications-of-apparent-pseudo-second-order-adsorption-kinetics-onto-cellulosic-materials-a-review/
+
+так же данные есть в: ENZYMATIC HYDROLYSIS OF LIGNOCELLULOSE: CELLULASE ENZYME ADSORPTION AND RECYCLE
+by
+MAOBING TU   таблица 22]]></Description>
+					<Unit>градусы</Unit> 
+					<X>400</X><Y>1700</Y>
+					<Label><X>-30</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[-7.46]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579444972497</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579445229501</Id>
+					<Name><![CDATA[K0_diff_CM]]></Name>
+					<Description><![CDATA[константа при нулевой температуре.
+
+По хорошему, если это действительно было бы что то типа михаэлиса, то та коснтанта, которая вставлена, была бы  вставлена из:
+Use and Misuse of Sorption Kinetic Data: A Common Mistake that Should
+be Avoided
+Silvana  Canzano,  Pasquale  Iovino * ,  Vincenzo  Leone,  Stefano  Salvestrini  and  Sante
+и она безразмерна
+
+или же можно вставить такую константу:
+7,95 миллилитров на  на миллиграмм древесины
+ENZYMATIC HYDROLYSIS OF LIGNOCELLULOSE: CELLULASE ENZYME ADSORPTION AND RECYCLE
+by
+MAOBING TU таблица 22]]></Description>
+					<X>580</X><Y>1700</Y>
+					<Label><X>-30</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.7421]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579445229499</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1574190138529" TargetId="1574190138524" Polarity="null">
@@ -1113,7 +1129,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>110</Y></Direction>
 					<Id>1574190138381</Id>
 					<Name><![CDATA[W_flac_m - C_flac_m]]></Name>
-					<X>320</X><Y>1660</Y>
+					<X>310</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1128,7 +1144,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-220</X><Y>-110</Y></Direction>
 					<Id>1574190138383</Id>
 					<Name><![CDATA[C_flac_c - U_M_C_lyg_fer]]></Name>
-					<X>720</X><Y>1770</Y>
+					<X>710</X><Y>1640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1143,7 +1159,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>180</X><Y>-110</Y></Direction>
 					<Id>1574190138388</Id>
 					<Name><![CDATA[C_flac_m - U_M_C_lyg_fer]]></Name>
-					<X>320</X><Y>1770</Y>
+					<X>310</X><Y>1640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1158,7 +1174,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>60</X><Y>-110</Y></Direction>
 					<Id>1574190138394</Id>
 					<Name><![CDATA[Z_flac_mc - U_M_C_lyg_fer]]></Name>
-					<X>440</X><Y>1770</Y>
+					<X>430</X><Y>1640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1173,7 +1189,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>110</Y></Direction>
 					<Id>1574190138396</Id>
 					<Name><![CDATA[W_flac_с - C_flac_c]]></Name>
-					<X>720</X><Y>1660</Y>
+					<X>710</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1188,7 +1204,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-60</X><Y>-110</Y></Direction>
 					<Id>1574190138398</Id>
 					<Name><![CDATA[U__flac_mc - U_M_C_lyg_fer]]></Name>
-					<X>560</X><Y>1770</Y>
+					<X>550</X><Y>1640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1200,7 +1216,7 @@ Doctor of Philosophy ]]></Description>
 				<Link SourceId="1574199016612" TargetId="1574190138526" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-100</X><Y>0</Y></Direction>
+					<Direction><X>-110</X><Y>-130</Y></Direction>
 					<Id>1574805653974</Id>
 					<Name><![CDATA[V_c - C_flac_c]]></Name>
 					<X>820</X><Y>1770</Y>
@@ -1248,7 +1264,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-80</Y></Direction>
 					<Id>1575216071805</Id>
 					<Name><![CDATA[V_m - C_flac_m]]></Name>
-					<X>320</X><Y>1850</Y>
+					<X>310</X><Y>1720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1263,7 +1279,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>120</Y></Direction>
 					<Id>1575482646973</Id>
 					<Name><![CDATA[MC_Seff - U_M_C_lyg_fer]]></Name>
-					<X>500</X><Y>1540</Y>
+					<X>490</X><Y>1410</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1278,7 +1294,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>-60</Y></Direction>
 					<Id>1575837807532</Id>
 					<Name><![CDATA[Ro_m - V_m]]></Name>
-					<X>320</X><Y>1910</Y>
+					<X>310</X><Y>1780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1293,7 +1309,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>90</X><Y>0</Y></Direction>
 					<Id>1575837824827</Id>
 					<Name><![CDATA[W_m - V_m]]></Name>
-					<X>230</X><Y>1850</Y>
+					<X>220</X><Y>1720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1308,7 +1324,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>100</X><Y>0</Y></Direction>
 					<Id>1575838275920</Id>
 					<Name><![CDATA[Sq_M - MC_Seff]]></Name>
-					<X>400</X><Y>1540</Y>
+					<X>390</X><Y>1410</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1323,7 +1339,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>-100</X><Y>0</Y></Direction>
 					<Id>1575838283400</Id>
 					<Name><![CDATA[Sq_wood_с - MC_Seff]]></Name>
-					<X>600</X><Y>1540</Y>
+					<X>590</X><Y>1410</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1333,12 +1349,12 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1575837744375" TargetId="1575838140488" Polarity="null">
-					<Height>150.884</Height>
+					<Height>125.56</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>170</X><Y>-310</Y></Direction>
 					<Id>1575838416096</Id>
 					<Name><![CDATA[W_m - Sq_M]]></Name>
-					<X>230</X><Y>1850</Y>
+					<X>220</X><Y>1720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1353,7 +1369,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>100</Y></Direction>
 					<Id>1575838637756</Id>
 					<Name><![CDATA[RoSq_M - Sq_M]]></Name>
-					<X>400</X><Y>1440</Y>
+					<X>390</X><Y>1310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1363,9 +1379,9 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1574867369724" TargetId="1575838071428" Polarity="null">
-					<Height>-68.616</Height>
+					<Height>-83.497</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-350</X><Y>-230</Y></Direction>
+					<Direction><X>-360</X><Y>-360</Y></Direction>
 					<Id>1575838853176</Id>
 					<Name><![CDATA[W_c - Sq_wood_с]]></Name>
 					<X>950</X><Y>1770</Y>
@@ -1383,7 +1399,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>0</X><Y>100</Y></Direction>
 					<Id>1575839469589</Id>
 					<Name><![CDATA[RoSq_C - Sq_wood_с]]></Name>
-					<X>600</X><Y>1440</Y>
+					<X>590</X><Y>1310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1398,7 +1414,7 @@ Doctor of Philosophy ]]></Description>
 					<Direction><X>90</X><Y>-190</Y></Direction>
 					<Id>1576065764884</Id>
 					<Name><![CDATA[W_m - W_flac_m]]></Name>
-					<X>230</X><Y>1850</Y>
+					<X>220</X><Y>1720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1410,10 +1426,10 @@ Doctor of Philosophy ]]></Description>
 				<Link SourceId="1576065168504" TargetId="1574190138529" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>120</X><Y>0</Y></Direction>
+					<Direction><X>90</X><Y>0</Y></Direction>
 					<Id>1576088492520</Id>
 					<Name><![CDATA[MF_flacc_m - W_flac_m]]></Name>
-					<X>200</X><Y>1660</Y>
+					<X>220</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1485,10 +1501,10 @@ Doctor of Philosophy ]]></Description>
 				<Link SourceId="1579187746647" TargetId="1576168632148" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>400</X><Y>-50</Y></Direction>
+					<Direction><X>80</X><Y>70</Y></Direction>
 					<Id>1576168662572</Id>
-					<Name><![CDATA[K0_Vmax - Vmax_lyg]]></Name>
-					<X>170</X><Y>2020</Y>
+					<Name><![CDATA[K0_Vmax - Vmax]]></Name>
+					<X>490</X><Y>1900</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1502,7 +1518,7 @@ Doctor of Philosophy ]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>90</Y></Direction>
 					<Id>1576168993608</Id>
-					<Name><![CDATA[Vmax_lyg - U_cc]]></Name>
+					<Name><![CDATA[Vmax - U_cc]]></Name>
 					<X>570</X><Y>1970</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1515,10 +1531,10 @@ Doctor of Philosophy ]]></Description>
 				<Link SourceId="1576358001837" TargetId="1576167814273" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>145</X><Y>90</Y></Direction>
+					<Direction><X>170</X><Y>60</Y></Direction>
 					<Id>1576169010303</Id>
 					<Name><![CDATA[Ks05 - U_cc]]></Name>
-					<X>430</X><Y>1970</Y>
+					<X>400</X><Y>2000</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1545,10 +1561,10 @@ Doctor of Philosophy ]]></Description>
 				<Link SourceId="1574190138526" TargetId="1576168632148" Polarity="null">
 					<Height>-36.424</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-150</X><Y>200</Y></Direction>
+					<Direction><X>-140</X><Y>330</Y></Direction>
 					<Id>1576169184630</Id>
-					<Name><![CDATA[C_flac_c - Vmax_lyg]]></Name>
-					<X>720</X><Y>1770</Y>
+					<Name><![CDATA[C_flac_c - Vmax]]></Name>
+					<X>710</X><Y>1640</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1573,7 +1589,7 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1576166245538" TargetId="1576170520661" Polarity="null">
-					<Height>0.0</Height>
+					<Height>-42.434</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>250</X><Y>160</Y></Direction>
 					<Id>1576170617989</Id>
@@ -1633,11 +1649,11 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1578226734720" TargetId="1576168632148" Polarity="null">
-					<Height>-3.631</Height>
+					<Height>-1.603</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-80</X><Y>70</Y></Direction>
 					<Id>1578226792880</Id>
-					<Name><![CDATA[K_error - Vmax_lyg]]></Name>
+					<Name><![CDATA[K_error - Vmax]]></Name>
 					<X>650</X><Y>1900</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1693,7 +1709,7 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1574199016612" TargetId="1578949393963" Polarity="null">
-					<Height>0.0</Height>
+					<Height>-72.633</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-500</X><Y>180</Y></Direction>
 					<Id>1578949569766</Id>
@@ -1707,43 +1723,43 @@ Doctor of Philosophy ]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579168603585" TargetId="1579168603589" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1579445229501" TargetId="1579168603589" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>64</X><Y>33</Y></Direction>
+					<Direction><X>-90</X><Y>0</Y></Direction>
 					<Id>1579168603582</Id>
 					<Name><![CDATA[K0_diff_CM - kt_diff_CM]]></Name>
-					<X>481</X><Y>1376.91</Y>
+					<X>580</X><Y>1700</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579168603587" TargetId="1579168603589" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1579444972499" TargetId="1579168603589" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-4</X><Y>57</Y></Direction>
+					<Direction><X>90</X><Y>0</Y></Direction>
 					<Id>1579168629696</Id>
 					<Name><![CDATA[GH_diff_CM - kt_diff_CM]]></Name>
-					<X>549</X><Y>1352</Y>
+					<X>400</X><Y>1700</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579168603589" TargetId="1574190138378" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-45</X><Y>251</Y></Direction>
+					<Direction><X>0</X><Y>-170</Y></Direction>
 					<Id>1579168755898</Id>
 					<Name><![CDATA[kt_diff_CM - U_M_C_lyg_fer]]></Name>
-					<X>545</X><Y>1409</Y>
+					<X>490</X><Y>1700</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1753,12 +1769,12 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579178941503" TargetId="1579168603589" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>505</X><Y>-301</Y></Direction>
+					<Direction><X>0</X><Y>-90</Y></Direction>
 					<Id>1579178970257</Id>
-					<Name><![CDATA[T - kt_diff_CM]]></Name>
-					<X>40</X><Y>1710</Y>
+					<Name><![CDATA[Temperature - kt_diff_CM]]></Name>
+					<X>490</X><Y>1790</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1768,42 +1784,42 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579181594782" TargetId="1579187746647" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>140</X><Y>10</Y></Direction>
+					<Direction><X>90</X><Y>0</Y></Direction>
 					<Id>1579187824948</Id>
 					<Name><![CDATA[GH_kin - K0_Vmax]]></Name>
-					<X>30</X><Y>2010</Y>
+					<X>400</X><Y>1900</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579181801955" TargetId="1579187746647" Polarity="null">
-					<Height>-41.745</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>140</X><Y>-20</Y></Direction>
+					<Direction><X>0</X><Y>-70</Y></Direction>
 					<Id>1579187834950</Id>
 					<Name><![CDATA[K0_kin - K0_Vmax]]></Name>
-					<X>30</X><Y>2040</Y>
+					<X>490</X><Y>1970</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579178941503" TargetId="1579187746647" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>130</X><Y>310</Y></Direction>
+					<Direction><X>0</X><Y>110</Y></Direction>
 					<Id>1579188038840</Id>
-					<Name><![CDATA[T - K0_Vmax]]></Name>
-					<X>40</X><Y>1710</Y>
+					<Name><![CDATA[Temperature - K0_Vmax]]></Name>
+					<X>490</X><Y>1790</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1813,27 +1829,27 @@ Doctor of Philosophy ]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579211337984" TargetId="1579212872687" Polarity="null">
-					<Height>20.0</Height>
+					<Height>-1.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>50</Y></Direction>
+					<Direction><X>70</X><Y>0</Y></Direction>
 					<Id>1579212941714</Id>
-					<Name><![CDATA[H - error_Vmax_ph]]></Name>
-					<X>30</X><Y>2110</Y>
+					<Name><![CDATA[pH - error_Vmax_ph]]></Name>
+					<X>420</X><Y>2130</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
+					<Color>-256</Color>
+					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579212872687" TargetId="1576167814273" Polarity="null">
-					<Height>20.0</Height>
+					<Height>-1.414</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>540</X><Y>-100</Y></Direction>
+					<Direction><X>80</X><Y>-70</Y></Direction>
 					<Id>1579215731303</Id>
 					<Name><![CDATA[error_Vmax_ph - U_cc]]></Name>
-					<X>30</X><Y>2160</Y>
+					<X>490</X><Y>2130</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2234,7 +2250,7 @@ Doctor of Philosophy ]]></Description>
 					<ParameterName><![CDATA[K_error]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[T]]></ParameterName>
+					<ParameterName><![CDATA[Temperature]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[GH_kin]]></ParameterName>
@@ -2243,7 +2259,13 @@ Doctor of Philosophy ]]></Description>
 					<ParameterName><![CDATA[K0_kin]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[H]]></ParameterName>
+					<ParameterName><![CDATA[pH]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
