@@ -450,8 +450,8 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[16*(1e9)*((9e-6)*(15e-6)*0.02*70*pH)/((pH*pH*(15e-6)*0.02+(9e-6)*70)+15e-6*10*(1e-6))*
-pH*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
+						<Formula><![CDATA[16*(1e9)*((9e-6)*(15e-6)*0.02*70*H)/((H*H*(15e-6)*0.02+(9e-6)*70)+15e-6*10*(1e-6))*
+H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -1027,7 +1027,7 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1579211337984</Id>
-					<Name><![CDATA[pH]]></Name>
+					<Name><![CDATA[H]]></Name>
 					<X>420</X><Y>2130</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1833,7 +1833,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>70</X><Y>0</Y></Direction>
 					<Id>1579212941714</Id>
-					<Name><![CDATA[pH - error_Vmax_ph]]></Name>
+					<Name><![CDATA[H - error_Vmax_ph]]></Name>
 					<X>420</X><Y>2130</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2259,7 +2259,7 @@ MAOBING TU таблица 22]]></Description>
 					<ParameterName><![CDATA[K0_kin]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[pH]]></ParameterName>
+					<ParameterName><![CDATA[H]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
