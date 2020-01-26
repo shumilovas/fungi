@@ -559,7 +559,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[8.4]]></InitialValue>
+						<InitialValue><![CDATA[Wm0]]></InitialValue>
 						<Color/>
 						<Shadow>
 							<Id>1579720852671</Id>
@@ -585,7 +585,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
-						<InitialValue><![CDATA[0.784]]></InitialValue>
+						<InitialValue><![CDATA[0.0]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -732,7 +732,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1394982657396" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Wm*q*Sm*(A-Wm)/A)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
+						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -835,6 +835,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394983172605</Id>
 					<Name><![CDATA[YGm]]></Name>
+					<Description><![CDATA[Эффективность роста мицелия (граммов мицелия из грамма сахаров)]]></Description>
 					<X>-490</X><Y>60</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -859,6 +860,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394983187577</Id>
 					<Name><![CDATA[Mm]]></Name>
+					<Description><![CDATA[Коэффициент дыхания поддержания для мицелия]]></Description>
+					<Unit>1/час</Unit> 
 					<X>-310</X><Y>20</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -869,7 +872,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.041/24]]></Code>
+							<Code><![CDATA[0//0.041/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1394983187575</Id>
@@ -883,6 +886,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394985410272</Id>
 					<Name><![CDATA[U]]></Name>
+					<Description><![CDATA[Предельно достижимое соотношение концентраций сахаров в мицелии и в опилках]]></Description>
 					<X>-490</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -907,6 +911,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394985441362</Id>
 					<Name><![CDATA[Z]]></Name>
+					<Description><![CDATA[Коэффициент диффузии сахаров из опилок в мицелий]]></Description>
+					<Unit>метр*метр*метр/(грамм*час)</Unit> 
 					<X>-540</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -931,6 +937,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394986428162</Id>
 					<Name><![CDATA[YGs]]></Name>
+					<Description><![CDATA[Эффективность роста спорофоров (граммов спорофора из грамма сахаров)]]></Description>
 					<X>-310</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -955,6 +962,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394986604217</Id>
 					<Name><![CDATA[Ms]]></Name>
+					<Description><![CDATA[Коэффициент дыхания поддержания для спорофора]]></Description>
+					<Unit>1/час</Unit> 
 					<X>-250</X><Y>190</Y>
 					<Label><X>-10</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -979,6 +988,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394986762729</Id>
 					<Name><![CDATA[k]]></Name>
+					<Description><![CDATA[Коэффициент экспоненциального распада  в уравнении роста спорофора]]></Description>
+					<Unit>1/час</Unit> 
 					<X>-180</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1003,6 +1014,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394986772305</Id>
 					<Name><![CDATA[a]]></Name>
+					<Description><![CDATA[Коэффициент в уравнении роста спорофора]]></Description>
+					<Unit>метр*метр/(грамм*час)</Unit> 
 					<X>-130</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1027,6 +1040,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394986790574</Id>
 					<Name><![CDATA[h]]></Name>
+					<Description><![CDATA[Коэффициент в знаменателе уравнения роста спорофора]]></Description>
+					<Unit>метр*метр*метр/грамм</Unit> 
 					<X>-80</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1050,7 +1065,9 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1394986825272</Id>
-					<Name><![CDATA[A]]></Name>
+					<Name><![CDATA[Am]]></Name>
+					<Description><![CDATA[Асимптота в уравнении роста мицелия]]></Description>
+					<Unit>грамм</Unit> 
 					<X>-490</X><Y>120</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1075,6 +1092,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1395068516572</Id>
 					<Name><![CDATA[Smcrit]]></Name>
+					<Description><![CDATA[Критическая концентрация сахаров внутри мицелия, при котором начинается рост спорофоров]]></Description>
+					<Unit>грамм/(метр*метр*метр)</Unit> 
 					<X>-190</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1099,6 +1118,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1395068742384</Id>
 					<Name><![CDATA[q]]></Name>
+					<Description><![CDATA[Коэффициент в уравнении роста мицелия]]></Description>
+					<Unit>метр*метр*метр/(грамм*час)</Unit> 
 					<X>-310</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1123,7 +1144,9 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1395238254834</Id>
 					<Name><![CDATA[lambda]]></Name>
-					<X>-150</X><Y>240</Y>
+					<Description><![CDATA[Коэффициент в формуле расчета интенсивности инициации роста нового спорофора]]></Description>
+					<Unit>метр*метр*метр/(грамм*грамм*час)</Unit> 
+					<X>-140</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1195,6 +1218,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1405517863092</Id>
 					<Name><![CDATA[alpha]]></Name>
+					<Description><![CDATA[Нечто странное и непонятное. Присвоим-ка пока это нулю]]></Description>
 					<X>-310</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1297,7 +1321,7 @@ Doctor of Philosophy ]]></Description>
 					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
 					<Unit>метр*метр*метр</Unit> 
 					<X>-210</X><Y>850</Y>
-					<Label><X>-10</X><Y>-20</Y></Label>
+					<Label><X>5</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1306,7 +1330,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.004]]></Code>
+							<Code><![CDATA[0.11]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477592</Id>
@@ -1359,7 +1383,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[900000]]></Code>
+							<Code><![CDATA[90000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477598</Id>
@@ -1746,6 +1770,32 @@ MAOBING TU таблица 22]]></Description>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1579947006832</Id>
+					<Name><![CDATA[Wm0]]></Name>
+					<Description><![CDATA[Начальная масса мицелия]]></Description>
+					<Unit>грамм</Unit> 
+					<X>-390</X><Y>-80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[8.4]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1579947006830</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1394981990462" TargetId="1394982101372" Polarity="null">
@@ -1843,7 +1893,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>0</Y></Direction>
 					<Id>1579448666050</Id>
-					<Name><![CDATA[A - Um]]></Name>
+					<Name><![CDATA[Am - Um]]></Name>
 					<X>-490</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1856,10 +1906,10 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1395238254834" TargetId="1395238597182" Polarity="null">
 					<Height>-3.544372685455528</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-40</X><Y>-50</Y></Direction>
+					<Direction><X>-50</X><Y>-50</Y></Direction>
 					<Id>1579448666051</Id>
 					<Name><![CDATA[lambda - initiationRate]]></Name>
-					<X>-150</X><Y>240</Y>
+					<X>-140</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2978,6 +3028,21 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1579947006832" TargetId="1394981990462" Polarity="null">
+					<Height>1.042</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>80</Y></Direction>
+					<Id>1579947140971</Id>
+					<Name><![CDATA[Wm0 - Wm]]></Name>
+					<X>-390</X><Y>-80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -2995,7 +3060,7 @@ MAOBING TU таблица 22]]></Description>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[initiationRate]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1395238844921</OccurrenceDate>
@@ -3333,6 +3398,28 @@ for (Mushroom mush : harvested) {
 					<LevelVisibility>ALWAYS_SHOW</LevelVisibility>
 
 			<Presentation>
+				<Oval>
+					<Id>1579946417350</Id>
+					<Name><![CDATA[oval]]></Name>
+					<X>-210</X><Y>850</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>20</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
 				<Rectangle>
 					<Id>1396454349410</Id>
 					<Name><![CDATA[basket]]></Name>
@@ -4018,6 +4105,137 @@ for (Mushroom mush : harvested) {
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-16744320</Color>
 					<Expression2><![CDATA[W_mon.get(2)]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>2.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>300</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[50]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
+    			</TimePlot>
+				<Oval>
+					<Id>1579946515364</Id>
+					<Name><![CDATA[oval1]]></Name>
+					<X>-750</X><Y>1400</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>20</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
+				<Text>
+					<Id>1579946535066</Id>
+					<Name><![CDATA[text10]]></Name>
+					<X>-720</X><Y>1390</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[- начальные значения]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>16</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Oval>
+					<Id>1579947415303</Id>
+					<Name><![CDATA[oval2]]></Name>
+					<X>-390</X><Y>-80</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>20</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
+    			<TimePlot>
+					<Id>1579948028107</Id>
+					<Name><![CDATA[plot4]]></Name>
+					<X>640</X><Y>1020</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1575792000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[0.2]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>650</Width>
+					<Height>400</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>570</Width>
+						<Height>310</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>DAY</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Масса мицелия]]></Title>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-16776961</Color>
+					<Expression2><![CDATA[Wm]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
@@ -5391,7 +5609,7 @@ else
 					<ParameterName><![CDATA[h]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[A]]></ParameterName>
+					<ParameterName><![CDATA[Am]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Smcrit]]></ParameterName>
@@ -5400,7 +5618,7 @@ else
 					<ParameterName><![CDATA[q]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[parameter]]></ParameterName>
+					<ParameterName><![CDATA[Wm0]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[lambda]]></ParameterName>
@@ -6660,7 +6878,7 @@ datasetBestFeasibleObjective.reset();
 					<Rotation>0.0</Rotation>
 					<Color>-4144960</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( A )]]></TextCode>
+					<TextCode><![CDATA[format( Am )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
@@ -7551,6 +7769,10 @@ copyToClipboard( s );
 				<Id>1579717477671</Id>
 				<Type>FIXED</Type>
 			</Parameter>
+			<Parameter>	
+				<Id>1579947006832</Id>
+				<Type>FIXED</Type>
+			</Parameter>
 			<ObjectiveFunctionCode><![CDATA[root.TotalWs]]></ObjectiveFunctionCode>
 			<Objective>MAXIMIZE</Objective>
 			<AfterIterationCode><![CDATA[if (isBestSolutionFeasible()) {
@@ -8089,6 +8311,9 @@ if (bestInfeasibleObjective != Double.NEGATIVE_INFINITY) {
 			<FreeformParamValue>	
 				<Id>1579717477671</Id>
 			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1579947006832</Id>
+			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1394983172605</Id>
 				<Type>FIXED</Type>
@@ -8380,6 +8605,10 @@ if (bestInfeasibleObjective != Double.NEGATIVE_INFINITY) {
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1579717477671</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1579947006832</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
 			<ModelTimeProperties>
