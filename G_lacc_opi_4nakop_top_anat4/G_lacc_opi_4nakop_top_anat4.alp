@@ -734,7 +734,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[900000]]></Code>
+							<Code><![CDATA[90000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1575837044478</Id>

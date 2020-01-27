@@ -872,7 +872,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0//0.041/24]]></Code>
+							<Code><![CDATA[0.041/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1394983187575</Id>
@@ -1078,7 +1078,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[375]]></Code>
+							<Code><![CDATA[375*3]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1394986825270</Id>
@@ -1487,9 +1487,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1517,9 +1517,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1546,9 +1546,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1575,9 +1575,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1629,9 +1629,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1657,9 +1657,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[model4nakArray]]></PackageName>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1785,7 +1785,7 @@ MAOBING TU таблица 22]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[8.4]]></Code>
+							<Code><![CDATA[500]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -5717,8 +5717,8 @@ else
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1394978861159]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1401026861000]]></FinalDate>	
-				<FinalTime><![CDATA[1680.0]]></FinalTime>	
+				<FinalDate><![CDATA[1405346861000]]></FinalDate>	
+				<FinalTime><![CDATA[2880.0]]></FinalTime>	
 			</ModelTimeProperties>
 		</SimulationExperiment>
 		<!--   =========  Optimization Experiment   ========  -->
@@ -8642,11 +8642,5 @@ if (bestInfeasibleObjective != Double.NEGATIVE_INFINITY) {
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
-    <RequiredLibraryReference>
-		<LibraryName><![CDATA[model4nakArray]]></LibraryName>
-		<VersionMajor>0</VersionMajor>
-		<VersionMinor>0</VersionMinor>
-		<VersionBuild>0</VersionBuild>
-    </RequiredLibraryReference>
 </Model>
 </AnyLogicWorkspace>
