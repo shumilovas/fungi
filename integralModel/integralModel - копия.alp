@@ -194,7 +194,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_flac_m/V_m]]></Formula>
+						<Formula><![CDATA[W_flac_m/(V_m*MF_apic_m)]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
@@ -543,6 +543,61 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
 						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1580212724949</Id>
+					<Name><![CDATA[MF_apic_m]]></Name>
+					<Description><![CDATA[доля апикальных клеток в мицелии, она должна  уменьшаатся по росту мицелия]]></Description>
+					<X>-950</X><Y>790</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(Perimetr_Myc+0.01*V_m)/(20*V_m)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1580223947289</Id>
+					<Name><![CDATA[R_myc]]></Name>
+					<Description><![CDATA[радиус мицелия? Вычисляется как корень по известной формуле из шара. Но я не смог поставить в формуле корень. пришлось ставить без корня
+на самом деле тут надо вычислять радиус 
+полусферы, исходя из объема полусферы.
+Но пока что я вычисляю радиус по обьему сферы, который найден из массы мицелия. 
+
+В размерностях я уже запутался, потом досчитаю.]]></Description>
+					<Unit>сантиметров</Unit> 
+					<X>-1225.998</X><Y>560</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[cbrt(((4*V_m)/(3*3.14)))]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1580223947344</Id>
+					<Name><![CDATA[Perimetr_Myc]]></Name>
+					<Description><![CDATA[площадь шара мицелиция]]></Description>
+					<Unit>сантиметров квадратных</Unit> 
+					<X>-1234.15</X><Y>630</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[4*3.14*(R_myc*R_myc)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
 					</Properties>
 
 				</Variable>
@@ -1330,7 +1385,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.11]]></Code>
+							<Code><![CDATA[11000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477592</Id>
@@ -1785,7 +1840,7 @@ MAOBING TU таблица 22]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[500]]></Code>
+							<Code><![CDATA[5000000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -3043,6 +3098,81 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1580212724949" TargetId="1579717477673" Polarity="null">
+					<Height>-33.153</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>230</X><Y>-70</Y></Direction>
+					<Id>1580212801030</Id>
+					<Name><![CDATA[MF_apic_m - C_flac_m]]></Name>
+					<X>-950</X><Y>790</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579717477682" TargetId="1580223947289" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-407</X><Y>70</Y></Direction>
+					<Id>1580223947285</Id>
+					<Name><![CDATA[V_m - R_myc]]></Name>
+					<X>-820.874</X><Y>490</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1580223947289" TargetId="1580223947344" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-9</X><Y>70</Y></Direction>
+					<Id>1580223947287</Id>
+					<Name><![CDATA[R_myc - Perimetr_Myc]]></Name>
+					<X>-1225.998</X><Y>560</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1580223947344" TargetId="1580212724949" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>284</X><Y>160</Y></Direction>
+					<Id>1580224175536</Id>
+					<Name><![CDATA[Perimetr_Myc - MF_apic_m]]></Name>
+					<X>-1234</X><Y>630</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579717477682" TargetId="1580212724949" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>300</Y></Direction>
+					<Id>1580224188746</Id>
+					<Name><![CDATA[V_m - MF_apic_m]]></Name>
+					<X>-820</X><Y>490</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -3445,7 +3575,7 @@ for (Mushroom mush : harvested) {
 				<Rectangle>
 					<Id>1395329279085</Id>
 					<Name><![CDATA[rectangle]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>0</X><Y>30</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
