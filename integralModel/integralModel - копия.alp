@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.1.201910011755" AlpVersion="8.4.9">
 <Model>
 	<Id>1394978861119</Id>
-	<Name><![CDATA[integralModel]]></Name>
+	<Name><![CDATA[integralModel - копия]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[modelmushroomstopajcomplex]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
@@ -556,7 +556,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Perimetr_Myc+0.01*V_m)/(20*V_m)]]></Formula>
+						<Formula><![CDATA[(10*V_m)/(Perimetr_Myc)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -578,7 +578,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[cbrt(((4*V_m)/(3*3.14)))]]></Formula>
+						<Formula><![CDATA[cbrt(((3*V_m)/(4*3.14)))]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -587,7 +587,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="AuxVariable">
 					<Id>1580223947344</Id>
 					<Name><![CDATA[Perimetr_Myc]]></Name>
-					<Description><![CDATA[площадь шара мицелиция]]></Description>
+					<Description><![CDATA[площадь шара мицелиция/Площадь поверхности шара равна квадрату его диаметра умноженного на число π]]></Description>
 					<Unit>сантиметров квадратных</Unit> 
 					<X>-1234.15</X><Y>630</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
@@ -1385,7 +1385,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[11000]]></Code>
+							<Code><![CDATA[0.11]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477592</Id>
@@ -1636,7 +1636,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.781*0.825, 0.001}]]></Code>
+							<Code><![CDATA[{1,0.005}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477639</Id>
@@ -1840,10 +1840,11 @@ MAOBING TU таблица 22]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[5000000]]></Code>
+							<Code><![CDATA[8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
+							<Label><![CDATA[Wm0]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -5814,9 +5815,6 @@ else
 					<ParameterName><![CDATA[Ks05]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[K_error]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[Temperature]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -5833,6 +5831,9 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[K_error]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
