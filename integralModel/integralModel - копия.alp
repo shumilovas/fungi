@@ -336,7 +336,7 @@
 					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[k_lac2*C_flac_c*Kerror_new*Kerror_Ks05]]></Formula>
 						<Value><![CDATA[0]]></Value>
-						<Color>-65536</Color>
+						<Color>-6632142</Color>
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
@@ -556,7 +556,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(10*V_m)/(Perimetr_Myc)]]></Formula>
+						<Formula><![CDATA[(10*V_m)/(S_Myc)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-6632142</Color>
 					</Properties>
@@ -586,7 +586,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1580223947344</Id>
-					<Name><![CDATA[Perimetr_Myc]]></Name>
+					<Name><![CDATA[S_Myc]]></Name>
 					<Description><![CDATA[площадь шара мицелиция/Площадь поверхности шара равна квадрату его диаметра умноженного на число π]]></Description>
 					<Unit>сантиметров квадратных</Unit> 
 					<X>-1234.15</X><Y>250.36</Y>
@@ -2600,7 +2600,7 @@ MAOBING TU таблица 22]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color>-65536</Color>
+					<Color>-6632142</Color>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
@@ -2735,7 +2735,7 @@ MAOBING TU таблица 22]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color>-65536</Color>
+					<Color>-6632142</Color>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
@@ -3119,7 +3119,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-9</X><Y>72</Y></Direction>
 					<Id>1580223947287</Id>
-					<Name><![CDATA[R_myc - Perimetr_Myc]]></Name>
+					<Name><![CDATA[R_myc - S_Myc]]></Name>
 					<X>-1225.998</X><Y>177.045</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3134,7 +3134,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>304</X><Y>10</Y></Direction>
 					<Id>1580224175536</Id>
-					<Name><![CDATA[Perimetr_Myc - MF_apic_m]]></Name>
+					<Name><![CDATA[S_Myc - MF_apic_m]]></Name>
 					<X>-1234</X><Y>250</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
