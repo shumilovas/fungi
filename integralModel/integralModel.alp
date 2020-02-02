@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.1.201910011755" AlpVersion="8.4.9">
 <Model>
 	<Id>1394978861119</Id>
-	<Name><![CDATA[integralModel - копия]]></Name>
+	<Name><![CDATA[integralModel]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[modelmushroomstopajcomplex]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
@@ -132,7 +132,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1397722156421</Id>
 					<Name><![CDATA[TotalWs]]></Name>
-					<X>-800</X><Y>200</Y>
+					<X>-750</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -235,7 +235,7 @@
 					<Name><![CDATA[V_m]]></Name>
 					<Description><![CDATA[объем мицелия, метров кубических]]></Description>
 					<X>-820</X><Y>490</Y>
-					<Label><X>-40</X><Y>-5</Y></Label>
+					<Label><X>5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -549,9 +549,9 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="AuxVariable">
 					<Id>1580212724949</Id>
 					<Name><![CDATA[MF_apic_m]]></Name>
-					<Description><![CDATA[доля апикальных клеток в мицелии, она должна  уменьшаатся по росту мицелия]]></Description>
-					<X>-930</X><Y>260</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Description><![CDATA[Доля апикальных клеток в мицелии, она должна  уменьшаться с ростом мицелия]]></Description>
+					<X>-1050</X><Y>490</Y>
+					<Label><X>-30</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -565,20 +565,19 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="AuxVariable">
 					<Id>1580223947289</Id>
 					<Name><![CDATA[R_myc]]></Name>
-					<Description><![CDATA[радиус мицелия? Вычисляется как корень по известной формуле из шара. Но я не смог поставить в формуле корень. пришлось ставить без корня
+					<Description><![CDATA[Радиус мицелия? Вычисляется как корень по известной формуле из шара. Но я не смог поставить в формуле корень. пришлось ставить без корня
 на самом деле тут надо вычислять радиус 
 полусферы, исходя из объема полусферы.
 Но пока что я вычисляю радиус по обьему сферы, который найден из массы мицелия. 
-
 В размерностях я уже запутался, потом досчитаю.]]></Description>
-					<Unit>сантиметров</Unit> 
-					<X>-1225.998</X><Y>177.045</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Unit>см</Unit> 
+					<X>-900</X><Y>490</Y>
+					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[cbrt(((3*V_m)/(4*3.14)))]]></Formula>
+						<Formula><![CDATA[Math.cbrt(((3*V_m)/(4*Math.PI)))]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-6632142</Color>
 					</Properties>
@@ -589,13 +588,13 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<Name><![CDATA[S_Myc]]></Name>
 					<Description><![CDATA[площадь шара мицелиция/Площадь поверхности шара равна квадрату его диаметра умноженного на число π]]></Description>
 					<Unit>сантиметров квадратных</Unit> 
-					<X>-1234.15</X><Y>250.36</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<X>-980</X><Y>490</Y>
+					<Label><X>-20</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[4*3.14*(R_myc*R_myc)]]></Formula>
+						<Formula><![CDATA[4*Math.PI*(R_myc*R_myc)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-6632142</Color>
 					</Properties>
@@ -604,13 +603,14 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="AuxVariable">
 					<Id>1580409741241</Id>
 					<Name><![CDATA[Mm_apic]]></Name>
-					<X>-300</X><Y>40</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Description><![CDATA[Коэффициент поддержания дыхания для мицелия с учетом его возраста]]></Description>
+					<X>-310</X><Y>30</Y>
+					<Label><X>-30</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Mm *5* MF_apic_m]]></Formula>
+						<Formula><![CDATA[Mm*5*MF_apic_m]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -907,7 +907,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[YGm]]></Name>
 					<Description><![CDATA[Эффективность роста мицелия (граммов мицелия из грамма сахаров)]]></Description>
 					<X>-490</X><Y>60</Y>
-					<Label><X>-10</X><Y>-20</Y></Label>
+					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -930,10 +930,10 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1394983187577</Id>
 					<Name><![CDATA[Mm]]></Name>
-					<Description><![CDATA[Коэффициент дыхания поддержания для мицелия]]></Description>
+					<Description><![CDATA[Базовый коэффициент дыхания поддержания для мицелия]]></Description>
 					<Unit>1/час</Unit> 
-					<X>-310</X><Y>20</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<X>-220</X><Y>30</Y>
+					<Label><X>-15</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1139,7 +1139,7 @@ Doctor of Philosophy ]]></Description>
 					<Description><![CDATA[Асимптота в уравнении роста мицелия]]></Description>
 					<Unit>грамм</Unit> 
 					<X>-490</X><Y>120</Y>
-					<Label><X>-10</X><Y>-20</Y></Label>
+					<Label><X>-10</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2140,7 +2140,7 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1394981990462" TargetId="1395238597182" Polarity="null">
-					<Height>87.429</Height>
+					<Height>123.035</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>200</X><Y>190</Y></Direction>
 					<Id>1579448666064</Id>
@@ -3085,12 +3085,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1580212724949" TargetId="1579717477673" Polarity="null">
-					<Height>-33.153</Height>
+					<Height>-82.092</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>210</X><Y>460</Y></Direction>
+					<Direction><X>330</X><Y>230</Y></Direction>
 					<Id>1580212801030</Id>
 					<Name><![CDATA[MF_apic_m - C_flac_m]]></Name>
-					<X>-930</X><Y>260</Y>
+					<X>-1050</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3100,9 +3100,9 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579717477682" TargetId="1580223947289" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-405</X><Y>-313</Y></Direction>
+					<Direction><X>-80</X><Y>0</Y></Direction>
 					<Id>1580223947285</Id>
 					<Name><![CDATA[V_m - R_myc]]></Name>
 					<X>-820</X><Y>490</Y>
@@ -3115,12 +3115,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1580223947289" TargetId="1580223947344" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-9</X><Y>72</Y></Direction>
+					<Direction><X>-80</X><Y>0</Y></Direction>
 					<Id>1580223947287</Id>
 					<Name><![CDATA[R_myc - S_Myc]]></Name>
-					<X>-1225.998</X><Y>177.045</Y>
+					<X>-900</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3130,12 +3130,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1580223947344" TargetId="1580212724949" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>304</X><Y>10</Y></Direction>
+					<Direction><X>-70</X><Y>0</Y></Direction>
 					<Id>1580224175536</Id>
 					<Name><![CDATA[S_Myc - MF_apic_m]]></Name>
-					<X>-1234</X><Y>250</Y>
+					<X>-980</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3145,9 +3145,9 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579717477682" TargetId="1580212724949" Polarity="null">
-					<Height>20.0</Height>
+					<Height>-78.392</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-110</X><Y>-230</Y></Direction>
+					<Direction><X>-230</X><Y>0</Y></Direction>
 					<Id>1580224188746</Id>
 					<Name><![CDATA[V_m - MF_apic_m]]></Name>
 					<X>-820</X><Y>490</Y>
@@ -3160,12 +3160,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1580409741241" TargetId="1579721301639" Polarity="null">
-					<Height>20.0</Height>
+					<Height>-1.524</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-90</X><Y>20</Y></Direction>
+					<Direction><X>-80</X><Y>30</Y></Direction>
 					<Id>1580409783271</Id>
 					<Name><![CDATA[Mm_apic - dWm]]></Name>
-					<X>-300</X><Y>40</Y>
+					<X>-310</X><Y>30</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3175,12 +3175,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1580409741241" TargetId="1394982113124" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-90</X><Y>80</Y></Direction>
+					<Direction><X>-80</X><Y>90</Y></Direction>
 					<Id>1580409802655</Id>
 					<Name><![CDATA[Mm_apic - Um]]></Name>
-					<X>-300</X><Y>40</Y>
+					<X>-310</X><Y>30</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3190,12 +3190,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1394983187577" TargetId="1580409741241" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>10</X><Y>20</Y></Direction>
+					<Direction><X>-90</X><Y>0</Y></Direction>
 					<Id>1580409880348</Id>
 					<Name><![CDATA[Mm - Mm_apic]]></Name>
-					<X>-310</X><Y>20</Y>
+					<X>-220</X><Y>30</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3205,12 +3205,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1580212724949" TargetId="1580409741241" Polarity="null">
-					<Height>20.0</Height>
+					<Height>161.012</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>630</X><Y>-220</Y></Direction>
+					<Direction><X>740</X><Y>-460</Y></Direction>
 					<Id>1580410037662</Id>
 					<Name><![CDATA[MF_apic_m - Mm_apic]]></Name>
-					<X>-930</X><Y>260</Y>
+					<X>-1050</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3224,7 +3224,7 @@ MAOBING TU таблица 22]]></Description>
 				<Event>
 					<Id>1395238845022</Id>
 					<Name><![CDATA[initiating]]></Name>
-					<X>-250</X><Y>90</Y>
+					<X>-200</X><Y>100</Y>
 					<Label><X>-30</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3258,7 +3258,7 @@ newMushroom.setXY(x,y); ]]></Action>
 				<Event>
 					<Id>1395569989504</Id>
 					<Name><![CDATA[harvesting]]></Name>
-					<X>-250</X><Y>50</Y>
+					<X>-250</X><Y>70</Y>
 					<Label><X>-30</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3302,7 +3302,7 @@ for (Mushroom mush : harvested) {
 				<Event>
 					<Id>1397721648829</Id>
 					<Name><![CDATA[event]]></Name>
-					<X>-800</X><Y>50</Y>
+					<X>-750</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3428,9 +3428,6 @@ for (Mushroom mush : harvested) {
 							<Value Class="CodeValue">
 								<Code><![CDATA[YGs]]></Code>
 							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[Ro_m]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -4557,22 +4554,6 @@ for (Mushroom mush : harvested) {
 					</Properties>
 
 				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1580408956093</Id>
-					<Name><![CDATA[V_m]]></Name>
-					<Description><![CDATA[объем мицелия, метров кубических]]></Description>
-					<X>-820</X><Y>490</Y>
-					<Label><X>-40</X><Y>-5</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Wm/Ro_m]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1395236796405</Id>
 					<Name><![CDATA[ws]]></Name>
@@ -4852,33 +4833,6 @@ for (Mushroom mush : harvested) {
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<Variable Class="Parameter">
-					<Id>1580408956083</Id>
-					<Name><![CDATA[Ro_m]]></Name>
-					<Description><![CDATA[плотность мицелия]]></Description>
-					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>-820</X><Y>390</Y>
-					<Label><X>-45</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[90000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1580408956081</Id>
-							<Label><![CDATA[Ro_m]]></Label>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1405518355461" TargetId="1405518207649" Polarity="null">
@@ -5113,21 +5067,6 @@ for (Mushroom mush : harvested) {
 					<Id>1579448666110</Id>
 					<Name><![CDATA[box - degradation]]></Name>
 					<X>-210</X><Y>40</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1580408956083" TargetId="1580408956093" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>100</Y></Direction>
-					<Id>1580408956079</Id>
-					<Name><![CDATA[Ro_m - V_m]]></Name>
-					<X>-820</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
