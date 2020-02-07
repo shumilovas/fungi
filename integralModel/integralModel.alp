@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.1.201910011755" AlpVersion="8.4.9">
 <Model>
 	<Id>1394978861119</Id>
-	<Name><![CDATA[integralModel1]]></Name>
+	<Name><![CDATA[integralModel]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[modelmushroomstopajcomplex]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
