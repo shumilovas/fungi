@@ -1049,7 +1049,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[10*5]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1394985410270</Id>
@@ -1075,7 +1075,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.000001329/24]]></Code>
+							<Code><![CDATA[0.000001329*5/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1394985441360</Id>
@@ -1733,7 +1733,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.781*0.825, 0.001}]]></Code>
+							<Code><![CDATA[{.781*0.825*10, 0.001*10}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477639</Id>
@@ -1937,7 +1937,7 @@ MAOBING TU таблица 22]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[500]]></Code>
+							<Code><![CDATA[8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -1988,7 +1988,7 @@ MAOBING TU таблица 22]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002*5]]></Code>
+							<Code><![CDATA[0.002*10]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1580908843482</Id>
