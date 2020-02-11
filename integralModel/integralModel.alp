@@ -209,7 +209,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_flac_с/V_c]]></Formula>
+						<Formula><![CDATA[W_flac_с/(V_c+0.00000001*time())]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
