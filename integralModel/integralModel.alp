@@ -194,7 +194,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_flac_m/(V_m*MF_apic_m)]]></Formula>
+						<Formula><![CDATA[W_flac_m/(V_m)]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
@@ -531,7 +531,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Um-Wm*Mm_apic)*YGm]]></Formula>
+						<Formula><![CDATA[(Um-Wm*Mm)*YGm]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 						<Shadow>
@@ -543,76 +543,6 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
 						</Shadow>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1580212724949</Id>
-					<Name><![CDATA[MF_apic_m]]></Name>
-					<Description><![CDATA[Доля апикальных клеток в мицелии, она должна  уменьшаться с ростом мицелия]]></Description>
-					<X>-1050</X><Y>490</Y>
-					<Label><X>-30</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(10*V_m)/(S_Myc)]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-6632142</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1580223947289</Id>
-					<Name><![CDATA[R_myc]]></Name>
-					<Description><![CDATA[Радиус мицелия? Вычисляется как корень по известной формуле из шара. Но я не смог поставить в формуле корень. пришлось ставить без корня
-на самом деле тут надо вычислять радиус 
-полусферы, исходя из объема полусферы.
-Но пока что я вычисляю радиус по обьему сферы, который найден из массы мицелия. 
-В размерностях я уже запутался, потом досчитаю.]]></Description>
-					<Unit>см</Unit> 
-					<X>-900</X><Y>490</Y>
-					<Label><X>-20</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Math.cbrt(((3*V_m)/(4*Math.PI)))]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-6632142</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1580223947344</Id>
-					<Name><![CDATA[S_Myc]]></Name>
-					<Description><![CDATA[площадь шара мицелиция/Площадь поверхности шара равна квадрату его диаметра умноженного на число π]]></Description>
-					<Unit>сантиметров квадратных</Unit> 
-					<X>-980</X><Y>490</Y>
-					<Label><X>-20</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[4*Math.PI*(R_myc*R_myc)]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-6632142</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1580409741241</Id>
-					<Name><![CDATA[Mm_apic]]></Name>
-					<Description><![CDATA[Коэффициент поддержания дыхания для мицелия с учетом его возраста]]></Description>
-					<X>-310</X><Y>30</Y>
-					<Label><X>-30</X><Y>-15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Mm*5*MF_apic_m]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
 					</Properties>
 
 				</Variable>
@@ -802,7 +732,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1394982657396" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm_apic*Wm/(1+alpha/Sm)]]></Formula>
+						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1651,7 +1581,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.781*0.825*3, 0.001*50}]]></Code>
+							<Code><![CDATA[{.781*0.825*10, 0.001*100}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477639</Id>
@@ -3084,117 +3014,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1580212724949" TargetId="1579717477673" Polarity="null">
-					<Height>-82.092</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>330</X><Y>230</Y></Direction>
-					<Id>1580212801030</Id>
-					<Name><![CDATA[MF_apic_m - C_flac_m]]></Name>
-					<X>-1050</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-6632142</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579717477682" TargetId="1580223947289" Polarity="null">
+				<Link SourceId="1394983187577" TargetId="1394982113124" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>0</Y></Direction>
-					<Id>1580223947285</Id>
-					<Name><![CDATA[V_m - R_myc]]></Name>
-					<X>-820</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-6632142</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1580223947289" TargetId="1580223947344" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>0</Y></Direction>
-					<Id>1580223947287</Id>
-					<Name><![CDATA[R_myc - S_Myc]]></Name>
-					<X>-900</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-6632142</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1580223947344" TargetId="1580212724949" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-70</X><Y>0</Y></Direction>
-					<Id>1580224175536</Id>
-					<Name><![CDATA[S_Myc - MF_apic_m]]></Name>
-					<X>-980</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-6632142</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579717477682" TargetId="1580212724949" Polarity="null">
-					<Height>-78.392</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-230</X><Y>0</Y></Direction>
-					<Id>1580224188746</Id>
-					<Name><![CDATA[V_m - MF_apic_m]]></Name>
-					<X>-820</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1580409741241" TargetId="1579721301639" Polarity="null">
-					<Height>-1.524</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>30</Y></Direction>
-					<Id>1580409783271</Id>
-					<Name><![CDATA[Mm_apic - dWm]]></Name>
-					<X>-310</X><Y>30</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1580409741241" TargetId="1394982113124" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>90</Y></Direction>
+					<Direction><X>-170</X><Y>90</Y></Direction>
 					<Id>1580409802655</Id>
-					<Name><![CDATA[Mm_apic - Um]]></Name>
-					<X>-310</X><Y>30</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1394983187577" TargetId="1580409741241" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-90</X><Y>0</Y></Direction>
-					<Id>1580409880348</Id>
-					<Name><![CDATA[Mm - Mm_apic]]></Name>
+					<Name><![CDATA[Mm - Um]]></Name>
 					<X>-220</X><Y>30</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3204,13 +3029,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1580212724949" TargetId="1580409741241" Polarity="null">
-					<Height>161.012</Height>
+				<Link SourceId="1394983187577" TargetId="1579721301639" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>740</X><Y>-460</Y></Direction>
-					<Id>1580410037662</Id>
-					<Name><![CDATA[MF_apic_m - Mm_apic]]></Name>
-					<X>-1050</X><Y>490</Y>
+					<Direction><X>-170</X><Y>30</Y></Direction>
+					<Id>1580409880348</Id>
+					<Name><![CDATA[Mm - dWm]]></Name>
+					<X>-220</X><Y>30</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
