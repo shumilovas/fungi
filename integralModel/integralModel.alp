@@ -158,6 +158,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1394981936486</Id>
 					<Name><![CDATA[Sm]]></Name>
+					<Description><![CDATA[ концентрация субстрата в мицелии]]></Description>
 					<X>-390</X><Y>290</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -549,6 +550,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="StockVariable">
 					<Id>1394981990462</Id>
 					<Name><![CDATA[Wm]]></Name>
+					<Description><![CDATA[вес мицелия]]></Description>
 					<X>-390</X><Y>0</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -575,6 +577,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="StockVariable">
 					<Id>1394982657396</Id>
 					<Name><![CDATA[Smg]]></Name>
+					<Description><![CDATA[содержание глюкозы в мицелии?]]></Description>
 					<X>-390</X><Y>190</Y>
 					<Label><X>-10</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -673,6 +676,7 @@ Doctor of Philosophy ]]></Description>
 						<Shadow>
 							<Id>1579718752214</Id>
 							<Name><![CDATA[<W_mon>]]></Name>
+							<Description><![CDATA[глюкоза. грамм]]></Description>
 							<X>-590</X><Y>190</Y>
 							<Label><X>-45</X><Y>-50</Y></Label>
 							<PublicFlag>false</PublicFlag>
