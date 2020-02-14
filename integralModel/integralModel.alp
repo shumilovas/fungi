@@ -158,6 +158,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1394981936486</Id>
 					<Name><![CDATA[Sm]]></Name>
+					<Description><![CDATA[ концентрация субстрата в мицелии]]></Description>
 					<X>-390</X><Y>290</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -209,7 +210,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_flac_с/V_c]]></Formula>
+						<Formula><![CDATA[W_flac_с/(V_c)]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
@@ -549,6 +550,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="StockVariable">
 					<Id>1394981990462</Id>
 					<Name><![CDATA[Wm]]></Name>
+					<Description><![CDATA[вес мицелия]]></Description>
 					<X>-390</X><Y>0</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -575,6 +577,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 				<Variable Class="StockVariable">
 					<Id>1394982657396</Id>
 					<Name><![CDATA[Smg]]></Name>
+					<Description><![CDATA[содержание глюкозы в мицелии?]]></Description>
 					<X>-390</X><Y>190</Y>
 					<Label><X>-10</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -673,6 +676,7 @@ Doctor of Philosophy ]]></Description>
 						<Shadow>
 							<Id>1579718752214</Id>
 							<Name><![CDATA[<W_mon>]]></Name>
+							<Description><![CDATA[глюкоза. грамм]]></Description>
 							<X>-590</X><Y>190</Y>
 							<Label><X>-45</X><Y>-50</Y></Label>
 							<PublicFlag>false</PublicFlag>
@@ -2219,12 +2223,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477676" Polarity="null">
+				<Link SourceId="1579717477594" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-110</X><Y>-130</Y></Direction>
+					<Direction><X>180</X><Y>-240</Y></Direction>
 					<Id>1579717477478</Id>
-					<Name><![CDATA[V_c - C_flac_c]]></Name>
+					<Name><![CDATA[V_c - ]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3036,6 +3040,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1580409880348</Id>
 					<Name><![CDATA[Mm - dWm]]></Name>
 					<X>-220</X><Y>30</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579717477594" TargetId="1579717477676" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>-130</Y></Direction>
+					<Id>1581457637337</Id>
+					<Name><![CDATA[V_c - C_flac_c]]></Name>
+					<X>-210</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
