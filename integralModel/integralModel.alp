@@ -5742,11 +5742,5 @@ else
 			</ModelTimeProperties>
 		</SimulationExperiment>	
 	</Experiments>
-	<ModelResources>
-		<Resource>
-			<Path><![CDATA[blue.png]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-		</Resource>
-	</ModelResources>
 </Model>
 </AnyLogicWorkspace>
