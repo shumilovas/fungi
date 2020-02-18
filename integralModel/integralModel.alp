@@ -851,7 +851,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1579717477729" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[dWm*MF_flacc_m]]></Formula>
+						<Formula><![CDATA[Math.max(dWm, 0.0)*MF_flacc_m]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1555,7 +1555,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{14.1*1000, 0.031*1000}]]></Code>
+							<Code><![CDATA[{14.1*1000, 0.031*1000000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477630</Id>
@@ -3970,7 +3970,7 @@ for (Mushroom mush : harvested) {
 						<LineWidth>2.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[Концентрация лакказы в опилках (г/м3)*100]]></Title>
+						<Title><![CDATA[Концентрация лакказы в опилках (г/м3) * 100]]></Title>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-8388608</Color>
 					<Expression2><![CDATA[C_flac_c*100]]></Expression2>
@@ -5733,8 +5733,8 @@ else
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1394978861159]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1405346861000]]></FinalDate>	
-				<FinalTime><![CDATA[2880.0]]></FinalTime>	
+				<FinalDate><![CDATA[1412546861000]]></FinalDate>	
+				<FinalTime><![CDATA[4880.0]]></FinalTime>	
 			</ModelTimeProperties>
 		</SimulationExperiment>	
 	</Experiments>
