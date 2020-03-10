@@ -483,7 +483,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[K0_kin[Fractions]*exp(-GH_kin[Fractions]/Temperature)]]></Expression>
+								<Expression><![CDATA[kt_er_ucc * K0_kin[Fractions] ]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -498,8 +498,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[16*(1e9)*((9e-6)*(15e-6)*0.02*70*H)/((H*H*(15e-6)*0.02+(9e-6)*70)+15e-6*10*(1e-6))*
-H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
+						<Formula><![CDATA[(-5.2976*pH*pH + 69.821*pH - 146.31)*0.01]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -566,7 +565,97 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_c/700]]></Formula>
+						<Formula><![CDATA[W_c*Knorm_fer_m/700]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1582900557488</Id>
+					<Name><![CDATA[T_depend_Ucc]]></Name>
+					<X>-540</X><Y>930</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[-0.0613*Temperature*Temperature + 7.2321*Temperature - 132.98]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1582970938655</Id>
+					<Name><![CDATA[kt_er_ucc]]></Name>
+					<X>-610</X><Y>990</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[T_depend_Ucc]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1583249499750</Id>
+					<Name><![CDATA[x1_t_fer_m]]></Name>
+					<X>-970</X><Y>360</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[  (Temperature-   30)/5]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1583249547655</Id>
+					<Name><![CDATA[x2_ph_fer_m]]></Name>
+					<X>-970</X><Y>410</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(pH-5)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1583250170784</Id>
+					<Name><![CDATA[k_fer_m]]></Name>
+					<X>-910</X><Y>290</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[ 0.3884   +  0.0075 * x1_t_fer_m   -   0.0341 * x2_ph_fer_m  -   0.0246*  x1_t_fer_m* -x1_t_fer_m*x1_t_fer_m -   0.06*x2_ph_fer_m*x2_ph_fer_m +  0.0015*x1_t_fer_m*x2_ph_fer_m]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1583250953160</Id>
+					<Name><![CDATA[Knorm_fer_m]]></Name>
+					<X>-940</X><Y>480</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[k_fer_m *k_err_tph_fer]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -632,7 +721,7 @@ H*70.2+0.02*(9e-6) + (70*(8e-9))]]></Formula>
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[MF_flacc_m*Wm]]></InitialValue>
+						<InitialValue><![CDATA[U_flacc_m - U_M_C_lyg_fer + U_flacc_m - U_M_C_lyg_fer + U_flacc_m - U_M_C_lyg_fer + MF_flacc_m*Wm  * Knorm_fer_m]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -1610,39 +1699,11 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[25]]></Code>
+							<Code><![CDATA[80]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477645</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1579717477650</Id>
-					<Name><![CDATA[GH_kin]]></Name>
-					<X>-630</X><Y>980</Y>
-					<Label><X>-25</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[HyperArray]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
-						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
-							<ClassName><![CDATA[Fractions]]></ClassName>
-						</Dimension>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{-2.07,2}]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1579717477648</Id>
-							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -1666,7 +1727,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95,1900000}]]></Code>
+							<Code><![CDATA[{15e-6*60*24*1000, 43*24*60*1000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -1679,7 +1740,7 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1579717477665</Id>
-					<Name><![CDATA[H]]></Name>
+					<Name><![CDATA[pH]]></Name>
 					<X>-610</X><Y>1210</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1690,7 +1751,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1e-7*18*1000]]></Code>
+							<Code><![CDATA[7]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477663</Id>
@@ -1793,6 +1854,30 @@ MAOBING TU таблица 22]]></Description>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
 							<Label><![CDATA[Wm0]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1583250739411</Id>
+					<Name><![CDATA[k_err_tph_fer]]></Name>
+					<X>-800</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[22.21]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1583250739409</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -2238,7 +2323,7 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1579717477682" TargetId="1579717477673" Polarity="null">
-					<Height>-104.26</Height>
+					<Height>-81.679</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>230</Y></Direction>
 					<Id>1579717477484</Id>
@@ -2762,21 +2847,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477650" TargetId="1579717477722" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>90</X><Y>0</Y></Direction>
-					<Id>1579717477577</Id>
-					<Name><![CDATA[GH_kin - K0_Vmax]]></Name>
-					<X>-630</X><Y>980</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-256</Color>
-					<LineWidth>3</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1579717477656" TargetId="1579717477722" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2792,12 +2862,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477647" TargetId="1579717477722" Polarity="null">
+				<Link SourceId="1579717477647" TargetId="1582900557488" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>110</Y></Direction>
+					<Direction><X>0</X><Y>60</Y></Direction>
 					<Id>1579717477581</Id>
-					<Name><![CDATA[Temperature - K0_Vmax]]></Name>
+					<Name><![CDATA[Temperature - T_depend_Ucc]]></Name>
 					<X>-540</X><Y>870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2812,7 +2882,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>70</X><Y>0</Y></Direction>
 					<Id>1579717477583</Id>
-					<Name><![CDATA[H - error_Vmax_ph]]></Name>
+					<Name><![CDATA[pH - error_Vmax_ph]]></Name>
 					<X>-610</X><Y>1210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3054,6 +3124,156 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1581935553225</Id>
 					<Name><![CDATA[MC_Seff - Uc]]></Name>
 					<X>-540</X><Y>490</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1582900557488" TargetId="1582970938655" Polarity="null">
+					<Height>-34.912</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-70</X><Y>60</Y></Direction>
+					<Id>1582901198895</Id>
+					<Name><![CDATA[T_depend_Ucc - kt_er_ucc]]></Name>
+					<X>-540</X><Y>930</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1582970938655" TargetId="1579717477722" Polarity="null">
+					<Height>-0.627</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>70</X><Y>-10</Y></Direction>
+					<Id>1582971351664</Id>
+					<Name><![CDATA[kt_er_ucc - K0_Vmax]]></Name>
+					<X>-610</X><Y>990</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579717477647" TargetId="1583249499750" Polarity="null">
+					<Height>292.409</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-430</X><Y>-510</Y></Direction>
+					<Id>1583249838492</Id>
+					<Name><![CDATA[Temperature - x1_t_fer_m]]></Name>
+					<X>-540</X><Y>870</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579717477665" TargetId="1583249547655" Polarity="null">
+					<Height>145.647</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-360</X><Y>-800</Y></Direction>
+					<Id>1583250009956</Id>
+					<Name><![CDATA[pH - x2_ph_fer_m]]></Name>
+					<X>-610</X><Y>1210</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1583249499750" TargetId="1583250170784" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>60</X><Y>-70</Y></Direction>
+					<Id>1583250349849</Id>
+					<Name><![CDATA[x1_t_fer_m - k_fer_m]]></Name>
+					<X>-970</X><Y>360</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1583249547655" TargetId="1583250170784" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>60</X><Y>-120</Y></Direction>
+					<Id>1583250356688</Id>
+					<Name><![CDATA[x2_ph_fer_m - k_fer_m]]></Name>
+					<X>-970</X><Y>410</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1583250170784" TargetId="1583250953160" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-30</X><Y>190</Y></Direction>
+					<Id>1583250790369</Id>
+					<Name><![CDATA[k_fer_m - Knorm_fer_m]]></Name>
+					<X>-910</X><Y>290</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1583250739411" TargetId="1583250953160" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-140</X><Y>140</Y></Direction>
+					<Id>1583250799295</Id>
+					<Name><![CDATA[k_err_tph_fer - Knorm_fer_m]]></Name>
+					<X>-800</X><Y>340</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1583250953160" TargetId="1579717477729" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>220</X><Y>130</Y></Direction>
+					<Id>1583251142048</Id>
+					<Name><![CDATA[Knorm_fer_m - W_flac_m]]></Name>
+					<X>-940</X><Y>480</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1583250953160" TargetId="1581709276253" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>450</X><Y>-360</Y></Direction>
+					<Id>1583674094010</Id>
+					<Name><![CDATA[Knorm_fer_m - Am]]></Name>
+					<X>-940</X><Y>480</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4264,6 +4484,50 @@ for (Mushroom mush : harvested) {
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
     			</TimePlot>
+				<Oval>
+					<Id>1582987673165</Id>
+					<Name><![CDATA[oval3]]></Name>
+					<X>-610</X><Y>1210</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>20</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
+				<Oval>
+					<Id>1582993950449</Id>
+					<Name><![CDATA[oval4]]></Name>
+					<X>-540</X><Y>870</Y>
+					<Label><X>0</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<RadiusX>20</RadiusX>
+					<RadiusY>40</RadiusY>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Oval>
 			</Presentation>
 
 				</Level>
@@ -5703,13 +5967,10 @@ else
 					<ParameterName><![CDATA[Temperature]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[GH_kin]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[K0_kin]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[H]]></ParameterName>
+					<ParameterName><![CDATA[pH]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
@@ -5719,6 +5980,9 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[K_error]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[k_err_tph_fer]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
