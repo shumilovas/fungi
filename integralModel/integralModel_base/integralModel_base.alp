@@ -358,7 +358,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[K0_Vmax[Fractions]*C_flac_c*K_error[Fractions]]]></Expression>
+								<Expression><![CDATA[K0_Vmax_depol_CC[Fractions]*C_flac_c*K_error[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -463,7 +463,7 @@
 				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1579717477722</Id>
-					<Name><![CDATA[K0_Vmax]]></Name>
+					<Name><![CDATA[K0_Vmax_depol_CC]]></Name>
 					<X>-540</X><Y>980</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -483,7 +483,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[K0_kin[Fractions]*exp(-GH_kin[Fractions]/Temperature)]]></Expression>
+								<Expression><![CDATA[K0_kin_depol_CC[Fractions]*exp(-GH_kin_depol_CC[Fractions]/Temperature)]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1667,7 +1667,11 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1579717477650</Id>
-					<Name><![CDATA[GH_kin]]></Name>
+					<Name><![CDATA[GH_kin_depol_CC]]></Name>
+					<Description><![CDATA[энергия гибса деполимеризации для двух ферментов: 
+разрушение лигнина
+разрушение сахара
+надо найти, откуда взяты данные, это в старых модельках есть]]></Description>
 					<X>-630</X><Y>980</Y>
 					<Label><X>-25</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1686,6 +1690,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477648</Id>
+							<Label><![CDATA[GH_kin_depol_CC]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1695,7 +1700,7 @@ Doctor of Philosophy ]]></Description>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1579717477656</Id>
-					<Name><![CDATA[K0_kin]]></Name>
+					<Name><![CDATA[K0_kin_depol_CC]]></Name>
 					<X>-540</X><Y>1050</Y>
 					<Label><X>-65</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1714,6 +1719,7 @@ Doctor of Philosophy ]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
+							<Label><![CDATA[K0_kin_depol_CC]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -2526,7 +2532,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>80</X><Y>70</Y></Direction>
 					<Id>1579717477539</Id>
-					<Name><![CDATA[K0_Vmax - Vmax]]></Name>
+					<Name><![CDATA[K0_Vmax_depol_CC - Vmax]]></Name>
 					<X>-540</X><Y>980</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2811,7 +2817,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>90</X><Y>0</Y></Direction>
 					<Id>1579717477577</Id>
-					<Name><![CDATA[GH_kin - K0_Vmax]]></Name>
+					<Name><![CDATA[GH_kin_depol_CC - K0_Vmax_depol_CC]]></Name>
 					<X>-630</X><Y>980</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2826,7 +2832,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-70</Y></Direction>
 					<Id>1579717477579</Id>
-					<Name><![CDATA[K0_kin - K0_Vmax]]></Name>
+					<Name><![CDATA[K0_kin_depol_CC - K0_Vmax_depol_CC]]></Name>
 					<X>-540</X><Y>1050</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2841,7 +2847,7 @@ MAOBING TU таблица 22]]></Description>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>110</Y></Direction>
 					<Id>1579717477581</Id>
-					<Name><![CDATA[Temperature - K0_Vmax]]></Name>
+					<Name><![CDATA[Temperature - K0_Vmax_depol_CC]]></Name>
 					<X>-540</X><Y>870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -6104,10 +6110,10 @@ else
 					<ParameterName><![CDATA[Temperature]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[GH_kin]]></ParameterName>
+					<ParameterName><![CDATA[GH_kin_depol_CC]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[K0_kin]]></ParameterName>
+					<ParameterName><![CDATA[K0_kin_depol_CC]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
