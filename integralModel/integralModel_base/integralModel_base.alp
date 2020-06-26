@@ -150,7 +150,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_mon.sum()/V_c]]></Formula>
+						<Formula><![CDATA[W_mon.sum()/Enviroment.Vc]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -210,7 +210,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_flac_с/(V_c)]]></Formula>
+						<Formula><![CDATA[W_flac_с/(Enviroment.Vc)]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
@@ -226,7 +226,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[V_c*Ro_с]]></Formula>
+						<Formula><![CDATA[Enviroment.Vc*Ro_с]]></Formula>
 						<Color/>
 						<Shadow>
 							<Id>1581868806332</Id>
@@ -329,7 +329,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_pol[Fractions]/V_c]]></Expression>
+								<Expression><![CDATA[W_pol[Fractions]/Enviroment.Vc]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -439,7 +439,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_mon[Fractions]/V_c]]></Expression>
+								<Expression><![CDATA[W_mon[Fractions]/Enviroment.Vc]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1871,21 +1871,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link TargetId="1394981926121" Polarity="null">
-					<Height>-114.4</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-380</X><Y>-560</Y></Direction>
-					<Id>1579448666052</Id>
-					<Name><![CDATA[ - Sc]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1394981926121" TargetId="1394982101372" Polarity="null">
 					<Height>2.1317565117076356</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2186,21 +2171,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link TargetId="1579717477679" Polarity="null">
-					<Height>-1.023</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>130</X><Y>0</Y></Direction>
-					<Id>1579717477482</Id>
-					<Name><![CDATA[ - W_c]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1579717477682" TargetId="1579717477673" Polarity="null">
 					<Height>-104.26</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2378,21 +2348,6 @@ MAOBING TU таблица 22]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Color>-65536</Color>
-					<LineWidth>3</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link TargetId="1579717477697" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>180</Y></Direction>
-					<Id>1579717477531</Id>
-					<Name><![CDATA[ - C_pol]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
@@ -2614,21 +2569,6 @@ MAOBING TU таблица 22]]></Description>
 					<Name><![CDATA[W_mon - C_mon]]></Name>
 					<X>-710</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link TargetId="1579717477713" Polarity="null">
-					<Height>-72.633</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-500</X><Y>180</Y></Direction>
-					<Id>1579717477567</Id>
-					<Name><![CDATA[ - C_mon]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
