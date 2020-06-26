@@ -470,7 +470,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[phFunct_Ucc(pH)*0.01]]></Formula>
+						<Formula><![CDATA[phFunct_Ucc(Enviroment.pH)*0.01]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-65281</Color>
 					</Properties>
@@ -567,7 +567,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(5.58*phFunct_W_flact_m(pH))]]></Formula>
+						<Formula><![CDATA[(5.58*phFunct_W_flact_m(Enviroment.pH))]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-65281</Color>
 					</Properties>
@@ -1740,30 +1740,6 @@ MAOBING TU таблица 22]]></Description>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<Variable Class="Parameter">
-					<Id>1584364030633</Id>
-					<Name><![CDATA[pH]]></Name>
-					<X>-630</X><Y>1210</Y>
-					<Label><X>-30</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[7]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1584364030631</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1394981990462" TargetId="1394982113124" Polarity="null">
@@ -2876,21 +2852,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1584364030633" TargetId="1579717477725" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>90</X><Y>0</Y></Direction>
-					<Id>1584364583808</Id>
-					<Name><![CDATA[pH - error_Vmax_ph_Ucc]]></Name>
-					<X>-630</X><Y>1210</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-65281</Color>
-					<LineWidth>3</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1579717477647" TargetId="1584683027946" Polarity="null">
 					<Height>165.749</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2913,21 +2874,6 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1584683398527</Id>
 					<Name><![CDATA[error_Vmax_T_Ucc - U_cc]]></Name>
 					<X>-360</X><Y>1230</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-65281</Color>
-					<LineWidth>3</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1584364030633" TargetId="1584699580588" Polarity="null">
-					<Height>280.893</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-230</X><Y>-490</Y></Direction>
-					<Id>1584699529900</Id>
-					<Name><![CDATA[pH - errPh_w_f_m]]></Name>
-					<X>-630</X><Y>1210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5689,9 +5635,6 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<Parameter>
 							<Name><![CDATA[Wm0]]></Name>
 						</Parameter>
-						<Parameter>
-							<Name><![CDATA[pH]]></Name>
-						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -6246,9 +6189,6 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[pH]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[K_error]]></ParameterName>
