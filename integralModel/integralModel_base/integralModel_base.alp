@@ -5765,7 +5765,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 	</RunConfiguration>
 	<Experiments>	
 		<!--   =========   Simulation Experiment   ========  -->
-		<SimulationExperiment ActiveObjectClassId="1394978861120">
+		<SimulationExperiment ActiveObjectClassId="1593202139175">
 			<Id>1394978861170</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
@@ -6085,117 +6085,6 @@ else
 			</Presentation>
 
 			<Parameters>			
-				<Parameter>
-					<ParameterName><![CDATA[YGm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Mm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[YGs]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ms]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[k]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[a]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Smcrit]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[q]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Wm0]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[lambda]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_harvesting]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_harvesting]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[age_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[ws_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[alpha]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[m_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U__flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z_flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_M]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_flacc_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_pol_mon]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ks05]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Temperature]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_error]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_kin_depol_CC]]></ParameterName>
-				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -6268,5 +6157,11 @@ public abstract class Enviroment implements Serializable {
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
+    <RequiredLibraryReference>
+		<LibraryName><![CDATA[com.anylogic.libraries.processmodeling]]></LibraryName>
+		<VersionMajor>8</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionBuild>5</VersionBuild>
+    </RequiredLibraryReference>
 </Model>
 </AnyLogicWorkspace>
