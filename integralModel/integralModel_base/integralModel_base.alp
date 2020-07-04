@@ -4519,7 +4519,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[NutritionBox]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(NutritionBox)getEngine().getRoot()]]></Code>
+							<Code><![CDATA[get_NutritionBox()]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
