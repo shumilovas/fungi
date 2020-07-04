@@ -498,7 +498,11 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
+<<<<<<< HEAD
 						<Formula><![CDATA[(-5.2976*pH*pH + 69.821*pH - 146.31)*0.01]]></Formula>
+=======
+						<Formula><![CDATA[(-5.2976*H*H + 69.821*H - 146.31)*0.01]]></Formula>
+>>>>>>> m2
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -656,6 +660,36 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[k_fer_m *k_err_tph_fer]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1582900557488</Id>
+					<Name><![CDATA[T_depend_Ucc]]></Name>
+					<X>-540</X><Y>930</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[-0.0613*Temperature*Temperature + 7.2321*Temperature - 132.98]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1582970938655</Id>
+					<Name><![CDATA[kt_er_ucc]]></Name>
+					<X>-610</X><Y>990</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[T_depend_Ucc]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -3162,6 +3196,7 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+<<<<<<< HEAD
 				<Link SourceId="1579717477647" TargetId="1583249499750" Polarity="null">
 					<Height>292.409</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -3282,6 +3317,8 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+=======
+>>>>>>> m2
 			</Dependences>
 			<Events>
 				<Event>
