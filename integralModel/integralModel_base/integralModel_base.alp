@@ -5624,7 +5624,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<EnableSteps>true</EnableSteps>
 					<StepDurationCode Class="CodeUnitValue">
 						<Code><![CDATA[1.0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 					</StepDurationCode>
 					<BeforeStepCode><![CDATA[W_pol_step_prew=veshenka.W_pol.get(1)+veshenka.W_pol.get(2);]]></BeforeStepCode>
 					<AfterStepCode><![CDATA[W_pol_step_now=veshenka.W_pol.get(1)+veshenka.W_pol.get(2);
