@@ -34,7 +34,7 @@
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1394978861120</Id>
-			<Name><![CDATA[NutritionBox]]></Name>
+			<Name><![CDATA[Organizm]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
@@ -3498,6 +3498,21 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1594846334114</Id>
+					<Name><![CDATA[enviroment]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Enviroment]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 			<EmbeddedObjects>
 				<EmbeddedObject>
 					<Id>1395237817367</Id>
@@ -3768,7 +3783,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[rectangle]]></Name>
 					<X>0</X><Y>110</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4679,9 +4694,9 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[NutritionBox]]></Type>        
+						<Type><![CDATA[Organizm]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(NutritionBox)getEngine().getRoot()]]></Code>
+							<Code><![CDATA[get_NutritionBox()]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -5246,7 +5261,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1579448668741</Id>
-					<Name><![CDATA[nutritionBox]]></Name>
+					<Name><![CDATA[organizm]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5254,7 +5269,20 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-						<ClassName><![CDATA[NutritionBox]]></ClassName>
+						<ClassName><![CDATA[Organizm]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1594846334132</Id>
+					<Name><![CDATA[enviroment]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Enviroment]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -5460,7 +5488,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1579448668752</Id>
-					<Name><![CDATA[nutritionBox]]></Name>
+					<Name><![CDATA[organizm]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5468,7 +5496,20 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-						<ClassName><![CDATA[NutritionBox]]></ClassName>
+						<ClassName><![CDATA[Organizm]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1594846334124</Id>
+					<Name><![CDATA[enviroment]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Enviroment]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -5528,6 +5569,331 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			</Presentation>
 
 				</Group>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1594846007219</Id>
+			<Name><![CDATA[Enviroment]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1594846007217</Id>
+				<Name><![CDATA[1594846007217]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1594886400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1594846007215</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1594846007218</CurrentLevel>
+			<ConnectionsId>1594846007214</ConnectionsId>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1594846007214</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1594846331404</Id>
+					<Name><![CDATA[organizm]]></Name>
+					<X>60</X><Y>190</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1594846334082</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Organizm]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+							<ClassName><![CDATA[Organizm]]></ClassName>
+							<ItemName><![CDATA[1579448665993]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[YGm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Mm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[YGs]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ms]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[k]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[a]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[h]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Smcrit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[q]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lambda]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[age_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ws_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[alpha]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[m_mode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U__flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z_flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[V_c]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_M]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_C]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_flacc_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_pol_mon]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ks05]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_error]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Temperature]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_kin_depol_CC]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[GH_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Wm0]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[pH]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
+
+			<Presentation>
+				<Level>
+					<Id>1594846007218</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<EmbeddedObjectPresentation>
+					<Id>1594846334082</Id>
+					<Name><![CDATA[organizm_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
