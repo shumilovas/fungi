@@ -5624,7 +5624,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<EnableSteps>true</EnableSteps>
 					<StepDurationCode Class="CodeUnitValue">
 						<Code><![CDATA[1.0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</StepDurationCode>
 					<BeforeStepCode><![CDATA[W_pol_step_prew=veshenka.W_pol.get(1)+veshenka.W_pol.get(2);]]></BeforeStepCode>
 					<AfterStepCode><![CDATA[W_pol_step_now=veshenka.W_pol.get(1)+veshenka.W_pol.get(2);
@@ -5680,7 +5680,7 @@ if (W_pol_step_d<0){W_pol_step_d=-W_pol_step_d;};]]></AfterStepCode>
 			<Variables>
 				<Variable Class="AuxVariable">
 					<Id>1594848928457</Id>
-					<Name><![CDATA[dynamicVariable]]></Name>
+					<Name><![CDATA[W_step_d]]></Name>
 					<X>180</X><Y>260</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5688,6 +5688,37 @@ if (W_pol_step_d<0){W_pol_step_d=-W_pol_step_d;};]]></AfterStepCode>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[W_pol_step_d]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1594889643675</Id>
+					<Name><![CDATA[W_step_prew]]></Name>
+					<X>140</X><Y>310</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[W_step_prew
+]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1594889647974</Id>
+					<Name><![CDATA[W_step_now]]></Name>
+					<X>230</X><Y>350</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[W_step_now]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
