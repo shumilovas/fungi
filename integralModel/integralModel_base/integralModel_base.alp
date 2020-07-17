@@ -226,7 +226,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[V_c*Ro_с]]></Formula>
+						<Formula><![CDATA[Enviroment.W_c]]></Formula>
 						<Color/>
 						<Shadow>
 							<Id>1581868806332</Id>
@@ -1349,37 +1349,10 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.11]]></Code>
+							<Code><![CDATA[Enviroment.V_c]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477592</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1579717477597</Id>
-					<Name><![CDATA[Ro_с]]></Name>
-					<Description><![CDATA[плотность опилки]]></Description>
-					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>-80</X><Y>730</Y>
-					<Label><X>-10</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[520000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1579717477595</Id>
-							<Label><![CDATA[Ro_с]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1512,7 +1485,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.2, .5}]]></Code>
+							<Code><![CDATA[{Enviroment.MF_с_lygnin, Enviroment.MF_с_cellulose}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477610</Id>
@@ -2190,36 +2163,6 @@ MAOBING TU таблица 22]]></Description>
 					<Name><![CDATA[U__flac_mc - U_M_C_lyg_fer]]></Name>
 					<X>-480</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579717477597" TargetId="1579717477679" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1579717477480</Id>
-					<Name><![CDATA[Ro_с - W_c]]></Name>
-					<X>-80</X><Y>730</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477679" Polarity="null">
-					<Height>-1.023</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>130</X><Y>0</Y></Direction>
-					<Id>1579717477482</Id>
-					<Name><![CDATA[V_c - W_c]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -5582,10 +5525,15 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			<AdditionalClassCode><![CDATA[public static double celluloza_kod;
 public static double celluloza_kod_before;
 public static double celluloza_kod_after;
-public static double celluloza_kod_delta;]]></AdditionalClassCode>
+public static double celluloza_kod_delta;
+public static double Ro_c=520000;
+public static double V_c=0.11;
+public static double W_c=Ro_c*V_c;
+public static double MF_с_cellulose=0.5;
+public static double MF_с_lygnin=0.2;
+]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[celluloza_kod_after=0;
-celluloza_kod_before=5;
+			<StartupCode><![CDATA[celluloza_kod_before=5;
 celluloza_kod_after=5;]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
@@ -5686,6 +5634,23 @@ celluloza_kod=celluloza_kod-celluloza_kod_delta;
 			</ScaleRuler>
 			<CurrentLevel>1594846007218</CurrentLevel>
 			<ConnectionsId>1594846007214</ConnectionsId>
+			<Variables>
+				<Variable Class="AuxVariable">
+					<Id>1594987268537</Id>
+					<Name><![CDATA[celluloza_grafic]]></Name>
+					<X>140</X><Y>250</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[celluloza_kod]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+			</Variables>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1594846007214</Id>
@@ -5786,9 +5751,6 @@ celluloza_kod=celluloza_kod-celluloza_kod_delta;
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[V_c]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[Ro_с]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[Ro_m]]></Name>
@@ -5952,9 +5914,6 @@ celluloza_kod=celluloza_kod-celluloza_kod_delta;
 							<Name><![CDATA[V_c]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[Ro_с]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[Ro_m]]></Name>
 						</Parameter>
 						<Parameter>
@@ -6114,9 +6073,6 @@ celluloza_kod=celluloza_kod-celluloza_kod_delta;
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[V_c]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[Ro_с]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[Ro_m]]></Name>
