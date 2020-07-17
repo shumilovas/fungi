@@ -5579,12 +5579,14 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 		<ActiveObjectClass>
 			<Id>1594846007219</Id>
 			<Name><![CDATA[Enviroment]]></Name>
-			<AdditionalClassCode><![CDATA[static double W_pol_step_now, W_pol_step_prew, W_pol_step_d;]]></AdditionalClassCode>
+			<AdditionalClassCode><![CDATA[public static double celluloza_kod;
+public static double celluloza_kod_before;
+public static double celluloza_kod_after;
+public static double celluloza_kod_delta;]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[W_pol_step_prew=0;
-W_pol_step_now=0;
-W_pol_step_d=0;
-W_pol_get1_before=0;]]></StartupCode>
+			<StartupCode><![CDATA[celluloza_kod_after=0;
+celluloza_kod_before=5;
+celluloza_kod_after=5;]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1594846007217</Id>
@@ -5630,11 +5632,11 @@ W_pol_get1_before=0;]]></StartupCode>
 						<Code><![CDATA[1.0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 					</StepDurationCode>
-					<BeforeStepCode><![CDATA[W_pol_step_prew=W_pol_step_prew+veshenka.W_pol.get(1)+veshenka.W_pol.get(2);
-W_pol_get1_before=W_pol_get1_before+veshenka.W_pol.get(1);]]></BeforeStepCode>
-					<AfterStepCode><![CDATA[W_pol_step_now=veshenka.W_pol.get(1)+veshenka.W_pol.get(2);
-W_pol_step_d=W_pol_step_prew-W_pol_step_now;
-W_pol_get1_after_step=veshenka.W_pol.get(1);
+					<BeforeStepCode><![CDATA[celluloza_kod_before=veshenka.W_pol.get(2)+trichoderma.W_pol.get(2)+trichoderma.W_pol.get(2);
+celluloza_kod_delta=celluloza_kod_before-celluloza_kod_after;
+]]></BeforeStepCode>
+					<AfterStepCode><![CDATA[celluloza_kod_after=veshenka.W_pol.get(2)+trichoderma.W_pol.get(2)+trichoderma.W_pol.get(2);
+celluloza_kod=celluloza_kod-celluloza_kod_delta;
 
 ]]></AfterStepCode>
 					<SpaceType>CONTINUOUS</SpaceType>
@@ -5684,114 +5686,6 @@ W_pol_get1_after_step=veshenka.W_pol.get(1);
 			</ScaleRuler>
 			<CurrentLevel>1594846007218</CurrentLevel>
 			<ConnectionsId>1594846007214</ConnectionsId>
-			<Variables>
-				<Variable Class="AuxVariable">
-					<Id>1594848928457</Id>
-					<Name><![CDATA[W_step_d]]></Name>
-					<X>180</X><Y>260</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_pol_step_d]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1594889643675</Id>
-					<Name><![CDATA[W_step_prew]]></Name>
-					<X>140</X><Y>310</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_step_prew
-]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1594889647974</Id>
-					<Name><![CDATA[W_step_now]]></Name>
-					<X>230</X><Y>350</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_step_now]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1594901153179</Id>
-					<Name><![CDATA[W_pol_get1_prost]]></Name>
-					<X>110</X><Y>390</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[veshenka.W_pol.get(1)]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1594901236858</Id>
-					<Name><![CDATA[W_pol_get1_before]]></Name>
-					<X>110</X><Y>450</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1594901320640</Id>
-					<Name><![CDATA[W_pol_get1_after_step]]></Name>
-					<X>230</X><Y>470</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1594902204737</Id>
-					<Name><![CDATA[W_pol_get1_after_step1]]></Name>
-					<X>224</X><Y>400</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-			</Variables>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1594846007214</Id>
