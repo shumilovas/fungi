@@ -152,7 +152,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[Enviroment]]></Type>        
+						<Type><![CDATA[Enviroment1]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="AuxVariable">
@@ -3560,7 +3560,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1595837932451</Id>
-					<Name><![CDATA[enviroment]]></Name>
+					<Name><![CDATA[enviroment1]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3568,7 +3568,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-						<ClassName><![CDATA[Enviroment]]></ClassName>
+						<ClassName><![CDATA[Enviroment1]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -5333,7 +5333,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 				</ContainerLink>
 				<ContainerLink>
 					<Id>1595837932460</Id>
-					<Name><![CDATA[enviroment]]></Name>
+					<Name><![CDATA[enviroment1]]></Name>
 					<X>150</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5341,7 +5341,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-						<ClassName><![CDATA[Enviroment]]></ClassName>
+						<ClassName><![CDATA[Enviroment1]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -5560,7 +5560,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 				</ContainerLink>
 				<ContainerLink>
 					<Id>1595837932456</Id>
-					<Name><![CDATA[enviroment]]></Name>
+					<Name><![CDATA[enviroment1]]></Name>
 					<X>150</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5568,7 +5568,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-						<ClassName><![CDATA[Enviroment]]></ClassName>
+						<ClassName><![CDATA[Enviroment1]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -5637,11 +5637,8 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1595837749945</Id>
-			<Name><![CDATA[Enviroment]]></Name>
+			<Name><![CDATA[Enviroment1]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[delta=0;
-celluloza_real=0.00000000000000000000000001;
-celluloza_0=0;]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1595837749943</Id>
@@ -5744,24 +5741,8 @@ celluloza_0=0;]]></StartupCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_c * MF_с.get(2)]]></Formula>
+						<Formula><![CDATA[Enviroment.celluloza_0]]></Formula>
 						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1595838318783</Id>
-					<Name><![CDATA[W_c]]></Name>
-					<Description><![CDATA[масса сухой древесины]]></Description>
-					<Unit>грамм</Unit> 
-					<X>130</X><Y>240</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[V_c*Ro_с]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -5790,179 +5771,20 @@ celluloza_0=0;]]></StartupCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[celluloza_0-fungi.W_pol.get(2)]]></Formula>
+						<Formula><![CDATA[Enviroment.delta]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
 
 				</Variable>
-				<Variable Class="Parameter">
-					<Id>1595838318781</Id>
-					<Name><![CDATA[Ro_с]]></Name>
-					<Description><![CDATA[плотность опилки]]></Description>
-					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>130</X><Y>120</Y>
-					<Label><X>-10</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[520000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1595838318779</Id>
-							<Label><![CDATA[Ro_с]]></Label>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1595838389259</Id>
-					<Name><![CDATA[MF_с]]></Name>
-					<Description><![CDATA[массовая доля сахаросодержащих компонент в компосте ( в опилке), безрамезрная]]></Description>
-					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>300</X><Y>240</Y>
-					<Label><X>-20</X><Y>30</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[HyperArray]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-							<ClassName><![CDATA[Fractions]]></ClassName>
-						</Dimension>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.2, .5}]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1595838389257</Id>
-							<Label><![CDATA[MF_с]]></Label>
-							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1595838517059</Id>
-					<Name><![CDATA[V_c]]></Name>
-					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
-					<Unit>метр*метр*метр</Unit> 
-					<X>70</X><Y>300</Y>
-					<Label><X>5</X><Y>15</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.11]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1595838517057</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1595838318781" TargetId="1595838318783" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1595838318775</Id>
-					<Name><![CDATA[Ro_с - W_c]]></Name>
-					<X>130</X><Y>120</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1595838318783" TargetId="1595837781979" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>170</X><Y>-130</Y></Direction>
-					<Id>1595838428217</Id>
-					<Name><![CDATA[W_c - celluloza_0]]></Name>
-					<X>130</X><Y>240</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1595838389259" TargetId="1595837781979" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-130</Y></Direction>
-					<Id>1595838444833</Id>
-					<Name><![CDATA[MF_с - celluloza_0]]></Name>
-					<X>300</X><Y>240</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1595838517059" TargetId="1595838318783" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>60</X><Y>-60</Y></Direction>
-					<Id>1595838525679</Id>
-					<Name><![CDATA[V_c - W_c]]></Name>
-					<X>70</X><Y>300</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1595837781979" TargetId="1595838919189" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>120</X><Y>0</Y></Direction>
 					<Id>1595841276127</Id>
 					<Name><![CDATA[celluloza_0 - celluloza_real]]></Name>
-					<X>300</X><Y>110</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1595837781979" TargetId="1595842352963" Polarity="null">
-					<Height>2.299</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>70</Y></Direction>
-					<Id>1595842367683</Id>
-					<Name><![CDATA[celluloza_0 - delta]]></Name>
 					<X>300</X><Y>110</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -6584,15 +6406,6 @@ else
 			</Presentation>
 
 			<Parameters>			
-				<Parameter>
-					<ParameterName><![CDATA[Ro_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[V_c]]></ParameterName>
-				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -6611,6 +6424,66 @@ else
 			</ModelTimeProperties>
 		</SimulationExperiment>	
 	</Experiments>
+	<JavaClasses>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1595858685170</Id>
+			<Name><![CDATA[Enviroment]]></Name>
+			<Text><![CDATA[/**
+ * Enviroment
+ */
+public abstract class Enviroment implements Serializable {
+
+	static public double pH = 7;
+
+	static public double Vc = 0.1;
+
+	static public double T = 293;
+	static public double Ro_с=520000;
+	static public double W_c;
+	static public double MF_с_cell=0.5;
+	static public double MF_с_lig=0.2;
+	static public double celluloza_0;
+	static public double celluloza_real;
+	static public double delta;
+
+	/**
+	 * Конструктор по умолчанию
+	 */
+	public Enviroment() {
+	}
+
+	/**
+	 * Конструктор, инициализирующий поля
+	 */
+	public Enviroment(double pH, double Vc, double T,
+			double Ro_с,  double MF_с_cel, double MF_с_lig) {
+		this.pH = pH;
+		this.Vc = Vc;
+		this.T = T;
+		this.Ro_с=Ro_с;
+		this.W_c=Vc*Ro_с;
+		this.celluloza_0=W_c * MF_с_cel;
+		this.delta=0;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "pH = " + pH + " " + "Vc = " + Vc + " "
+				+ "T = " + T + " ";
+	}
+
+	/**
+	 * Это число используется при сохранении состояния
+	 * модели<br>
+	 * Его рекомендуется изменить в случае изменения класса
+	 */
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+	</JavaClasses>
 	<ModelResources>
 		<Resource>
 			<Path><![CDATA[blue.png]]></Path>
