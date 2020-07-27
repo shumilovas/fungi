@@ -35,6 +35,9 @@
 		<ActiveObjectClass>
 			<Id>1394978861120</Id>
 			<Name><![CDATA[NutritionBox]]></Name>
+			<AdditionalClassCode><![CDATA[if (celluloza_pol==null) {celluloza_pol=0;};
+if (for_envir.celluloza_real==null) {for_envir.celluloza_real=0;};
+]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
@@ -139,6 +142,18 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1595842743139</Id>
+					<Name><![CDATA[for_envir]]></Name>
+					<X>-40</X><Y>980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Enviroment]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="AuxVariable">
@@ -588,6 +603,21 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1595842894136</Id>
+					<Name><![CDATA[celluloza_pol]]></Name>
+					<X>-50</X><Y>1040</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[for_envir.celluloza_real]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1394981990462</Id>
 					<Name><![CDATA[Wm]]></Name>
@@ -739,7 +769,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{W_c * MF_с.get(1), W_c * MF_с.get(2)}]]></InitialValue>
+						<InitialValue><![CDATA[{celluloza_pol, W_c * MF_с.get(2)}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -3089,6 +3119,36 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1585334896353</Id>
 					<Name><![CDATA[K0_kin_depol_CC - Vmax]]></Name>
 					<X>-530</X><Y>1080</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595842743139" TargetId="1595842894136" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>60</Y></Direction>
+					<Id>1595842846510</Id>
+					<Name><![CDATA[for_envir - celluloza_pol]]></Name>
+					<X>-40</X><Y>980</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595842894136" TargetId="1579717477740" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-160</X><Y>100</Y></Direction>
+					<Id>1595842917496</Id>
+					<Name><![CDATA[celluloza_pol - W_pol]]></Name>
+					<X>-50</X><Y>1040</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5580,6 +5640,9 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			<Id>1595837749945</Id>
 			<Name><![CDATA[Enviroment]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<StartupCode><![CDATA[delta=0;
+celluloza_real=0.00000000000000000000000001;
+celluloza_0=0;]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1595837749943</Id>
