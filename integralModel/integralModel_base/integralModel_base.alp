@@ -35,8 +35,7 @@
 		<ActiveObjectClass>
 			<Id>1394978861120</Id>
 			<Name><![CDATA[NutritionBox]]></Name>
-			<AdditionalClassCode><![CDATA[if (celluloza_pol==null) {celluloza_pol=0;};
-if (for_envir.celluloza_real==null) {for_envir.celluloza_real=0;};
+			<AdditionalClassCode><![CDATA[
 ]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
