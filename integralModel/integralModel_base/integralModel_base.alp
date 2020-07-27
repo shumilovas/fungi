@@ -3498,6 +3498,21 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1595837932451</Id>
+					<Name><![CDATA[enviroment]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Enviroment]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 			<EmbeddedObjects>
 				<EmbeddedObject>
 					<Id>1395237817367</Id>
@@ -3746,7 +3761,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[basket]]></Name>
 					<X>700</X><Y>0</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3768,7 +3783,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[rectangle]]></Name>
 					<X>0</X><Y>110</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3854,7 +3869,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[rectangle1]]></Name>
 					<X>0</X><Y>400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3899,7 +3914,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text]]></Name>
 					<X>10</X><Y>511</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3942,7 +3957,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text2]]></Name>
 					<X>230</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3963,7 +3978,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text3]]></Name>
 					<X>230</X><Y>430</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3984,7 +3999,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text4]]></Name>
 					<X>-200</X><Y>400</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4024,7 +4039,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text5]]></Name>
 					<X>730</X><Y>10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4045,7 +4060,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text6]]></Name>
 					<X>950</X><Y>230</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4066,7 +4081,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text7]]></Name>
 					<X>920</X><Y>260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4131,7 +4146,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[plot]]></Name>
 					<X>660</X><Y>280</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4215,7 +4230,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[plot1]]></Name>
 					<X>10</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4290,7 +4305,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[plot2]]></Name>
 					<X>640</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4365,7 +4380,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[plot3]]></Name>
 					<X>20</X><Y>1020</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4440,7 +4455,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[oval1]]></Name>
 					<X>-750</X><Y>1400</Y>
 					<Label><X>0</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4462,7 +4477,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text10]]></Name>
 					<X>-720</X><Y>1390</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4505,7 +4520,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[plot4]]></Name>
 					<X>640</X><Y>1020</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4681,7 +4696,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[NutritionBox]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(NutritionBox)getEngine().getRoot()]]></Code>
+							<Code><![CDATA[get_NutritionBox()]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -5257,6 +5272,19 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<ClassName><![CDATA[NutritionBox]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
+				<ContainerLink>
+					<Id>1595837932460</Id>
+					<Name><![CDATA[enviroment]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Enviroment]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
 			</ContainerLinks>
 
 			<Presentation>
@@ -5471,6 +5499,19 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<ClassName><![CDATA[NutritionBox]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
+				<ContainerLink>
+					<Id>1595837932456</Id>
+					<Name><![CDATA[enviroment]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[Enviroment]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
 			</ContainerLinks>
 
 			<Presentation>
@@ -5534,6 +5575,585 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			</Presentation>
 
 		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1595837749945</Id>
+			<Name><![CDATA[Enviroment]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1595837749943</Id>
+				<Name><![CDATA[1595837749943]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1595923200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1595837749941</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1595837749944</CurrentLevel>
+			<ConnectionsId>1595837749940</ConnectionsId>
+			<Variables>
+				<Variable Class="AuxVariable">
+					<Id>1595837781979</Id>
+					<Name><![CDATA[celluloza_0]]></Name>
+					<X>300</X><Y>110</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[W_c * MF_с.get(2)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1595838318783</Id>
+					<Name><![CDATA[W_c]]></Name>
+					<Description><![CDATA[масса сухой древесины]]></Description>
+					<Unit>грамм</Unit> 
+					<X>130</X><Y>240</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[V_c*Ro_с]]></Formula>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1595838919189</Id>
+					<Name><![CDATA[celluloza_real]]></Name>
+					<X>420</X><Y>110</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[celluloza_0- delta]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1595842352963</Id>
+					<Name><![CDATA[delta]]></Name>
+					<X>400</X><Y>180</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[celluloza_0-fungi.W_pol.get(2)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1595838318781</Id>
+					<Name><![CDATA[Ro_с]]></Name>
+					<Description><![CDATA[плотность опилки]]></Description>
+					<Unit>грамм/метр*метр*метр</Unit> 
+					<X>130</X><Y>120</Y>
+					<Label><X>-10</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[520000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1595838318779</Id>
+							<Label><![CDATA[Ro_с]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1595838389259</Id>
+					<Name><![CDATA[MF_с]]></Name>
+					<Description><![CDATA[массовая доля сахаросодержащих компонент в компосте ( в опилке), безрамезрная]]></Description>
+					<Unit>грамм/метр*метр*метр</Unit> 
+					<X>300</X><Y>240</Y>
+					<Label><X>-20</X><Y>30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[HyperArray]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<Dimension>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+							<ClassName><![CDATA[Fractions]]></ClassName>
+						</Dimension>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[{.2, .5}]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1595838389257</Id>
+							<Label><![CDATA[MF_с]]></Label>
+							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1595838517059</Id>
+					<Name><![CDATA[V_c]]></Name>
+					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
+					<Unit>метр*метр*метр</Unit> 
+					<X>70</X><Y>300</Y>
+					<Label><X>5</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.11]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1595838517057</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<Dependences>
+				<Link SourceId="1595838318781" TargetId="1595838318783" Polarity="null">
+					<Height>0.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>120</Y></Direction>
+					<Id>1595838318775</Id>
+					<Name><![CDATA[Ro_с - W_c]]></Name>
+					<X>130</X><Y>120</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595838318783" TargetId="1595837781979" Polarity="null">
+					<Height>0.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>170</X><Y>-130</Y></Direction>
+					<Id>1595838428217</Id>
+					<Name><![CDATA[W_c - celluloza_0]]></Name>
+					<X>130</X><Y>240</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595838389259" TargetId="1595837781979" Polarity="null">
+					<Height>0.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>-130</Y></Direction>
+					<Id>1595838444833</Id>
+					<Name><![CDATA[MF_с - celluloza_0]]></Name>
+					<X>300</X><Y>240</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595838517059" TargetId="1595838318783" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>60</X><Y>-60</Y></Direction>
+					<Id>1595838525679</Id>
+					<Name><![CDATA[V_c - W_c]]></Name>
+					<X>70</X><Y>300</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595837781979" TargetId="1595838919189" Polarity="null">
+					<Height>0.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>0</Y></Direction>
+					<Id>1595841276127</Id>
+					<Name><![CDATA[celluloza_0 - celluloza_real]]></Name>
+					<X>300</X><Y>110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595837781979" TargetId="1595842352963" Polarity="null">
+					<Height>2.299</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>70</Y></Direction>
+					<Id>1595842367683</Id>
+					<Name><![CDATA[celluloza_0 - delta]]></Name>
+					<X>300</X><Y>110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1595842352963" TargetId="1595838919189" Polarity="null">
+					<Height>-3.721</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>20</X><Y>-70</Y></Direction>
+					<Id>1595842438271</Id>
+					<Name><![CDATA[delta - celluloza_real]]></Name>
+					<X>400</X><Y>180</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+			</Dependences>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1595837749940</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1595837931121</Id>
+					<Name><![CDATA[fungi]]></Name>
+					<X>390</X><Y>70</Y>
+					<Label><X>-40</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1595837932441</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+						<ClassName><![CDATA[NutritionBox]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+							<ClassName><![CDATA[NutritionBox]]></ClassName>
+							<ItemName><![CDATA[1579448665993]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[YGm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Mm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[YGs]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ms]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[k]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[a]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[h]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Smcrit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[q]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lambda]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[age_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ws_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[alpha]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[m_mode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U__flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z_flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[V_c]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_M]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_C]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_flacc_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_pol_mon]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ks05]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_error]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Temperature]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_kin_depol_CC]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[GH_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Wm0]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[pH]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
+
+			<Presentation>
+				<Level>
+					<Id>1595837749944</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<EmbeddedObjectPresentation>
+					<Id>1595837932441</Id>
+					<Name><![CDATA[fungi_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
 	</ActiveObjectClasses>	
 	<DifferentialEquationsMethod>RK4</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
@@ -5556,7 +6176,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 		</ExportSettings>
 	</Database>
 	
-	<RunConfiguration ActiveObjectClassId="1394978861120">
+	<RunConfiguration ActiveObjectClassId="1595837749945">
 		<Id>1579448667010</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
 		<MaximumMemory>512</MaximumMemory>
@@ -5582,7 +6202,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 	</RunConfiguration>
 	<Experiments>	
 		<!--   =========   Simulation Experiment   ========  -->
-		<SimulationExperiment ActiveObjectClassId="1394978861120">
+		<SimulationExperiment ActiveObjectClassId="1595837749945">
 			<Id>1394978861170</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
@@ -5903,121 +6523,13 @@ else
 
 			<Parameters>			
 				<Parameter>
-					<ParameterName><![CDATA[YGm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Mm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[YGs]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ms]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[k]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[a]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Smcrit]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[q]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Wm0]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[lambda]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_harvesting]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_harvesting]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[age_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[ws_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[alpha]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[m_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U__flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z_flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[V_c]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[Ro_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_M]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_flacc_m]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[MF_с]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[K_pol_mon]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ks05]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Temperature]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[pH]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_error]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_kin_depol_CC]]></ParameterName>
+					<ParameterName><![CDATA[V_c]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
