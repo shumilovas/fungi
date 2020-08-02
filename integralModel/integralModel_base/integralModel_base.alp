@@ -153,6 +153,9 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[Enviroment1]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[get_Enviroment1()]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="AuxVariable">
@@ -5771,7 +5774,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Enviroment.delta]]></Formula>
+						<Formula><![CDATA[fungi.W_pol.get(2)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -6463,7 +6466,7 @@ public abstract class Enviroment implements Serializable {
 		this.T = T;
 		this.Ro_с=Ro_с;
 		this.W_c=Vc*Ro_с;
-		this.celluloza_0=W_c * MF_с_cel;
+		this.celluloza_0=1000;
 		this.delta=0;
 		
 	}
