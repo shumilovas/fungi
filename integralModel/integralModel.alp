@@ -607,9 +607,9 @@
 					<Description><![CDATA[вес мицелия]]></Description>
 					<X>-390</X><Y>0</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
+					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
+					<ShowLabel>false</ShowLabel>
 					<Properties Array="false">
 					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
@@ -745,7 +745,7 @@ Doctor of Philosophy ]]></Description>
 					<Description><![CDATA[масса полимеров сахаросодержащих компонент, грамм]]></Description>
 					<X>-210</X><Y>1140</Y>
 					<Label><X>-55</X><Y>-40</Y></Label>
-					<PublicFlag>false</PublicFlag>
+					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
@@ -1667,7 +1667,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{15e-6*60*24*1000, 43*24*60*1000}]]></Code>
+							<Code><![CDATA[{15e-6*60*24, 43*60*1000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3212,6 +3212,21 @@ for (Mushroom mush : harvested) {
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1596839208042</Id>
+					<Name><![CDATA[biozenoz]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+						<ClassName><![CDATA[Biozenoz]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 			<EmbeddedObjects>
 				<EmbeddedObject>
 					<Id>1395237817367</Id>
@@ -3460,7 +3475,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[basket]]></Name>
 					<X>700</X><Y>0</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3482,7 +3497,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[rectangle]]></Name>
 					<X>0</X><Y>110</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3568,7 +3583,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[rectangle1]]></Name>
 					<X>0</X><Y>400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3656,7 +3671,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[text2]]></Name>
 					<X>230</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3677,7 +3692,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[text3]]></Name>
 					<X>230</X><Y>430</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3738,7 +3753,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[text5]]></Name>
 					<X>730</X><Y>10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3759,7 +3774,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[text6]]></Name>
 					<X>950</X><Y>230</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3780,7 +3795,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[text7]]></Name>
 					<X>920</X><Y>260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3845,7 +3860,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[plot]]></Name>
 					<X>660</X><Y>280</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -3929,7 +3944,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[plot1]]></Name>
 					<X>10</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4004,7 +4019,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[plot2]]></Name>
 					<X>640</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4219,7 +4234,7 @@ for (Mushroom mush : harvested) {
 					<Name><![CDATA[plot4]]></Name>
 					<X>640</X><Y>1020</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
@@ -4284,28 +4299,6 @@ for (Mushroom mush : harvested) {
 					<Id>1582987673165</Id>
 					<Name><![CDATA[oval3]]></Name>
 					<X>-610</X><Y>1210</Y>
-					<Label><X>0</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<RadiusX>20</RadiusX>
-					<RadiusY>40</RadiusY>
-					<Rotation>0.0</Rotation>
-					<FillColor>-16711681</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Oval>
-				<Oval>
-					<Id>1582993950449</Id>
-					<Name><![CDATA[oval4]]></Name>
-					<X>-540</X><Y>870</Y>
 					<Label><X>0</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4439,7 +4432,7 @@ for (Mushroom mush : harvested) {
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[NutritionBox]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(NutritionBox)getEngine().getRoot()]]></Code>
+							<Code><![CDATA[get_NutritionBox()]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -5015,6 +5008,19 @@ for (Mushroom mush : harvested) {
 						<ClassName><![CDATA[NutritionBox]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
+				<ContainerLink>
+					<Id>1596839208055</Id>
+					<Name><![CDATA[biozenoz]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+						<ClassName><![CDATA[Biozenoz]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
 			</ContainerLinks>
 
 			<Presentation>
@@ -5229,6 +5235,19 @@ for (Mushroom mush : harvested) {
 						<ClassName><![CDATA[NutritionBox]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
+				<ContainerLink>
+					<Id>1596839208049</Id>
+					<Name><![CDATA[biozenoz]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+						<ClassName><![CDATA[Biozenoz]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
 			</ContainerLinks>
 
 			<Presentation>
@@ -5292,6 +5311,331 @@ for (Mushroom mush : harvested) {
 			</Presentation>
 
 		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1596839067226</Id>
+			<Name><![CDATA[Biozenoz]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1596839067224</Id>
+				<Name><![CDATA[1596839067224]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1596873600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1596839067222</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1596839067225</CurrentLevel>
+			<ConnectionsId>1596839067221</ConnectionsId>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1596839067221</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1596839206493</Id>
+					<Name><![CDATA[veshenka]]></Name>
+					<X>210</X><Y>-190</Y>
+					<Label><X>-50</X><Y>-65</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1596839207955</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+						<ClassName><![CDATA[NutritionBox]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+							<ClassName><![CDATA[NutritionBox]]></ClassName>
+							<ItemName><![CDATA[1579448665993]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[YGm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Mm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[YGs]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ms]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[k]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[a]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[h]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Smcrit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[q]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lambda]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[age_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ws_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[alpha]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[m_mode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U__flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z_flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[V_c]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_M]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_C]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_flacc_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_pol_mon]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ks05]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_error]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Temperature]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_kin]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[H]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[GH_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Wm0]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
+
+			<Presentation>
+				<Level>
+					<Id>1596839067225</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<EmbeddedObjectPresentation>
+					<Id>1596839207955</Id>
+					<Name><![CDATA[veshenka_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
 	</ActiveObjectClasses>	
 	<DifferentialEquationsMethod>RK4</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
@@ -5314,7 +5658,7 @@ for (Mushroom mush : harvested) {
 		</ExportSettings>
 	</Database>
 	
-	<RunConfiguration ActiveObjectClassId="1394978861120">
+	<RunConfiguration ActiveObjectClassId="1596839067226">
 		<Id>1579448667010</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
 		<MaximumMemory>512</MaximumMemory>
@@ -5340,7 +5684,7 @@ for (Mushroom mush : harvested) {
 	</RunConfiguration>
 	<Experiments>	
 		<!--   =========   Simulation Experiment   ========  -->
-		<SimulationExperiment ActiveObjectClassId="1394978861120">
+		<SimulationExperiment ActiveObjectClassId="1596839067226">
 			<Id>1394978861170</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
@@ -5660,123 +6004,6 @@ else
 			</Presentation>
 
 			<Parameters>			
-				<Parameter>
-					<ParameterName><![CDATA[YGm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Mm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[YGs]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ms]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[k]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[a]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Smcrit]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[q]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Wm0]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[lambda]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_harvesting]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_harvesting]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[age_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[ws_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[alpha]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[m_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U__flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z_flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[V_c]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_M]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_flacc_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_pol_mon]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ks05]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Temperature]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_kin]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[H]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_error]]></ParameterName>
-				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
