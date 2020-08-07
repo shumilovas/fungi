@@ -141,6 +141,21 @@
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1596840538546</Id>
+					<Name><![CDATA[for_cell]]></Name>
+					<X>-50</X><Y>1010</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Enviroment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[get_Enviroment()]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1394981926121</Id>
 					<Name><![CDATA[Sc]]></Name>
@@ -596,6 +611,21 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[T_depend_Ucc]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1596840608197</Id>
+					<Name><![CDATA[celluloiza]]></Name>
+					<X>-90</X><Y>1080</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[for_cell.celluloza]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -3070,6 +3100,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1582971351664</Id>
 					<Name><![CDATA[kt_er_ucc - K0_Vmax]]></Name>
 					<X>-610</X><Y>990</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1596840538546" TargetId="1596840608197" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-40</X><Y>74</Y></Direction>
+					<Id>1596840605926</Id>
+					<Name><![CDATA[for_cell - celluloiza]]></Name>
+					<X>-50</X><Y>1010</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6040,6 +6085,7 @@ public class Enviroment implements Serializable {
 	public static double W_c=Ro_c*V_c;
 	public static double MF_с_cellulose=0.5;
 	public static double MF_с_lygnin=0.2;
+	public static double celluloza=W_c*MF_с_cellulose;
 
     /**
      * Конструктор по умолчанию
