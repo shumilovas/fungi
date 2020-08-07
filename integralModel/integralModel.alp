@@ -6022,6 +6022,62 @@ else
 			</ModelTimeProperties>
 		</SimulationExperiment>	
 	</Experiments>
+	<JavaClasses>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1596839894924</Id>
+			<Name><![CDATA[Enviroment]]></Name>
+			<Text><![CDATA[/**
+ * Enviroment
+ */	
+public class Enviroment implements Serializable {
+	private static Enviroment instance; //#1
+	
+	public static double pH = 7;
+	public static double V_c = 0.1;
+	public static double T = 293;
+	public static double Ro_c=520000;
+	public static double W_c=Ro_c*V_c;
+	public static double MF_с_cellulose=0.5;
+	public static double MF_с_lygnin=0.2;
+
+    /**
+     * Конструктор по умолчанию
+     */
+    private Enviroment() {
+    	
+    }
+    
+    public static void setpH(double x) {
+    	instance.pH=x;
+    };
+    
+    public double getpH() {
+        return instance.pH;
+        //System.out.println("never been writen");
+    };
+    
+    public static Enviroment getInstance(){ // #3
+        if(instance == null){		//если объект еще не создан
+            instance = new Enviroment();	//создать новый объект
+        }
+        return instance;		// вернуть ранее созданный объект
+    }
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * Это число используется при сохранении состояния модели<br>
+	 * Его рекомендуется изменить в случае изменения класса
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+	</JavaClasses>
 	<ModelResources>
 		<Resource>
 			<Path><![CDATA[blue.png]]></Path>
