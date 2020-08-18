@@ -63,13 +63,13 @@
 					<Code><![CDATA[10 / getScale().pixelsPerUnit(METER) / 86400]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
-				<AfterStepCode><![CDATA[//x=Enviroment.getInstance().getCelluloza();
-//x=x-W_mon1.get(2);
-//Enviroment.celluloza=x;
-traceln("-=Step=-");
+				<AfterStepCode><![CDATA[x=Enviroment.getInstance().getCelluloza();
+x=x-W_mon1.get(2);
+Enviroment.celluloza=x;
+//traceln("-=Step=-");
 //traceln("W_mon1[2]=" + W_mon1.get(2));
-//Enviroment.setCelluloza(W_mon1.get(2));
-//traceln(Enviroment.getCelluloza());]]></AfterStepCode>
+//forEnv.setCelluloza(W_mon1.get(2));
+//traceln(Enviroment.getInstance().getCelluloza());]]></AfterStepCode>
 				<PhysicalLength Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
@@ -147,6 +147,21 @@ traceln("-=Step=-");
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1597778285321</Id>
+					<Name><![CDATA[forEnv]]></Name>
+					<X>-60</X><Y>1010</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Enviroment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[Enviroment.getInstance()]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="AuxVariable">
@@ -618,7 +633,7 @@ traceln("-=Step=-");
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Enviroment.getInstance().getCelluloza()]]></Formula>
+						<Formula><![CDATA[forEnv.getCelluloza()]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -3232,6 +3247,21 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1597778285321" TargetId="1596840608197" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-30</X><Y>70</Y></Direction>
+					<Id>1597778392929</Id>
+					<Name><![CDATA[forEnv - celluloza]]></Name>
+					<X>-60</X><Y>1010</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -5587,7 +5617,7 @@ for (Mushroom mush : harvested) {
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Enviroment.getCelluloza()]]></Formula>
+						<Formula><![CDATA[Enviroment.getInstance().getCelluloza()]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -6226,7 +6256,7 @@ public class Enviroment implements Serializable {
 	public static double W_c=Ro_c*V_c;
 	public static double MF_с_cellulose=0.5;
 	public static double MF_с_lygnin=0.2;
-	public double celluloza=W_c*MF_с_cellulose;
+	public static double celluloza=W_c*MF_с_cellulose;
 
     /**
      * Конструктор по умолчанию
@@ -6235,12 +6265,12 @@ public class Enviroment implements Serializable {
     	
     }
     
-    public static void setCelluloza(double x) {
-    	instance.celluloza=getInstance().celluloza-x;
+    public void setCelluloza(double x) {
+    	this.celluloza=this.celluloza-x;
     };
     
-    public static double getCelluloza() {
-        return getInstance().celluloza;
+    public double getCelluloza() {
+        return this.celluloza;
         //System.out.println("never been writen");
     };
     
