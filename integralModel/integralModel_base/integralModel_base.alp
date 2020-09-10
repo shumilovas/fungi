@@ -271,7 +271,7 @@
 					<Unit>грамм/(метр*метр*метр)</Unit> 
 					<X>-210</X><Y>1030</Y>
 					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
+					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="true">
@@ -328,7 +328,7 @@
 					<Description><![CDATA[share lygnin- доля разложившегося лигнина]]></Description>
 					<X>-460</X><Y>1300</Y>
 					<Label><X>-20</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
+					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
@@ -690,14 +690,14 @@ Doctor of Philosophy ]]></Description>
 					<Description><![CDATA[масса полимеров сахаросодержащих компонент, грамм]]></Description>
 					<X>-210</X><Y>1140</Y>
 					<Label><X>-55</X><Y>-40</Y></Label>
-					<PublicFlag>false</PublicFlag>
+					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{Enviroment.MF_lyg*Enviroment.W_c, Enviroment.MF_сell*Enviroment.W_c}]]></InitialValue>
+						<InitialValue><![CDATA[get_Main.W_pol]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -789,7 +789,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[U_cc]]></Name>
 					<X>-210</X><Y>1140</Y>
 					<Label><X>10</X><Y>15</Y></Label>
-					<PublicFlag>false</PublicFlag>
+					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1579717477740" TargetId="1579717477736" External="false" Constant="false" Array="true">
@@ -3113,7 +3113,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1599725035020</Id>
+					<Id>1599725463996</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -3651,7 +3651,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text6]]></Name>
 					<X>950</X><Y>230</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3672,7 +3672,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text7]]></Name>
 					<X>920</X><Y>260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3693,7 +3693,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text8]]></Name>
 					<X>1204</X><Y>231</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -3715,7 +3715,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Name><![CDATA[text9]]></Name>
 					<X>1204</X><Y>260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
+					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
@@ -4864,7 +4864,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					</ActiveObjectClass>
 				</ContainerLink>
 				<ContainerLink>
-					<Id>1599725035030</Id>
+					<Id>1599725464006</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>150</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5091,7 +5091,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					</ActiveObjectClass>
 				</ContainerLink>
 				<ContainerLink>
-					<Id>1599725035025</Id>
+					<Id>1599725464001</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>150</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5263,6 +5263,31 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 			</ScaleRuler>
 			<CurrentLevel>1593877606774</CurrentLevel>
 			<ConnectionsId>1593877606770</ConnectionsId>
+			<Variables>
+				<Variable Class="StockVariable">
+					<Id>1599725522427</Id>
+					<Name><![CDATA[W_pol]]></Name>
+					<Description><![CDATA[масса полимеров сахаросодержащих компонент, грамм]]></Description>
+					<X>860</X><Y>300</Y>
+					<Label><X>-55</X><Y>-40</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>60</Width>
+					<Height>60</Height>
+						<InitialValue><![CDATA[{Enviroment.MF_lyg*Enviroment.W_c, Enviroment.MF_сell*Enviroment.W_c}]]></InitialValue>
+						<Color>-65536</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+			</Variables>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1593877606770</Id>
