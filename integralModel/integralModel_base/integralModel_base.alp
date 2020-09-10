@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.1.201910011755" AlpVersion="8.4.9">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.6.0.202008201438" AlpVersion="8.5.7">
 <Model>
 	<Id>1394978861119</Id>
 	<Name><![CDATA[integralModel_base]]></Name>
@@ -6161,6 +6161,7 @@ else
 				<FinalDate><![CDATA[1412546861000]]></FinalDate>	
 				<FinalTime><![CDATA[4880.0]]></FinalTime>	
 			</ModelTimeProperties>
+			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>	
 	</Experiments>
 	<JavaClasses>
@@ -6174,8 +6175,12 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-
 	static public double  Vc = 0.1;
+	static public double RoSq_C=175000;
+	static public double Ro_C=520000;
+	static public double W_c=Vc*Ro_C;
+	static public double Sq_wood_с=W_c /RoSq_C;
+
 
 	public double T = 293;
 
@@ -6222,6 +6227,12 @@ public abstract class Enviroment implements Serializable {
 		<VersionMajor>8</VersionMajor>
 		<VersionMinor>0</VersionMinor>
 		<VersionBuild>5</VersionBuild>
+    </RequiredLibraryReference>
+    <RequiredLibraryReference>
+		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
+		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionBuild>0</VersionBuild>
     </RequiredLibraryReference>
 </Model>
 </AnyLogicWorkspace>
