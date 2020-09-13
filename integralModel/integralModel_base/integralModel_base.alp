@@ -694,7 +694,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(4*V_m/3*PI)^(1/3)]]></Expression>
+								<Expression><![CDATA[(4*V_m[Agents]/3*PI)^(1/3)]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -798,13 +798,19 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="false">
+					<Properties Array="true">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
 						<InitialValue><![CDATA[0.0]]></InitialValue>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -947,7 +953,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[Smg*v_S_m]]></InitialValue>
+						<InitialValue><![CDATA[Smg[Agents]*v_S_m[Agents]]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -965,9 +971,22 @@ Doctor of Philosophy ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1579718752214" TargetId="1394982657396" External="false" Constant="false" Array="false">
+					<Properties SourceId="1579718752214" TargetId="1394982657396" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[Z*MC_Seff.get(1)*(U*Sc-Sm)]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Z*MC_Seff.get(1)*(U*Sc-Sm)]]></Expression>
+							</CustomExpression>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>10</X><Y>0</Y></Point>
@@ -1016,9 +1035,22 @@ Doctor of Philosophy ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1394982657396" External="false" Constant="false" Array="false">
+					<Properties SourceId="1394982657396" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[mushroom/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[mushroom/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
+							</CustomExpression>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -1631,7 +1663,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1000000]]></Code>
+							<Code><![CDATA[{1000000,1000000, 1000000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477601</Id>
@@ -4233,7 +4265,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<Title><![CDATA[Substrate Density in Mycelium Storage]]></Title>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-60269</Color>
-					<Expression2><![CDATA[Sm]]></Expression2>
+					<Expression2><![CDATA[Sm.get(2)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
@@ -4749,13 +4781,19 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="false">
+					<Properties Array="true">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[growth-degradation]]></Expression>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -4815,9 +4853,22 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1395236796405" External="false" Constant="false" Array="false">
+					<Properties SourceId="1395236796405" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[((Ms*ws/(1+alpha/box.Sm))*(alpha/box.Sm))*YGs]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[((Ms*ws/(1+alpha/box.Sm))*(alpha/box.Sm))*YGs]]></Expression>
+							</CustomExpression>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -5341,8 +5392,8 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<ScaleXCode><![CDATA[ws / 3]]></ScaleXCode>
-					<ScaleYCode><![CDATA[ws / 3]]></ScaleYCode>
+					<ScaleXCode><![CDATA[ws.get(2) / 3]]></ScaleXCode>
+					<ScaleYCode><![CDATA[ws.get(2)/ 3]]></ScaleYCode>
 
 			<Presentation>
 				<Image>
