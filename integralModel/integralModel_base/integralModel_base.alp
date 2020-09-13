@@ -198,9 +198,22 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[Smg/V_m]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Smg/V_m]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -258,10 +271,32 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Wm/Ro_m]]></Formula>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[Wm[Agents]/Ro_m[Agents]]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Wm[Agents]/Ro_m[Agents]]]></Expression>
+							</CustomExpression>
+						</Array>
+						<Shadow>
+							<Id>1599997091810</Id>
+							<Name><![CDATA[<V_m>]]></Name>
+							<X>-730</X><Y>70</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -650,47 +685,70 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1599943154019</Id>
-					<Name><![CDATA[dWm1]]></Name>
-					<X>-390</X><Y>-60</Y>
+					<Id>1599997097998</Id>
+					<Name><![CDATA[R_m]]></Name>
+					<X>-610</X><Y>100</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Um-Wm.get(1)*Mm)*YGm]]></Formula>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[(4*V_m/3*PI)^(1/3)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[(4*V_m/3*PI)^(1/3)]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1599943304043</Id>
-					<Name><![CDATA[dWm2]]></Name>
-					<X>-490</X><Y>-50</Y>
+					<Id>1599997443174</Id>
+					<Name><![CDATA[S_m]]></Name>
+					<X>-510</X><Y>130</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Um-Wm.get(2)*Mm)*YGm]]></Formula>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+						<Array>
+							<CustomExpression>
+								<Expression><![CDATA[4*PI*(R_m)^2]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1599943495595</Id>
-					<Name><![CDATA[dWm3]]></Name>
-					<X>-290</X><Y>-50</Y>
+					<Id>1599997579103</Id>
+					<Name><![CDATA[v_S_m]]></Name>
+					<X>-440</X><Y>150</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Um-Wm.get(3)*Mm)*YGm]]></Formula>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+						<Array>
+							<CustomExpression>
+								<Expression><![CDATA[S_m/S_m.sum()]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -867,6 +925,28 @@ Doctor of Philosophy ]]></Description>
 						</Array>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1599997708245</Id>
+					<Name><![CDATA[S_mg_array]]></Name>
+					<X>-390</X><Y>130</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[Smg*v_S_m]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1394982101372</Id>
 					<Name><![CDATA[Uc]]></Name>
@@ -889,19 +969,19 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1394982113124</Id>
 					<Name><![CDATA[Um]]></Name>
-					<X>-390</X><Y>190</Y>
+					<X>-390</X><Y>130</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1394982657396" External="false" Constant="false" Array="false">
+					<Properties SourceId="1599997708245" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>-70</Y></Point>
-							<Point><X>0</X><Y>-120</Y></Point>
+							<Point><X>0</X><Y>-80</Y></Point>
+							<Point><X>0</X><Y>-160</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1356,7 +1436,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1405517863092</Id>
 					<Name><![CDATA[alpha]]></Name>
 					<Description><![CDATA[Нечто странное и непонятное. Присвоим-ка пока это нулю]]></Description>
-					<X>-310</X><Y>120</Y>
+					<X>-280</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1463,16 +1543,20 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
+						<Dimension>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+							<ClassName><![CDATA[Agents]]></ClassName>
+						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[90000]]></Code>
+							<Code><![CDATA[{90000,90000,90000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477598</Id>
 							<Label><![CDATA[Ro_m]]></Label>
-							<EditorContolType>TEXT_BOX</EditorContolType>
+							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -1801,10 +1885,10 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1405517863092" TargetId="1394982132599" Polarity="null">
 					<Height>-2.0360331117451835</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>70</Y></Direction>
+					<Direction><X>-30</X><Y>70</Y></Direction>
 					<Id>1579448666046</Id>
 					<Name><![CDATA[alpha - Us]]></Name>
-					<X>-310</X><Y>120</Y>
+					<X>-280</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1904,7 +1988,7 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1394981936486" TargetId="1394982113124" Polarity="null">
-					<Height>40.045040527347766</Height>
+					<Height>281.015</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-170</Y></Direction>
 					<Id>1579448666054</Id>
@@ -1996,10 +2080,10 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1405517863092" TargetId="1394982113124" Polarity="null">
 					<Height>-4.3277784285967731E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>0</Y></Direction>
+					<Direction><X>-110</X><Y>-70</Y></Direction>
 					<Id>1579448666061</Id>
 					<Name><![CDATA[alpha - Um]]></Name>
-					<X>-310</X><Y>120</Y>
+					<X>-280</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2623,21 +2707,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983172605" TargetId="1599943154019" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>120</Y></Direction>
-					<Id>1579721355939</Id>
-					<Name><![CDATA[YGm - dWm1]]></Name>
-					<X>-490</X><Y>-180</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1394981990462" TargetId="1579721301639" Polarity="null">
 					<Height>-24.614</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2653,12 +2722,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394982113124" TargetId="1599943154019" Polarity="null">
+				<Link SourceId="1394982113124" TargetId="1579721301639" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-180</Y></Direction>
+					<Direction><X>0</X><Y>-300</Y></Direction>
 					<Id>1579721371710</Id>
-					<Name><![CDATA[Um - dWm1]]></Name>
+					<Name><![CDATA[Um - dWm]]></Name>
 					<X>-390</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2743,12 +2812,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983187577" TargetId="1599943154019" Polarity="null">
+				<Link SourceId="1394983187577" TargetId="1579721301639" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-90</X><Y>120</Y></Direction>
+					<Direction><X>-90</X><Y>0</Y></Direction>
 					<Id>1580409880348</Id>
-					<Name><![CDATA[Mm - dWm1]]></Name>
+					<Name><![CDATA[Mm - dWm]]></Name>
 					<X>-300</X><Y>-180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2878,27 +2947,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981990462" TargetId="1599943154019" Polarity="null">
-					<Height>-10.237</Height>
+				<Link SourceId="1394983172605" TargetId="1579721301639" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>130</Y></Direction>
-					<Id>1599943217842</Id>
-					<Name><![CDATA[Wm - dWm1]]></Name>
-					<X>-390</X><Y>-190</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1394983172605" TargetId="1599943304043" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>130</Y></Direction>
-					<Id>1599943396451</Id>
-					<Name><![CDATA[YGm - dWm2]]></Name>
+					<Direction><X>100</X><Y>0</Y></Direction>
+					<Id>1599943937724</Id>
+					<Name><![CDATA[YGm - dWm]]></Name>
 					<X>-490</X><Y>-180</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2908,13 +2962,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983187577" TargetId="1599943304043" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1599997091810" TargetId="1599997097998" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-190</X><Y>130</Y></Direction>
-					<Id>1599943403771</Id>
-					<Name><![CDATA[Mm - dWm2]]></Name>
-					<X>-300</X><Y>-180</Y>
+					<Direction><X>120</X><Y>30</Y></Direction>
+					<Id>1599997105629</Id>
+					<Name><![CDATA[<V_m> - R_m]]></Name>
+					<X>-730</X><Y>70</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2923,13 +2977,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981990462" TargetId="1599943304043" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1599997097998" TargetId="1599997443174" Polarity="null">
+					<Height>2.045</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-100</X><Y>140</Y></Direction>
-					<Id>1599943409896</Id>
-					<Name><![CDATA[Wm - dWm2]]></Name>
-					<X>-390</X><Y>-190</Y>
+					<Direction><X>100</X><Y>30</Y></Direction>
+					<Id>1599997458682</Id>
+					<Name><![CDATA[R_m - S_m]]></Name>
+					<X>-610</X><Y>100</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2938,13 +2992,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394982113124" TargetId="1599943304043" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1599997443174" TargetId="1599997579103" Polarity="null">
+					<Height>-8.724</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-100</X><Y>-170</Y></Direction>
-					<Id>1599943441840</Id>
-					<Name><![CDATA[Um - dWm2]]></Name>
-					<X>-390</X><Y>120</Y>
+					<Direction><X>70</X><Y>20</Y></Direction>
+					<Id>1599997572983</Id>
+					<Name><![CDATA[S_m - v_S_m]]></Name>
+					<X>-510</X><Y>130</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2953,13 +3007,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983187577" TargetId="1599943495595" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1394982657396" TargetId="1599997708245" Polarity="null">
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>10</X><Y>130</Y></Direction>
-					<Id>1599943504193</Id>
-					<Name><![CDATA[Mm - dWm3]]></Name>
-					<X>-300</X><Y>-180</Y>
+					<Direction><X>0</X><Y>-60</Y></Direction>
+					<Id>1599997738197</Id>
+					<Name><![CDATA[Smg - S_mg_array]]></Name>
+					<X>-390</X><Y>190</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2968,43 +3022,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981990462" TargetId="1599943495595" Polarity="null">
-					<Height>20.0</Height>
+				<Link SourceId="1599997579103" TargetId="1599997708245" Polarity="null">
+					<Height>-0.398</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>140</Y></Direction>
-					<Id>1599943509535</Id>
-					<Name><![CDATA[Wm - dWm3]]></Name>
-					<X>-390</X><Y>-190</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1394983172605" TargetId="1599943495595" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>200</X><Y>130</Y></Direction>
-					<Id>1599943516200</Id>
-					<Name><![CDATA[YGm - dWm3]]></Name>
-					<X>-490</X><Y>-180</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1394982113124" TargetId="1599943495595" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>-170</Y></Direction>
-					<Id>1599943521699</Id>
-					<Name><![CDATA[Um - dWm3]]></Name>
-					<X>-390</X><Y>120</Y>
+					<Direction><X>50</X><Y>-20</Y></Direction>
+					<Id>1599997745919</Id>
+					<Name><![CDATA[v_S_m - S_mg_array]]></Name>
+					<X>-440</X><Y>150</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5887,12 +5911,6 @@ else
 
 			<Parameters>			
 				<Parameter>
-					<ParameterName><![CDATA[YGm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Mm]]></ParameterName>
-				</Parameter>
-				<Parameter>
 					<ParameterName><![CDATA[U]]></ParameterName>
 				</Parameter>
 				<Parameter>
@@ -5972,6 +5990,12 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Wm0]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Mm]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[YGm]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
