@@ -172,7 +172,10 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[Main]]></Type>        
+						<Type><![CDATA[Enviroment]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[get_Enviroment()]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="AuxVariable">
@@ -6088,13 +6091,15 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-	static public double  Vc = 0.1;
+	static public double Vc = 0.1;
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
 	static public double Sq_wood_с=W_c /RoSq_C;
 	static public double MF_сell=0.2;
 	static public double MF_lyg=0.5;
+	static public double W_lyg=MF_lyg*W_c;
+	static public double W_cell=MF_сell*W_c;
 	
 
 	public double T = 293;
