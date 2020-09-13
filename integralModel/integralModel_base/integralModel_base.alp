@@ -213,9 +213,22 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[(Sm[Agents] > Smcrit) ? lambda*(Sm[Agents]-Smcrit)*Wm[Agents] : 0]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[(Sm[Agents] > Smcrit) ? lambda*(Sm[Agents]-Smcrit)*Wm[Agents] : 0]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -694,7 +707,8 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(4*V_m[Agents]/3*PI)^(1/3)]]></Expression>
+								<Expression><![CDATA[(4*V_m[Agents]/3*PI);
+//^(1/3)]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -750,7 +764,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[S_m/S_m.sum()]]></Expression>
+								<Expression><![CDATA[S_m[Agents]/S_m.sum()]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -984,7 +998,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff.get(1)*(U*Sc-Sm)]]></Expression>
+								<Expression><![CDATA[Z*MC_Seff.get(1)*(U*Sc-Sm[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1144,8 +1158,24 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm[Agents], 0.0)*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(1))*MF_flacc_m]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Math.max(dWm.get(2))*MF_flacc_m]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Math.max(dWm.get(3))*MF_flacc_m]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -3119,7 +3149,7 @@ MAOBING TU таблица 22]]></Description>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[initiationRate]]></Code>
+							<Code><![CDATA[initiationRate.get(2)]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -3176,7 +3206,9 @@ for (Mushroom mush : mushroom) {
 for (Mushroom mush : harvested) {
 	remove_mushroom(mush);
 	Harvested_Mushroom mush1 = add_harvested_Mushroom();
-	mush1.ws = mush.ws;
+	mush1.ws.set(1,mush.ws.get(1));
+	mush1.ws.set(2,mush.ws.get(2));
+	mush1.ws.set(3,mush.ws.get(3));
 	double x = basket.getX() + basket.getWidth()*random();
     double y = basket.getY() + basket.getHeight()*random();
 	mush1.setXY(x,y); 	
@@ -4834,7 +4866,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[a*(box.Sm[Agents]/(1+h*box.Sm[Agents]))*exp(-k*age)*(ws+0.1)]]></Expression>
+								<Expression><![CDATA[a*(box.Sm[Agents]/(1+h*box.Sm[Agents]))*exp(-k*age)*(ws[Agents]+0.1)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
