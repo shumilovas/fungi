@@ -997,7 +997,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Expression>
+								<Expression><![CDATA[(Wm[Agents]*q*Sm[Agents]*(Am-Wm[Agents])/Am)/YGm + Mm*Wm[Agents]/(1+alpha/Sm)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1017,7 +1017,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1394982657396" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[mushroom.totalGrowth() / YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm)]]></Formula>
+						<Formula><![CDATA[mushroom/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1049,7 +1049,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc*C_flac_m-C_flac_c)*MC_Seff]]></Expression>
+								<Expression><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc[Agents]*C_flac_m-C_flac_c)*MC_Seff]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -4598,7 +4598,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<Title><![CDATA[Масса мицелия]]></Title>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-16776961</Color>
-					<Expression2><![CDATA[Wm]]></Expression2>
+					<Expression2><![CDATA[Wm.get(2)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
@@ -4783,9 +4783,22 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TargetId="1395236796405" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[a*(box.Sm/(1+h*box.Sm))*exp(-k*age)*(ws+0.1)]]></Formula>
+					<Properties TargetId="1395236796405" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[a*(box.Sm[Agents]/(1+h*box.Sm[Agents]))*exp(-k*age)*(ws+0.1)]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[a*(box.Sm[Agents]/(1+h*box.Sm[Agents]))*exp(-k*age)*(ws+0.1)]]></Expression>
+							</CustomExpression>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
