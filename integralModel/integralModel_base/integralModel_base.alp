@@ -3219,9 +3219,9 @@ for (Mushroom mush : mushroom) {
 for (Mushroom mush : harvested) {
 	remove_mushroom(mush);
 	Harvested_Mushroom mush1 = add_harvested_Mushroom();
-	mush1.ws.set(1,mush.ws.get(1));
-	mush1.ws.set(2,mush.ws.get(2));
-	mush1.ws.set(3,mush.ws.get(3));
+	//{{mush1.ws.set(1,mush.ws.get(1));
+	//mush1.ws.set(2,mush.ws.get(2));
+	//mush1.ws.set(3,mush.ws.get(3));}}
 	double x = basket.getX() + basket.getWidth()*random();
     double y = basket.getY() + basket.getHeight()*random();
 	mush1.setXY(x,y); 	
@@ -3725,7 +3725,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<StatisticsItem>
 						<Name><![CDATA[totalGrowth]]></Name>
 						<Type>sum</Type>
-						<Expression><![CDATA[item.growth]]></Expression>
+						<Expression><![CDATA[item.growth.get(2)]]></Expression>
 						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<StatisticsItem>
@@ -3737,7 +3737,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<StatisticsItem>
 						<Name><![CDATA[meanWeight]]></Name>
 						<Type>average</Type>
-						<Expression><![CDATA[item.ws]]></Expression>
+						<Expression><![CDATA[item.ws.get(2)]]></Expression>
 						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<InEnvironment>true</InEnvironment>	
