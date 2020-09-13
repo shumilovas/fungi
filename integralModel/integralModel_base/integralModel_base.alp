@@ -242,9 +242,22 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[W_flac_m/(V_m)]]></Formula>
 						<Color>-16711936</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[W_flac_m[Agents]/(V_m)]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -258,7 +271,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_flac_с/(Enviroment.Vc)]]></Formula>
+						<Formula><![CDATA[W_flac_с[Agents]/(Enviroment.Vc)]]></Formula>
 						<Color>-16711936</Color>
 					</Properties>
 
@@ -736,7 +749,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[4*PI*(R_m)^2]]></Expression>
+								<Expression><![CDATA[4*PI*(R_m[Agents])*4*PI*(R_m[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1030,7 +1043,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Wm[Agents]*q*Sm[Agents]*(Am-Wm[Agents])/Am)/YGm + Mm*Wm[Agents]/(1+alpha/Sm)]]></Expression>
+								<Expression><![CDATA[(Wm[Agents]*q*Sm[Agents]*(Am-Wm[Agents])/Am)/YGm + Mm*Wm[Agents]/(1+alpha/Sm[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1062,7 +1075,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[mushroom/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
+								<Expression><![CDATA[mushroom[Agents]/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1160,7 +1173,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm)*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm[1])*MF_flacc_m]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -3889,7 +3902,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Height>400</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-4144960</FillColor>
-					<FillColorCode><![CDATA[lerpColor(Sm/22000.0, minColor.getFillColor(), maxColor1.getFillColor())]]></FillColorCode>
+					<FillColorCode><![CDATA[lerpColor(Sm.get(2)/22000.0, minColor.getFillColor(), maxColor1.getFillColor())]]></FillColorCode>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<EmbeddedObjectPresentation>
