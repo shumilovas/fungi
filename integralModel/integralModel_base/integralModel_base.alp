@@ -279,7 +279,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Smg.get(1)/V_m]]></Expression>
+								<Expression><![CDATA[Smg.get(1)/V_m.get(1)]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -335,7 +335,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_flac_m[Agents]/(V_m)]]></Expression>
+								<Expression><![CDATA[W_flac_m.get(1)/(V_m[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1039,7 +1039,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[U_cc.get[Fractions]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
+								<Expression><![CDATA[U_cc.[Fractions]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
@@ -1241,7 +1241,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc*C_flac_m-C_flac_c)*MC_Seff]]></Expression>
+								<Expression><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc*C_flac_m[Agents]-C_flac_c[Agents])*MC_Seff[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -4946,7 +4946,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[m_mode ? ((age > age_maturing*24) ? 1 : 0) : ((ws > ws_maturing) ? 1 : 0)]]></Formula>
+						<Formula><![CDATA[m_mode ? ((age > age_maturing*24) ? 1 : 0) : ((ws.get(1) > ws_maturing) ? 1 : 0)]]></Formula>
 						<Color/>
 					</Properties>
 
