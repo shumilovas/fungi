@@ -758,7 +758,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599997579103</Id>
 					<Name><![CDATA[v_S_m]]></Name>
-					<X>-440</X><Y>150</Y>
+					<X>-470</X><Y>150</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -977,16 +977,40 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
+					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[Smg[Agents]*v_S_m[Agents]]]></InitialValue>
+						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Smg.get(1)*v_S_m.get(1)-Um.get(1)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Smg.get(2)*v_S_m.get(2)-Um.get(2)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Smg.get(3)*v_S_m.get(3)-Um.get(3)]]></Expression>
+							</CustomExpression>
 						</Array>
 					</Properties>
 				</Variable>
@@ -3104,7 +3128,7 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1599997443174" TargetId="1599997579103" Polarity="null">
 					<Height>-8.724</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>70</X><Y>20</Y></Direction>
+					<Direction><X>40</X><Y>20</Y></Direction>
 					<Id>1599997572983</Id>
 					<Name><![CDATA[S_m - v_S_m]]></Name>
 					<X>-510</X><Y>130</Y>
@@ -3134,10 +3158,10 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1599997579103" TargetId="1599997708245" Polarity="null">
 					<Height>-0.398</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>-20</Y></Direction>
+					<Direction><X>80</X><Y>-20</Y></Direction>
 					<Id>1599997745919</Id>
 					<Name><![CDATA[v_S_m - S_mg_array]]></Name>
-					<X>-440</X><Y>150</Y>
+					<X>-470</X><Y>150</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
