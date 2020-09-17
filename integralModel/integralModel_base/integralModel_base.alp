@@ -1120,7 +1120,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[mushroom[Agents]/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
+								<Expression><![CDATA[mushroom.get(1)/ YGs + Ms * mushroom.get(1).totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1153,7 +1153,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc[Agents]*C_flac_m-C_flac_c)*MC_Seff]]></Expression>
+								<Expression><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc*C_flac_m-C_flac_c)*MC_Seff]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1218,7 +1218,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm[1])*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(1))*MF_flacc_m]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1226,14 +1226,14 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudBacillus]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm)*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(2))*MF_flacc_m]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(3))*MF_flacc_m]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -4439,7 +4439,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<Title><![CDATA[Концентрация лакказы в опилках (г/м3) * 100]]></Title>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-8388608</Color>
-					<Expression2><![CDATA[C_flac_c*100]]></Expression2>
+					<Expression2><![CDATA[C_flac_c.get(2)*100]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
