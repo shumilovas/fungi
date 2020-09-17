@@ -270,9 +270,22 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[W_flac_с[Agents]/(Enviroment.Vc)]]></Formula>
 						<Color>-16711936</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[W_flac_с[Agents]/(Enviroment.Vc)]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -855,7 +868,7 @@
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[MF_flacc_m[Agents]*Wm[Agents]*errPh_w_f_m[Agents]*errT_w_f_m]]></InitialValue>
+						<InitialValue><![CDATA[MF_flacc_m*Wm[Agents]*errPh_w_f_m[Agents]*errT_w_f_m]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -4409,7 +4422,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<Title><![CDATA[Концентрация лакказы в мицелии (г/м3)]]></Title>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-6632142</Color>
-					<Expression2><![CDATA[C_flac_m]]></Expression2>
+					<Expression2><![CDATA[C_flac_m.get(2)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
