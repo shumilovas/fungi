@@ -199,7 +199,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Smg[]/V_m]]></Expression>
+								<Expression><![CDATA[Smg[Agents]/V_m]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -433,12 +433,20 @@
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[K0_kin_depol_CC[Fractions]*C_flac_c*K_error[Fractions]]]></Expression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[K0_kin_depol_CC[Fractions]*C_flac_c[Agents]*K_error[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -943,7 +951,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[U_cc[Fractions]*K_pol_mon[Fractions]-Uc*Share_mon[Fractions]]]></Expression>
+								<Expression><![CDATA[U_cc[Fractions]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
