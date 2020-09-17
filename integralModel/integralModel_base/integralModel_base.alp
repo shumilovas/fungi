@@ -199,7 +199,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Smg/V_m]]></Expression>
+								<Expression><![CDATA[Smg[]/V_m]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
