@@ -762,7 +762,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(5.58*phFunct_W_flact_m_Fung((Enviroment.pH)*(Enviroment.pH))]]></Expression>
+								<Expression><![CDATA[(5.58*phFunct_W_flact_m_Fung((pH)*(pH))]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -770,7 +770,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudBacillus]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(5.58*phFunct_W_flact_m_Bacill((Enviroment.pH)*(Enviroment.pH))]]></Expression>
+								<Expression><![CDATA[(5.58*phFunct_W_flact_m_Bacill((pH)*(pH))]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -778,7 +778,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(5.58*phFunct_W_flact_m_Trich((Enviroment.pH)*(Enviroment.pH))]]></Expression>
+								<Expression><![CDATA[(5.58*phFunct_W_flact_m_Trich((pH)*(pH))]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1221,7 +1221,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[mushroom[Agents]/ YGs + Ms * mushroom[Agents].totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
+								<Expression><![CDATA[YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -2129,6 +2129,30 @@ MAOBING TU таблица 22]]></Description>
 							<Id>1579947006830</Id>
 							<Label><![CDATA[Wm0]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1600888022721</Id>
+					<Name><![CDATA[pH]]></Name>
+					<X>-1000</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[7]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1600888022719</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -3284,6 +3308,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1599997745919</Id>
 					<Name><![CDATA[v_S_m - S_mg_array]]></Name>
 					<X>-470</X><Y>150</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1600888022721" TargetId="1584699580588" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-30</Y></Direction>
+					<Id>1600888060562</Id>
+					<Name><![CDATA[pH - errPh_w_f_m]]></Name>
+					<X>-1000</X><Y>750</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6285,6 +6324,9 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[YGm]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[pH]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
