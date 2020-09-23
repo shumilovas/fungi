@@ -335,7 +335,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_flac_m.get(1)/(V_m[Agents])]]></Expression>
+								<Expression><![CDATA[W_flac_m[Agents]/(V_m[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -792,10 +792,16 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[12.5*TFunct_W_flact_m(Temperature)]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-65281</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -956,7 +962,7 @@
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[MF_flacc_m*Wm[Agents]*errPh_w_f_m[Agents]*errT_w_f_m]]></InitialValue>
+						<InitialValue><![CDATA[{MF_flacc_m*Wm.get(1)*errPh_w_f_m.get(1)*errT_w_f_m.get(1), MF_flacc_m*Wm.get(2)*errPh_w_f_m.get(2)*errT_w_f_m.get(2), MF_flacc_m*Wm.get(3)*errPh_w_f_m.get(3)*errT_w_f_m.get(3)}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -995,7 +1001,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
-						<InitialValue><![CDATA[0]]></InitialValue>
+						<InitialValue><![CDATA[{0,0,0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1019,7 +1025,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0, 0}]]></InitialValue>
+						<InitialValue><![CDATA[{{0, 0}, {0, 0}, {0, 0}}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1039,7 +1045,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[U_cc.[Fractions]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
+								<Expression><![CDATA[U_cc[Fractions]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
@@ -1089,7 +1095,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[0]]></InitialValue>
+						<InitialValue><![CDATA[{0,0,0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1100,25 +1106,8 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Smg.get(1)*v_S_m.get(1)-Um.get(1)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudBacillus]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Smg.get(2)*v_S_m.get(2)-Um.get(2)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Smg.get(3)*v_S_m.get(3)-Um.get(3)]]></Expression>
+								<Expression><![CDATA[Smg[Agents]*v_S_m[Agents]-Um[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
