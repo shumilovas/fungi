@@ -801,6 +801,30 @@
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[12.5*TFunct_W_flact_m(Temperature)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[12.5*TFunct_W_flact_m(Temperature)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[12.5*TFunct_W_flact_m(Temperature)]]></Expression>
+							</CustomExpression>
 						</Array>
 					</Properties>
 
