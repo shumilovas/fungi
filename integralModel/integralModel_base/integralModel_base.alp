@@ -541,10 +541,31 @@
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[W_mon[1]get(1)/(W_mon[1]get(1)+W_pol[1]get(1)*K_pol_mon.get(1))]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[W_mon[Fractions][Agents]/(W_mon[Fractions][Agents]+W_pol[Fractions][Agents]*K_pol_mon.[Fractions])]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
