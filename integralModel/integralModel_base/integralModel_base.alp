@@ -484,12 +484,20 @@
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_pol[Fractions]/Enviroment.Vc]]></Expression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[W_pol[Fractions,Agents]/Enviroment.Vc]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1089,7 +1097,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[U_cc[Fractions]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
+								<Expression><![CDATA[U_cc[Fractions,Agents]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
@@ -1330,7 +1338,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Enviroment.Vc*K_lability[Fractions,Agents]*Vmax[Fractions,Agents]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) *error_Vmax_T_Ucc * error_Vmax_ph_Ucc]]></Expression>
+								<Expression><![CDATA[(Enviroment.Vc*K_lability[Fractions,Agents]*Vmax[Fractions,Agents]*C_pol[Fractions,Agents]/(Ks05[Fractions] + C_pol[Fractions,Agents])) *error_Vmax_T_Ucc * error_Vmax_ph_Ucc]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1363,7 +1371,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm.get(1),0/0)*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(1),0)*MF_flacc_m]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1371,14 +1379,15 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudBacillus]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm.get(2),0/0)*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(2),0)*MF_flacc_m]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm.get(3),0/0)*MF_flacc_m]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(3),0)*MF_flacc_m]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
