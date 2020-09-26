@@ -563,7 +563,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_mon[Fractions][Agents]/(W_mon[Fractions][Agents]+W_pol[Fractions][Agents]*K_pol_mon[Fractions])]]></Expression>
+								<Expression><![CDATA[W_mon[Fractions,Agents]/(W_mon[Fractions,Agents]+W_pol[Fractions,Agents]*K_pol_mon[Fractions])]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -594,78 +594,12 @@
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Lygnin]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[1]get(1)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Lygnin]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudBacillus]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[1]get(2)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Lygnin]]></ItemName>
 								</Coordinate>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[1]get(3)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Cellulose]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[2]get(1)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Cellulose]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudBacillus]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[2]get(2)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Cellulose]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[2]get(3)]]></Expression>
+								<Expression><![CDATA[Sh_lyg[Fractions,Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1180,10 +1114,10 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
-					<EquationStyle>custom</EquationStyle>
+					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{Enviroment.W_lyg,Enviroment.W_cell}]]></InitialValue>
+						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1194,6 +1128,18 @@ Doctor of Philosophy ]]></Description>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Lygnin]]></ItemName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+							</CustomExpression>
 						</Array>
 					</Properties>
 				</Variable>
@@ -1371,12 +1317,20 @@ Doctor of Philosophy ]]></Description>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Enviroment.Vc*K_lability[Fractions]*Vmax[Fractions]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) *error_Vmax_T_Ucc * error_Vmax_ph_Ucc]]></Expression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[(Enviroment.Vc*K_lability[Fractions,Agents]*Vmax[Fractions,Agents]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) *error_Vmax_T_Ucc * error_Vmax_ph_Ucc]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
