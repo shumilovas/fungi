@@ -928,13 +928,20 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[Wm0]]></InitialValue>
+						<InitialValue><![CDATA[{Wm0.get(1), Wm0.get(2), Wm0.get(3)}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[dWm[Agents]]]></Expression>
+							</CustomExpression>
 						</Array>
 						<Shadow>
 							<Id>1579720852671</Id>
