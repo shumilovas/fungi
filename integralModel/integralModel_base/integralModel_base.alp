@@ -1126,7 +1126,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="StockVariable">
 					<Id>1599997708245</Id>
 					<Name><![CDATA[S_mg_array]]></Name>
-					<X>-390</X><Y>130</Y>
+					<X>-440</X><Y>110</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1147,7 +1147,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Smg[Agents]*v_S_m[Agents]-Um[Agents]]]></Expression>
+								<Expression><![CDATA[v_S_m[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1187,12 +1187,12 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1394982113124</Id>
 					<Name><![CDATA[Um]]></Name>
-					<X>-390</X><Y>130</Y>
+					<X>-390</X><Y>190</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1599997708245" External="false" Constant="false" Array="true">
+					<Properties SourceId="1394982657396" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<Array>
@@ -1211,8 +1211,8 @@ Doctor of Philosophy ]]></Description>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>-80</Y></Point>
-							<Point><X>0</X><Y>-160</Y></Point>
+							<Point><X>0</X><Y>-140</Y></Point>
+							<Point><X>0</X><Y>-220</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -3317,25 +3317,10 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394982657396" TargetId="1599997708245" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-60</Y></Direction>
-					<Id>1599997738197</Id>
-					<Name><![CDATA[Smg - S_mg_array]]></Name>
-					<X>-390</X><Y>190</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1599997579103" TargetId="1599997708245" Polarity="null">
 					<Height>-0.398</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>80</X><Y>-20</Y></Direction>
+					<Direction><X>30</X><Y>-40</Y></Direction>
 					<Id>1599997745919</Id>
 					<Name><![CDATA[v_S_m - S_mg_array]]></Name>
 					<X>-470</X><Y>150</Y>
@@ -4741,7 +4726,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 						<Title><![CDATA[Масса мицелия]]></Title>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-16776961</Color>
-					<Expression2><![CDATA[Wm.get(2)]]></Expression2>
+					<Expression2><![CDATA[Wm.get(1)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
