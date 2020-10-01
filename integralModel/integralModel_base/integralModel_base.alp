@@ -251,7 +251,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_mon.sum()/Enviroment.Vc]]></Formula>
+						<Formula><![CDATA[!Double.isNaN(W_mon.sum()/Enviroment.Vc) ? W_mon.sum()/Enviroment.Vc : 1]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -666,7 +666,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_mon.sum()>0 ? W_mon[Fractions]/W_mon.sum() : 0.5]]></Expression>
+								<Expression><![CDATA[W_mon.sum()>0 ? W_mon[Fractions, 1]/W_mon.sum() : 0.5]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -928,7 +928,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[{Wm0.get(1), Wm0.get(2), Wm0.get(3)}]]></InitialValue>
+						<InitialValue><![CDATA[{8,8,8}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -3114,21 +3114,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579947006832" TargetId="1394981990462" Polarity="null">
-					<Height>1.042</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>60</Y></Direction>
-					<Id>1579947140971</Id>
-					<Name><![CDATA[Wm0 - Wm]]></Name>
-					<X>-390</X><Y>-270</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1394983187577" TargetId="1394982113124" Polarity="null">
 					<Height>152.296</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -4780,6 +4765,8 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Code><![CDATA[10 / getScale().pixelsPerUnit(METER) / 86400]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<OnEnterFlowchartBlock><![CDATA[traceln(1);]]></OnEnterFlowchartBlock>
+				<OnExitFlowchartBlock><![CDATA[traceln(1);]]></OnExitFlowchartBlock>
 				<PhysicalLength Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
@@ -5573,6 +5560,8 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Code><![CDATA[10 / getScale().pixelsPerUnit(METER) / 86400]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<OnEnterFlowchartBlock><![CDATA[traceln(1);]]></OnEnterFlowchartBlock>
+				<OnExitFlowchartBlock><![CDATA[traceln(1);]]></OnExitFlowchartBlock>
 				<PhysicalLength Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
