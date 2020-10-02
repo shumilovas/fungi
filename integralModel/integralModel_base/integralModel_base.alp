@@ -1243,8 +1243,25 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
+								<Expression><![CDATA[YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
