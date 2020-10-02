@@ -277,9 +277,8 @@
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Smg.get(1)/V_m.get(1)]]></Expression>
+								<Expression><![CDATA[Smg[Agents]/V_m[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
