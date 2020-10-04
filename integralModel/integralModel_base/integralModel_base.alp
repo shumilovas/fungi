@@ -251,7 +251,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[!Double.isNaN(W_mon.sum()/Enviroment.Vc) ? W_mon.sum()/Enviroment.Vc : 1]]></Formula>
+						<Formula><![CDATA[! isNan(dWm[Agents])? 0.0001: dWm[Agents]]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -939,7 +939,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[dWm[Agents]]]></Expression>
+								<Expression><![CDATA[dWm[Agents]<=0 ? dWm[Agents]: dWm[Agents]+80]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
