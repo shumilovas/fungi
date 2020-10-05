@@ -927,7 +927,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[{8,8,8}]]></InitialValue>
+						<InitialValue><![CDATA[{130,8,8}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1949,7 +1949,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.001]]></Code>
+							<Code><![CDATA[0.01]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477607</Id>
@@ -6250,7 +6250,7 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-	static public double Vc = 0.1;
+	static public double Vc = 10;
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
