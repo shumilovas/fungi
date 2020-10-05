@@ -1057,7 +1057,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.0, 0.0,0.0, 0.0, 0.0,0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{63000.0, 63000.0,0.0, 0.0, 0.0,0.0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1949,7 +1949,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.01]]></Code>
+							<Code><![CDATA[0.001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477607</Id>
