@@ -107,6 +107,16 @@
 				<Name><![CDATA[Cellulose]]></Name>
 				<Value>2</Value>
 			</Element>
+			<Element>
+				<Id>1601959532480</Id>
+				<Name><![CDATA[Peptids]]></Name>
+				<Value>3</Value>
+			</Element>
+			<Element>
+				<Id>1601959579985</Id>
+				<Name><![CDATA[Salts]]></Name>
+				<Value>4</Value>
+			</Element>
 		</Dimension>
 		<!--   =========   Dimension   ========  -->
 		<Dimension>
@@ -132,6 +142,33 @@
 			<Element>
 				<Id>1601957694025</Id>
 				<Name><![CDATA[Plant]]></Name>
+				<Value>4</Value>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1601959506530</Id>
+			<Name><![CDATA[Elements]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>0</Id>
+				<Name><![CDATA[C]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>0</Id>
+				<Name><![CDATA[N]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>0</Id>
+				<Name><![CDATA[P]]></Name>
+				<Value>3</Value>
+			</Element>
+			<Element>
+				<Id>0</Id>
+				<Name><![CDATA[S]]></Name>
 				<Value>4</Value>
 			</Element>
 		</Dimension>
@@ -1107,7 +1144,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[U_cc[Fractions,Agents]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions]]]></Expression>
+								<Expression><![CDATA[U_cc[Fractions,Agents]*K_pol_mon[Fractions]-Uc[Agents]*Share_mon[Fractions] + mon_gluc_plus_fotos]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
@@ -1135,7 +1172,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell}]]></InitialValue>
+						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell,0,0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -2037,7 +2074,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{14.1*1000, 0.031*1000000}]]></Code>
+							<Code><![CDATA[{14.1*1000, 0.031*1000000,0,0}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477630</Id>
@@ -3434,6 +3471,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1601959051989</Id>
 					<Name><![CDATA[k_hv - mon_gluc_plus_fotos]]></Name>
 					<X>-990</X><Y>1070</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1601958995320" TargetId="1579717477736" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>160</X><Y>90</Y></Direction>
+					<Id>1601959259533</Id>
+					<Name><![CDATA[mon_gluc_plus_fotos - W_mon]]></Name>
+					<X>-870</X><Y>1050</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
