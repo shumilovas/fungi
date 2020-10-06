@@ -117,6 +117,11 @@
 				<Name><![CDATA[Salts]]></Name>
 				<Value>4</Value>
 			</Element>
+			<Element>
+				<Id>1602000517828</Id>
+				<Name><![CDATA[h20]]></Name>
+				<Value>5</Value>
+			</Element>
 		</Dimension>
 		<!--   =========   Dimension   ========  -->
 		<Dimension>
@@ -292,9 +297,22 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[!Double.isNaN(W_mon.sum()/Enviroment.Vc) ? W_mon.sum()/Enviroment.Vc : 1]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[!Double.isNaN(W_mon[Fractions]/Enviroment.Vc) ? W_mon[Fractions]/Enviroment.Vc : 1]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -1040,7 +1058,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
+					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
@@ -1051,6 +1069,36 @@
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Uc[1, Eltements]-Um.get(1)- Us.get(1)]- 0.1*(Uc[1, Salt] +Uc[1, Water] ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Uc[2, Eltements]-Um.get(2)- 0]]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Uc[3, Eltements]-Um.get(3)- 0]]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Uc[1, Eltements]-Um.get(1)- Us.get(1)]+ 0.1*(Uc[1, Salt] +Uc[1, Water] ]]></Expression>
+							</CustomExpression>
 						</Array>
 					</Properties>
 				</Variable>
@@ -1251,37 +1299,16 @@ Doctor of Philosophy ]]></Description>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+								<ClassName><![CDATA[Elements]]></ClassName>
+							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff.get(1)*(U*Sc-Sm.get(1))]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudBacillus]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff.get(2)*(U*Sc-Sm.get(2))]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff.get(3)*(U*Sc-Sm.get(3))]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[Plant]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff.get(4)*(U*Sc-Sm.get(4))]]></Expression>
+								<Expression><![CDATA[Z*MC_Seff[Agents]*(U*Sc-Sm[Agents]))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
