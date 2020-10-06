@@ -129,6 +129,11 @@
 				<Name><![CDATA[BadTrichoderma]]></Name>
 				<Value>3</Value>
 			</Element>
+			<Element>
+				<Id>1601957694025</Id>
+				<Name><![CDATA[Plant]]></Name>
+				<Value>4</Value>
+			</Element>
 		</Dimension>
 	</Dimensions>
 	<ActiveObjectClasses>
@@ -344,7 +349,7 @@
 					<Id>1579717477676</Id>
 					<Name><![CDATA[C_flac_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр  ммцелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку  грамм/метр*метр*метр]]></Description>
-					<X>-320</X><Y>720</Y>
+					<X>-300</X><Y>720</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -927,7 +932,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[{130,8,8}]]></InitialValue>
+						<InitialValue><![CDATA[{120,8,8,300}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -994,7 +999,7 @@
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[{MF_flacc_m*Wm.get(1)*errPh_w_f_m.get(1)*errT_w_f_m.get(1), MF_flacc_m*Wm.get(2)*errPh_w_f_m.get(2)*errT_w_f_m.get(2), MF_flacc_m*Wm.get(3)*errPh_w_f_m.get(3)*errT_w_f_m.get(3)}]]></InitialValue>
+						<InitialValue><![CDATA[{MF_flacc_m*Wm.get(1)*errPh_w_f_m.get(1)*errT_w_f_m.get(1), MF_flacc_m*Wm.get(2)*errPh_w_f_m.get(2)*errT_w_f_m.get(2), MF_flacc_m*Wm.get(3)*errPh_w_f_m.get(3)*errT_w_f_m.get(3),  MF_flacc_m*Wm.get(3)*errPh_w_f_m.get(3)*errT_w_f_m.get(4)}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1057,7 +1062,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{63000.0, 63000.0,0.0, 0.0, 0.0,0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{6300.0, 6300.0,0.0, 0.0, 0.0,0.0 , 0.0, 0.0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1105,7 +1110,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell}]]></InitialValue>
+						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell, Enviroment.W_lyg, Enviroment.W_cell}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1892,7 +1897,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{90000,90000,90000}]]></Code>
+							<Code><![CDATA[{90000,90000,90000,90000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477598</Id>
@@ -1923,7 +1928,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{1000000,1000000, 1000000}]]></Code>
+							<Code><![CDATA[{1000000,1000000, 1000000,1000000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477601</Id>
@@ -2194,7 +2199,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{8,8,8}]]></Code>
+							<Code><![CDATA[{8,8,8,8}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -2550,10 +2555,10 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1579717477676" TargetId="1579717477434" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-220</X><Y>-110</Y></Direction>
+					<Direction><X>-240</X><Y>-110</Y></Direction>
 					<Id>1579717477466</Id>
 					<Name><![CDATA[C_flac_c - U_M_C_lyg_fer]]></Name>
-					<X>-320</X><Y>720</Y>
+					<X>-300</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2595,7 +2600,7 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1579717477732" TargetId="1579717477676" Polarity="null">
 					<Height>-4.1644660350648192E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>110</Y></Direction>
+					<Direction><X>20</X><Y>110</Y></Direction>
 					<Id>1579717477474</Id>
 					<Name><![CDATA[W_flac_с - C_flac_c]]></Name>
 					<X>-320</X><Y>610</Y>
@@ -2820,10 +2825,10 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1579717477676" TargetId="1579717477701" Polarity="null">
 					<Height>-54.764</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-140</X><Y>330</Y></Direction>
+					<Direction><X>-160</X><Y>330</Y></Direction>
 					<Id>1579717477547</Id>
 					<Name><![CDATA[C_flac_c - Vmax]]></Name>
-					<X>-320</X><Y>720</Y>
+					<X>-300</X><Y>720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6250,7 +6255,7 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-	static public double Vc = 10;
+	static public double Vc = 1.1;
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
