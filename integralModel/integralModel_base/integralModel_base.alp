@@ -1180,7 +1180,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, 0, 0, Enviroment.W_lyg, Enviroment.W_cell, 0, 0, Enviroment.W_lyg, Enviroment.W_cell, 0, 0, 0, 0, 0, 0}]]></InitialValue>
+						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, 1, 1, Enviroment.W_lyg, Enviroment.W_cell, 1, 1, Enviroment.W_lyg, Enviroment.W_cell, 1, 1, 0, 0, 1, 1}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1401,10 +1401,6 @@ Doctor of Philosophy ]]></Description>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-								<ClassName><![CDATA[Elements]]></ClassName>
-							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
@@ -1413,10 +1409,6 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
-									<ClassName><![CDATA[Elements]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[(Enviroment.Vc*K_lability[Fractions,Agents]*Vmax[Fractions,Agents]*C_pol[Fractions,Agents]/(Ks05[Fractions] + C_pol[Fractions,Agents])) *error_Vmax_T_Ucc * error_Vmax_ph_Ucc]]></Expression>
 							</CustomExpression>
