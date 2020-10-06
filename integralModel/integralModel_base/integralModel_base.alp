@@ -1255,8 +1255,33 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff[Agents]*(U*Sc-Sm[Agents])]]></Expression>
+								<Expression><![CDATA[Z*MC_Seff.get(1)*(U*Sc-Sm.get(1))]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Z*MC_Seff.get(2)*(U*Sc-Sm.get(2))]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Z*MC_Seff.get(3)*(U*Sc-Sm.get(3))]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[Plant]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Z*MC_Seff.get(4)*(U*Sc-Sm.get(4))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
