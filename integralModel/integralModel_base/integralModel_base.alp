@@ -1156,7 +1156,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
-						<InitialValue><![CDATA[{0,0,0}]]></InitialValue>
+						<InitialValue><![CDATA[{0,0,0,0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1180,7 +1180,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{6300.0, 6300.0,0.0, 0.0, 0.0,0.0 , 0.0, 0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0, 6300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6300, 0, 0, 0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1228,7 +1228,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{Enviroment.W_lyg, Enviroment.W_cell, 1, 1, Enviroment.W_lyg, Enviroment.W_cell, 1, 1, Enviroment.W_lyg, Enviroment.W_cell, 1, 1, 0, 0, 1, 1}]]></InitialValue>
+						<InitialValue><![CDATA[{W_lyg, W_cell, 1, 1, 1, W_lyg, W_cell, 1, 1, 1, W_lyg, W_cell, 1, 1, 1, 0, W_cell, 1, 1, 1}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
