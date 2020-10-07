@@ -564,7 +564,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 									<ClassName><![CDATA[Elements]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_pol[Fractions,Agents,Elements]/Enviroment.Vc]]></Expression>
+								<Expression><![CDATA[W_pol[Fractions,Agents]/Vc]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1266,7 +1266,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{0,0,0}]]></InitialValue>
+						<InitialValue><![CDATA[{0,0,0,0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -2105,7 +2105,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.5, 1}]]></Code>
+							<Code><![CDATA[{.5, 1,0,0,0}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477622</Id>
@@ -2133,8 +2133,12 @@ Doctor of Philosophy ]]></Description>
 							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
+						<Dimension>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab]]></PackageName>
+							<ClassName><![CDATA[Agents]]></ClassName>
+						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{14.1*1000, 0.031*1000000,0,0}]]></Code>
+							<Code><![CDATA[{14.1*1000, 0.031*1000000, 0, 0, 0}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477630</Id>
