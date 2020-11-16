@@ -5166,7 +5166,7 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[a*(box.Sm[Agents]/(1+h*box.Sm[Agents]))*exp(-k*age)*(ws[Agents]+0.1)]]></Expression>
+								<Expression><![CDATA[(Double.isNaN(h*box.Sm.get(1)) || h*box.Sm.get(1) == -1) ? 0.00000000000000001 : a*(box.Sm.get(1)/(1+h*box.Sm.get(1)))*exp(-k*age)*(ws+0.1)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
