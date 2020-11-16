@@ -1409,7 +1409,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Math.max(dWm.get(1),0/0)*MF_flacc_m   ]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*Math.max(dWm.get(1),0)*MF_flacc_m ]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
