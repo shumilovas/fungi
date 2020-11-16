@@ -484,12 +484,20 @@
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_pol[Fractions]/Enviroment.Vc]]></Expression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[W_pol[Fractions,Agents]/Enviroment.Vc]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
