@@ -3488,7 +3488,7 @@ newMushroom.setXY(x,y); ]]></Action>
 					</Properties>
 					<Action><![CDATA[List<Mushroom> harvested = new ArrayList<Mushroom>();
 for (Mushroom mush : mushroom) {
-	if (mush.matured.get(1)>0.5)
+	if (mush.matured>0.5)
 	harvested.add(mush);
 }
 for (Mushroom mush : harvested) {
@@ -4000,19 +4000,19 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<StatisticsItem>
 						<Name><![CDATA[totalGrowth]]></Name>
 						<Type>sum</Type>
-						<Expression><![CDATA[item.growth.get(2)]]></Expression>
+						<Expression><![CDATA[item.growth]]></Expression>
 						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<StatisticsItem>
 						<Name><![CDATA[totalWeight]]></Name>
 						<Type>sum</Type>
-						<Expression><![CDATA[item.ws.get(2)]]></Expression>
+						<Expression><![CDATA[item.ws]]></Expression>
 						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<StatisticsItem>
 						<Name><![CDATA[meanWeight]]></Name>
 						<Type>average</Type>
-						<Expression><![CDATA[item.ws.get(2)]]></Expression>
+						<Expression><![CDATA[item.ws]]></Expression>
 						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<InEnvironment>true</InEnvironment>	
@@ -5680,8 +5680,8 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<ScaleXCode><![CDATA[ws.get(2) / 3]]></ScaleXCode>
-					<ScaleYCode><![CDATA[ws.get(2)/ 3]]></ScaleYCode>
+					<ScaleXCode><![CDATA[ws / 3]]></ScaleXCode>
+					<ScaleYCode><![CDATA[ws/ 3]]></ScaleYCode>
 
 			<Presentation>
 				<Image>
