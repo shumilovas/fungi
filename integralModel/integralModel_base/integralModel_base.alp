@@ -716,21 +716,6 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477725</Id>
-					<Name><![CDATA[error_Vmax_ph_Ucc]]></Name>
-					<X>-540</X><Y>1210</Y>
-					<Label><X>-40</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[phFunct_Ucc(Enviroment.pH)*0.01]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-65281</Color>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
 					<Id>1579719290689</Id>
 					<Name><![CDATA[Share_mon]]></Name>
 					<X>-1050</X><Y>1140</Y>
@@ -807,21 +792,6 @@
 						<Formula><![CDATA[Enviroment.W_c/700]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1584683027946</Id>
-					<Name><![CDATA[error_Vmax_T_Ucc]]></Name>
-					<X>-360</X><Y>1230</Y>
-					<Label><X>-40</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[TFunct_Ucc(Temperature)*0.1]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color>-65281</Color>
 					</Properties>
 
 				</Variable>
@@ -1040,6 +1010,112 @@
 								<Expression><![CDATA[Wm[Agents]/Wm.sum()]]></Expression>
 							</CustomExpression>
 						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1605530824844</Id>
+					<Name><![CDATA[error_Vmax_ph_Ucc]]></Name>
+					<X>-540</X><Y>1210</Y>
+					<Label><X>-40</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[phFunct_Ucc(Enviroment.pH)*0.01]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-65281</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[phFunct_W_flact_m_Trich(pH)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[phFunct_W_flact_m_Bacill(pH)*TimeFunction(time())]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[phFunct_W_flact_m_Fung(pH)]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1605530850832</Id>
+					<Name><![CDATA[error_Vmax_T_Ucc]]></Name>
+					<X>-360</X><Y>1230</Y>
+					<Label><X>-40</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[TFunct_Ucc*0.1]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-65281</Color>
+						<Array>
+							<CustomExpression>
+								<Expression><![CDATA[TFunct_Ucc[Agents]]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1605530872889</Id>
+					<Name><![CDATA[TFunct_Ucc1]]></Name>
+					<X>-280</X><Y>1190</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Array>
+							<CustomExpression>
+								<Expression><![CDATA[TFunctFung_Ucc(Temperature)*TimeFunction(time())]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Expression><![CDATA[TFunctBacill_Ucc(Temperature)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Expression><![CDATA[TFunctTrich_Ucc(Temperature)]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1605531017129</Id>
+					<Name><![CDATA[pH]]></Name>
+					<X>-1000</X><Y>750</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[9//pH_time(time())]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
 					</Properties>
 
 				</Variable>
@@ -2299,30 +2375,6 @@ MAOBING TU таблица 22]]></Description>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<Variable Class="Parameter">
-					<Id>1600888022721</Id>
-					<Name><![CDATA[pH]]></Name>
-					<X>-1000</X><Y>750</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[7]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1600888022719</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
 			</Variables>
 			<Dependences>
 				<Link SourceId="1394981990462" TargetId="1394982113124" Polarity="null">
@@ -3105,7 +3157,7 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477725" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1605530824844" TargetId="1579717477451" Polarity="null">
 					<Height>-1.414</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>80</X><Y>-70</Y></Direction>
@@ -3300,12 +3352,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1605528142469" TargetId="1584683027946" Polarity="null">
+				<Link SourceId="1605528142469" TargetId="1605530872889" Polarity="null">
 					<Height>165.749</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>180</X><Y>360</Y></Direction>
+					<Direction><X>260</X><Y>320</Y></Direction>
 					<Id>1584683327311</Id>
-					<Name><![CDATA[Temperature - error_Vmax_T_Ucc]]></Name>
+					<Name><![CDATA[Temperature - TFunct_Ucc1]]></Name>
 					<X>-540</X><Y>870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3315,7 +3367,7 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1584683027946" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1605530850832" TargetId="1579717477451" Polarity="null">
 					<Height>4.98</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-100</X><Y>-90</Y></Direction>
@@ -3480,7 +3532,7 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1600888022721" TargetId="1584699580588" Polarity="null">
+				<Link SourceId="1605531017129" TargetId="1584699580588" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>140</X><Y>-30</Y></Direction>
@@ -3568,6 +3620,21 @@ MAOBING TU таблица 22]]></Description>
 					<ShowLabel>false</ShowLabel>
 					<Color/>
 					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1605531017129" TargetId="1605530824844" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>460</X><Y>460</Y></Direction>
+					<Id>1605531034255</Id>
+					<Name><![CDATA[pH - error_Vmax_ph_Ucc]]></Name>
+					<X>-1000</X><Y>750</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-65281</Color>
+					<LineWidth>2</LineWidth>
 					<Delay>false</Delay>
 				</Link>
 			</Dependences>
@@ -6604,9 +6671,6 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[YGm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[pH]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
