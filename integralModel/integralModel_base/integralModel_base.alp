@@ -594,78 +594,12 @@
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Lygnin]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[1]get(1)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Lygnin]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudBacillus]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[1]get(2)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Lygnin]]></ItemName>
 								</Coordinate>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[1]get(3)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Cellulose]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudFungi]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[2]get(1)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Cellulose]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[GudBacillus]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[2]get(2)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-									<ItemName><![CDATA[Cellulose]]></ItemName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[2]get(3)]]></Expression>
+								<Expression><![CDATA[Sh_lyg[Fractions,Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
