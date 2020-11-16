@@ -5087,21 +5087,9 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="true">
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[m_mode ? ((age > age_maturing*24) ? 1 : 0) : ((ws> ws_maturing) ? 1 : 0)]]></Formula>
 						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-								<ClassName><![CDATA[Agents]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[m_mode ? ((age > age_maturing*24) ? 1 : 0) : ((ws[Agents] > ws_maturing) ? 1 : 0)]]></Expression>
-							</CustomExpression>
-						</Array>
 					</Properties>
 
 				</Variable>
