@@ -335,7 +335,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_flac_m[Agents]/(V_m[Agents])]]></Expression>
+								<Expression><![CDATA[(V_m[Agents] > 0.00000000000001)? (W_flac_m[Agents]/(V_m[Agents])) : (0.000000001)]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
