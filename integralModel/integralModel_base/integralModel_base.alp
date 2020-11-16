@@ -563,7 +563,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_mon[Fractions][Agents]/(W_mon[Fractions][Agents]+W_pol[Fractions][Agents]*K_pol_mon.[Fractions])]]></Expression>
+								<Expression><![CDATA[W_mon[Fractions,Agents]/(W_mon[Fractions,Agents]+W_pol[Fractions,Agents]*K_pol_mon[Fractions])]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
