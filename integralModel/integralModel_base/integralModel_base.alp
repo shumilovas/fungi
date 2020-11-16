@@ -1015,6 +1015,34 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1605530144237</Id>
+					<Name><![CDATA[MF_W_pol_Agents]]></Name>
+					<X>-100</X><Y>1120</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Wm[Agents]/Wm.sum()]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1394981990462</Id>
 					<Name><![CDATA[Wm]]></Name>
@@ -1042,6 +1070,15 @@
 							<Name><![CDATA[<Wm>]]></Name>
 							<X>-720</X><Y>490</Y>
 							<Label><X>-20</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<Shadow>
+							<Id>1605530155856</Id>
+							<Name><![CDATA[<Wm>]]></Name>
+							<X>-40</X><Y>1170</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
 							<PublicFlag>false</PublicFlag>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
@@ -3418,6 +3455,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1605528158127</Id>
 					<Name><![CDATA[ - Temperature]]></Name>
 					<X>-690</X><Y>890</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1605530155856" TargetId="1605530144237" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-60</X><Y>-50</Y></Direction>
+					<Id>1605530160264</Id>
+					<Name><![CDATA[<Wm> - MF_W_pol_Agents]]></Name>
+					<X>-40</X><Y>1170</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
