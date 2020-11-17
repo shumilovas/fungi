@@ -279,7 +279,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[V_m[BadTrichoderma]<0.00000000000001 || Double.isNaN(V_m[BadTrichoderma]) || Double.isNaN(Smg[BadTrichoderma]) ?  0.000000000000001 : Smg[BadTrichoderma]/V_m[BadTrichoderma] ]]></Expression>
+								<Expression><![CDATA[V_m[BadTrichoderma]<0.00000000000000001 || Double.isNaN(V_m[BadTrichoderma]) || Double.isNaN(Smg[BadTrichoderma]) ?  0.00000000001 : Smg[BadTrichoderma]/V_m[BadTrichoderma] ]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -287,7 +287,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[V_m[GudFungi]<0.00000000000001 || Double.isNaN(V_m[GudFungi]) || Double.isNaN(Smg[GudFungi]) ?  0.000000000000001 : Smg[GudFungi]/V_m[GudFungi] ]]></Expression>
+								<Expression><![CDATA[V_m[GudFungi]<0.000000000000000001 || Double.isNaN(V_m[GudFungi]) || Double.isNaN(Smg[GudFungi]) ?  0.000000001 : Smg[GudFungi]/V_m[GudFungi] ]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -295,7 +295,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudBacillus]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[V_m[GudBacillus]<0.00000000000001 || Double.isNaN(V_m[GudBacillus]) || Double.isNaN(Smg[GudBacillus]) ?  0.000000000000001 : Smg[GudBacillus]/V_m[GudBacillus] ]]></Expression>
+								<Expression><![CDATA[V_m[GudBacillus]<0.000000000000000001 || Double.isNaN(V_m[GudBacillus]) || Double.isNaN(Smg[GudBacillus]) ?  0.0000000001 : Smg[GudBacillus]/V_m[GudBacillus] ]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -411,15 +411,6 @@
 								<Expression><![CDATA[Wm[Agents]/Ro_m[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
-						<Shadow>
-							<Id>1599997091810</Id>
-							<Name><![CDATA[<V_m>]]></Name>
-							<X>-730</X><Y>70</Y>
-							<Label><X>0</X><Y>-20</Y></Label>
-							<PublicFlag>false</PublicFlag>
-							<PresentationFlag>true</PresentationFlag>
-							<ShowLabel>true</ShowLabel>
-						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -810,91 +801,6 @@
 									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
 								</Coordinate>
 								<Expression><![CDATA[12.5*TFunct_W_flact_m(Temperature)]]></Expression>
-							</CustomExpression>
-						</Array>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1599997097998</Id>
-					<Name><![CDATA[R_m]]></Name>
-					<X>-610</X><Y>100</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="true">
-						<Formula><![CDATA[(4*V_m/3*PI)^(1/3)]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-								<ClassName><![CDATA[Agents]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[(4*V_m[Agents]/3*PI)
-//^(1/3)]]></Expression>
-							</CustomExpression>
-						</Array>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1599997443174</Id>
-					<Name><![CDATA[S_m]]></Name>
-					<X>-510</X><Y>130</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="true">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-								<ClassName><![CDATA[Agents]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[4*PI*(R_m[Agents])*4*PI*(R_m[Agents])]]></Expression>
-							</CustomExpression>
-						</Array>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1599997579103</Id>
-					<Name><![CDATA[v_S_m]]></Name>
-					<X>-470</X><Y>150</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="true">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-								<ClassName><![CDATA[Agents]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[S_m[Agents]/S_m.sum()]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1310,35 +1216,6 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1599997708245</Id>
-					<Name><![CDATA[S_mg_array]]></Name>
-					<X>-390</X><Y>130</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>custom</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{0,0,0}]]></InitialValue>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-								<ClassName><![CDATA[Agents]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[Smg[Agents]*v_S_m[Agents]-Um[Agents]]]></Expression>
-							</CustomExpression>
-						</Array>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
 					<Id>1605530550495</Id>
 					<Name><![CDATA[W_mon1]]></Name>
 					<Description><![CDATA[масса мономеров, то есть разрушенных сахаросодержащих компонент, грамм]]></Description>
@@ -1412,12 +1289,12 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1394982113124</Id>
 					<Name><![CDATA[Um]]></Name>
-					<X>-390</X><Y>130</Y>
+					<X>-390</X><Y>190</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1599997708245" External="false" Constant="false" Array="true">
+					<Properties SourceId="1394982657396" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<Array>
@@ -1452,8 +1329,8 @@ Doctor of Philosophy ]]></Description>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>-80</Y></Point>
-							<Point><X>0</X><Y>-160</Y></Point>
+							<Point><X>0</X><Y>-140</Y></Point>
+							<Point><X>0</X><Y>-220</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1477,8 +1354,9 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm[Agents])]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -2364,7 +2242,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{8,8,8}]]></Code>
+							<Code><![CDATA[{0.000001,0.8,0.008}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -3428,81 +3306,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1599997091810" TargetId="1599997097998" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>120</X><Y>30</Y></Direction>
-					<Id>1599997105629</Id>
-					<Name><![CDATA[<V_m> - R_m]]></Name>
-					<X>-730</X><Y>70</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1599997097998" TargetId="1599997443174" Polarity="null">
-					<Height>2.045</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>30</Y></Direction>
-					<Id>1599997458682</Id>
-					<Name><![CDATA[R_m - S_m]]></Name>
-					<X>-610</X><Y>100</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1599997443174" TargetId="1599997579103" Polarity="null">
-					<Height>-8.724</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>40</X><Y>20</Y></Direction>
-					<Id>1599997572983</Id>
-					<Name><![CDATA[S_m - v_S_m]]></Name>
-					<X>-510</X><Y>130</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1394982657396" TargetId="1599997708245" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-60</Y></Direction>
-					<Id>1599997738197</Id>
-					<Name><![CDATA[Smg - S_mg_array]]></Name>
-					<X>-390</X><Y>190</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1599997579103" TargetId="1599997708245" Polarity="null">
-					<Height>-0.398</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>80</X><Y>-20</Y></Direction>
-					<Id>1599997745919</Id>
-					<Name><![CDATA[v_S_m - S_mg_array]]></Name>
-					<X>-470</X><Y>150</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1605531017129" TargetId="1584699580588" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -3699,10 +3502,12 @@ MAOBING TU таблица 22]]></Description>
 						</RecurrenceCode>
 						<Condition><![CDATA[Sm > Smcrit]]></Condition>
 					</Properties>
-					<Action><![CDATA[Mushroom newMushroom = add_mushroom();
+					<Action><![CDATA[if (time()>72) {
+ Mushroom newMushroom = add_mushroom();
 double x = spaceWidth()*random();
 double y = spaceHeight()*random();
-newMushroom.setXY(x,y); ]]></Action>
+newMushroom.setXY(x,y);
+} ]]></Action>
 				</Event>
 				<Event>
 					<Id>1395569989504</Id>
@@ -3724,7 +3529,7 @@ newMushroom.setXY(x,y); ]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1395569989433</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[73]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -3735,7 +3540,7 @@ newMushroom.setXY(x,y); ]]></Action>
 					</Properties>
 					<Action><![CDATA[List<Mushroom> harvested = new ArrayList<Mushroom>();
 for (Mushroom mush : mushroom) {
-	if (mush.matured>0.5)
+	if ((mush.matured>0.5) & (time()>75))
 	harvested.add(mush);
 }
 for (Mushroom mush : harvested) {
