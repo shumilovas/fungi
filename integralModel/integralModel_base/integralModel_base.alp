@@ -1118,13 +1118,22 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[Wm0]]></InitialValue>
+						<InitialValue><![CDATA[{8,8,8}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[dWm[Agents]<=0 ? dWm[Agents]: 100
+
+]]></Expression>
+							</CustomExpression>
 						</Array>
 						<Shadow>
 							<Id>1579720852671</Id>
@@ -1587,9 +1596,10 @@ Doctor of Philosophy ]]></Description>
 								<Expression><![CDATA[Math.max(dWm.get(3),0/0)*MF_flacc_m]]></Expression>
 							</CustomExpression>
 						</Array>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>16</X><Y>0</Y></Point>
 							<Point><X>40</X><Y>0</Y></Point>
 							<Point><X>110</X><Y>0</Y></Point>
 						</Points>
@@ -3269,21 +3279,6 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1579721866115</Id>
 					<Name><![CDATA[MF_flacc_m - U_flacc_m]]></Name>
 					<X>-790</X><Y>540</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579947006832" TargetId="1394981990462" Polarity="null">
-					<Height>1.042</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>60</Y></Direction>
-					<Id>1579947140971</Id>
-					<Name><![CDATA[Wm0 - Wm]]></Name>
-					<X>-390</X><Y>-270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
