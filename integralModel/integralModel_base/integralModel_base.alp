@@ -277,9 +277,25 @@
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[V_m[BadTrichoderma]<0.00000000000001 || Double.isNaN(V_m[BadTrichoderma]) || Double.isNaN(Smg[BadTrichoderma]) ?  0.000000000000001 : Smg[BadTrichoderma]/V_m[BadTrichoderma] ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Smg.get(1)/V_m.get(1)]]></Expression>
+								<Expression><![CDATA[V_m[GudFungi]<0.00000000000001 || Double.isNaN(V_m[GudFungi]) || Double.isNaN(Smg[GudFungi]) ?  0.000000000000001 : Smg[GudFungi]/V_m[GudFungi] ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[V_m[GudBacillus]<0.00000000000001 || Double.isNaN(V_m[GudBacillus]) || Double.isNaN(Smg[GudBacillus]) ?  0.000000000000001 : Smg[GudBacillus]/V_m[GudBacillus] ]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
