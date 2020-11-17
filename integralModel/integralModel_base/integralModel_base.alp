@@ -1232,7 +1232,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.0, 0.0,0.0, 0.0, 0.0,0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0.001, 0.001, 1.0 , 1.0, 1.0, 1.0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
