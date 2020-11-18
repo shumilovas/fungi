@@ -3640,10 +3640,12 @@ Bacillus_vs_Trichoderma.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[Wm.set(10,GudFungi);
+					<Action><![CDATA[
+Wm.set(10,GudFungi);
 
-W_pol.set(90+(Enviroment.W_lyg-W_mon1.get(Cellulose,GudFungi)*Enviroment.MF_сell) * MF_W_pol_Agents.get(1), Cellulose,GudFungi); 
-W_pol.set(90+ (Enviroment.W_cell-W_mon1.get(Lygnin, GudFungi))* MF_W_pol_Agents.get(1),Lygnin, GudFungi); ]]></Action>
+W_pol.set((Enviroment.W_cell-W_mon1.sum()/2) * MF_W_pol_Agents.get(1), Cellulose,GudFungi); 
+
+W_pol.set((Enviroment.W_lyg-W_mon1.sum()/2)* MF_W_pol_Agents.get(1),Lygnin, GudFungi); ]]></Action>
 				</Event>
 				<Event>
 					<Id>1605633594649</Id>
