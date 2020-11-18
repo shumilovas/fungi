@@ -277,8 +277,25 @@
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[ Smg[Agents]/V_m[Agents] ]]></Expression>
+								<Expression><![CDATA[Math.abs(V_m[GudFungi])<0.00000000000001 || Double.isNaN(V_m[GudFungi]) || Double.isNaN(Smg[GudFungi]) ?  0.000000000000001 : Smg[GudFungi]/V_m[GudFungi] ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Math.abs(V_m[GudBacillus])<0.00000000000001 || Double.isNaN(V_m[GudBacillus]) || Double.isNaN(Smg[GudBacillus]) ?  0.000000000000001 : Smg[GudBacillus]/V_m[GudBacillus] ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Math.abs(V_m[BadTrichoderma])<0.00000000000001 || Double.isNaN(V_m[BadTrichoderma]) || Double.isNaN(Smg[BadTrichoderma]) ?  0.000000000000001 : Smg[BadTrichoderma]/V_m[BadTrichoderma] ]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -3470,7 +3487,7 @@ MAOBING TU таблица 22]]></Description>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[initiationRate.get(2)]]></Code>
+							<Code><![CDATA[initiationRate.get(1)]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -3485,12 +3502,12 @@ MAOBING TU таблица 22]]></Description>
 						</RecurrenceCode>
 						<Condition><![CDATA[Sm > Smcrit]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (time()>72) {
+					<Action><![CDATA[/*if (time()>72) {
  Mushroom newMushroom = add_mushroom();
 double x = spaceWidth()*random();
 double y = spaceHeight()*random();
 newMushroom.setXY(x,y);
-} ]]></Action>
+}*/ ]]></Action>
 				</Event>
 				<Event>
 					<Id>1395569989504</Id>
