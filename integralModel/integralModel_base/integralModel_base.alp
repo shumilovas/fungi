@@ -250,9 +250,39 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[W_mon.sum()/Enviroment.Vc]]></Formula>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[W_mon[Agents]/Enviroment.Vc]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(W_mon[1,1]+W_mon[2,1])/Enviroment.Vc]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(W_mon[1,2]+W_mon[2,2])/Enviroment.Vc]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(W_mon[1,3]+W_mon[2,3])/Enviroment.Vc]]></Expression>
+							</CustomExpression>
+						</Array>
 					</Properties>
 
 				</Variable>
@@ -1275,7 +1305,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Z*MC_Seff[Agents]*(U*Sc-Sm[Agents])]]></Expression>
+								<Expression><![CDATA[Z*MC_Seff[Agents]*(U*Sc[Agents]-Sm[Agents])]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -4594,7 +4624,7 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 					<Height>130</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
-					<FillColorCode><![CDATA[lerpColor(Sc/22000.0, minColor.getFillColor(), maxColor.getFillColor())]]></FillColorCode>
+					<FillColorCode><![CDATA[lerpColor(Sc.get(1)/22000.0, minColor.getFillColor(), maxColor.getFillColor())]]></FillColorCode>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Rectangle>
@@ -4907,7 +4937,7 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 						<Title><![CDATA[Substrate Density in Compost]]></Title>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-8097537</Color>
-					<Expression2><![CDATA[Sc]]></Expression2>
+					<Expression2><![CDATA[Sc.get(1)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
