@@ -873,7 +873,9 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Wm[Agents]/Wm.sum()]]></Expression>
+								<Expression><![CDATA[//*(Wm[Agents]/Enviroment.W_c)
+Wm[Agents]/Wm.sum()
+]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1183,7 +1185,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.001, 0.001, 3.0 , 3.0, 3.0, 3.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0.001, 0.001, 3.0 , 3.0, 1.0, 1.0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -3643,7 +3645,7 @@ for (Mushroom mush : harvested) {
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[(time()>5) & (time()%2==0) & (Wm.get(2)>2*Wm.get(3)) & Wm.get(3)>0.1]]></Condition>
+						<Condition><![CDATA[(time()>5)  & (Wm.get(2)>2*Wm.get(3)) & Wm.get(3)>0.1 & W_pol.get(Cellulose,BadTrichoderma)>10]]></Condition>
 					</Properties>
 					<Action><![CDATA[traceln("Bacillus_Butle_trich" );
      //traceln(W_pol.get(Cellulose,GudFungi));
@@ -3689,9 +3691,14 @@ Bacillus_vs_Trichoderma.restart();
 					<Action><![CDATA[
 Wm.set(10,GudFungi);
 
-W_pol.set(100+(Enviroment.W_cell-W_mon1.sum()/6) , Cellulose,GudFungi); 
+W_pol.set(100+(Enviroment.W_cell-
 
-W_pol.set(100+(Enviroment.W_lyg-W_mon1.sum()/6),Lygnin, GudFungi); ]]></Action>
+(W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma))) , Cellulose,GudFungi); 
+
+W_pol.set(100+(Enviroment.W_lyg-
+
+(W_mon1.get( Lygnin ,GudBacillus)+ W_mon1.get( Lygnin , BadTrichoderma))
+),Lygnin, GudFungi); ]]></Action>
 				</Event>
 				<Event>
 					<Id>1605633594649</Id>
