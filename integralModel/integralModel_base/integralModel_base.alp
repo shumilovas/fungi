@@ -873,8 +873,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[//*(Wm[Agents]/Enviroment.W_c)
-Wm[Agents]/Wm.sum()
+								<Expression><![CDATA[time()<72  ? Wm[Agents]/Wm.sum()*(Wm[Agents]/Enviroment.W_c) : Wm[Agents]/Wm.sum()
 ]]></Expression>
 							</CustomExpression>
 						</Array>
@@ -3688,17 +3687,30 @@ Bacillus_vs_Trichoderma.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[
+					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
 Wm.set(10,GudFungi);
+double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
+double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
+double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
+double delta_2_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(2);
+double delta_3_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(3);
+double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
 
-W_pol.set(100+(Enviroment.W_cell-
 
-(W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma))) , Cellulose,GudFungi); 
 
-W_pol.set(100+(Enviroment.W_lyg-
+W_pol.set(100+delta_1_c , Cellulose,GudFungi); 
 
-(W_mon1.get( Lygnin ,GudBacillus)+ W_mon1.get( Lygnin , BadTrichoderma))
-),Lygnin, GudFungi); ]]></Action>
+W_pol.set(100+delta_1_l, Lygnin, GudFungi); 
+
+
+W_pol.set(delta_2_c , Cellulose , GudBacillus); 
+
+W_pol.set(delta_2_l , Lygnin , GudBacillus); 
+
+
+W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
+
+W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 				</Event>
 				<Event>
 					<Id>1605633594649</Id>
