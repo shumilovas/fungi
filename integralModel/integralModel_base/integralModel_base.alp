@@ -1183,7 +1183,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.001, 0.001, 1.0 , 1.0, 1.0, 1.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0.001, 0.001, 3.0 , 3.0, 3.0, 3.0}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1231,7 +1231,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>custom</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{.0000000000000001, .00000000000000001, Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3)}]]></InitialValue>
+						<InitialValue><![CDATA[{.0000000000000001, .00000000000000001, Enviroment.W_lyg* MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3)}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -2052,7 +2052,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.001]]></Code>
+							<Code><![CDATA[0.00001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477607</Id>
@@ -2272,7 +2272,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.000001,0.8,0.008}]]></Code>
+							<Code><![CDATA[{0.000001,0.8,0.11}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -3643,17 +3643,16 @@ for (Mushroom mush : harvested) {
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[Wm.get(2)>2*Wm.get(3) & Wm.get(3)>1]]></Condition>
+						<Condition><![CDATA[(time()>5) & (time()%2==0) & (Wm.get(2)>2*Wm.get(3)) & Wm.get(3)>0.1]]></Condition>
 					</Properties>
-					<Action><![CDATA[//traceln("Bacillus_Butle_trich" );
+					<Action><![CDATA[traceln("Bacillus_Butle_trich" );
      //traceln(W_pol.get(Cellulose,GudFungi));
      // traceln(W_pol.get(Cellulose,GudBacillus));
       //traceln(W_pol.get(Cellulose,BadTrichoderma));     
 W_pol.increment(Cellulose,GudBacillus);
 W_pol.decrement(Cellulose,BadTrichoderma);
-W_pol.decrement(Cellulose,BadTrichoderma);
-W_pol.increment(GudFungi,Cellulose);
-Wm.decrement(BadTrichoderma);
+Wm.set(Wm.get(3)-0.1, BadTrichoderma);
+
 
 Bacillus_vs_Trichoderma.restart();
 ]]></Action>
@@ -3690,9 +3689,9 @@ Bacillus_vs_Trichoderma.restart();
 					<Action><![CDATA[
 Wm.set(10,GudFungi);
 
-W_pol.set((Enviroment.W_cell-W_mon1.sum()/2) * MF_W_pol_Agents.get(1), Cellulose,GudFungi); 
+W_pol.set(100+(Enviroment.W_cell-W_mon1.sum()/6) , Cellulose,GudFungi); 
 
-W_pol.set((Enviroment.W_lyg-W_mon1.sum()/2)* MF_W_pol_Agents.get(1),Lygnin, GudFungi); ]]></Action>
+W_pol.set(100+(Enviroment.W_lyg-W_mon1.sum()/6),Lygnin, GudFungi); ]]></Action>
 				</Event>
 				<Event>
 					<Id>1605633594649</Id>
