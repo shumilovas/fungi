@@ -1246,7 +1246,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
-					<EquationStyle>custom</EquationStyle>
+					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
 						<InitialValue><![CDATA[{.0000000000000001, .00000000000000001, Enviroment.W_lyg* MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3)}]]></InitialValue>
@@ -1260,6 +1260,16 @@ Doctor of Philosophy ]]></Description>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+							</CustomExpression>
 						</Array>
 					</Properties>
 				</Variable>
@@ -1510,7 +1520,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[TimeFunction(time())*Math.max(dWm.get(1),0)*MF_flacc_m ]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(1),0)*MF_flacc_m ]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -3682,7 +3692,7 @@ Bacillus_vs_Trichoderma.restart();
 				</Event>
 				<Event>
 					<Id>1605633572341</Id>
-					<Name><![CDATA[Ev_Wm]]></Name>
+					<Name><![CDATA[Ev_Wm_0]]></Name>
 					<X>-290</X><Y>-320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3719,15 +3729,6 @@ double delta_3_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(3);
 double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
 
 
-
-W_pol.set(100+delta_1_c , Cellulose,GudFungi);
-W_mon.set(100, Cellulose,GudFungi);
-W_flac_m.set(MF_flacc_m*10,GudFungi);
- 
-
-W_pol.set(100+delta_1_l, Lygnin, GudFungi); 
-
-
 W_pol.set(delta_2_c , Cellulose , GudBacillus); 
 
 W_pol.set(delta_2_l , Lygnin , GudBacillus); 
@@ -3735,7 +3736,9 @@ W_pol.set(delta_2_l , Lygnin , GudBacillus);
 
 W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
 
-W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
+W_pol.set(delta_3_l , Lygnin , BadTrichoderma); 
+
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1605633594649</Id>
