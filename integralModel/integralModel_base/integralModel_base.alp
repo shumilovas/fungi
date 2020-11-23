@@ -3792,7 +3792,7 @@ V_m_nan.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -3808,7 +3808,7 @@ V_m_nan.restart();
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[50]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
@@ -3824,21 +3824,11 @@ double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
 
 
 
-W_pol.set(100+delta_1_c , Cellulose,GudFungi);
-W_mon.set(100, Cellulose,GudFungi);
-W_flac_m.set(MF_flacc_m*10,GudFungi);
- 
-
-W_pol.set(100+delta_1_l, Lygnin, GudFungi); 
-
-
+W_pol.set(delta_1_c , Cellulose,GudFungi);
+W_pol.set(delta_1_l, Lygnin, GudFungi); 
 W_pol.set(delta_2_c , Cellulose , GudBacillus); 
-
 W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-
-
 W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
-
 W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 				</Event>
 			</Events>
