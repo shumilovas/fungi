@@ -1793,7 +1793,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[18000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1395068516570</Id>
@@ -2167,7 +2167,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.781*0.825*1000, 0.001*10000}]]></Code>
+							<Code><![CDATA[{.781*0.825*100, 0.001*1000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477639</Id>
@@ -3608,7 +3608,8 @@ for (Mushroom mush : harvested) {
 	double x = basket.getX() + basket.getWidth()*random();
     double y = basket.getY() + basket.getHeight()*random();
 	mush1.setXY(x,y); 	
-}]]></Action>
+}
+   ]]></Action>
 				</Event>
 				<Event>
 					<Id>1397721648829</Id>
