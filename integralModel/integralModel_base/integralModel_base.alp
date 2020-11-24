@@ -1366,7 +1366,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.5*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *8* error_Vmax_ph_Ucc[GudFungi]]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *8* error_Vmax_ph_Ucc[GudFungi]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1414,7 +1414,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.3*TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -3733,6 +3733,7 @@ double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
 W_pol.set(100+delta_1_c , Cellulose,GudFungi);
 W_mon.set(100, Cellulose,GudFungi);
 W_flac_m.set(MF_flacc_m*10,GudFungi);
+W_flac_с.set(0.000001, GudFungi);
  
 
 W_pol.set(100+delta_1_l, Lygnin, GudFungi); 
@@ -3792,9 +3793,9 @@ V_m_nan.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
+					<Properties TriggerType="timeout" Mode="occuresOnce">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[200]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
@@ -3805,6 +3806,53 @@ V_m_nan.restart();
 						<OccurrenceDate>1604563200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
 							<Code><![CDATA[300]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[50]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
+Wm.set(10,GudFungi);
+double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
+double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
+double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
+double delta_2_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(2);
+double delta_3_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(3);
+double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
+
+
+
+W_pol.set(delta_1_c , Cellulose,GudFungi);
+W_pol.set(delta_1_l, Lygnin, GudFungi); 
+W_pol.set(delta_2_c , Cellulose , GudBacillus); 
+W_pol.set(delta_2_l , Lygnin , GudBacillus); 
+W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
+W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
+				</Event>
+				<Event>
+					<Id>1606153340014</Id>
+					<Name><![CDATA[Ev_Wm2]]></Name>
+					<X>-230</X><Y>-350</Y>
+					<Label><X>29</X><Y>-118</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[200]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1604563200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[500]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
