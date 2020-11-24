@@ -3560,12 +3560,12 @@ MAOBING TU таблица 22]]></Description>
 						</RecurrenceCode>
 						<Condition><![CDATA[Sm > Smcrit]]></Condition>
 					</Properties>
-					<Action><![CDATA[/*if (time()>72) {
+					<Action><![CDATA[if (time()>72) {
  Mushroom newMushroom = add_mushroom();
 double x = spaceWidth()*random();
 double y = spaceHeight()*random();
 newMushroom.setXY(x,y);
-}*/ ]]></Action>
+}]]></Action>
 				</Event>
 				<Event>
 					<Id>1395569989504</Id>
