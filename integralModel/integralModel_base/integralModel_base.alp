@@ -1414,7 +1414,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
+								<Expression><![CDATA[0*TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -3631,7 +3631,7 @@ for (Mushroom mush : harvested) {
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1397721648781</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[65]]></Code>
+							<Code><![CDATA[120]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -3728,7 +3728,7 @@ double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
 traceln("[jg" +Enviroment.Vc);
 
 
-
+Us.set(TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi)
 W_pol.set(100+delta_1_c , Cellulose,GudFungi);
 W_mon.set(100, Cellulose,GudFungi);
 W_flac_m.set(MF_flacc_m*10,GudFungi);
