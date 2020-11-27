@@ -1201,7 +1201,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.0000000001, 0.00000000001, 3.0 , 3.0, 1.0, 1.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0.0000000001, 0.00000000001, 00000000001 , 00000000001, 00000000001, 00000000001}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1994,7 +1994,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002/30]]></Code>
+							<Code><![CDATA[0.002/10]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2198,7 +2198,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95/50,190000/50}]]></Code>
+							<Code><![CDATA[{0.95/20,190000/20}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3849,7 +3849,7 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 					<Id>1606153340014</Id>
 					<Name><![CDATA[Ev_Wm2]]></Name>
 					<X>-230</X><Y>-350</Y>
-					<Label><X>29</X><Y>-118</Y></Label>
+					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3866,6 +3866,98 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 						<OccurrenceDate>1604563200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
 							<Code><![CDATA[500]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[50]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
+double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
+double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
+double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
+double delta_2_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(2);
+double delta_3_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(3);
+double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
+
+
+
+W_pol.set(delta_1_c , Cellulose,GudFungi);
+W_pol.set(delta_1_l, Lygnin, GudFungi); 
+W_pol.set(delta_2_c , Cellulose , GudBacillus); 
+W_pol.set(delta_2_l , Lygnin , GudBacillus); 
+W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
+W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
+				</Event>
+				<Event>
+					<Id>1606511514411</Id>
+					<Name><![CDATA[Ev_Wm3]]></Name>
+					<X>-210</X><Y>-420</Y>
+					<Label><X>10</X><Y>5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[200]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1604563200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[750]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[50]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
+double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
+double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
+double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
+double delta_2_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(2);
+double delta_3_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(3);
+double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
+
+
+
+W_pol.set(delta_1_c , Cellulose,GudFungi);
+W_pol.set(delta_1_l, Lygnin, GudFungi); 
+W_pol.set(delta_2_c , Cellulose , GudBacillus); 
+W_pol.set(delta_2_l , Lygnin , GudBacillus); 
+W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
+W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
+				</Event>
+				<Event>
+					<Id>1606512465141</Id>
+					<Name><![CDATA[Ev_Wm4]]></Name>
+					<X>-222</X><Y>-322</Y>
+					<Label><X>72</X><Y>-128</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[200]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1604563200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[900]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -6932,7 +7024,7 @@ public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
 	static public double Vc1 = 0.05;//обхем бочки
-	static public double Vc=0.001;// количество соломы в бочке
+	static public double Vc=0.002;// количество соломы в бочке
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
