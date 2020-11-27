@@ -1414,7 +1414,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0*TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1967,7 +1967,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477586</Id>
@@ -1982,7 +1982,7 @@ Doctor of Philosophy ]]></Description>
 					<Id>1579717477591</Id>
 					<Name><![CDATA[Z_flac_mc]]></Name>
 					<Description><![CDATA[Коэффициент диффузии лакказы из мицелия в опилки.
-раньше это была диффузия в агар или жидкость, теперь в солому и потому меньше]]></Description>
+раньше это была диффузия в агар или жидкость, теперь в солому и потому меньше в сто раз]]></Description>
 					<Unit>метр/час</Unit> 
 					<X>-600</X><Y>720</Y>
 					<Label><X>-45</X><Y>20</Y></Label>
@@ -1994,7 +1994,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0002]]></Code>
+							<Code><![CDATA[0.002/30]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2198,7 +2198,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95/20,190000/20}]]></Code>
+							<Code><![CDATA[{0.95/70,190000/70}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3733,7 +3733,7 @@ Bacillus_vs_Trichoderma.restart();
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
-Wm.set(100,GudFungi);
+Wm.set(100/2,GudFungi);
 double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
 double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
 double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
@@ -6932,7 +6932,7 @@ public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
 	static public double Vc1 = 0.05;//обхем бочки
-	static public double Vc=Vc1*0.02;// количество соломы в бочке
+	static public double Vc=0.001;// количество соломы в бочке
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;

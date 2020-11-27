@@ -1981,7 +1981,8 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Parameter">
 					<Id>1579717477591</Id>
 					<Name><![CDATA[Z_flac_mc]]></Name>
-					<Description><![CDATA[Коэффициент диффузии лакказы из мицелия в опилки]]></Description>
+					<Description><![CDATA[Коэффициент диффузии лакказы из мицелия в опилки.
+раньше это была диффузия в агар или жидкость, теперь в солому и потому меньше]]></Description>
 					<Unit>метр/час</Unit> 
 					<X>-600</X><Y>720</Y>
 					<Label><X>-45</X><Y>20</Y></Label>
@@ -1993,7 +1994,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002]]></Code>
+							<Code><![CDATA[0.0002]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2080,7 +2081,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.00001]]></Code>
+							<Code><![CDATA[0.0000001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477607</Id>
@@ -2167,7 +2168,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.781*0.825*100, 0.001*1000}]]></Code>
+							<Code><![CDATA[{.781*0.825*10, 0.001*1000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477639</Id>
@@ -2197,7 +2198,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95,1900000}]]></Code>
+							<Code><![CDATA[{0.95/20,190000/20}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3588,19 +3589,30 @@ newMushroom.setXY(x,y);
 						<OccurrenceDate>1395569989433</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
 							<Code><![CDATA[73]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[List<Mushroom> harvested = new ArrayList<Mushroom>();
 for (Mushroom mush : mushroom) {
-	if (mush.matured>0.5)
-	harvested.add(mush);
+ 
+	if (mush.matured>0.5) {
+	   traceln(mush);
+	   harvested.add(mush);
+	}
 }
+/*for (int i = 0; i<mushroom.size(); i++) {
+    Mushroom mush = mushroom.get(i);
+	if (mush.matured>0.5) {
+	   traceln(mush);
+	   harvested.add(mush);
+	}
+}*/
+traceln("size harvested: " + harvested.size());
 for (Mushroom mush : harvested) {
 	remove_mushroom(mush);
 	Harvested_Mushroom mush1 = add_harvested_Mushroom();
@@ -3632,7 +3644,7 @@ for (Mushroom mush : harvested) {
 						<OccurrenceDate>1397721648781</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
 							<Code><![CDATA[120]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -3675,8 +3687,7 @@ for (Mushroom mush : harvested) {
      //traceln(W_pol.get(Cellulose,GudFungi));
      // traceln(W_pol.get(Cellulose,GudBacillus));
       //traceln(W_pol.get(Cellulose,BadTrichoderma));     
-W_pol.increment(Cellulose,GudBacillus);
-W_pol.increment(Cellulose,GudFungi);
+
 W_pol.decrement(Cellulose,BadTrichoderma);
 W_pol.decrement(Cellulose,BadTrichoderma);
 Wm.set(Wm.get(3)-0.2, BadTrichoderma);
@@ -3691,6 +3702,10 @@ Bacillus_vs_Trichoderma.restart();
 				<Event>
 					<Id>1605633572341</Id>
 					<Name><![CDATA[Ev_Wm]]></Name>
+					<Description><![CDATA[100 грамм гриба взяты из статьи аненнкова, страница 6 https://cyberleninka.ru/article/n/ispolzovanie-bacillus-cereus-v-sozdanii-kachestvennyh-izbiratelnyh-substratov-dlya-intensivnogo-kultivirovaniya-veshenki/viewer
+
+там 2 кг мешочки с посевной нормой 5%.
+только вместо 40 дней мы сделали 42 дня, так как два дня на предварительное замачивание бациллы]]></Description>
 					<X>-290</X><Y>-320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3718,7 +3733,7 @@ Bacillus_vs_Trichoderma.restart();
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
-Wm.set(10,GudFungi);
+Wm.set(100,GudFungi);
 double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
 double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
 double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
@@ -3728,11 +3743,11 @@ double delta_3_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(3);
 traceln("[jg" +Enviroment.Vc);
 
 
-Us.set(TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi)
-W_pol.set(100+delta_1_c , Cellulose,GudFungi);
-W_mon.set(100, Cellulose,GudFungi);
-W_flac_m.set(MF_flacc_m*10,GudFungi);
-W_flac_с.set(0.000001, GudFungi);
+Us.set(TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
+//W_pol.set(100+delta_1_c , Cellulose,GudFungi);
+//W_mon.set(100, Cellulose,GudFungi);
+W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
+//W_flac_с.set(0.000001, GudFungi);
  
 
 W_pol.set(100+delta_1_l, Lygnin, GudFungi); 
@@ -3776,7 +3791,7 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(1)<0.000000000000000000000000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m.set(0.00000000000000000001, GudFungi);
+					<Action><![CDATA[V_m.set(0.0000000000000000000001, GudFungi);
 //traceln("объем гриба равен: %f" , V_m.get(1));
 V_m_nan.restart();
 
@@ -3814,7 +3829,6 @@ V_m_nan.restart();
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
-Wm.set(10,GudFungi);
 double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
 double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
 double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
@@ -3861,7 +3875,6 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[double delta = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma));
-Wm.set(10,GudFungi);
 double delta_1_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(1);
 double delta_1_l=(Enviroment.W_lyg- delta)*MF_W_pol_Agents.get(1);
 double delta_2_c=(Enviroment.W_cell- delta)*MF_W_pol_Agents.get(2);
@@ -6918,7 +6931,8 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-	static public double Vc = 0.1;
+	static public double Vc1 = 0.05;//обхем бочки
+	static public double Vc=Vc1*0.02;// количество соломы в бочке
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
