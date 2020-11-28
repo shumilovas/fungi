@@ -6902,8 +6902,7 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-	static public double Vc1 = 0.05;//обхем бочки
-	static public double Vc=0.002;// количество соломы в бочке
+	static public double Vc = 0.0038459;// количество соломы в бочке
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
