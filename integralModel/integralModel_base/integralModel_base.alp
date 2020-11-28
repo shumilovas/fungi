@@ -3828,14 +3828,14 @@ V_m_nan.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[double delta_c = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma)+ W_mon1.get( Cellulose , GudFungi);
-double delta_l = (W_mon1.get( lygnin ,GudBacillus)+ W_mon1.get( lygnin , BadTrichoderma) + W_mon1.get( lygnin , GudFungi));
+					<Action><![CDATA[double delta_c = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma)+ W_mon1.get( Cellulose , GudFungi));
+double delta_l = (W_mon1.get( Lygnin ,GudBacillus)+ W_mon1.get( Lygnin , BadTrichoderma) + W_mon1.get( Lygnin , GudFungi));
 double delta_1_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(1);
 double delta_1_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(1);
 double delta_2_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(2);
 double delta_2_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(2);
 double delta_3_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(3);
-double delta_3_l=(Enviroment.W_lyg- delta)_l*MF_W_pol_Agents.get(3);
+double delta_3_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(3);
 
 W_pol.set(delta_1_c , Cellulose,GudFungi);
 W_pol.set(delta_1_l, Lygnin, GudFungi); 
