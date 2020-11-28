@@ -1201,7 +1201,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.0, 0.0, 0.0, 0.0, 0.0, 0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{.0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1414,7 +1414,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.1*TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1994,7 +1994,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002/10]]></Code>
+							<Code><![CDATA[0.002]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2168,7 +2168,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.781*0.825*10/10, 0.001*1000/10}]]></Code>
+							<Code><![CDATA[{.781*0.825*10, 0.001*1000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477639</Id>
@@ -2198,7 +2198,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95/30,190000/30}]]></Code>
+							<Code><![CDATA[{0.95,190000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
