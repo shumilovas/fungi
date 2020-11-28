@@ -1201,7 +1201,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{.0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001, .0000000000000000000000000000001}]]></InitialValue>
+						<InitialValue><![CDATA[{0.000000000000000001, 0.000000000000000001, 0.000000000000000001 , 0.00000000000000000001, 00000000001, 0.0000000000000000001}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1246,7 +1246,7 @@ Doctor of Philosophy ]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
+					<EquationStyle>custom</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
 						<InitialValue><![CDATA[{.0000000000000001, .00000000000000001, Enviroment.W_lyg* MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3)}]]></InitialValue>
@@ -1264,11 +1264,27 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Lygnin]]></ItemName>
 								</Coordinate>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
+								<Expression><![CDATA[(time()<72)  ? (Enviroment.W_lyg * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]):0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Cellulose]]></ItemName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(time()<72)  ? (Enviroment.W_cell * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]) : 0]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1414,7 +1430,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
+								<Expression><![CDATA[0.1*TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1994,7 +2010,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002]]></Code>
+							<Code><![CDATA[0.002/5]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2198,7 +2214,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95,190000}]]></Code>
+							<Code><![CDATA[{0.95/30,190000/30}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3807,7 +3823,7 @@ V_m_nan.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
+					<Properties TriggerType="timeout" Mode="occuresOnce">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[200]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -6902,7 +6918,8 @@ else
 public abstract class Enviroment implements Serializable {
 
 	static public double pH = 7;
-	static public double Vc = 0.0038459;// количество соломы в бочке
+	static public double Vc1 = 0.05;//обхем бочки
+	static public double Vc=0.0038459;// количество соломы в бочке
 	static public double RoSq_C=175000;
 	static public double Ro_C=520000;
 	static public double W_c=Vc*Ro_C;
