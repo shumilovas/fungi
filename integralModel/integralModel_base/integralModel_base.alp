@@ -1430,7 +1430,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.1*TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -2010,7 +2010,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002/5]]></Code>
+							<Code><![CDATA[0.002]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2126,7 +2126,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.5, 0.5}]]></Code>
+							<Code><![CDATA[{.8, 0.8}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477622</Id>
@@ -2214,7 +2214,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95/30,190000/30}]]></Code>
+							<Code><![CDATA[{0.95,190000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3814,51 +3814,6 @@ V_m_nan.restart();
 
 
 ]]></Action>
-				</Event>
-				<Event>
-					<Id>1606151123591</Id>
-					<Name><![CDATA[Ev_Wm1]]></Name>
-					<X>-290</X><Y>-380</Y>
-					<Label><X>10</X><Y>-5</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[200]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1604563200000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[300]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[50]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[double delta_c = (W_mon1.get( Cellulose ,GudBacillus)+ W_mon1.get( Cellulose , BadTrichoderma)+ W_mon1.get( Cellulose , GudFungi));
-double delta_l = (W_mon1.get( Lygnin ,GudBacillus)+ W_mon1.get( Lygnin , BadTrichoderma) + W_mon1.get( Lygnin , GudFungi));
-double delta_1_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(1);
-double delta_1_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(1);
-double delta_2_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(2);
-double delta_2_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(2);
-double delta_3_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(3);
-double delta_3_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(3);
-
-W_pol.set(delta_1_c , Cellulose,GudFungi);
-W_pol.set(delta_1_l, Lygnin, GudFungi); 
-W_pol.set(delta_2_c , Cellulose , GudBacillus); 
-W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
-W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
