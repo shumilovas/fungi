@@ -890,8 +890,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[((time()<72) ? Wm[Agents]/Wm.sum()*(Wm[Agents]/Enviroment.W_c) : Wm[Agents]/Wm.sum()
-Wm.sum()>(100+Enviroment.W_c)  ? 100 : Wm[Agents]/Wm.sum()]]></Expression>
+								<Expression><![CDATA[Wm.sum()>(100+Enviroment.W_c)  ? 100 : Wm[Agents]/Wm.sum()]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -3815,7 +3814,7 @@ V_m_nan.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -3827,21 +3826,22 @@ V_m_nan.restart();
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1602835200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[50]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[(time()>100)&(1+W_pol.get(Cellulose,GudFungi)<100*TimeFunction(time()) ) & (W_pol.get(Cellulose,GudBacillus)>10 ) &(W_pol.get(Cellulose,BadTrichoderma)>10 ) ]]></Condition>
 					</Properties>
-					<Action><![CDATA[W_pol.increment(Cellulose,GudFungi);
-W_pol.decrement(Cellulose,GudBacillus);
-W_pol.increment(Cellulose,GudFungi);
-W_pol.decrement(Cellulose,BadTrichoderma);
-
-GudFungi_Cellulose.restart();]]></Action>
+					<Action><![CDATA[if ((1+W_pol.get(Cellulose,GudFungi))<100*TimeFunction(time()))  {
+    W_pol.increment(Cellulose,GudFungi) ;
+        W_pol.decrement(Cellulose,GudBacillus);
+        W_pol.increment(Cellulose,GudFungi);
+        W_pol.decrement(Cellulose,BadTrichoderma);
+        GudFungi_Cellulose.restart();
+}]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
