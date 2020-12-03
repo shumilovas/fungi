@@ -353,7 +353,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(Sm[GudFungi] > Smcrit) ? lambda*(Sm[GudFungi]-Smcrit)*Wm[GudFungi] : 0]]></Expression>
+								<Expression><![CDATA[(Sm[GudFungi] > Smcrit & Wm.get(1)> 25 )? lambda*(Sm[GudFungi]-Smcrit)*Wm[GudFungi]/20 : 0]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -890,7 +890,7 @@
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Wm.sum() >Enviroment.W_c/2) ?  (Wm[Agents]/10 ): (Wm[Agents]/Wm.sum())]]></Expression>
+								<Expression><![CDATA[(Wm.sum() >Enviroment.W_c/3 || (harvested_Mushroom.totalHarvestedWeight()>Enviroment.W_c*0.85) ) ?  (Wm[Agents]/1000 ): (Wm[Agents]/Wm.sum())]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1137,7 +1137,7 @@
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[{2*MF_flacc_m * Wm.get(1) * errPh_w_f_m.get(1)* errT_w_f_m.get(1), MF_flacc_m * Wm.get(2) * errPh_w_f_m.get(2)* errT_w_f_m.get(2), MF_flacc_m * Wm.get(3) * errPh_w_f_m.get(3)* errT_w_f_m.get(3)}]]></InitialValue>
+						<InitialValue><![CDATA[{MF_flacc_m * Wm.get(1) * errPh_w_f_m.get(1)* errT_w_f_m.get(1), MF_flacc_m * Wm.get(2) * errPh_w_f_m.get(2)* errT_w_f_m.get(2), MF_flacc_m * Wm.get(3) * errPh_w_f_m.get(3)* errT_w_f_m.get(3)}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1200,7 +1200,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.000000000000000001, 0.000000000000000001, 0.000000000000000001 , 0.00000000000000000001, 00000000001, 0.0000000000000000001}]]></InitialValue>
+						<InitialValue><![CDATA[{0.0000000000000000000001, 0.0000000000000000000001, 0.0000000000000000000001 , 0.000000000000000000000001, 0000000000001, 0.000000000000000000001}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1270,7 +1270,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(time()<72)  ? (Enviroment.W_lyg * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]):0]]></Expression>
+								<Expression><![CDATA[((time()>72) & (W_pol.sum()<Enviroment.W_c)  ) ? (Enviroment.W_lyg * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]):0]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1283,7 +1283,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(time()<72)  ? (Enviroment.W_cell * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]) : 0]]></Expression>
+								<Expression><![CDATA[((time()>72) & (W_pol.sum()<Enviroment.W_c) ) ? (Enviroment.W_cell * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]) : 0]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1429,7 +1429,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
+								<Expression><![CDATA[0.1 * TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1982,7 +1982,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[9]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477586</Id>
@@ -2009,7 +2009,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002]]></Code>
+							<Code><![CDATA[0.002/3]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477589</Id>
@@ -2125,7 +2125,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.8, 0.8}]]></Code>
+							<Code><![CDATA[{.5, 0.5}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477622</Id>
@@ -2213,7 +2213,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95,190000}]]></Code>
+							<Code><![CDATA[{0.95/30,190000/30}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
