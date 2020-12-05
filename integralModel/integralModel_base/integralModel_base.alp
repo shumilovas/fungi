@@ -353,7 +353,7 @@
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(Sm[GudFungi] > Smcrit & Wm.get(1)> 25 )? lambda*(Sm[GudFungi]-Smcrit)*Wm[GudFungi]/5: 0]]></Expression>
+								<Expression><![CDATA[(Sm[GudFungi] > Smcrit & Wm.get(1)> 25 )? lambda*(Sm[GudFungi]-Smcrit)*Wm[GudFungi]/10: 0]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1455,7 +1455,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[ 0.05* TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
+								<Expression><![CDATA[ 0.65* TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1719,7 +1719,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1.329/(24*2)]]></Code>
+							<Code><![CDATA[1.329/(24*3)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1394985441360</Id>
@@ -5784,6 +5784,7 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 				<Variable Class="Parameter">
 					<Id>1395569144935</Id>
 					<Name><![CDATA[ws_maturing]]></Name>
+					<Description><![CDATA[у торнли 4, у нас 20 ( больше гриб)]]></Description>
 					<X>-410</X><Y>330</Y>
 					<Label><X>-40</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5794,7 +5795,7 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[4]]></Code>
+							<Code><![CDATA[20]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1395569144933</Id>
