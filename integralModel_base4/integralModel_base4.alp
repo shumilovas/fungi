@@ -136,6 +136,7 @@
 		<ActiveObjectClass>
 			<Id>1394978861120</Id>
 			<Name><![CDATA[NutritionBox]]></Name>
+			<AdditionalClassCode><![CDATA[int i, FL,FC,BL,BC, TL,TC, BVT, TVF, VMN, TVB;]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
@@ -163,6 +164,17 @@
 					<Code><![CDATA[10 / getScale().pixelsPerUnit(METER) / 86400]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
+				<OnEnterFlowchartBlock><![CDATA[i=0;
+FL=0;
+FC=0;
+BL=0;
+BC=0;
+TL=0;
+TC=0;
+BVT=0; // счетчик для количества боёв ьацилы  против триходермы
+TVF=0; // счетчик для количества боёв триходермы против фунги
+VMN=0;// счетчик для события слежки за не минусовым значением мицелия
+TVB=0; // счетчик для события слежки количества боёв триходермы против ,fwbks]]></OnEnterFlowchartBlock>
 				<PhysicalLength Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
@@ -3693,7 +3705,7 @@ for (Mushroom mush : mushroom) {
 	   harvested.add(mush);
 	}
 }*/
-traceln("size harvested: " + harvested.size());
+//traceln("size harvested: " + harvested.size());
 for (Mushroom mush : harvested) {
 	remove_mushroom(mush);
 	Harvested_Mushroom mush1 = add_harvested_Mushroom();
@@ -3765,14 +3777,16 @@ for (Mushroom mush : harvested) {
 						<Condition><![CDATA[(time()>5)  & (Wm.get(2)>Wm.get(3)/2) & Wm.get(3)>0.1 & W_pol.get(Cellulose,BadTrichoderma)>10]]></Condition>
 					</Properties>
 					<Action><![CDATA[if ((time()>5)  & (Wm.get(2)>Wm.get(3)/2) & Wm.get(3)>0.1 & W_pol.get(Cellulose,BadTrichoderma)>10) {
-
-traceln("Bacillus_Butle_trich" );
+BVT++;
+if (BVT % 10 == 0) {
+traceln("Bacillus_Butle_trich " +BVT +"times"  );
      //traceln(W_pol.get(Cellulose,GudFungi));
      // traceln(W_pol.get(Cellulose,GudBacillus));
-      //traceln(W_pol.get(Cellulose,BadTrichoderma));     
+      //traceln(W_pol.get(Cellulose,BadTrichoderma)); 
+      }    
 
 W_pol.decrement(Cellulose,BadTrichoderma);
-W_pol.decrement(Cellulose,BadTrichoderma);
+W_pol.increment(Cellulose,GudBacillus);
 Wm.set(Wm.get(3)-0.1, BadTrichoderma);
 Wm.set(Wm.get(2)-0.025, GudBacillus);
 
@@ -3821,7 +3835,7 @@ double delta_2_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(2);
 double delta_2_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(2);
 double delta_3_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(3);
 double delta_3_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(3);
-traceln("[jg" +Enviroment.Vc);
+traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
 
 
 Us.set(TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
@@ -3863,7 +3877,7 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1604563200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[5]]></Code>
+							<Code><![CDATA[50]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -3873,8 +3887,9 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
 						<Condition><![CDATA[V_m.get(1)<0.000000000000000000000000000001]]></Condition>
 					</Properties>
 					<Action><![CDATA[if (V_m.get(1)<0.000000000000000000000000000001) {
-V_m.set(0.001, GudFungi);
-traceln("объем гриба равен: %f" , V_m.get(1));
+VMN++;
+if (VMN % 10==0) traceln("объем гриба равен: %f" , +V_m.get(1) , "уже который раз?"  ,+VMN ); 
+V_m.set(0.000001, GudFungi);
 }
 
 
@@ -3910,9 +3925,10 @@ traceln("объем гриба равен: %f" , V_m.get(1));
 						</RecurrenceCode>
 						<Condition><![CDATA[Wm.get(3)>3*Wm.get(2)]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (Wm.get(3)>3*Wm.get(2)) {     
-traceln("BadTrichoderma_Butle_bacillus" );
-     traceln(W_pol.get(Cellulose,GudFungi));
+					<Action><![CDATA[if (Wm.get(3)>3*Wm.get(2) & Wm.get(2)>0.00000001 ) { 
+TVB++;
+if (TVB % 10 == 0) traceln("BadTrichoderma_Butle_bacillu, times: " +TVB );    
+      traceln(W_pol.get(Cellulose,GudFungi));
       traceln(W_pol.get(Cellulose,GudBacillus));
       traceln(W_pol.get(Cellulose,BadTrichoderma));     
 W_pol.decrement(Cellulose,GudBacillus);
@@ -3930,6 +3946,49 @@ W_pol.decrement(GudFungi,Cellulose);
 					<Name><![CDATA[Trichoderma_vs_Fungi]]></Name>
 					<X>-200</X><Y>-160</Y>
 					<Label><X>-71</X><Y>-213</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[80]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[TimeFunction(time())*Wm.get(3)>(1+0.5*Wm.get(1)) & (time()>50)]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (TimeFunction(time())*Wm.get(3)>(1+0.5*Wm.get(1)) & (time()>50))
+{ TVF++;
+if (TVF % 20 == 0) traceln("BadTrichoderma_Butle_Fungi" +TVF );
+
+if (TVF % 40 == 0) {
+     traceln("целл юлоза гриба" +W_pol.get(Cellulose,GudFungi));
+      traceln("целл юлоза бацил" +W_pol.get(Cellulose,GudBacillus));
+      traceln("целл юлоза триходермы" +W_pol.get(Cellulose,BadTrichoderma));
+      }     
+W_pol.increment(Cellulose,BadTrichoderma);
+W_pol.decrement(Cellulose,GudFungi);
+}
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239587953</Id>
+					<Name><![CDATA[BadTrichoderma_Cellulose]]></Name>
+					<X>-190</X><Y>920</Y>
+					<Label><X>20</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -3952,18 +4011,405 @@ W_pol.decrement(GudFungi,Cellulose);
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[TimeFunction(time())*Wm.get(3)>(1+0.5*Wm.get(1)) & (time()>50)]]></Condition>
+						<Condition><![CDATA[(W_pol.get(Cellulose,GudBacillus)>10 )  & (W_pol.get(Cellulose,BadTrichoderma)>10 )  & (W_pol.get(Cellulose,GudFungi)>10 & Wm.get(3)>Wm.get(2) ) ]]></Condition>
 					</Properties>
-					<Action><![CDATA[
-     traceln("BadTrichoderma_Butle_Fungi" );
+					<Action><![CDATA[TC=TC+1;
+if (TC % 10 == 0) {
+     traceln("BadTrichoderma_Cellulose =" +TC);
      traceln(W_pol.get(Cellulose,GudFungi));
       traceln(W_pol.get(Cellulose,GudBacillus));
       traceln(W_pol.get(Cellulose,BadTrichoderma));     
+}
 W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(Cellulose,GudFungi);
-Wm.increment(BadTrichoderma);
+W_pol.decrement(Cellulose,GudBacillus);
+W_pol.increment(Cellulose,BadTrichoderma);
+W_pol.decrement(GudFungi,Cellulose);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239587962</Id>
+					<Name><![CDATA[BadTrichoderma_Cellulose1]]></Name>
+					<X>-386.081</X><Y>903.916</Y>
+					<Label><X>20</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Cellulose,BadTrichoderma)<0 )  ]]></Condition>
+					</Properties>
+					<Action><![CDATA[W_pol.get(0,Cellulose,BadTrichoderma)]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239587970</Id>
+					<Name><![CDATA[BadTrichoderma_Lygnin]]></Name>
+					<X>-190</X><Y>880</Y>
+					<Label><X>5</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Lygnin,BadTrichoderma)<10 )   & (W_pol.get(Lygnin,GudBacillus)>10 )   & (W_pol.get(Lygnin,GudFungi)>10 )  ]]></Condition>
+					</Properties>
+					<Action><![CDATA[TL=TL+1;
+if (TL % 10 == 0) {
+     traceln("BadTrichoderma_Lygnin =" +TL);
+     traceln(W_pol.get(Lygnin,GudFungi));
+      traceln(W_pol.get(Lygnin,GudBacillus));
+      traceln(W_pol.get(Lygnin,BadTrichoderma));     
+}
+W_pol.increment(Lygnin,BadTrichoderma);
+W_pol.decrement(Lygnin,GudBacillus);
+W_pol.increment(Lygnin,BadTrichoderma);
+W_pol.decrement(Lygnin,GudFungi);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239587978</Id>
+					<Name><![CDATA[BadTrichoderma_Lygnin1]]></Name>
+					<X>-386.081</X><Y>870.6</Y>
+					<Label><X>5</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Lygnin,BadTrichoderma)<0 )  ]]></Condition>
+					</Properties>
+					<Action><![CDATA[W_pol.set(0,Lygnin,BadTrichoderma);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239587986</Id>
+					<Name><![CDATA[GudBacilus_Cellulose]]></Name>
+					<X>-190</X><Y>850</Y>
+					<Label><X>10</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Cellulose,GudFungi)<100 )  & (W_pol.get(Cellulose,GudBacillus)>10 )  & (W_pol.get(Cellulose,BadTrichoderma)>10 ) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[BC=BC+1;
+if (BC% 10 == 0) {
+     traceln("GudB_C =" +BC);
+     traceln(W_pol.get(Cellulose,GudFungi));
+      traceln(W_pol.get(Cellulose,GudBacillus));
+      traceln(W_pol.get(Cellulose,BadTrichoderma));
+     
+}
 
-Trichoderma_vs_Fungi.restart();
+W_pol.increment(Cellulose,GudBacillus);
+W_pol.decrement(Cellulose,GudFungi);
+W_pol.increment(Cellulose,GudBacillus);
+W_pol.decrement(Cellulose,BadTrichoderma);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239587995</Id>
+					<Name><![CDATA[GudBacilus_Cellulose1]]></Name>
+					<X>-386.081</X><Y>845.613</Y>
+					<Label><X>10</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Cellulose,GudBacillus)<0 ) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[W_pol.set(0,Cellulose,GudBacillus);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239588003</Id>
+					<Name><![CDATA[GudBacilus_Lygnin]]></Name>
+					<X>-190</X><Y>820</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Lygnin,GudBacillus)<10 ) & (W_pol.get(Lygnin,BadTrichoderma)>10 ) &(W_pol.get(Lygnin,GudFungi)>10 ) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[BL=BL+1;
+if (BL% 10 == 0) {
+     traceln("GudB_L =" +BL);
+     traceln(W_pol.get(Lygnin,GudFungi));
+      traceln(W_pol.get(Lygnin,GudBacillus));
+      traceln(W_pol.get(Lygnin,BadTrichoderma));
+     
+}
+
+W_pol.increment(Lygnin,GudBacillus);
+W_pol.decrement(Lygnin,GudFungi);
+W_pol.increment(Lygnin,GudBacillus);
+W_pol.decrement(Lygnin,BadTrichoderma);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239588011</Id>
+					<Name><![CDATA[GudBacilus_Lygnin1]]></Name>
+					<X>-386.081</X><Y>820.626</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(GudBacillus,Lygnin)<0) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[W_pol.set(0,GudBacillus,Lygnin);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239588019</Id>
+					<Name><![CDATA[GudFungi_Cellulose]]></Name>
+					<X>-190</X><Y>790</Y>
+					<Label><X>15</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(1+W_pol.get(Cellulose,GudFungi)<100*TimeFunction(time()) ) & (W_pol.get(Cellulose,GudBacillus)>10 ) &(W_pol.get(Cellulose,BadTrichoderma)>10 ) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[FC=FC+1;
+if (FC % 10 == 0) {
+     traceln("десять заимствований в GudFungi_Lygnin="+"GudFungi_Cellulose =" + FC);
+     traceln(W_pol.get(Cellulose,GudFungi));
+      traceln(W_pol.get(Cellulose,GudBacillus));
+      traceln(W_pol.get(Cellulose,BadTrichoderma));
+     
+}
+W_pol.increment(Cellulose,GudFungi);
+W_pol.decrement(Cellulose,GudBacillus);
+W_pol.increment(Cellulose,GudFungi);
+W_pol.decrement(Cellulose,BadTrichoderma);
+W_pol.increment(Cellulose,GudFungi);
+W_pol.decrement(Cellulose,GudBacillus);
+W_pol.increment(Cellulose,GudFungi);
+W_pol.decrement(Cellulose,BadTrichoderma);
+W_pol.increment(Cellulose,GudFungi);
+W_pol.decrement(Cellulose,GudBacillus);
+W_pol.increment(Cellulose,GudFungi);
+W_pol.decrement(Cellulose,BadTrichoderma);
+GudFungi_Cellulose.restart();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239588027</Id>
+					<Name><![CDATA[GudFungi_Cellulose1]]></Name>
+					<X>-386.081</X><Y>795.639</Y>
+					<Label><X>15</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Cellulose,GudFungi)<0 ) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[W_pol.set(0,Cellulose,GudFungi);]]></Action>
+				</Event>
+				<Event>
+					<Id>1607239588034</Id>
+					<Name><![CDATA[GudFungi_Lygnin]]></Name>
+					<X>-190</X><Y>760</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1602835200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[100]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[3]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(W_pol.get(Lygnin,GudFungi+1)<100*TimeFunction(time()) )  & (W_pol.get(Lygnin,GudBacillus)>10 )& (W_pol.get(Lygnin,BadTrichoderma)>10) ]]></Condition>
+					</Properties>
+					<Action><![CDATA[if ((W_pol.get(Lygnin,GudFungi)<10*TimeFunction(time()) )  & (W_pol.get(Lygnin,GudBacillus)>10 )& (W_pol.get(Lygnin,BadTrichoderma)>10) )
+{
+FL=FL+1;
+if (FL % 10 == 0) {
+     traceln("десять заимствований в GudFungi_Lygnin= " +FL);
+     traceln("Lygnin,GudFung размером " +W_pol.get(Lygnin,GudFungi));
+      traceln("Lygnin,GudBacillus раземром " +W_pol.get(Lygnin,GudBacillus));
+      traceln("Lygnin,BadTrichoderma размером " + W_pol.get(Lygnin,BadTrichoderma));     
+}
+W_pol.increment(Lygnin,GudFungi);
+W_pol.decrement(Lygnin,GudBacillus);
+
+W_pol.increment(Lygnin,GudFungi);
+W_pol.decrement(Lygnin,BadTrichoderma);
+
+W_pol.increment(Lygnin,GudFungi);
+W_pol.decrement(Lygnin,GudBacillus);
+
+W_pol.increment(Lygnin,GudFungi);
+W_pol.decrement(Lygnin,BadTrichoderma);
+
+}
 ]]></Action>
 				</Event>
 			</Events>
@@ -5181,7 +5627,7 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 						<Title><![CDATA[Substrate Density in Mycelium Storage]]></Title>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-60269</Color>
-					<Expression2><![CDATA[Sm.get(2)]]></Expression2>
+					<Expression2><![CDATA[Sm.get(1)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
