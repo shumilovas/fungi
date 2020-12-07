@@ -467,7 +467,7 @@ TVB=0; // счетчик для события слежки количества
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new1]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Wm[Agents]/Ro_m[Agents]]]></Expression>
+								<Expression><![CDATA[Wm[Agents] >0.00000000000001 ? Wm[Agents]/Ro_m[Agents] : 0.000000000000001]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1053,7 +1053,7 @@ TVB=0; // счетчик для события слежки количества
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[4//pH_Time(time())]]></Formula>
+						<Formula><![CDATA[pH_Time(time())]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1212,7 +1212,7 @@ Doctor of Philosophy ]]></Description>
 					<Width>60</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[U_cc_lyg*K_pol_mon]]></Expression>
-						<InitialValue><![CDATA[{0.0000000000000000000001, 0.0000000000000000000001, 0.0000000000000000000001 , 0.000000000000000000000001, 0000000000001, 0.000000000000000000001}]]></InitialValue>
+						<InitialValue><![CDATA[{100, 0.0000000000000000000001, 100 , 0.000000000000000000000001, 0000000000001, 0.000000000000000000001}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1419,7 +1419,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[5*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
+								<Expression><![CDATA[2* TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -2395,7 +2395,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.000001,0.8,10}]]></Code>
+							<Code><![CDATA[{0.000001,0.8,0.01}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -3829,7 +3829,7 @@ Wm.set(Wm.get(2)-0.025, GudBacillus);
 					</Properties>
 					<Action><![CDATA[double delta_l = (W_mon_copy.get( Lygnin ,GudBacillus)+ W_mon_copy.get( Lygnin , BadTrichoderma));
 double delta_c = (W_mon_copy.get( Cellulose ,GudBacillus)+ W_mon_copy.get( Cellulose , BadTrichoderma));
-Wm.set(100/2,GudFungi);
+Wm.set(100,GudFungi);
 double delta_1_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(1);
 double delta_1_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(1);
 double delta_2_c=(Enviroment.W_cell- delta_c)*MF_W_pol_Agents.get(2);
@@ -4499,13 +4499,15 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Argument><![CDATA[7.0]]></Argument>
 					<Argument><![CDATA[2.0]]></Argument>
 					<Argument><![CDATA[11.0]]></Argument>
+					<Argument><![CDATA[9.0]]></Argument>
 					<Value><![CDATA[0.2161254]]></Value>
 					<Value><![CDATA[0.3618754]]></Value>
 					<Value><![CDATA[0.3876254]]></Value>
 					<Value><![CDATA[0.2933754]]></Value>
-					<Value><![CDATA[0.1791254000000001]]></Value>
+					<Value><![CDATA[0.19991254]]></Value>
 					<Value><![CDATA[0.2]]></Value>
 					<Value><![CDATA[0.09]]></Value>
+					<Value><![CDATA[0.2]]></Value>
 				</TableFunction>
 				<TableFunction AccessType="public" StaticFunction="false">
 					<Id>1584698160934</Id>
@@ -4673,13 +4675,17 @@ Kalaimahan  Theodore  and  Tapobrata  Panda ]]></Description>
 					<Argument><![CDATA[7.0]]></Argument>
 					<Argument><![CDATA[2.0]]></Argument>
 					<Argument><![CDATA[11.0]]></Argument>
+					<Argument><![CDATA[8.0]]></Argument>
+					<Argument><![CDATA[9.0]]></Argument>
 					<Value><![CDATA[0.1161254]]></Value>
 					<Value><![CDATA[0.1618754]]></Value>
 					<Value><![CDATA[0.21876254]]></Value>
 					<Value><![CDATA[0.22933754]]></Value>
 					<Value><![CDATA[0.1891254000000001]]></Value>
-					<Value><![CDATA[0.112]]></Value>
+					<Value><![CDATA[0.1]]></Value>
 					<Value><![CDATA[0.14]]></Value>
+					<Value><![CDATA[0.3]]></Value>
+					<Value><![CDATA[0.4]]></Value>
 				</TableFunction>
 				<TableFunction AccessType="public" StaticFunction="false">
 					<Id>1599941824651</Id>
@@ -4973,9 +4979,9 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 					<Value><![CDATA[8.0]]></Value>
 					<Value><![CDATA[10.0]]></Value>
 					<Value><![CDATA[11.0]]></Value>
-					<Value><![CDATA[100.0]]></Value>
-					<Value><![CDATA[9.0]]></Value>
 					<Value><![CDATA[8.0]]></Value>
+					<Value><![CDATA[7.0]]></Value>
+					<Value><![CDATA[7.0]]></Value>
 					<Value><![CDATA[7.0]]></Value>
 					<Value><![CDATA[7.0]]></Value>
 				</TableFunction>
