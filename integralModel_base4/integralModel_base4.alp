@@ -4055,7 +4055,8 @@ BadTrichoderma_Cellulose.restart();]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_pol.get(Cellulose,BadTrichoderma)<0 )  ]]></Condition>
 					</Properties>
-					<Action><![CDATA[W_pol.get(0,Cellulose,BadTrichoderma)]]></Action>
+					<Action><![CDATA[W_pol.get(0,Cellulose,BadTrichoderma);
+BadTrichoderma_Cellulose1.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239587970</Id>
@@ -4128,7 +4129,9 @@ BadTrichoderma_Lygnin.restart();]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_pol.get(Lygnin,BadTrichoderma)<0 )  ]]></Condition>
 					</Properties>
-					<Action><![CDATA[W_pol.set(0,Lygnin,BadTrichoderma);]]></Action>
+					<Action><![CDATA[W_pol.set(0,Lygnin,BadTrichoderma);
+BadTrichoderma_Lygnin1.restart();
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239587986</Id>
@@ -4203,7 +4206,8 @@ GudBacilus_Cellulose.restart();]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_pol.get(Cellulose,GudBacillus)<0 ) ]]></Condition>
 					</Properties>
-					<Action><![CDATA[W_pol.set(0,Cellulose,GudBacillus);]]></Action>
+					<Action><![CDATA[W_pol.set(0,Cellulose,GudBacillus);
+GudBacilus_Cellulose1.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239588003</Id>
@@ -4278,7 +4282,8 @@ GudBacilus_Lygnin.restart();]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_pol.get(GudBacillus,Lygnin)<0) ]]></Condition>
 					</Properties>
-					<Action><![CDATA[W_pol.set(0,GudBacillus,Lygnin);]]></Action>
+					<Action><![CDATA[W_pol.set(0,GudBacillus,Lygnin);
+GudBacilus_Lygnin1.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239588019</Id>
@@ -4362,7 +4367,7 @@ GudFungi_Cellulose.restart();
 						<Condition><![CDATA[(W_pol.get(Cellulose,GudFungi)<0 ) ]]></Condition>
 					</Properties>
 					<Action><![CDATA[W_pol.set(0,Cellulose,GudFungi);
-GudFungi_Cellulose1.restart;]]></Action>
+GudFungi_Cellulose1.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239588034</Id>
@@ -7059,9 +7064,9 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 		<Height>1024</Height>
 	</Frame>
 	<Database>
-		<Logging>false</Logging>
+		<Logging>true</Logging>
 		<AutoExport>false</AutoExport>
-		<ShutdownCompact>false</ShutdownCompact>
+		<ShutdownCompact>true</ShutdownCompact>
 		<ImportSettings>
 		</ImportSettings>
 		<ExportSettings>
