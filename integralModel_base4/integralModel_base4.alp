@@ -4023,7 +4023,8 @@ if (TC % 10 == 0) {
 W_pol.increment(Cellulose,BadTrichoderma);
 W_pol.decrement(Cellulose,GudBacillus);
 W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(GudFungi,Cellulose);]]></Action>
+W_pol.decrement(GudFungi,Cellulose);
+BadTrichoderma_Cellulose.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239587962</Id>
@@ -4095,7 +4096,8 @@ if (TL % 10 == 0) {
 W_pol.increment(Lygnin,BadTrichoderma);
 W_pol.decrement(Lygnin,GudBacillus);
 W_pol.increment(Lygnin,BadTrichoderma);
-W_pol.decrement(Lygnin,GudFungi);]]></Action>
+W_pol.decrement(Lygnin,GudFungi);
+BadTrichoderma_Lygnin.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239587978</Id>
@@ -4169,7 +4171,8 @@ if (BC% 10 == 0) {
 W_pol.increment(Cellulose,GudBacillus);
 W_pol.decrement(Cellulose,GudFungi);
 W_pol.increment(Cellulose,GudBacillus);
-W_pol.decrement(Cellulose,BadTrichoderma);]]></Action>
+W_pol.decrement(Cellulose,BadTrichoderma);
+GudBacilus_Cellulose.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239587995</Id>
@@ -4243,7 +4246,8 @@ if (BL% 10 == 0) {
 W_pol.increment(Lygnin,GudBacillus);
 W_pol.decrement(Lygnin,GudFungi);
 W_pol.increment(Lygnin,GudBacillus);
-W_pol.decrement(Lygnin,BadTrichoderma);]]></Action>
+W_pol.decrement(Lygnin,BadTrichoderma);
+GudBacilus_Lygnin.restart();]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239588011</Id>
@@ -4357,7 +4361,8 @@ GudFungi_Cellulose.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_pol.get(Cellulose,GudFungi)<0 ) ]]></Condition>
 					</Properties>
-					<Action><![CDATA[W_pol.set(0,Cellulose,GudFungi);]]></Action>
+					<Action><![CDATA[W_pol.set(0,Cellulose,GudFungi);
+GudFungi_Cellulose1.restart;]]></Action>
 				</Event>
 				<Event>
 					<Id>1607239588034</Id>
@@ -4410,6 +4415,7 @@ W_pol.increment(Lygnin,GudFungi);
 W_pol.decrement(Lygnin,BadTrichoderma);
 
 }
+GudFungi_Lygnin.restart();
 ]]></Action>
 				</Event>
 			</Events>
