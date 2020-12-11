@@ -939,7 +939,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudBacillus]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[phFunct_W_flact_m_Bacill(pH)*TimeFunction(time())]]></Expression>
+								<Expression><![CDATA[phFunct_W_flact_m_Bacill(pH)]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -947,7 +947,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[phFunct_W_flact_m_Fung(pH)]]></Expression>
+								<Expression><![CDATA[phFunct_W_flact_m_Fung(pH)*TimeFunction(time())]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
@@ -1149,7 +1149,7 @@ TVB=0; // счетчик для события слежки количества
 					<Width>40</Width>
 					<Height>60</Height>
 						<Expression><![CDATA[-Uc]]></Expression>
-						<InitialValue><![CDATA[{MF_flacc_m * Wm.get(1) * errPh_w_f_m.get(1)* errT_w_f_m.get(1), MF_flacc_m * Wm.get(2) * errPh_w_f_m.get(2)* errT_w_f_m.get(2), MF_flacc_m * Wm.get(3) * errPh_w_f_m.get(3)* errT_w_f_m.get(3)}]]></InitialValue>
+						<InitialValue><![CDATA[{0, MF_flacc_m * Wm.get(2) * errPh_w_f_m.get(2)* errT_w_f_m.get(2), MF_flacc_m * Wm.get(3) * errPh_w_f_m.get(3)* errT_w_f_m.get(3)}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1295,7 +1295,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[((time()>72) & (W_pol.sum()<Enviroment.W_c) ) ? (Enviroment.W_cell * MF_W_pol_Agents[GudFungi]-U_cc[Lygnin,GudFungi]) : 0]]></Expression>
+								<Expression><![CDATA[((time()>72) & (W_pol.sum()<Enviroment.W_c) ) ? (Enviroment.W_cell * MF_W_pol_Agents[GudFungi]-U_cc[Cellulose,GudFungi]) : 0]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1419,7 +1419,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.1*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
+								<Expression><![CDATA[2*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -2175,7 +2175,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0000001]]></Code>
+							<Code><![CDATA[0.00001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477607</Id>
@@ -3840,7 +3840,7 @@ double delta_3_l=(Enviroment.W_lyg- delta_l)*MF_W_pol_Agents.get(3);
 traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
 
 
-Us.set(TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
+Us.set((YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
 //W_pol.set(100+delta_1_c , Cellulose,GudFungi);
 //W_mon.set(100, Cellulose,GudFungi);
 W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
@@ -3848,16 +3848,14 @@ W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
  
 
 W_pol.set(delta_1_l, Lygnin, GudFungi); 
+W_pol.set(delta_1_c, Cellulose, GudFungi); 
 
-
-W_pol.set(delta_2_c , Cellulose , GudBacillus); 
-
+/*W_pol.set(delta_2_c , Cellulose , GudBacillus); 
 W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-
-
 W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
+W_pol.set(delta_3_l , Lygnin , BadTrichoderma);*/
 
-W_pol.set(delta_3_l , Lygnin , BadTrichoderma); ]]></Action>
+ ]]></Action>
 				</Event>
 				<Event>
 					<Id>1605633594649</Id>
