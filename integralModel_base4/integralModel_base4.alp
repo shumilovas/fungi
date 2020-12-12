@@ -3784,7 +3784,7 @@ traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
      //traceln(W_pol.get(Cellulose,GudFungi));
      // traceln(W_pol.get(Cellulose,GudBacillus));
       //traceln(W_pol.get(Cellulose,BadTrichoderma)); 
-      traceln("общая масса полимеров" + W_pol.sum());
+      traceln("общая масса полимеров " + W_pol.sum());
       }    
 
 W_pol.decrement(Cellulose,BadTrichoderma);
@@ -3977,9 +3977,9 @@ if (TVF % 20 == 0)
 traceln("BadTrichoderma_Butle_Fungi times: " +TVF +" время" +time() );
 
 if (TVF % 40 == 0) {
-     traceln("целл юлоза гриба" +W_pol.get(Cellulose,GudFungi));
-      traceln("целл юлоза бацил" +W_pol.get(Cellulose,GudBacillus));
-      traceln("целл юлоза триходермы" +W_pol.get(Cellulose,BadTrichoderma));
+     traceln("целл юлоза гриба " +W_pol.get(Cellulose,GudFungi));
+      traceln("целл юлоза бацил " +W_pol.get(Cellulose,GudBacillus));
+      traceln("целл юлоза триходермы " +W_pol.get(Cellulose,BadTrichoderma));
       traceln("законеч блок по времени " +time());}     
 W_pol.increment(Cellulose,BadTrichoderma);
 W_pol.decrement(Cellulose,GudFungi);
@@ -4095,7 +4095,7 @@ if (TL % 10 == 0) {
      traceln(W_pol.get(Lygnin,GudFungi));
       traceln(W_pol.get(Lygnin,GudBacillus));
       traceln(W_pol.get(Lygnin,BadTrichoderma)); 
-      traceln("общая масса полимеров" +W_pol.sum());    
+      traceln("общая масса полимеров " +W_pol.sum());    
 }
 W_pol.increment(Lygnin,BadTrichoderma);
 W_pol.decrement(Lygnin,GudBacillus);
@@ -4402,7 +4402,7 @@ if (FL % 10 == 0) {
      traceln("десять заимствований в GudFungi_Lygnin= " +FL);
      traceln("Lygnin,GudFung размером " +W_pol.get(Lygnin,GudFungi));
       traceln("Lygnin,GudBacillus раземром " +W_pol.get(Lygnin,GudBacillus));
-      traceln("общая масса полимеров" +W_pol.sum());
+      traceln("общая масса полимеров " +W_pol.sum());
       traceln("Lygnin,BadTrichoderma размером " + W_pol.get(Lygnin,BadTrichoderma));     
 }
 W_pol.increment(Lygnin,GudFungi);
