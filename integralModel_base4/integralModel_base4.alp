@@ -1419,7 +1419,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[2*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
+								<Expression><![CDATA[TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -3853,12 +3853,15 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma);
 
 
 if (time()==72) {
-Wm.set(100,GudFungi);
+W_pol.set(delta_1_l+50, Lygnin, GudFungi); 
+W_pol.set(delta_1_c+50, Cellulose, GudFungi);
+
+Wm.set(50,GudFungi);
 traceln("fungi mass" +Wm.get(1));
 traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
 	Us.set((YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
 W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
-W_flac_с.set(0.000001, GudFungi);
+W_flac_с.set(0.0000001, GudFungi);
 }
 
  ]]></Action>
@@ -4446,7 +4449,7 @@ GudFungi_Lygnin.restart();
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[80]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4455,7 +4458,7 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(1)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (V_m.get(1)< 0.00000001) {
+					<Action><![CDATA[if (V_m.get(1)< 0.000000001) {
 V_m.set(0.0000001,1);
 }]]></Action>
 				</Event>
@@ -4479,7 +4482,7 @@ V_m.set(0.0000001,1);
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[80]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4488,42 +4491,9 @@ V_m.set(0.0000001,1);
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(2)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (V_m.get(3)< 0.00000001) {
+					<Action><![CDATA[if (V_m.get(3)< 0.000000001) {
 V_m.set(0.0000001,3);
 }
-]]></Action>
-				</Event>
-				<Event>
-					<Id>1608402045216</Id>
-					<Name><![CDATA[V_m_gf_2]]></Name>
-					<X>-819</X><Y>491</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1608451200000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
-					</Properties>
-					<Action><![CDATA[V_m.set(0.0000001,3);
-
 ]]></Action>
 				</Event>
 				<Event>
@@ -4546,7 +4516,7 @@ V_m.set(0.0000001,3);
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[80]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4555,7 +4525,7 @@ V_m.set(0.0000001,3);
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (V_m.get(2)< 0.00000001) {
+					<Action><![CDATA[if (V_m.get(2)< 0.000000001) {
 V_m.set(0.0000001,2);
 }
 ]]></Action>
@@ -4580,7 +4550,7 @@ V_m.set(0.0000001,2);
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[75]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4617,7 +4587,7 @@ Uc.set(0,1);
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[60]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4653,7 +4623,7 @@ Uc.set(0,2);
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[70]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
