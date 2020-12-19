@@ -4434,7 +4434,7 @@ GudFungi_Lygnin.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4446,7 +4446,7 @@ GudFungi_Lygnin.restart();
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4455,7 +4455,7 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(1)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m_gf_0.restart();]]></Action>
+					<Action><![CDATA[V_m.set(0.0000001,1);]]></Action>
 				</Event>
 				<Event>
 					<Id>1608402037234</Id>
@@ -4487,7 +4487,7 @@ GudFungi_Lygnin.restart();
 						<Condition><![CDATA[V_m.get(2)<0.000000001]]></Condition>
 					</Properties>
 					<Action><![CDATA[V_m.set(0.0000001,2);
-V_m_gb_1.restart();]]></Action>
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1608402045216</Id>
@@ -4497,7 +4497,7 @@ V_m_gb_1.restart();]]></Action>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="occuresOnce">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4509,7 +4509,7 @@ V_m_gb_1.restart();]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4519,7 +4519,7 @@ V_m_gb_1.restart();]]></Action>
 						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
 					</Properties>
 					<Action><![CDATA[V_m.set(0.0000001,3);
-V_m_gf_2.restart();
+
 ]]></Action>
 				</Event>
 				<Event>
@@ -4530,7 +4530,7 @@ V_m_gf_2.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4542,7 +4542,7 @@ V_m_gf_2.restart();
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4552,7 +4552,7 @@ V_m_gf_2.restart();
 						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
 					</Properties>
 					<Action><![CDATA[V_m.set(0.0000001,3);
-V_m_gb_2.restart();]]></Action>
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1608410104033</Id>
@@ -4562,7 +4562,7 @@ V_m_gb_2.restart();]]></Action>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4574,7 +4574,7 @@ V_m_gb_2.restart();]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4585,7 +4585,7 @@ V_m_gb_2.restart();]]></Action>
 					</Properties>
 					<Action><![CDATA[Sc.set(0.0000001,1);
 Uc.set(0,1);
-W_mon_gb_1.restart();
+
 ]]></Action>
 				</Event>
 				<Event>
@@ -4596,7 +4596,7 @@ W_mon_gb_1.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="occuresOnce">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4608,7 +4608,7 @@ W_mon_gb_1.restart();
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4619,7 +4619,7 @@ W_mon_gb_1.restart();
 					</Properties>
 					<Action><![CDATA[Sc.set(0.0000001,2);
 Uc.set(0,2);
-W_mon_gb_2.restart();]]></Action>
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1608410452994</Id>
@@ -4629,7 +4629,7 @@ W_mon_gb_2.restart();]]></Action>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4641,7 +4641,7 @@ W_mon_gb_2.restart();]]></Action>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1608451200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4652,7 +4652,7 @@ W_mon_gb_2.restart();]]></Action>
 					</Properties>
 					<Action><![CDATA[Sc.set(0.0000001,3);
 Uc.set(0,3);
-W_mon_gb_3.restart();]]></Action>
+]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
