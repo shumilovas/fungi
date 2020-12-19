@@ -4579,14 +4579,15 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_mon.get(1,1)+W_mon.get(2,1))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[Sc.set(0.0000001,2);
+					<Action><![CDATA[Sc.set(0.0000001,1);
+Uc.set(0,1);
 ]]></Action>
 				</Event>
 				<Event>
-					<Id>1608410105071</Id>
-					<Name><![CDATA[V_m_gb_4]]></Name>
-					<X>-950</X><Y>1160</Y>
-					<Label><X>-130</X><Y>-224</Y></Label>
+					<Id>1608410420614</Id>
+					<Name><![CDATA[W_mon_gb_2]]></Name>
+					<X>-764</X><Y>308</Y>
+					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -4609,9 +4610,11 @@ GudFungi_Lygnin.restart();
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[V_m.get(2)<0.000000001]]></Condition>
+						<Condition><![CDATA[(W_mon.get(1,1)+W_mon.get(2,1))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m.set(0.0000001,2)]]></Action>
+					<Action><![CDATA[Sc.set(0.0000001,1);
+Uc.set(0,1);
+]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
