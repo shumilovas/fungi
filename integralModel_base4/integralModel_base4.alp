@@ -1368,7 +1368,7 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1394982101372</Id>
 					<Name><![CDATA[Uc]]></Name>
-					<X>-600</X><Y>190</Y>
+					<X>-590</X><Y>190</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1391,9 +1391,9 @@ Doctor of Philosophy ]]></Description>
 						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
-							<Point><X>10</X><Y>0</Y></Point>
-							<Point><X>100</X><Y>0</Y></Point>
-							<Point><X>210</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>90</X><Y>0</Y></Point>
+							<Point><X>200</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -4620,7 +4620,7 @@ Uc.set(0,2);
 					<Id>1608410452994</Id>
 					<Name><![CDATA[W_mon_gb_3]]></Name>
 					<X>-764</X><Y>308</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>-141</X><Y>-113</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -4643,10 +4643,10 @@ Uc.set(0,2);
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[(W_mon.get(1,1)+W_mon.get(2,1))<0.000000001]]></Condition>
+						<Condition><![CDATA[(W_mon.get(1,3)+W_mon.get(2,3))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[Sc.set(0.0000001,1);
-Uc.set(0,1);
+					<Action><![CDATA[Sc.set(0.0000001,3);
+Uc.set(0,3);
 ]]></Action>
 				</Event>
 			</Events>
