@@ -4428,7 +4428,7 @@ GudFungi_Lygnin.restart();
 				</Event>
 				<Event>
 					<Id>1608401913513</Id>
-					<Name><![CDATA[V_m_gf_0]]></Name>
+					<Name><![CDATA[V_m_gf_1]]></Name>
 					<X>-960</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -4461,7 +4461,7 @@ V_m.set(0.0000001,1);
 				</Event>
 				<Event>
 					<Id>1608402037234</Id>
-					<Name><![CDATA[V_m_gb_1]]></Name>
+					<Name><![CDATA[V_m_bt_3]]></Name>
 					<X>-819</X><Y>491</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -4488,8 +4488,8 @@ V_m.set(0.0000001,1);
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(2)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (V_m.get(2)< 0.00000001) {
-V_m.set(0.0000001,2);
+					<Action><![CDATA[if (V_m.get(3)< 0.00000001) {
+V_m.set(0.0000001,3);
 }
 ]]></Action>
 				</Event>
@@ -4555,8 +4555,8 @@ V_m.set(0.0000001,2);
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (V_m.get(3)< 0.00000001) {
-V_m.set(0.0000001,3);
+					<Action><![CDATA[if (V_m.get(2)< 0.00000001) {
+V_m.set(0.0000001,2);
 }
 ]]></Action>
 				</Event>
@@ -4568,7 +4568,7 @@ V_m.set(0.0000001,3);
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
+					<Properties TriggerType="condition" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4589,8 +4589,11 @@ V_m.set(0.0000001,3);
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_mon.get(1,1)+W_mon.get(2,1))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[Sc.set(0.0000001,1);
+					<Action><![CDATA[if ((W_mon.get(1,1)+
+W_mon.get(2,1))<0.000000001) {
+Sc.set(0.0000001,1);
 Uc.set(0,1);
+}
 
 ]]></Action>
 				</Event>
@@ -4623,8 +4626,11 @@ Uc.set(0,1);
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_mon.get(1,2)+W_mon.get(2,2))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[Sc.set(0.0000001,2);
+					<Action><![CDATA[if ((W_mon.get(1,2)+
+W_mon.get(2,2))<0.000000001) {
+Sc.set(0.0000001,2);
 Uc.set(0,2);
+}
 ]]></Action>
 				</Event>
 				<Event>
@@ -4656,9 +4662,11 @@ Uc.set(0,2);
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_mon.get(1,3)+W_mon.get(2,3))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[Sc.set(0.0000001,3);
+					<Action><![CDATA[if ((W_mon.get(1,3)+
+W_mon.get(2,3))<0.000000001) {
+Sc.set(0.0000001,3);
 Uc.set(0,3);
-]]></Action>
+}]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
