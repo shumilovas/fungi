@@ -4455,7 +4455,9 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(1)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m.set(0.0000001,1);]]></Action>
+					<Action><![CDATA[if V_m.get(1)< 0.00000001 {
+V_m.set(0.0000001,1);
+}]]></Action>
 				</Event>
 				<Event>
 					<Id>1608402037234</Id>
@@ -4486,7 +4488,9 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(2)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m.set(0.0000001,2);
+					<Action><![CDATA[if V_m.get(2)< 0.00000001 {
+V_m.set(0.0000001,2);
+}
 ]]></Action>
 				</Event>
 				<Event>
@@ -4551,7 +4555,9 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m.set(0.0000001,3);
+					<Action><![CDATA[if V_m.get(3)< 0.00000001 {
+V_m.set(0.0000001,3);
+}
 ]]></Action>
 				</Event>
 				<Event>
