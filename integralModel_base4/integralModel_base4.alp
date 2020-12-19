@@ -4579,7 +4579,8 @@ GudFungi_Lygnin.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[(W_mon.get(1,1)+W_mon.get(2,1))<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[V_m.set(0.0000001,2)]]></Action>
+					<Action><![CDATA[Sc.set(0.0000001,2);
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1608410105071</Id>
