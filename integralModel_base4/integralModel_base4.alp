@@ -769,7 +769,7 @@ TVB=0; // счетчик для события слежки количества
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Enviroment.W_c/700]]></Formula>
+						<Formula><![CDATA[Enviroment.W_c/400]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1232,7 +1232,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new1]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[K_pol_mon[Fractions]*Share_mon[Fractions] + U_cc[Fractions,Agents]-Uc[Agents]]]></Expression>
+								<Expression><![CDATA[K_pol_mon[Fractions]*Share_mon[Fractions] * U_cc[Fractions,Agents]-Uc[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
@@ -2292,7 +2292,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95*300000,190000*2}]]></Code>
+							<Code><![CDATA[{0.95*2000,190000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -5227,6 +5227,8 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 							</ValueColumnReference>
 					</ValuesQuery>
 // arguments and values
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>
 					<Argument><![CDATA[30.0]]></Argument>
 					<Argument><![CDATA[40.0]]></Argument>
 					<Argument><![CDATA[50.0]]></Argument>
@@ -5234,16 +5236,14 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 					<Argument><![CDATA[70.0]]></Argument>
 					<Argument><![CDATA[80.0]]></Argument>
 					<Argument><![CDATA[90.0]]></Argument>
-					<Argument><![CDATA[20.0]]></Argument>
-					<Argument><![CDATA[10.0]]></Argument>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[10.0]]></Value>
 					<Value><![CDATA[15.0]]></Value>
 					<Value><![CDATA[100.0]]></Value>
 					<Value><![CDATA[60.0]]></Value>
 					<Value><![CDATA[1.0]]></Value>
 					<Value><![CDATA[1.0]]></Value>
 					<Value><![CDATA[1.0]]></Value>
-					<Value><![CDATA[1.0]]></Value>
-					<Value><![CDATA[10.0]]></Value>
 					<Value><![CDATA[1.0]]></Value>
 				</TableFunction>
 				<TableFunction AccessType="public" StaticFunction="false">
