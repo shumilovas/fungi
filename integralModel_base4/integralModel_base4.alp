@@ -1419,7 +1419,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.2*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
+								<Expression><![CDATA[0.25*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1468,7 +1468,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[ 0.25* TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
+								<Expression><![CDATA[ 0.3* TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -2175,7 +2175,7 @@ Doctor of Philosophy ]]></Description>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.00001]]></Code>
+							<Code><![CDATA[0.00001*1.3]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477607</Id>
@@ -2292,7 +2292,7 @@ Doctor of Philosophy ]]></Description>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.95*200000,190000}]]></Code>
+							<Code><![CDATA[{0.95*300000,190000*2}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579717477654</Id>
@@ -3894,13 +3894,14 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma);
 if (time()==72) {
 W_pol.set(delta_1_l+50, Lygnin, GudFungi); 
 W_pol.set(delta_1_c+50, Cellulose, GudFungi);
-Wm.set(50,GudFungi);
+Wm.set(100,GudFungi);
 traceln("fungi mass" +Wm.get(1));
 traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
 traceln("время инициации" +time());
 	Us.set((YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
 W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
-W_flac_с.set(0.0000001, GudFungi);
+W_flac_с.set(0.000001, GudFungi);
+Smg.set(10, GudFungi);
 }
 
  ]]></Action>
@@ -4682,6 +4683,38 @@ traceln("W_mon_gb_3 время" +time());
 Sc.set(0.0000001,3);
 Uc.set(0,3);
 }]]></Action>
+				</Event>
+				<Event>
+					<Id>1608721710918</Id>
+					<Name><![CDATA[time_for_log]]></Name>
+					<X>-610</X><Y>1010</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1608796800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[100]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[100]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[traceln("Прошло  " +time() +"часов");
+traceln("_________________________________");]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
