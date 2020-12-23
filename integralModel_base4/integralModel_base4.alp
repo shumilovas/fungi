@@ -3894,6 +3894,9 @@ W_pol.set(delta_3_l , Lygnin , BadTrichoderma);
 if (time()==72) {
 W_pol.set(delta_1_l+50, Lygnin, GudFungi); 
 W_pol.set(delta_1_c+50, Cellulose, GudFungi);
+W_mon.set(50, Lygnin, GudFungi);
+W_mon.set(50, Cellulose, GudFungi);
+
 Wm.set(100,GudFungi);
 traceln("fungi mass" +Wm.get(1));
 traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
