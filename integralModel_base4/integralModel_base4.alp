@@ -3907,6 +3907,8 @@ W_flac_с.set(0.000001, GudFungi);
 Smg.set(10, GudFungi);
 }
 
+if Wm.get(1)<10 Uc_K_err=0.7;
+
  ]]></Action>
 				</Event>
 				<Event>
@@ -4535,7 +4537,8 @@ V_m.set(0.0000001,1);
 						</RecurrenceCode>
 						<Condition><![CDATA[V_m.get(2)<0.000000001]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (V_m.get(3)< 0.000000001) {
+					<Action><![CDATA[if ((V_m.get(3)< 0.000000001) &&((W_mon.get(1,3)+
+W_mon.get(2,3)))>0.00000001) {
 traceln("W_m3" +time());
 V_m.set(0.0000001,3);
 }
@@ -4649,7 +4652,7 @@ W_mon.get(2,2))<0.000000001) {
 traceln("W_mon_gb_2 время" +time());
 Sc.set(0.0000001,2);
 Uc.set(0,2);
-Us.set(0,1);
+Us.set(0,2);
 }
 ]]></Action>
 				</Event>
@@ -4687,7 +4690,7 @@ W_mon.get(2,3))<0.000000001) {
 traceln("W_mon_gb_3 время" +time());
 Sc.set(0.0000001,3);
 Uc.set(0,3);
-Us.set(0,1);
+Us.set(0,3);
 }]]></Action>
 				</Event>
 				<Event>
