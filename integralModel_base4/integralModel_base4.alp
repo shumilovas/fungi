@@ -769,7 +769,7 @@ TVB=0; // счетчик для события слежки количества
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Enviroment.W_c/400]]></Formula>
+						<Formula><![CDATA[Enviroment.W_c/300]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -3907,7 +3907,7 @@ W_flac_с.set(0.000001, GudFungi);
 Smg.set(10, GudFungi);
 }
 
-if Wm.get(1)<10 Uc_K_err=0.7;
+
 
  ]]></Action>
 				</Event>
@@ -4724,6 +4724,55 @@ Us.set(0,3);
 					</Properties>
 					<Action><![CDATA[traceln("Прошло  " +time() +"часов");
 traceln("_________________________________");]]></Action>
+				</Event>
+				<Event>
+					<Id>1608830620726</Id>
+					<Name><![CDATA[Uc_nan1]]></Name>
+					<X>-780</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1604563200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[1000]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[V_m.get(1)<0.000000000000000000000000000001]]></Condition>
+					</Properties>
+					<Action><![CDATA[if ((Wm.get(1)<4.5) && (Wm.get(1)>2)){
+VMN++;
+Uc_K_err=1.2;
+if (VMN % 10==0) traceln("Uc: %f" , +V_m.get(1) , "уже который приблизительно  раз?"  ,+(VMN-10) ); 
+}
+
+if ((Wm.get(1)<2) && (Wm.get(1)>1.7)) {
+VMN++;
+Uc_K_err=1.5;
+if (VMN % 10==0) traceln("Uc: %f" , +V_m.get(1) , "уже который приблизительно  раз?"  ,+(VMN-10) ); 
+}
+
+if (Wm.get(1)<2){
+VMN++;
+Uc_K_err=2;
+if (VMN % 10==0) traceln("Uc: %f" , +V_m.get(1) , "уже который приблизительно  раз?"  ,+(VMN-10) ); 
+}
+
+]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
