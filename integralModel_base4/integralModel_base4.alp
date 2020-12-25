@@ -3944,6 +3944,16 @@ W_pol.set(delta_2_l , Lygnin , GudBacillus);
 W_pol.set(delta_3_c , Cellulose , BadTrichoderma); 
 W_pol.set(delta_3_l , Lygnin , BadTrichoderma);
 
+W_pol_copy.set(delta_1_l, Lygnin, GudFungi); 
+W_pol.set(delta_1_c, Cellulose, GudFungi);
+
+W_pol_copy.set(delta_2_c , Cellulose , GudBacillus); 
+W_pol.set(delta_2_l , Lygnin , GudBacillus); 
+
+W_pol_copy.set(delta_3_c , Cellulose , BadTrichoderma); 
+W_pol_copy.set(delta_3_l , Lygnin , BadTrichoderma);
+
+
 
 if (time()==72) {
 W_pol.set(delta_1_l+50, Lygnin, GudFungi); 
