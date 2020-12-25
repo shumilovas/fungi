@@ -1419,7 +1419,10 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Um_K_err*TimeFunction(time())*((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm + Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*0.01* TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
+								<Expression><![CDATA[Um_K_err*TimeFunction(time())*
+            ((Wm[GudFungi]*q*Sm[GudFungi]*(Am-Wm[GudFungi])/Am)/YGm) 
+            + (Mm*Wm[GudFungi]/(1+alpha/Sm[GudFungi]))*
+            * TFunct_Ucc[GudFungi] *error_Vmax_ph_Ucc[GudFungi]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1468,7 +1471,8 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[ 0.1* TimeFunction(time())*(YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))/3]]></Expression>
+								<Expression><![CDATA[Us_err* TimeFunction(time())*
+(mushroom.totalGrowth() /YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1)))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -2448,6 +2452,31 @@ MAOBING TU таблица 22]]></Description>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1608845641444</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1608903515821</Id>
+					<Name><![CDATA[Us_err]]></Name>
+					<X>-350</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.03
+]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1608903515819</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -3717,6 +3746,21 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1608903515821" TargetId="1394982132599" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>40</X><Y>70</Y></Direction>
+					<Id>1608903537826</Id>
+					<Name><![CDATA[Us_err - Us]]></Name>
+					<X>-350</X><Y>120</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -4821,21 +4865,21 @@ traceln("_________________________________");]]></Action>
 					<Action><![CDATA[if ((Wm.get(1)<10) && (Wm.get(1)>3)){
 VMN++;
 Uc_K_err=1.6;
-Um_K_err=0.5;
+Um_K_err=0.05;
 if (VMN % 10==0) traceln("Uc: %f" , +V_m.get(1) , "уже который приблизительно  раз?"  ,+(VMN-10) ); 
 }
 
 if ((Wm.get(1)<3) && (Wm.get(1)>1.7)) {
 VMN++;
 Uc_K_err=1.7;
-Um_K_err=0.6;
+Um_K_err=0.06;
 if (VMN % 10==0) traceln("Uc: %f" , +V_m.get(1) , "уже который приблизительно  раз?"  ,+(VMN-10) ); 
 }
 
 if (Wm.get(1)<2){
 VMN++;
 Uc_K_err=2;
-Um_K_err=1;
+Um_K_err=0.1;
 if (VMN % 10==0) traceln("Uc: %f" , +V_m.get(1) , "уже который приблизительно  раз?"  ,+(VMN-10) ); 
 }
 
@@ -7926,6 +7970,9 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Um_K_err]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Us_err]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
