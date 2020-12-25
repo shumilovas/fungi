@@ -1386,7 +1386,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new1]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Z*MC_Seff[Agents]*(U*Sc[Agents]-Sm[Agents]))*Uc_K_err]]></Expression>
+								<Expression><![CDATA[Wm[Agents]*(Z*MC_Seff[Agents]*(U*Sc[Agents]-Sm[Agents]))*Uc_K_err]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -3694,6 +3694,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1608845694857</Id>
 					<Name><![CDATA[Um_K_err - Um]]></Name>
 					<X>-490</X><Y>90</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1394981990462" TargetId="1394982101372" Polarity="null">
+					<Height>-232.772</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>400</Y></Direction>
+					<Id>1608890780355</Id>
+					<Name><![CDATA[Wm - Uc]]></Name>
+					<X>-390</X><Y>-210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
