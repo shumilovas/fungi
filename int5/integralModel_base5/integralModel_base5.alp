@@ -3970,46 +3970,64 @@ Wm.set(Wm.get(2)-0.025, GudBacillus);
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[
-    double delta_1_l,delta_2_l,delta_3_l,delta_1_c, delta_2_c, delta_3_c;
+					<Action><![CDATA[    double Old_delta_1_l=0;
+    double Old_delta_2_l=0,Old_delta_3_l=0;
+    Old_delta_1_l= W_mon_copy.get( Lygnin ,GudFungi);
+    Old_delta_2_l= W_mon_copy.get( Lygnin ,GudBacillus);
+    Old_delta_3_l= W_mon_copy.get( Lygnin , BadTrichoderma);
+    double Rezult_1_l=0;
+    double Rezult_2_l=0,Rezult_3_l=0;
+
 
 
 
     //считаем, сколько грибы сьели к этому моменту:
     //лигнина
-    double delta_l = (W_mon_copy.get( Lygnin ,GudBacillus)+ W_mon_copy.get( Lygnin , BadTrichoderma) +
-            W_mon_copy.get( Lygnin ,GudFungi));
-    double rezult_l=Enviroment.W_lyg- delta_l;
+    double Old_delta_l = (Old_delta_1_l+ Old_delta_2_l +Old_delta_3_l
+            );
+
+    double New0_1_l;
+    double New0_2_l,New0_3_l;
+
+
+    double rezult_l;
     //целлюлозы
+    New0_1_l=Enviroment.W_lyg *MF_W_pol_Agents.get(1) ;
+// для основного организма
+    New0_2_l=Enviroment.W_lyg *MF_W_pol_Agents.get(2);
+// для мешающего организма
+    New0_3_l=Enviroment.W_lyg *MF_W_pol_Agents.get(3);
+
+
 //если лигнина сьедено было достаточно, и он не минусово,то
 
-if ((delta_l>0.000000000000001) && (W_mon_copy.get( Lygnin ,GudFungi)>0.000000000000001)){
+if ((Old_delta_l>0.000000000000001) && (W_mon_copy.get( Lygnin ,GudFungi)>0.000000000000001)){
 // учитываем сьеденный лигнин в изначальном накопителе (mnogo строчек)
 
-    
+
         traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1)   );
 // для основного гриба
-        delta_1_l=rezult_l *MF_W_pol_Agents.get(1) ;
-// для основного организма
-        delta_2_l=rezult_l *MF_W_pol_Agents.get(2);
-// для мешающего организма
-        delta_3_l=rezult_l *MF_W_pol_Agents.get(3);
-        traceln("delta_1_l " +delta_1_l  );
-    // заносим изменения в накопители для полимера и его копию
-W_pol.set(delta_1_l, Lygnin, GudFungi); 
-W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-W_pol.set(delta_3_l , Lygnin , BadTrichoderma);
-W_pol_copy.set(delta_1_l, Lygnin, GudFungi); 
-W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-W_pol_copy.set(delta_3_l , Lygnin , BadTrichoderma);
-}
+                traceln("New0_1_l " +New0_1_l  );
+        // заносим изменения в накопители для полимера и его копию
+        if (Old_delta_1_l<New0_1_l)
+            Rezult_1_l = New0_1_l - Old_delta_1_l;
+        else traceln("отрицательное значение дельты New0_1_l " + (New0_1_l - Old_delta_1_l));
 
 
+        if (Old_delta_2_l<New0_2_l)
+            Rezult_2_l=New0_2_l-Old_delta_2_l;
+        else traceln("отрицательное значение дельты New0_2_l " + (New0_2_l - Old_delta_2_l));
 
-
-
-
-]]></Action>
+        if (Old_delta_2_l<New0_2_l)
+            Rezult_3_l=New0_3_l-Old_delta_3_l;
+        else traceln("отрицательное значение дельты New0_3_l " + (New0_1_l - Old_delta_3_l));
+        W_pol.set(Rezult_1_l, Lygnin, GudFungi);
+        W_pol.set(Rezult_2_l , Lygnin , GudBacillus);
+        W_pol.set(Rezult_3_l , Lygnin , BadTrichoderma);
+        W_pol_copy.set(Rezult_1_l, Lygnin, GudFungi);
+        W_pol.set(Rezult_2_l , Lygnin , GudBacillus);
+        W_pol_copy.set(Rezult_3_l , Lygnin , BadTrichoderma);
+    }]]></Action>
 					<Logging>false</Logging>
 				</Event>
 				<Event>
@@ -4350,7 +4368,7 @@ BadTrichoderma_Lygnin1.restart();
 						<Condition><![CDATA[V_m.get(1)<0.000000001]]></Condition>
 					</Properties>
 					<Action><![CDATA[if (V_m.get(1)< 0.000000001) {
-traceln("W_m1" +time());
+traceln("W_m1 " +time());
 V_m.set(0.0000001,1);
 W_pol.set(W_pol.get(1,2)-0.01,1,2);
 }]]></Action>
@@ -4387,7 +4405,7 @@ W_pol.set(W_pol.get(1,2)-0.01,1,2);
 					</Properties>
 					<Action><![CDATA[if ((V_m.get(3)< 0.000000001) &&((W_mon.get(1,3)+
 W_mon.get(2,3)))>0.00000001) {
-traceln("W_m3" +time());
+traceln("W_m3 " +time());
 V_m.set(0.0000001,3);
 W_pol.set(W_pol.get(1,2)-0.01,1,2);
 }
@@ -4424,7 +4442,7 @@ W_pol.set(W_pol.get(1,2)-0.01,1,2);
 						<Condition><![CDATA[V_m.get(3)<0.000000001]]></Condition>
 					</Properties>
 					<Action><![CDATA[if (V_m.get(2)< 0.000000001) {
-traceln("W_m2" +time());
+traceln("W_m2 " +time());
 V_m.set(0.0000001,2);
 W_pol.set(W_pol.get(1,2)-0.01,1,2);
 }
