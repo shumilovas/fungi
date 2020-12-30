@@ -136,7 +136,9 @@
 		<ActiveObjectClass>
 			<Id>1394978861120</Id>
 			<Name><![CDATA[NutritionBox]]></Name>
-			<AdditionalClassCode><![CDATA[int i, FL,FC,BL,BC, TL,TC, BVT, TVF, VMN, TVB;]]></AdditionalClassCode>
+			<AdditionalClassCode><![CDATA[int i, FL,FC,BL,BC, TL,TC, BVT, TVF, VMN, TVB;
+boolean wm73_l_1;
+]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
@@ -3938,99 +3940,6 @@ Wm.set(Wm.get(2)-0.025, GudBacillus);
 					<Logging>false</Logging>
 				</Event>
 				<Event>
-					<Id>1605633572341</Id>
-					<Name><![CDATA[Wm_73_l]]></Name>
-					<Description><![CDATA[100 грамм гриба взяты из статьи аненнкова, страница 6 https://cyberleninka.ru/article/n/ispolzovanie-bacillus-cereus-v-sozdanii-kachestvennyh-izbiratelnyh-substratov-dlya-intensivnogo-kultivirovaniya-veshenki/viewer
-
-там 2 кг мешочки с посевной нормой 5%.
-только вместо 40 дней мы сделали 42 дня, так как два дня на предварительное замачивание бациллы]]></Description>
-					<X>-290</X><Y>-320</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1604563200000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[80]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[    double Old_delta_1_l=0;
-    double Old_delta_2_l=0,Old_delta_3_l=0;
-    Old_delta_1_l= W_mon_copy.get( Lygnin ,GudFungi);
-    Old_delta_2_l= W_mon_copy.get( Lygnin ,GudBacillus);
-    Old_delta_3_l= W_mon_copy.get( Lygnin , BadTrichoderma);
-    double Rezult_1_l=0;
-    double Rezult_2_l=0,Rezult_3_l=0;
-
-
-
-
-    //считаем, сколько грибы сьели к этому моменту:
-    //лигнина
-    double Old_delta_l = (Old_delta_1_l+ Old_delta_2_l +Old_delta_3_l
-            );
-
-    double New0_1_l;
-    double New0_2_l,New0_3_l;
-
-
-    double rezult_l;
-    //целлюлозы
-    New0_1_l=Enviroment.W_lyg *MF_W_pol_Agents.get(1) ;
-// для основного организма
-    New0_2_l=Enviroment.W_lyg *MF_W_pol_Agents.get(2);
-// для мешающего организма
-    New0_3_l=Enviroment.W_lyg *MF_W_pol_Agents.get(3);
-
-
-//если лигнина сьедено было достаточно, и он не минусово,то
-
-if ((Old_delta_l>0.000000000000001) && (W_mon_copy.get( Lygnin ,GudFungi)>0.000000000000001)){
-// учитываем сьеденный лигнин в изначальном накопителе (mnogo строчек)
-
-
-        traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1)   );
-// для основного гриба
-                traceln("New0_1_l " +New0_1_l  );
-        // заносим изменения в накопители для полимера и его копию
-        if (Old_delta_1_l<New0_1_l)
-            Rezult_1_l = New0_1_l - Old_delta_1_l;
-        else traceln("отрицательное значение дельты New0_1_l " + (New0_1_l - Old_delta_1_l));
-
-
-        if (Old_delta_2_l<New0_2_l)
-            Rezult_2_l=New0_2_l-Old_delta_2_l;
-        else traceln("отрицательное значение дельты New0_2_l " + (New0_2_l - Old_delta_2_l));
-
-        if (Old_delta_2_l<New0_2_l)
-            Rezult_3_l=New0_3_l-Old_delta_3_l;
-        else traceln("отрицательное значение дельты New0_3_l " + (New0_1_l - Old_delta_3_l));
-        W_pol.set(Rezult_1_l, Lygnin, GudFungi);
-        W_pol.set(Rezult_2_l , Lygnin , GudBacillus);
-        W_pol.set(Rezult_3_l , Lygnin , BadTrichoderma);
-        W_pol_copy.set(Rezult_1_l, Lygnin, GudFungi);
-        W_pol.set(Rezult_2_l , Lygnin , GudBacillus);
-        W_pol_copy.set(Rezult_3_l , Lygnin , BadTrichoderma);
-    }]]></Action>
-					<Logging>false</Logging>
-				</Event>
-				<Event>
 					<Id>1605633594649</Id>
 					<Name><![CDATA[V_m_nan]]></Name>
 					<X>-1060</X><Y>490</Y>
@@ -4988,253 +4897,6 @@ GudFungi_Lygnin.restart();
 ]]></Action>
 				</Event>
 				<Event>
-					<Id>1609249221495</Id>
-					<Name><![CDATA[Wm_73_c]]></Name>
-					<Description><![CDATA[100 грамм гриба взяты из статьи аненнкова, страница 6 https://cyberleninka.ru/article/n/ispolzovanie-bacillus-cereus-v-sozdanii-kachestvennyh-izbiratelnyh-substratov-dlya-intensivnogo-kultivirovaniya-veshenki/viewer
-
-там 2 кг мешочки с посевной нормой 5%.
-только вместо 40 дней мы сделали 42 дня, так как два дня на предварительное замачивание бациллы]]></Description>
-					<X>-400</X><Y>-410</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1604563200000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[80]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[
-    double delta_1_c,delta_2_c,delta_3_c;
-
-    // засеваем хороший гриб
-
-    //считаем, сколько грибы сьели к этому моменту:
-    
-    double delta_c = (W_mon_copy.get( Cellulose ,GudBacillus)+ W_mon_copy.get( Cellulose , BadTrichoderma) +
-            W_mon_copy.get( Cellulose ,GudFungi));
-    double rezult_c=Enviroment.W_cell- delta_c;
-    //целлюлозы
-//если  сьедено было достаточно, и он не минусово,то
-
-if ((delta_c>0.000000000000001) && (W_mon_copy.get( Cellulose ,GudFungi)>0.000000000000001)){
-// учитываем сьеденный  в изначальном накопителе (mnogo строчек)
-
-    
-        traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1)   );
-// для основного гриба
-        delta_1_c=rezult_c *MF_W_pol_Agents.get(1) ;
-// для основного организма
-        delta_2_c=rezult_c *MF_W_pol_Agents.get(2);
-// для мешающего организма
-        delta_3_c=rezult_c *MF_W_pol_Agents.get(3);
-        traceln("delta_1_c " +delta_1_c  );
-    
-
-// заносим изменения в накопители для полимера и его копию
-W_pol.set(delta_1_c, Cellulose, GudFungi); 
-W_pol.set(delta_2_c , Cellulose , GudBacillus); 
-W_pol.set(delta_3_c , Cellulose , BadTrichoderma);
-W_pol_copy.set(delta_1_c, Cellulose, GudFungi); 
-W_pol.set(delta_2_c , Cellulose , GudBacillus); 
-W_pol_copy.set(delta_3_c , Cellulose , BadTrichoderma);
-}
-
-
-
-
-
-
-]]></Action>
-					<Logging>false</Logging>
-				</Event>
-				<Event>
-					<Id>1609254373045</Id>
-					<Name><![CDATA[Wm__72_l]]></Name>
-					<Description><![CDATA[100 грамм гриба взяты из статьи аненнкова, страница 6 https://cyberleninka.ru/article/n/ispolzovanie-bacillus-cereus-v-sozdanii-kachestvennyh-izbiratelnyh-substratov-dlya-intensivnogo-kultivirovaniya-veshenki/viewer
-
-там 2 кг мешочки с посевной нормой 5%.
-только вместо 40 дней мы сделали 42 дня, так как два дня на предварительное замачивание бациллы]]></Description>
-					<X>-400</X><Y>-350</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1604563200000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[72]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[
-    double delta_1_l,delta_2_l,delta_3_l,delta_1_c, delta_2_c, delta_3_c;
-
-    // засеваем хороший гриб
-Wm.set(100,GudFungi);
-
-    //считаем, сколько грибы сьели к этому моменту:
-    //лигнина
-    double delta_l = (W_mon_copy.get( Lygnin ,GudBacillus)+ W_mon_copy.get( Lygnin , BadTrichoderma) +
-            W_mon_copy.get( Lygnin ,GudFungi));
-    double rezult_l=Enviroment.W_lyg- delta_l;
-    //целлюлозы
-//если лигнина сьедено было достаточно, и он не минусово,то
-
-{
-// учитываем сьеденный лигнин в изначальном накопителе (mnogo строчек)
-
-    
-        traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1)   );
-// для основного гриба
-        delta_1_l=rezult_l *MF_W_pol_Agents.get(1) ;
-// для основного организма
-        delta_2_l=rezult_l *MF_W_pol_Agents.get(2);
-// для мешающего организма
-        delta_3_l=rezult_l *MF_W_pol_Agents.get(3);
-        traceln("delta_1_l " +delta_1_l  );
-    }
-
-// заносим изменения в накопители для полимера и его копию
-W_pol.set(delta_1_l, Lygnin, GudFungi); 
-W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-W_pol.set(delta_3_l , Lygnin , BadTrichoderma);
-W_pol_copy.set(delta_1_l, Lygnin, GudFungi); 
-W_pol.set(delta_2_l , Lygnin , GudBacillus); 
-W_pol_copy.set(delta_3_l , Lygnin , BadTrichoderma);
-
-
-    
-
-
-        W_pol.set(delta_1_l, Lygnin, GudFungi);
-        traceln("fungi mass" +Wm.get(1));
-        traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
-        traceln("время инициации" +time());
-        Us.set((YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
-        W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
-        W_flac_с.set(0.000001, GudFungi);
-        Smg.set(10, GudFungi);
-    
-
-
-
-
-
-]]></Action>
-					<Logging>false</Logging>
-				</Event>
-				<Event>
-					<Id>1609254834153</Id>
-					<Name><![CDATA[Wm__72_c]]></Name>
-					<Description><![CDATA[100 грамм гриба взяты из статьи аненнкова, страница 6 https://cyberleninka.ru/article/n/ispolzovanie-bacillus-cereus-v-sozdanii-kachestvennyh-izbiratelnyh-substratov-dlya-intensivnogo-kultivirovaniya-veshenki/viewer
-
-там 2 кг мешочки с посевной нормой 5%.
-только вместо 40 дней мы сделали 42 дня, так как два дня на предварительное замачивание бациллы]]></Description>
-					<X>-340</X><Y>-470</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1604563200000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[72]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[
-    double delta_1_c, delta_2_c, delta_3_c;
-
-    // засеваем хороший гриб
-Wm.set(100,GudFungi);
-
-    //считаем, сколько грибы сьели к этому моменту:
-    
-    double delta_c = (W_mon_copy.get( Cellulose, GudBacillus)+ W_mon_copy.get( Cellulose, BadTrichoderma) +
-            W_mon_copy.get( Cellulose,GudFungi));
-    double rezult_c=Enviroment.W_cell- delta_c;
-    //целлюлозы
-//если сьедено было достаточно, и он не минусово,то
-
-{
-// учитываем сьеденный в изначальном накопителе (mnogo строчек)
-
-    
-        traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1)   );
-// для основного гриба
-        delta_1_c=rezult_c *MF_W_pol_Agents.get(1) ;
-// для основного организма
-        delta_2_c=rezult_c *MF_W_pol_Agents.get(2);
-// для мешающего организма
-        delta_3_c=rezult_c *MF_W_pol_Agents.get(3);
-        traceln("delta_1_c " +delta_1_c  );
-    }
-
-// заносим изменения в накопители для полимера и его копию
-W_pol.set(delta_1_c, Cellulose, GudFungi); 
-W_pol.set(delta_2_c , Cellulose, GudBacillus); 
-W_pol.set(delta_3_c , Cellulose, BadTrichoderma);
-W_pol_copy.set(delta_1_c, Cellulose, GudFungi); 
-W_pol.set(delta_2_c , Cellulose, GudBacillus); 
-W_pol_copy.set(delta_3_c , Cellulose, BadTrichoderma);
-  
-       W_pol.set(delta_1_c, Lygnin, GudFungi);
-    
-    
-
-
-
-
-
-]]></Action>
-					<Logging>false</Logging>
-				</Event>
-				<Event>
 					<Id>1609255273074</Id>
 					<Name><![CDATA[Ucc_GF_C]]></Name>
 					<Description><![CDATA[100 грамм гриба взяты из статьи аненнкова, страница 6 https://cyberleninka.ru/article/n/ispolzovanie-bacillus-cereus-v-sozdanii-kachestvennyh-izbiratelnyh-substratov-dlya-intensivnogo-kultivirovaniya-veshenki/viewer
@@ -5655,6 +5317,87 @@ Uc.set(0, GudFungi);}
 
 ]]></Action>
 					<Logging>false</Logging>
+				</Event>
+				<Event>
+					<Id>1609275438216</Id>
+					<Name><![CDATA[Delta_73_1_l]]></Name>
+					<X>-330</X><Y>-410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1609315200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[73]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[    double Old_delta_1_l=Enviroment.W_lyg *MF_W_pol_Agents.get(1) ;
+    double  Rezult_1_l=0;
+    //считаем, сколько грибы стало к этому моменту:
+    double New0_1_l=0;
+    Old_delta_1_l= W_mon_copy.get( Lygnin ,GudFungi);
+//если лигнина сьедено было достаточно, и он не минусово,то
+
+if ( Old_delta_1_l > 0.000000000000001) {
+		traceln("New0_1_l " +New0_1_l  );
+        // заносим изменения в накопители для полимера и его копию
+        if (Old_delta_1_l<New0_1_l)
+            Rezult_1_l = New0_1_l - Old_delta_1_l;
+        else {
+            traceln("отрицательное значение дельты New0_1_l " + (New0_1_l - Old_delta_1_l));
+            wm73_l_1=true;
+            return ;
+        }
+        W_pol.set(Rezult_1_l, Lygnin, GudFungi);
+    } ]]></Action>
+					<Logging>false</Logging>
+				</Event>
+				<Event>
+					<Id>1609276369811</Id>
+					<Name><![CDATA[Delta_73_1_l_b]]></Name>
+					<X>-460</X><Y>-510</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1609315200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[wm73_l_1]]></Condition>
+					</Properties>
+					<Action><![CDATA[wm73_l_1=false;]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
