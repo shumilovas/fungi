@@ -136,7 +136,7 @@
 		<ActiveObjectClass>
 			<Id>1394978861120</Id>
 			<Name><![CDATA[NutritionBox]]></Name>
-			<AdditionalClassCode><![CDATA[int i, FL,FC,BL,BC, TL,TC, BVT, TVF, VMN, TVB;
+			<AdditionalClassCode><![CDATA[int i,FL,FC,BL,BC,TL,TC, BVT, TVF, VMN, TVB;
 boolean wm73_l_1;
 ]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
@@ -5347,25 +5347,43 @@ Uc.set(0, GudFungi);}
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[    double Old_delta_1_l=Enviroment.W_lyg *MF_W_pol_Agents.get(1) ;
+					<Action><![CDATA[double Old_delta_1_l=Enviroment.W_lyg *MF_W_pol_Agents.get(1) ;
     double  Rezult_1_l=0;
     //считаем, сколько грибы стало к этому моменту:
     double New0_1_l=0;
     Old_delta_1_l= W_mon_copy.get( Lygnin ,GudFungi);
 //если лигнина сьедено было достаточно, и он не минусово,то
 
-if ( Old_delta_1_l > 0.000000000000001) {
-		traceln("New0_1_l " +New0_1_l  );
+if ( Old_delta_1_l > 0.000000000000001)
+
+    {
+        traceln("New0_1_l " + New0_1_l);
         // заносим изменения в накопители для полимера и его копию
-        if (Old_delta_1_l<New0_1_l)
+        if (Old_delta_1_l < New0_1_l)
             Rezult_1_l = New0_1_l - Old_delta_1_l;
         else {
             traceln("отрицательное значение дельты New0_1_l " + (New0_1_l - Old_delta_1_l));
-            wm73_l_1=true;
-            return ;
+            wm73_l_1 = true;
+            return;
         }
+    }   else Rezult_1_l= W_pol.get(Lygnin, GudFungi)-0.0000000000000000001;
         W_pol.set(Rezult_1_l, Lygnin, GudFungi);
-    } ]]></Action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></Action>
 					<Logging>false</Logging>
 				</Event>
 				<Event>
@@ -5397,7 +5415,20 @@ if ( Old_delta_1_l > 0.000000000000001) {
 						</RecurrenceCode>
 						<Condition><![CDATA[wm73_l_1]]></Condition>
 					</Properties>
-					<Action><![CDATA[wm73_l_1=false;]]></Action>
+					<Action><![CDATA[// в прошлом событии дельта оказаось минусовой, потому что после 
+//события хранилище резко увеличилось. считаем по другому
+
+double delta_l = W_mon_copy.get( Lygnin ,GudFungi);
+
+// дельта вряд ли когда нибудь будет больше хранилища
+
+double rezult_l=Enviroment.W_lyg- delta_l;
+traceln("MF_W_pol_Agents.get(1) после delta_l" +MF_W_pol_Agents.get(1) );
+double delta_1_l=rezult_l *MF_W_pol_Agents.get(1) ;
+traceln("delta_1_c " +delta_1_l+"delta_1_l " + delta_1_l ); 
+W_pol.set(delta_1_l, Lygnin, GudFungi); 
+W_pol_copy.set(delta_1_l, Lygnin, GudFungi); 
+]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
