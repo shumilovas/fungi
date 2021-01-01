@@ -2434,7 +2434,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.000001, 0.0000001, 15.0}]]></Code>
+							<Code><![CDATA[{0.000001, 10, 0.0001}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
