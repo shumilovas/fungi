@@ -3924,11 +3924,13 @@ traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
       traceln("общая масса полимеров " + W_pol.sum());
       }    
 
-W_pol.decrement(Cellulose,BadTrichoderma);
-W_pol.increment(Cellulose,GudBacillus);
-Wm.set(Wm.get(3)-0.1, BadTrichoderma);
-Wm.set(Wm.get(2)-0.025, GudBacillus);
-
+double damage=Wm.get( GudBacillus )/100; 
+double WCT= W_pol.get(Cellulose, BadTrichoderma );
+double WCB= W_pol.get(Cellulose, GudBacillus );
+double m=Wm.get(BadTrichoderma); 
+W_pol.set(WCT-damage, Cellulose, BadTrichoderma );
+W_pol.set(WCB+damage/1.5,BadTrichoderma);
+Wm.set(m-damage/10, BadTrichoderma );
 }
 ]]></Action>
 				</Event>
@@ -4096,19 +4098,15 @@ V_m.set(0.000001, GudFungi);
 					<Action><![CDATA[if (Wm.get(3)>1.5*Wm.get(2) & Wm.get(2)>0.00000001 ) { 
 TVB++;
 if (TVB % 10 == 0) traceln("BadTrichoderma_Butle_bacillu, times: " +TVB );    
-      traceln(W_pol.get(Cellulose,GudFungi));
-      traceln(W_pol.get(Cellulose,GudBacillus));
-      traceln(W_pol.get(Cellulose,BadTrichoderma)); 
+      traceln("Cellulose,GudFung " +W_pol.get(Cellulose,GudFungi));
+      traceln("cellulose,GudBacillus " +W_pol.get(Cellulose,GudBacillus));
+      traceln("Cellulose,BadTrichoderma " +W_pol.get(Cellulose,BadTrichoderma)); 
 double damage=Wm.get(BadTrichoderma)/100; 
 double WpolCB= W_pol.get(Cellulose,GudBacillus);
-double WpolCT= W_pol.get(Cellulose,BadTrichoderma);     
+double WpolCT= W_pol.get(Cellulose,BadTrichoderma); 
+double m2=Wm.get(GudBacillus);    
 W_pol.set(WpolCB-damage, Cellulose,GudBacillus);
-W_pol.set(WpolCT+damage/1.5,BadTrichoderma);
-Wm.decrement(2);
-
-
-
-
+Wm.set(m2-damage/10,GudBacillus);
 }
 ]]></Action>
 				</Event>
@@ -4153,14 +4151,13 @@ if (TVF % 40 == 0) {
       traceln("законеч блок по времени " +time());}     
 
 }
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(Cellulose,GudFungi);
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(Cellulose,GudFungi);
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(Cellulose,GudFungi);
-Wm.decrement(1);
-Wm.decrement(1);
+double damage=Wm.get(BadTrichoderma)/100; 
+double WpolCF = W_pol.get(Cellulose,GudFungi);
+double WpolCT= W_pol.get(Cellulose,BadTrichoderma);
+double m1=Wm.get( GudFungi ); 
+W_pol.set(WpolCF-damage, Cellulose, GudFungi );
+W_pol.set(WpolCT+damage/1.5,BadTrichoderma);
+Wm.set(m1-damage/7,GudFungi);
 }
 
 ]]></Action>
