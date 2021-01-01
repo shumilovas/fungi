@@ -2399,7 +2399,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{0.000001, 0.0000001, 15.0}]]></Code>
+							<Code><![CDATA[{0.000001, 0.000000000000000000000000000000001, 200.0}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1579947006830</Id>
@@ -4098,15 +4098,12 @@ TVB++;
 if (TVB % 10 == 0) traceln("BadTrichoderma_Butle_bacillu, times: " +TVB );    
       traceln(W_pol.get(Cellulose,GudFungi));
       traceln(W_pol.get(Cellulose,GudBacillus));
-      traceln(W_pol.get(Cellulose,BadTrichoderma));     
-W_pol.decrement(Cellulose,GudBacillus);
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(GudFungi,Cellulose);
-W_pol.decrement(Cellulose,GudBacillus);
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.increment(Cellulose,BadTrichoderma);
-W_pol.decrement(GudFungi,Cellulose);
+      traceln(W_pol.get(Cellulose,BadTrichoderma)); 
+double damage=Wm.get(BadTrichoderma)/100; 
+double WpolCB= W_pol.get(Cellulose,GudBacillus);
+double WpolCT= W_pol.get(Cellulose,BadTrichoderma);     
+W_pol.set(WpolCB-damage, Cellulose,GudBacillus);
+W_pol.set(WpolCT+damage/1.5,BadTrichoderma);
 Wm.decrement(2);
 
 
