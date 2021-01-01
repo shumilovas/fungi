@@ -3923,14 +3923,44 @@ traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
       //traceln(W_pol.get(Cellulose,BadTrichoderma)); 
       traceln("общая масса полимеров " + W_pol.sum());
       }    
-
+// расчитываем уменьшение биомассы организма
 double damage=Wm.get( GudBacillus )/100; 
-double WCT= W_pol.get(Cellulose, BadTrichoderma );
-double WCB= W_pol.get(Cellulose, GudBacillus );
 double m=Wm.get(BadTrichoderma); 
-W_pol.set(WCT-damage, Cellulose, BadTrichoderma );
-W_pol.set(WCB+damage/1.5,BadTrichoderma);
-Wm.set(m-damage/10, BadTrichoderma );
+double NewM=m-damage/10;
+Wm.set(NewM, BadTrichoderma );
+//расчитываем, насколько уменьшился организм
+double K_Sm= NewM/m;
+// настолько же уменьшаем его полимеры и мономеры 
+
+//полимеры
+//сразу на этом шаге, что бы не возникало пилы
+//старое количество полимеров бацилы
+double WCB= W_pol.get(Cellulose, GudBacillus );
+//новое количество полимеров бацилы
+double New_WCB = WCB*K_Sm; 
+W_pol.set(New_WCB,GudBacillus);
+//насколько увеличилость количество полимеров у триходермы?
+//было
+double WCT= W_pol.get(Cellulose, GudBacillus );
+//стало
+double new_WCT=WCT +(WCB-New_WCB);
+W_pol.set(new_WCT,BadTrichoderma);
+
+
+//мономеры
+//сразу на этом шаге, что бы не возникало пилы
+//старое количество мономеров бацилы
+double WCB1= W_mon.get(Cellulose, GudBacillus );
+//новое количество полимеров бацилы
+double New_WCB1 = WCB1*K_Sm; 
+W_mon.set(New_WCB1,GudBacillus);
+//насколько увеличилость количество полимеров у триходермы?
+//было
+double WCT1= W_mon.get(Cellulose, GudBacillus );
+//стало
+double new_WCT1=WCT1 +(WCB1-New_WCB);
+W_mon.set(new_WCT1,BadTrichoderma);
+
 }
 ]]></Action>
 				</Event>
