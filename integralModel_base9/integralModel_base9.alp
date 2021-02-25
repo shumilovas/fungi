@@ -1001,7 +1001,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[.0000000000000001
+								<Expression><![CDATA[1
 ]]></Expression>
 							</CustomExpression>
 						</Array>
@@ -1086,6 +1086,14 @@ TVB=0; // счетчик для события слежки количества
 								</Coordinate>
 								<Expression><![CDATA[TFunctFung_Ucc(Temperature)*TimeFunction(time())]]></Expression>
 							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[Plant]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[1]]></Expression>
+							</CustomExpression>
 						</Array>
 						<Shadow>
 							<Id>1605632722377</Id>
@@ -1143,7 +1151,7 @@ TVB=0; // счетчик для события слежки количества
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[dWm]]></Expression>
-						<InitialValue><![CDATA[{Wm0.get(1), Wm0.get(2), Wm0.get(3), Wm0.get(3), W_c}]]></InitialValue>
+						<InitialValue><![CDATA[{Wm0.get(1), Wm0.get(2), Wm0.get(3), W_c}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1216,7 +1224,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Wm.get(4)*0.3- Um[Plant]- Us[Plant]]]></Expression>
+								<Expression><![CDATA[Wm.get(4)*0.0003- Um[Plant]- Us[Plant]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1616,7 +1624,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[((Wm[Plant]*q*Sm[Plant]*(Am-Wm[Plant])/Am)/YGm + Mm*Wm[Plant]/(1+alpha/Sm[Plant]))*0.01* TFunct_Ucc[Plant] *error_Vmax_ph_Ucc[Plant]*Um_K_err]]></Expression>
+								<Expression><![CDATA[((Wm[Plant]*q*Sm[Plant]*(100*Am-Wm[Plant])/Am)/YGm + Mm*Wm[Plant]/(1+alpha/Sm[Plant]))*0.01* TFunct_Ucc[Plant] *error_Vmax_ph_Ucc[Plant]*Um_K_err]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
