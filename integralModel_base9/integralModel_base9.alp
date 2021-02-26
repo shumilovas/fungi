@@ -651,58 +651,14 @@ TVB=0; // счетчик для события слежки количества
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
-								<ClassName><![CDATA[Fractions]]></ClassName>
-							</Dimension>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[W_mon[Fractions,Agents]/(W_mon[Fractions,Agents]+W_pol[Fractions,Agents]*K_pol_mon[Fractions])]]></Expression>
-							</CustomExpression>
-						</Array>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1579717477709</Id>
-					<Name><![CDATA[K_lability]]></Name>
-					<X>-460</X><Y>1220</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="true">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
-								<ClassName><![CDATA[Fractions]]></ClassName>
-							</Dimension>
-							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
-								<ClassName><![CDATA[Agents]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
-									<ClassName><![CDATA[Fractions]]></ClassName>
-								</Coordinate>
-								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
-									<ClassName><![CDATA[Agents]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[Sh_lyg[Fractions,Agents]]]></Expression>
+								<Expression><![CDATA[lygm[Agents]/(lygm[Agents]+lygp[Agents])*K_pol_mon.get(1))]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1132,6 +1088,36 @@ TVB=0; // счетчик для события слежки количества
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1614369026338</Id>
+					<Name><![CDATA[lygp]]></Name>
+					<X>-310</X><Y>1300</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[W_pol[1,Agents]]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1614369090544</Id>
+					<Name><![CDATA[lygm]]></Name>
+					<X>-630</X><Y>1250</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[W_mon[1,Agents]]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1726,12 +1712,37 @@ Doctor of Philosophy ]]></Description>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Lygnin]]></ItemName>
 								</Coordinate>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(Enviroment.Vc*K_lability[Fractions,Agents]*Vmax[Fractions,Agents]*C_pol[Fractions,Agents]/(Ks05[Fractions] + C_pol[Fractions,Agents])) *error_Vmax_T_Ucc[Agents] * error_Vmax_ph_Ucc[Agents]]]></Expression>
+								<Expression><![CDATA[(Enviroment.Vc*Vmax[1,Agents]*C_pol[1,Agents]/(Ks05[1] + C_pol[1,Agents])) *error_Vmax_T_Ucc[1] * error_Vmax_ph_Ucc[1]]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Cellulose]]></ItemName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Sh_lyg[Agents]*(Enviroment.Vc*Vmax[2,Agents]*C_pol[2,Agents]/(Ks05[2] + C_pol[2,Agents])) *error_Vmax_T_Ucc[2] * error_Vmax_ph_Ucc[2]]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Salt]]></ItemName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[0.000000000000000000000000000000000000000000000000000001]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>2</ValveIndex>
@@ -3281,12 +3292,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477740" TargetId="1579717477704" Polarity="null">
+				<Link SourceId="1579717477740" TargetId="1614369026338" Polarity="null">
 					<Height>88.021</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-290</X><Y>160</Y></Direction>
+					<Direction><X>-140</X><Y>160</Y></Direction>
 					<Id>1579717477549</Id>
-					<Name><![CDATA[W_pol - Sh_lyg]]></Name>
+					<Name><![CDATA[W_pol - lygp]]></Name>
 					<X>-170</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3296,12 +3307,12 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477736" TargetId="1579717477704" Polarity="null">
+				<Link SourceId="1579717477736" TargetId="1614369090544" Polarity="null">
 					<Height>-42.434</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>230</X><Y>150</Y></Direction>
+					<Direction><X>60</X><Y>100</Y></Direction>
 					<Id>1579717477551</Id>
-					<Name><![CDATA[W_mon - Sh_lyg]]></Name>
+					<Name><![CDATA[W_mon - lygm]]></Name>
 					<X>-690</X><Y>1150</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3353,36 +3364,6 @@ MAOBING TU таблица 22]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Color>-6632142</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579717477704" TargetId="1579717477709" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-80</Y></Direction>
-					<Id>1579717477561</Id>
-					<Name><![CDATA[Sh_lyg - K_lability]]></Name>
-					<X>-460</X><Y>1300</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1579717477709" TargetId="1579717477451" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-80</Y></Direction>
-					<Id>1579717477563</Id>
-					<Name><![CDATA[K_lability - U_cc]]></Name>
-					<X>-460</X><Y>1220</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
@@ -3993,6 +3974,51 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1614092874234</Id>
 					<Name><![CDATA[<W_c> - Wm]]></Name>
 					<X>-400</X><Y>-360</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1614369026338" TargetId="1579717477704" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-150</X><Y>0</Y></Direction>
+					<Id>1614369246145</Id>
+					<Name><![CDATA[lygp - Sh_lyg]]></Name>
+					<X>-310</X><Y>1300</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1614369090544" TargetId="1579717477704" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>170</X><Y>50</Y></Direction>
+					<Id>1614369252012</Id>
+					<Name><![CDATA[lygm - Sh_lyg]]></Name>
+					<X>-630</X><Y>1250</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1579717477704" TargetId="1579717477451" Polarity="null">
+					<Height>-16.022</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>-160</Y></Direction>
+					<Id>1614369410557</Id>
+					<Name><![CDATA[Sh_lyg - U_cc]]></Name>
+					<X>-460</X><Y>1300</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
