@@ -912,8 +912,33 @@ TVB=0; // счетчик для события слежки количества
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudFungi]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(Wm.sum() >Enviroment.W_c/3 || (harvested_Mushroom.totalHarvestedWeight()>Enviroment.W_c*0.85) & Wm.get(3)<-10 ) ?  (abs(Wm[Agents])/1000 ): (abs(Wm[Agents])/Wm.sum())]]></Expression>
+								<Expression><![CDATA[(Wm.sum() >Enviroment.W_c/3 || (harvested_Mushroom.totalHarvestedWeight()>Enviroment.W_c*0.85) & Wm.get(3)<-10 ) ?  (abs(Wm[GudFungi])/1000 ): (abs(Wm[GudFungi])/Wm.sum())]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[GudBacillus]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(Wm.sum() >Enviroment.W_c/3 || (harvested_Mushroom.totalHarvestedWeight()>Enviroment.W_c*0.85) & Wm.get(3)<-10 ) ?  (abs(Wm[GudBacillus])/1000 ): (abs(Wm[GudBacillus])/Wm.sum())]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(Wm.sum() >Enviroment.W_c/3 || (harvested_Mushroom.totalHarvestedWeight()>Enviroment.W_c*0.85) & Wm.get(3)<-10 ) ?  (abs(Wm[BadTrichoderma])/1000 ): (abs(Wm[BadTrichoderma])/Wm.sum())]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+									<ItemName><![CDATA[Plant]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Wm.sum() >100000000 ?  (abs(Wm[Plant])/1000 ): (abs(0.5*Wm[Plant])/Wm.sum())]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1166,10 +1191,69 @@ TVB=0; // счетчик для события слежки количества
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[V_m[Agents]/(k_h20[Agents]*d[Agents])]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[V_m[Agents]*k_h20[Agents]/d[Agents]]]></Expression>
+							</CustomExpression>
+						</Array>
+						<Shadow>
+							<Id>1615315112578</Id>
+							<Name><![CDATA[<v_h20>]]></Name>
+							<X>-300</X><Y>1100</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1615313452035</Id>
+					<Name><![CDATA[r]]></Name>
+					<X>-900</X><Y>1570</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
 						<Formula><![CDATA[0]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Math.exp(Math.log((V_m[Agents]*4/3))/3)]]></Expression>
+							</CustomExpression>
+						</Array>
+						<Shadow>
+							<Id>1615315030254</Id>
+							<Name><![CDATA[<r>]]></Name>
+							<X>-340</X><Y>1040</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -1425,7 +1509,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{.0000000000000001, .0000000000000001, .0000000000000001, Enviroment.W_lyg * MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), .0000000000000001, Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3), .0000000000000001, .0000000000000001, .0000000000000001, .0000000000000001}]]></InitialValue>
+						<InitialValue><![CDATA[{.0000000000000001, .0000000000000001, Enviroment.W_salt * MF_W_pol_Agents.get(1), Enviroment.W_lyg * MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_salt * MF_W_pol_Agents.get(2), Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3), Enviroment.W_salt * MF_W_pol_Agents.get(3), .0000000000000001, .0000000000000001, Enviroment.W_salt * MF_W_pol_Agents.get(4)}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1801,7 +1885,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000000000000000000000000000000000001]]></Expression>
+								<Expression><![CDATA[r[Agents]>0.1 ? v_h20[Agents]:0.000000000000000000000001]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>2</ValveIndex>
@@ -2765,6 +2849,9 @@ MAOBING TU таблица 22]]></Description>
 							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[{.0000001, .00001, .00001, .1}]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1615280261857</Id>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
@@ -2791,7 +2878,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{1, 1, 1, 1}]]></Code>
+							<Code><![CDATA[{.01, .001, .001, .000001}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1615280539980</Id>
@@ -4131,6 +4218,96 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1614369410557</Id>
 					<Name><![CDATA[Sh_lyg - U_cc]]></Name>
 					<X>-460</X><Y>1300</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615280539982" TargetId="1615280458661" Polarity="null">
+					<Height>-14.601</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>10</Y></Direction>
+					<Id>1615312969934</Id>
+					<Name><![CDATA[k_h20 - v_h20]]></Name>
+					<X>-750</X><Y>1600</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615280261859" TargetId="1615280458661" Polarity="null">
+					<Height>-41.981</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>90</X><Y>-50</Y></Direction>
+					<Id>1615312978038</Id>
+					<Name><![CDATA[d - v_h20]]></Name>
+					<X>-730</X><Y>1660</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615280166446" TargetId="1615280458661" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>90</X><Y>40</Y></Direction>
+					<Id>1615312996382</Id>
+					<Name><![CDATA[<V_m> - v_h20]]></Name>
+					<X>-730</X><Y>1570</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615280166446" TargetId="1615313452035" Polarity="null">
+					<Height>0.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-170</X><Y>0</Y></Direction>
+					<Id>1615313491631</Id>
+					<Name><![CDATA[<V_m> - r]]></Name>
+					<X>-730</X><Y>1570</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615315030254" TargetId="1579717477451" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>100</Y></Direction>
+					<Id>1615315037161</Id>
+					<Name><![CDATA[<r> - U_cc]]></Name>
+					<X>-340</X><Y>1040</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615315112578" TargetId="1579717477451" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-160</X><Y>40</Y></Direction>
+					<Id>1615315120814</Id>
+					<Name><![CDATA[<v_h20> - U_cc]]></Name>
+					<X>-300</X><Y>1100</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7876,6 +8053,7 @@ public abstract class Enviroment implements Serializable {
 	static public double MF_lyg=0.2;
 	static public double W_lyg=MF_lyg*W_c;
 	static public double W_cell=MF_сell*W_c;
+	static public double W_salt=100;
 	
 
 	public double T = 293;
