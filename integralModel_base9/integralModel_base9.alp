@@ -499,6 +499,15 @@ TVB=0; // счетчик для события слежки количества
 								<Expression><![CDATA[Wm[Agents] >0.00000000000001 ? Wm[Agents]/Ro_m[Agents] : 0.000000000000001]]></Expression>
 							</CustomExpression>
 						</Array>
+						<Shadow>
+							<Id>1615280166446</Id>
+							<Name><![CDATA[<V_m>]]></Name>
+							<X>-730</X><Y>1570</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -1149,6 +1158,21 @@ TVB=0; // счетчик для события слежки количества
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1615280458661</Id>
+					<Name><![CDATA[v_h20]]></Name>
+					<X>-640</X><Y>1610</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1394981990462</Id>
 					<Name><![CDATA[Wm]]></Name>
@@ -1202,6 +1226,15 @@ TVB=0; // счетчик для события слежки количества
 							<Id>1614084684366</Id>
 							<Name><![CDATA[<Wm>]]></Name>
 							<X>-450</X><Y>220</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
+						<Shadow>
+							<Id>1615280132328</Id>
+							<Name><![CDATA[<Wm>]]></Name>
+							<X>-740</X><Y>1490</Y>
 							<Label><X>0</X><Y>-20</Y></Label>
 							<PublicFlag>false</PublicFlag>
 							<PresentationFlag>true</PresentationFlag>
@@ -2710,6 +2743,59 @@ MAOBING TU таблица 22]]></Description>
 						<ParameterEditor>
 							<Id>1608903515819</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1615280261859</Id>
+					<Name><![CDATA[d]]></Name>
+					<X>-730</X><Y>1660</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[HyperArray]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>true</SdArray>
+						<Dimension>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+							<ClassName><![CDATA[Agents]]></ClassName>
+						</Dimension>
+						<ParameterEditor>
+							<Id>1615280261857</Id>
+							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1615280539982</Id>
+					<Name><![CDATA[k_h20]]></Name>
+					<X>-750</X><Y>1600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[HyperArray]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>true</SdArray>
+						<Dimension>
+							<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+							<ClassName><![CDATA[Agents]]></ClassName>
+						</Dimension>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[{1, 1, 1, 1}]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1615280539980</Id>
+							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -7743,6 +7829,12 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Us_err]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[d]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[k_h20]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
