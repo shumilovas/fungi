@@ -7296,7 +7296,7 @@ Production_of_Laccase_from_Pleurotus_sajor_caju_in_liquid_state_fermentation_and
 		<Height>1024</Height>
 	</Frame>
 	<Database>
-		<Logging>true</Logging>
+		<Logging>false</Logging>
 		<AutoExport>false</AutoExport>
 		<ShutdownCompact>true</ShutdownCompact>
 		<ImportSettings>
