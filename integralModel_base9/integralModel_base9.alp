@@ -1217,6 +1217,15 @@ TVB=0; // счетчик для события слежки количества
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
 						</Shadow>
+						<Shadow>
+							<Id>1615382644631</Id>
+							<Name><![CDATA[<v_h20>]]></Name>
+							<X>-740</X><Y>60</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -1353,7 +1362,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Wm.get(4)*0.0003- Um[Plant]- Us[Plant]]]></Expression>
+								<Expression><![CDATA[time()>200 ? Wm.get(4)*v_h20[Plant] : Wm.get(4)*0.0003- Um[Plant]- Us[Plant]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -2878,7 +2887,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.01, .001, .001, .000001}]]></Code>
+							<Code><![CDATA[{.01, .001, .001, .00000001}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1615280539980</Id>
@@ -4308,6 +4317,21 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1615315120814</Id>
 					<Name><![CDATA[<v_h20> - U_cc]]></Name>
 					<X>-300</X><Y>1100</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1615382644631" TargetId="1394982657396" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>350</X><Y>130</Y></Direction>
+					<Id>1615382659029</Id>
+					<Name><![CDATA[<v_h20> - Smg]]></Name>
+					<X>-740</X><Y>60</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
