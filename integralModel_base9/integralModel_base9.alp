@@ -1362,7 +1362,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[time()>200 ? Wm.get(4)*v_h20[Plant] : Wm.get(4)*0.0003- Um[Plant]- Us[Plant]]]></Expression>
+								<Expression><![CDATA[v_h20[Plant]>0.0000003 ? (Wm.get(4)*v_h20[Plant]- Um[Plant]- Us[Plant]) : (Wm.get(4)*v_h20[Plant]*0.0001- Um[Plant]- Us[Plant])]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1386,8 +1386,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[
-Uc[BadTrichoderma]- Um[BadTrichoderma]- Us[BadTrichoderma]]]></Expression>
+								<Expression><![CDATA[v_h20[Plant]>0.0000003 ? (Wm.get(4)*v_h20[Plant]- Um[Plant]- Us[Plant]) : (Wm.get(4)*v_h20[Plant]*0.0001- Um[Plant]- Us[Plant])]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -8077,7 +8076,7 @@ public abstract class Enviroment implements Serializable {
 	static public double MF_lyg=0.2;
 	static public double W_lyg=MF_lyg*W_c;
 	static public double W_cell=MF_сell*W_c;
-	static public double W_salt=100;
+	static public double W_salt=1000;
 	
 
 	public double T = 293;
