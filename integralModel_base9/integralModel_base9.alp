@@ -1362,7 +1362,9 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[v_h20[Plant]>0.0000003 ? (Wm.get(4)*v_h20[Plant]- Um[Plant]- Us[Plant]) : (Wm.get(4)*v_h20[Plant]*0.0001- Um[Plant]- Us[Plant])]]></Expression>
+								<Expression><![CDATA[
+((time()>150) & (v_h20.get(Plant)<.00000005) & (v_h20.get(GudFungi)>.0000005))? Wm.get(4)*v_h20[GudFungi]/2- Um[Plant] :	Wm.get(4)*v_h20[Plant]- Um[Plant] 	
+]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1378,7 +1380,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[GudBacillus]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[Uc[GudBacillus]- Um[GudBacillus]- Us[GudBacillus]]]></Expression>
+								<Expression><![CDATA[Uc[GudBacillus]- Um[GudBacillus]]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -1386,7 +1388,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[BadTrichoderma]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[v_h20[Plant]>0.0000003 ? (Wm.get(4)*v_h20[Plant]- Um[Plant]- Us[Plant]) : (Wm.get(4)*v_h20[Plant]*0.0001- Um[Plant]- Us[Plant])]]></Expression>
+								<Expression><![CDATA[Uc[BadTrichoderma]- Um[BadTrichoderma]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1761,7 +1763,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[((Wm[Plant]*q*Sm[Plant]*(100*Am-Wm[Plant])/Am)/YGm + Mm*Wm[Plant]/(1+alpha/Sm[Plant]))*0.01* TFunct_Ucc[Plant] *error_Vmax_ph_Ucc[Plant]*Um_K_err]]></Expression>
+								<Expression><![CDATA[((Wm[Plant]*q*Sm[Plant]*(100*Am-Wm[Plant])/Am)/YGm + Mm*Wm[Plant]/(1+alpha/Sm[Plant]))* TFunct_Ucc[Plant] *error_Vmax_ph_Ucc[Plant]*Um_K_err]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -2886,7 +2888,7 @@ MAOBING TU таблица 22]]></Description>
 							<ClassName><![CDATA[Agents]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[{.01, .001, .001, .00000001}]]></Code>
+							<Code><![CDATA[{.01, .001, .001, .0000001}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1615280539980</Id>
@@ -4528,7 +4530,7 @@ traceln("_________________________________");]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[(Wm.get(1)+Wm.get(2)+Wm.get(3) +harvested_Mushroom.totalHarvestedWeight())>Enviroment.W_c*0.7;]]></Condition>
 					</Properties>
-					<Action><![CDATA[traceln("locaut" +time());
+					<Action><![CDATA[//traceln("locaut" +time());
 Sc.set(0,1);
 Uc.set(0,1);
 Us.set(0,1);
@@ -4587,28 +4589,28 @@ double rezult_c=Enviroment.W_cell- dc;
 double delta_c = (W_mon_copy.get( Cellulose ,GudBacillus)+
  W_mon_copy.get( Cellulose , BadTrichoderma) +
 W_mon_copy.get( Cellulose ,GudFungi));
-traceln("W_pol " +Enviroment.W_lyg );
-traceln("Enviroment.W_cell " +Enviroment.W_cell );
+//traceln("W_pol " +Enviroment.W_lyg );
+//traceln("Enviroment.W_cell " +Enviroment.W_cell );
 
-traceln ("delta_l " +delta_l);
+//traceln ("delta_l " +delta_l);
 
 if( delta_l>0)  rezult_l=Enviroment.W_lyg- delta_l;
-if( delta_l<0) {traceln("-delta_l " +"время" +time());
+if( delta_l<0) {//traceln("-delta_l " +"время" +time());
 dl=dl+0.0000000000001;
-traceln("dl=dl+0.0000000000001" +dl);
+//traceln("dl=dl+0.0000000000001" +dl);
 rezult_c=Enviroment.W_cell- dl;
 }
 if ( delta_c>0) rezult_c=Enviroment.W_cell- delta_c;
-if( delta_c<0) {traceln("-delta_c ");
+if( delta_c<0) {//traceln("-delta_c ");
 dc=dc+0.0000000000001;
-traceln("dl=dc+0.0000000000001" +dc);
+//traceln("dl=dc+0.0000000000001" +dc);
 rezult_c=Enviroment.W_cell- dc;
-traceln("rezult_c=Enviroment.W_cell- dc;" +rezult_c);
+//traceln("rezult_c=Enviroment.W_cell- dc;" +rezult_c);
 }
-traceln("rezult_l " +rezult_l);
-traceln("rezult_c " +rezult_c);
+//traceln("rezult_l " +rezult_l);
+//traceln("rezult_c " +rezult_c);
 
-traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1) );
+//traceln("MF_W_pol_Agents.get(1)" +MF_W_pol_Agents.get(1) );
 
 double delta_1_c=rezult_c * MF_W_pol_Agents.get(1);
 double delta_1_l = rezult_l * MF_W_pol_Agents.get(1) ;
@@ -4616,7 +4618,7 @@ double delta_2_c = rezult_c *MF_W_pol_Agents.get(2);
 double delta_2_l=rezult_l *MF_W_pol_Agents.get(2);
 double delta_3_c=rezult_c *MF_W_pol_Agents.get(3);
 double delta_3_l=rezult_l *MF_W_pol_Agents.get(3);
-traceln("delta_1_c " +delta_1_c +"delta_1_l " + delta_1_l );
+//traceln("delta_1_c " +delta_1_c +"delta_1_l " + delta_1_l );
 
  
 
@@ -4645,9 +4647,9 @@ W_pol.set(delta_1_l, Lygnin, GudFungi);
 W_pol.set(delta_1_c, Cellulose, GudFungi);
 
 
-traceln("fungi mass" +Wm.get(1));
-traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
-traceln("время инициации" +time());
+//traceln("fungi mass" +Wm.get(1));
+//traceln("инициация основного гриба на таком вот обьеме субстрата: " +Enviroment.Vc);
+//traceln("время инициации" +time());
 	Us.set((YGs + Ms * mushroom.totalWeight()/(1+alpha/Sm.get(1))), GudFungi);
 W_flac_m.set(MF_flacc_m*Wm.get(1),GudFungi);
 W_flac_с.set(0.0000000000001, GudFungi);
@@ -4691,9 +4693,9 @@ Smg.set(10, GudFungi);
 					<Action><![CDATA[if ((time()>5)  & (Wm.get(2)>Wm.get(3)/2) & Wm.get(3)>0.1 & W_pol.get(Cellulose,BadTrichoderma)>10) {
 BVT++;
 if (BVT % 10 == 0) {
-traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
+//traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
     
-      traceln("общая масса полимеров " + W_pol.sum());
+      //traceln("общая масса полимеров " + W_pol.sum());
       }    
 // расчитываем уменьшение биомассы организма
 double damage=Wm.get( GudBacillus )/100; 
@@ -4769,7 +4771,7 @@ W_mon.set(new_WCT1,BadTrichoderma);
 					<Action><![CDATA[if ((time()>5)  & (Wm.get(2)>Wm.get(3)/2) & Wm.get(3)>0.1 & W_pol.get(Cellulose,BadTrichoderma)>10) {
 BVT++;
 if (BVT % 10 == 0) {
-traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
+//traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
      
       traceln("общая масса полимеров " + W_pol.sum());
       }    
@@ -4778,7 +4780,7 @@ double damage=Wm.get( GudFungi )/100;
 double m=Wm.get(BadTrichoderma); 
 traceln("нулевая масса гриба " +m +"время " +time());
 double NewM=m-damage/10;
-traceln("новая масса гриба " +NewM +"время " +time());
+//traceln("новая масса гриба " +NewM +"время " +time());
 Wm.set(NewM, BadTrichoderma );
 //расчитываем, насколько уменьшился организм
 double K_Sm= NewM/m;
@@ -4863,7 +4865,7 @@ traceln("Bacillus_Butle_trich " +BVT +" times " +" время " +time()  );
      //traceln(W_pol.get(Cellulose,GudFungi));
      // traceln(W_pol.get(Cellulose,GudBacillus));
       //traceln(W_pol.get(Cellulose,BadTrichoderma)); 
-      traceln("общая масса полимеров " + W_pol.sum());
+      //traceln("общая масса полимеров " + W_pol.sum());
       }    
 // расчитываем уменьшение биомассы организма
 double damage=Wm.get( GudBacillus )/100; 
@@ -4930,12 +4932,48 @@ W_mon.set(new_WCT1,BadTrichoderma);
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[20]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Code><![CDATA[100]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[traceln("TFunctFung_Ucc(Temperature)*TimeFunction(time())" +TFunctFung_Ucc(Temperature)*TimeFunction(time()))]]></Action>
+				</Event>
+				<Event>
+					<Id>1615393433837</Id>
+					<Name><![CDATA[mycorize]]></Name>
+					<X>-350</X><Y>410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1615449600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[3500]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if ((time()>150) & (v_h20.get(Plant)<.000005) & (v_h20.get(GudFungi)>.000005)) 
+	{
+	traceln(" fung w mon " +W_mon.get(GudFungi,Cellulose) +" time " +time());
+	W_mon.set((W_mon.get(GudFungi,Cellulose)+0.8),GudFungi,Cellulose);
+	traceln(" fung w mon 2"+W_mon.get(GudFungi,Cellulose));
+	}]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
