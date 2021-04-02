@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.2.202012241901" AlpVersion="8.7.0">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.3.202103181427" AlpVersion="8.7.1">
 <Model>
 	<Id>1394978861119</Id>
 	<Name><![CDATA[integralModel_base9]]></Name>
@@ -1363,7 +1363,8 @@ TVB=0; // счетчик для события слежки количества
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
 								<Expression><![CDATA[
-((time()>150) & (v_h20.get(Plant)<.00000005) & (v_h20.get(GudFungi)>.0000005))? Wm.get(4)*v_h20[GudFungi]/2- Um[Plant] :	Wm.get(4)*v_h20[Plant]- Um[Plant] 	
+((time()>150) & (v_h20.get(Plant)<.00000005) & (v_h20.get(GudFungi)>.0000005))? Wm.get(4)*v_h20[GudFungi]/2- Um[Plant] :
+Wm.get(4)*v_h20[Plant]- Um[Plant] 	
 ]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
@@ -4971,7 +4972,7 @@ W_mon.set(new_WCT1,BadTrichoderma);
 					<Action><![CDATA[if ((time()>150) & (v_h20.get(Plant)<.000005) & (v_h20.get(GudFungi)>.000005)) 
 	{
 	traceln(" fung w mon " +W_mon.get(GudFungi,Cellulose) +" time " +time());
-	W_mon.set((W_mon.get(GudFungi,Cellulose)+0.8),GudFungi,Cellulose);
+	W_mon.set((W_mon.get(GudFungi,Cellulose)+v_h20.get(GudFungi)),GudFungi,Cellulose);
 	traceln(" fung w mon 2"+W_mon.get(GudFungi,Cellulose));
 	}]]></Action>
 				</Event>
