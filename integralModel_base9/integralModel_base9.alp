@@ -4972,9 +4972,8 @@ W_mon.set(new_WCT1,BadTrichoderma);
 					<Action><![CDATA[if ((time()>150) & (v_h20.get(Plant)<.000005) & (v_h20.get(GudFungi)>.000005)) 
 	{
 	traceln(" fung w mon " +W_mon.get(GudFungi,Cellulose) +" time " +time());
-	W_mon.set((W_mon.get(GudFungi,Cellulose)+v_h20.get(GudFungi)),GudFungi,Cellulose);
-	traceln(" fung w mon 2"+W_mon.get(GudFungi,Cellulose));
-	}]]></Action>
+	W_mon.set((W_mon.get(GudFungi,Cellulose)+0.7*v_h20.get(GudFungi)),GudFungi,Cellulose);
+W_mon.set((W_mon.get(Plant,Cellulose)-0.8*v_h20.get(GudFungi)),GudFungi,Cellulose);]]></Action>
 				</Event>
 			</Events>
 			<TableFunctions>
