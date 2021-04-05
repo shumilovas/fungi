@@ -885,7 +885,7 @@ TVB=0; // счетчик для события слежки количества
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Temp_Time(time())]]></Formula>
+						<Formula><![CDATA[20]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1106,7 +1106,7 @@ TVB=0; // счетчик для события слежки количества
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[pH_Time(time())]]></Formula>
+						<Formula><![CDATA[7]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1520,7 +1520,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>classic</EquationStyle>
 					<Width>60</Width>
 					<Height>60</Height>
-						<InitialValue><![CDATA[{.0000000000000001, .0000000000000001, Enviroment.W_salt * MF_W_pol_Agents.get(1), Enviroment.W_lyg * MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_salt * MF_W_pol_Agents.get(2), Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3), Enviroment.W_salt * MF_W_pol_Agents.get(3), .0000000000000001, .0000000000000001, Enviroment.W_salt * MF_W_pol_Agents.get(4)}]]></InitialValue>
+						<InitialValue><![CDATA[{Enviroment.W_lyg * MF_W_pol_Agents.get(1), Enviroment.W_cell * MF_W_pol_Agents.get(1), Enviroment.W_salt * MF_W_pol_Agents.get(1), Enviroment.W_lyg * MF_W_pol_Agents.get(2), Enviroment.W_cell * MF_W_pol_Agents.get(2), Enviroment.W_salt * MF_W_pol_Agents.get(2), Enviroment.W_lyg * MF_W_pol_Agents.get(3), Enviroment.W_cell * MF_W_pol_Agents.get(3), Enviroment.W_salt * MF_W_pol_Agents.get(3), .0000000000000001, .0000000000000001, Enviroment.W_salt * MF_W_pol_Agents.get(4)}]]></InitialValue>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
@@ -1953,7 +1953,7 @@ Doctor of Philosophy ]]></Description>
 									<ClassName><![CDATA[Agents]]></ClassName>
 									<ItemName><![CDATA[Plant]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.00000000000000000000000000000000000001]]></Expression>
+								<Expression><![CDATA[Math.max(dWm.get(4),0)*MF_flacc_m]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>2</ValveIndex>
