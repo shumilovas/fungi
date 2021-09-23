@@ -1734,7 +1734,36 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[0.5*Smg[Agents,1]+Smg[Agents,2]+0.1*[Agents,3]+0.2*Smg[Agents,4]]]></Expression>
+								<Expression><![CDATA[Smg[Agents,1]<Smg[Agents,3]/100 ? 0.5*Smg[Agents,1]+Smg[Agents,2]+0.1*[Agents,3]+0.3*Smg[Agents,4]-Us[Agents]: 0.0-Us[Agents]]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1632426996868</Id>
+					<Name><![CDATA[SmgInt]]></Name>
+					<X>-390</X><Y>120</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>custom</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{0.0,0.0,.0,.0,.0}]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+								<ClassName><![CDATA[Agents]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[Smg[Agents,1]<Smg[Agents,3]/1000 ? 0.5*Smg[Agents,1]-Um[Agents]+Smg[Agents,2]+0.1*[Agents,3]+0.1*Smg[Agents,4]: 0.0 - -Um[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1782,12 +1811,12 @@ Doctor of Philosophy ]]></Description>
 				<Variable Class="Flow">
 					<Id>1394982113124</Id>
 					<Name><![CDATA[Um]]></Name>
-					<X>-390</X><Y>190</Y>
+					<X>-390</X><Y>110</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1394982657396" External="false" Constant="false" Array="true">
+					<Properties SourceId="1632426996868" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<Array>
@@ -1834,8 +1863,8 @@ Doctor of Philosophy ]]></Description>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>-60</Y></Point>
 							<Point><X>0</X><Y>-140</Y></Point>
-							<Point><X>0</X><Y>-220</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -4429,6 +4458,21 @@ MAOBING TU таблица 22]]></Description>
 					<Name><![CDATA[Us - Smg]]></Name>
 					<X>-310</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1394982657396" TargetId="1632426996868" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>-70</Y></Direction>
+					<Id>1632427033507</Id>
+					<Name><![CDATA[Smg - SmgInt]]></Name>
+					<X>-390</X><Y>190</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
