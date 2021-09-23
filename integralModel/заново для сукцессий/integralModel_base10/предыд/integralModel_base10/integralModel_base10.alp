@@ -1416,7 +1416,7 @@ TVB=0; // счетчик для события слежки количества
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Uc[BadTrichoderma]- Um[BadTrichoderma]]]></Expression>
+								<Expression><![CDATA[Uc[BadTrichoderma]- Um[BadTrichoderma] -Us[BadTrichoderma]+Us[BadTrichoderma]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1729,6 +1729,13 @@ Doctor of Philosophy ]]></Description>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[0.5*Smg[Agents,1]+Smg[Agents,2]+0.1*[Agents,3]+0.2*Smg[Agents,4]]]></Expression>
+							</CustomExpression>
 						</Array>
 					</Properties>
 				</Variable>
@@ -4407,6 +4414,21 @@ MAOBING TU таблица 22]]></Description>
 					<Name><![CDATA[Smg - SmgIntegral]]></Name>
 					<X>-390</X><Y>190</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1394982132599" TargetId="1394982657396" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>0</Y></Direction>
+					<Id>1632426538724</Id>
+					<Name><![CDATA[Us - Smg]]></Name>
+					<X>-310</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
