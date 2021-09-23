@@ -1379,7 +1379,7 @@ TVB=0; // счетчик для события слежки количества
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[
-((time()>150) & (v_h20.get(Plant)<.00000005) & (v_h20.get(GudFungi)>.0000005))? Wm.get(4)*v_h20[GudFungi]/2- Um[Plant] :	Wm.get(4)*v_h20[Plant]- Um[Plant] 	
+((time()>150) & (v_h20.get(Plant)<.00000005) & (v_h20.get(GudFungi)>.0000005))? Uc[Plant]-Wm.get(4)*v_h20[GudFungi]/2- Um[Plant] :	Wm.get(4)*v_h20[Plant]- Um[Plant] 	
 ]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
