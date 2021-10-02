@@ -383,7 +383,7 @@ TVB=0; // счетчик для события слежки количества
 				<Variable Class="AuxVariable">
 					<Id>1395238597182</Id>
 					<Name><![CDATA[initiationRate]]></Name>
-					<X>-190</X><Y>190</Y>
+					<X>-120</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1897,8 +1897,8 @@ Doctor of Philosophy ]]></Description>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>20</X><Y>0</Y></Point>
-							<Point><X>70</X><Y>0</Y></Point>
+							<Point><X>100</X><Y>20</Y></Point>
+							<Point><X>120</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -2230,7 +2230,7 @@ Doctor of Philosophy ]]></Description>
 					<Name><![CDATA[Ms]]></Name>
 					<Description><![CDATA[Коэффициент дыхания поддержания для спорофора]]></Description>
 					<Unit>1/час</Unit> 
-					<X>-250</X><Y>190</Y>
+					<X>-180</X><Y>190</Y>
 					<Label><X>-10</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3041,12 +3041,12 @@ MAOBING TU таблица 22]]></Description>
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1394986604217" TargetId="1394982132599" Polarity="null">
-					<Height>-1.0032733136541765</Height>
+					<Height>2.075</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-60</X><Y>0</Y></Direction>
+					<Direction><X>-50</X><Y>20</Y></Direction>
 					<Id>1579448666048</Id>
 					<Name><![CDATA[Ms - Us]]></Name>
-					<X>-250</X><Y>190</Y>
+					<X>-180</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3088,7 +3088,7 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1395238254834" TargetId="1395238597182" Polarity="null">
 					<Height>0.721</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-50</X><Y>-50</Y></Direction>
+					<Direction><X>20</X><Y>-50</Y></Direction>
 					<Id>1579448666051</Id>
 					<Name><![CDATA[lambda - initiationRate]]></Name>
 					<X>-140</X><Y>240</Y>
@@ -3133,7 +3133,7 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1395068516572" TargetId="1395238597182" Polarity="null">
 					<Height>-4.0011536415328659E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-100</Y></Direction>
+					<Direction><X>70</X><Y>-100</Y></Direction>
 					<Id>1579448666055</Id>
 					<Name><![CDATA[Smcrit - initiationRate]]></Name>
 					<X>-190</X><Y>290</Y>
@@ -3178,7 +3178,7 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1394981936486" TargetId="1395238597182" Polarity="null">
 					<Height>-72.119</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>200</X><Y>-100</Y></Direction>
+					<Direction><X>270</X><Y>-100</Y></Direction>
 					<Id>1579448666059</Id>
 					<Name><![CDATA[Sm - initiationRate]]></Name>
 					<X>-390</X><Y>290</Y>
@@ -3238,7 +3238,7 @@ MAOBING TU таблица 22]]></Description>
 				<Link SourceId="1394981990462" TargetId="1395238597182" Polarity="null">
 					<Height>123.035</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>200</X><Y>400</Y></Direction>
+					<Direction><X>270</X><Y>400</Y></Direction>
 					<Id>1579448666064</Id>
 					<Name><![CDATA[Wm - initiationRate]]></Name>
 					<X>-390</X><Y>-210</Y>
@@ -4472,6 +4472,36 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1632427033507</Id>
 					<Name><![CDATA[Smg - SmgInt]]></Name>
 					<X>-390</X><Y>190</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1394982113124" TargetId="1394982657396" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>140</Y></Direction>
+					<Id>1633159570564</Id>
+					<Name><![CDATA[Um - Smg]]></Name>
+					<X>-390</X><Y>50</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1394982132599" TargetId="1632417850939" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-110</X><Y>-20</Y></Direction>
+					<Id>1633159599115</Id>
+					<Name><![CDATA[Us - SmgIntegral]]></Name>
+					<X>-230</X><Y>210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
