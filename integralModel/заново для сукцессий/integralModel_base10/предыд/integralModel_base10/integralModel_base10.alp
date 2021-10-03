@@ -1357,7 +1357,7 @@ TVB=0; // счетчик для события слежки количества
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
-						<InitialValue><![CDATA[{0.0,0.0,0.0,100}]]></InitialValue>
+						<InitialValue><![CDATA[{1, 1, 1, 20, 1, 1, 1, 100, 1, 1, 1, 1, 1, 1, 1, 1}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1722,7 +1722,7 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{0.0,0.0,0.0,0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0.0,0.0,0.0,100}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -1734,7 +1734,7 @@ Doctor of Philosophy ]]></Description>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[Smg[Agents,1]<Smg[Agents,3]/100 ? 0.5*Smg[Agents,1]+Smg[Agents,2]+0.1*[Agents,3]+0.3*Smg[Agents,4]-Us[Agents]: 0.0-Us[Agents]]]></Expression>
+								<Expression><![CDATA[(Smg[Agents,1]<Smg[Agents,3]/100  && time()>70) ? (0.5*Smg[Agents,1]+Smg[Agents,2]+0.1*[Agents,3]+0.3*Smg[Agents,4]-Us[Agents]) : -Us[Agents]]]></Expression>
 							</CustomExpression>
 						</Array>
 					</Properties>
@@ -1751,17 +1751,25 @@ Doctor of Philosophy ]]></Description>
 					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{0.0,0.0,.0,.0,.0}]]></InitialValue>
+						<InitialValue><![CDATA[{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 								<ClassName><![CDATA[Agents]]></ClassName>
 							</Dimension>
+							<Dimension>
+								<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
 									<ClassName><![CDATA[Agents]]></ClassName>
+								</Coordinate>
+								<Coordinate>
+									<PackageName><![CDATA[modelmushroomstopajcomplex_Tab_new5]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[Smg[Agents,1]<Smg[Agents,3]/1000 ? 0.5*Smg[Agents,1]-Um[Agents]+Smg[Agents,2]+0.1*[Agents,3]+0.1*Smg[Agents,4]: 0.0 - -Um[Agents]]]></Expression>
 							</CustomExpression>
