@@ -6,25 +6,25 @@
 -->
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.5.202310311109" AlpVersion="8.8.2">
 <Model>
-	<Id>1394978861119</Id>
-	<Name><![CDATA[integralModel]]></Name>
+	<Id>1767385310003</Id>
+	<Name><![CDATA[Model11]]></Name>
 	<EngineVersion>6</EngineVersion>
-	<JavaPackageName><![CDATA[modelmushroomstopajcomplex]]></JavaPackageName>
+	<JavaPackageName><![CDATA[model9]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
 	<Dimensions>
 		<!--   =========   Dimension   ========  -->
 		<Dimension>
-			<Id>1579717547835</Id>
+			<Id>1767385332309</Id>
 			<Name><![CDATA[Fractions]]></Name>
 			<Type>enumeration</Type>
 			<Range><![CDATA[]]></Range>
 			<Element>
-				<Id>1579717547832</Id>
+				<Id>1767385332306</Id>
 				<Name><![CDATA[Lygnin]]></Name>
 				<Value>1</Value>
 			</Element>
 			<Element>
-				<Id>1579717547834</Id>
+				<Id>1767385332308</Id>
 				<Name><![CDATA[Cellulose]]></Name>
 				<Value>2</Value>
 			</Element>
@@ -33,12 +33,329 @@
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
-			<Id>1394978861120</Id>
+			<Id>1767385310006</Id>
+			<Name><![CDATA[Main]]></Name>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1767385310012</Id>
+				<Name><![CDATA[1767385310012]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1767427200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1767385310009</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1767385310013</CurrentLevel>
+			<ConnectionsId>1767385310007</ConnectionsId>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1767385310007</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1767385799483</Id>
+					<Name><![CDATA[nutritionBox]]></Name>
+					<X>130</X><Y>80</Y>
+					<Label><X>-40</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1767385800421</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[model9]]></PackageName>
+						<ClassName><![CDATA[NutritionBox]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[model9]]></PackageName>
+							<ClassName><![CDATA[NutritionBox]]></ClassName>
+							<ItemName><![CDATA[1767385543603]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[YGm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Mm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[k]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[a]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[h]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Smcrit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[q]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lambda]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[age_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ws_maturing]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[alpha]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[m_mode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[U__flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Z_flac_mc]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[V_c]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ro_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_M]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[RoSq_C]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_flacc_m]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[MF_с]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_pol_mon]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Ks05]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K_error]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Temperature]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_kin]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[H]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[GH_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[K0_diff_CM]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Wm0]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
+
+			<Presentation>
+				<Level>
+					<Id>1767385310013</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<EmbeddedObjectPresentation>
+					<Id>1767385800421</Id>
+					<Name><![CDATA[nutritionBox_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1767385543608</Id>
 			<Name><![CDATA[NutritionBox]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
-				<Id>1579448665993</Id>
-				<Name><![CDATA[1579448665993]]></Name>
+				<Id>1767385543603</Id>
+				<Name><![CDATA[1767385543603]]></Name>
 				<GenericParameterValue Class="CodeValue">
 					<Code><![CDATA[T]]></Code>
 				</GenericParameterValue>
@@ -109,7 +426,7 @@
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
-				<Id>1579448666072</Id>
+				<Id>1767385543604</Id>
 				<Name><![CDATA[scale]]></Name>
 				<X>0</X><Y>-150</Y>
 				<PublicFlag>false</PublicFlag>
@@ -124,11 +441,11 @@
 				<Scale>10</Scale>
 				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 			</ScaleRuler>
-			<CurrentLevel>1579448667486</CurrentLevel>
-			<ConnectionsId>1579448666071</ConnectionsId>
+			<CurrentLevel>1767385543669</CurrentLevel>
+			<ConnectionsId>1767385544029</ConnectionsId>
 			<Variables>
 				<Variable Class="PlainVariable">
-					<Id>1397722156421</Id>
+					<Id>1767385543667</Id>
 					<Name><![CDATA[TotalWs]]></Name>
 					<X>-820</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -140,7 +457,7 @@
 					</Properties>
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1394981926121</Id>
+					<Id>1767385543610</Id>
 					<Name><![CDATA[Sc]]></Name>
 					<X>-590</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -154,7 +471,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1394981936486</Id>
+					<Id>1767385543612</Id>
 					<Name><![CDATA[Sm]]></Name>
 					<Description><![CDATA[ концентрация субстрата в мицелии]]></Description>
 					<X>-390</X><Y>290</Y>
@@ -169,7 +486,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1395238597182</Id>
+					<Id>1767385543614</Id>
 					<Name><![CDATA[initiationRate]]></Name>
 					<X>-190</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -183,7 +500,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477673</Id>
+					<Id>1767385543616</Id>
 					<Name><![CDATA[C_flac_m]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
@@ -199,7 +516,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477676</Id>
+					<Id>1767385543618</Id>
 					<Name><![CDATA[C_flac_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр  ммцелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку  грамм/метр*метр*метр]]></Description>
 					<X>-320</X><Y>720</Y>
@@ -214,7 +531,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477679</Id>
+					<Id>1767385543620</Id>
 					<Name><![CDATA[W_c]]></Name>
 					<Description><![CDATA[масса сухой древесины]]></Description>
 					<Unit>грамм</Unit> 
@@ -227,10 +544,10 @@
 						<Formula><![CDATA[V_c*Ro_с]]></Formula>
 						<Color/>
 						<Shadow>
-							<Id>1581868806332</Id>
+							<Id>1767385589662</Id>
 							<Name><![CDATA[<W_c>]]></Name>
 							<X>-580</X><Y>120</Y>
-							<Label><X>-20</X><Y>-20</Y></Label>
+							<Label><X>0</X><Y>-20</Y></Label>
 							<PublicFlag>false</PublicFlag>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
@@ -239,7 +556,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477682</Id>
+					<Id>1767385543624</Id>
 					<Name><![CDATA[V_m]]></Name>
 					<Description><![CDATA[объем мицелия, метров кубических]]></Description>
 					<X>-820</X><Y>490</Y>
@@ -255,7 +572,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477687</Id>
+					<Id>1767385543626</Id>
 					<Name><![CDATA[Sq_wood_с]]></Name>
 					<Description><![CDATA[Площадь активной поверхности опилок]]></Description>
 					<Unit>метр*метр</Unit> 
@@ -272,7 +589,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477690</Id>
+					<Id>1767385543628</Id>
 					<Name><![CDATA[Sq_M]]></Name>
 					<Description><![CDATA[Площадь активной поверхности мицелия]]></Description>
 					<Unit>метр*метр</Unit> 
@@ -289,7 +606,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477693</Id>
+					<Id>1767385543630</Id>
 					<Name><![CDATA[MC_Seff]]></Name>
 					<Description><![CDATA[Эффективная площадь взаимодействия мицелия и опилок]]></Description>
 					<X>-540</X><Y>490</Y>
@@ -305,7 +622,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477697</Id>
+					<Id>1767385543633</Id>
 					<Name><![CDATA[C_pol]]></Name>
 					<Description><![CDATA[Концентрация (грамм сахаросодержащего компонента на метр кубический древесины) сахаросодержащих компонент внутри опилки]]></Description>
 					<Unit>грамм/(метр*метр*метр)</Unit> 
@@ -334,7 +651,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477701</Id>
+					<Id>1767385543636</Id>
 					<Name><![CDATA[Vmax]]></Name>
 					<Description><![CDATA[максимальная скорость разложения сахаросодержащих компонент древесины, грамм на м3  в час]]></Description>
 					<X>-460</X><Y>1050</Y>
@@ -363,7 +680,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477704</Id>
+					<Id>1767385543638</Id>
 					<Name><![CDATA[Sh_lyg]]></Name>
 					<Description><![CDATA[share lygnin- доля разложившегося лигнина]]></Description>
 					<X>-460</X><Y>1300</Y>
@@ -379,7 +696,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477709</Id>
+					<Id>1767385543642</Id>
 					<Name><![CDATA[K_lability]]></Name>
 					<X>-460</X><Y>1220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -416,7 +733,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477713</Id>
+					<Id>1767385543645</Id>
 					<Name><![CDATA[C_mon]]></Name>
 					<X>-710</X><Y>1030</Y>
 					<Label><X>-70</X><Y>0</Y></Label>
@@ -444,7 +761,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477717</Id>
+					<Id>1767385543647</Id>
 					<Name><![CDATA[kt_diff_CM]]></Name>
 					<Description><![CDATA[коэффециэнт диффузии (константа пропорциональности)]]></Description>
 					<X>-540</X><Y>780</Y>
@@ -460,7 +777,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477722</Id>
+					<Id>1767385543650</Id>
 					<Name><![CDATA[K0_Vmax]]></Name>
 					<X>-540</X><Y>980</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
@@ -488,7 +805,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579717477725</Id>
+					<Id>1767385543652</Id>
 					<Name><![CDATA[error_Vmax_ph]]></Name>
 					<X>-540</X><Y>1210</Y>
 					<Label><X>-40</X><Y>20</Y></Label>
@@ -503,7 +820,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579719290689</Id>
+					<Id>1767385543655</Id>
 					<Name><![CDATA[Share_mon]]></Name>
 					<X>-860</X><Y>1140</Y>
 					<Label><X>-35</X><Y>-20</Y></Label>
@@ -531,7 +848,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1579721301639</Id>
+					<Id>1767385543657</Id>
 					<Name><![CDATA[dWm]]></Name>
 					<X>-390</X><Y>60</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
@@ -543,10 +860,10 @@
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 						<Shadow>
-							<Id>1579721771697</Id>
+							<Id>1767385715923</Id>
 							<Name><![CDATA[<dWm>]]></Name>
 							<X>-790</X><Y>670</Y>
-							<Label><X>10</X><Y>0</Y></Label>
+							<Label><X>0</X><Y>-20</Y></Label>
 							<PublicFlag>false</PublicFlag>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
@@ -555,7 +872,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1581709276253</Id>
+					<Id>1767385543661</Id>
 					<Name><![CDATA[Am]]></Name>
 					<X>-490</X><Y>120</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
@@ -570,7 +887,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1582900557488</Id>
+					<Id>1767385543663</Id>
 					<Name><![CDATA[T_depend_Ucc]]></Name>
 					<X>-540</X><Y>930</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
@@ -585,7 +902,7 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1582970938655</Id>
+					<Id>1767385543665</Id>
 					<Name><![CDATA[kt_er_ucc]]></Name>
 					<X>-610</X><Y>990</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
@@ -600,7 +917,7 @@
 
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1394981990462</Id>
+					<Id>1767385543743</Id>
 					<Name><![CDATA[Wm]]></Name>
 					<Description><![CDATA[вес мицелия]]></Description>
 					<X>-390</X><Y>0</Y>
@@ -616,10 +933,10 @@
 						<InitialValue><![CDATA[Wm0]]></InitialValue>
 						<Color/>
 						<Shadow>
-							<Id>1579720852671</Id>
+							<Id>1767385669190</Id>
 							<Name><![CDATA[<Wm>]]></Name>
 							<X>-720</X><Y>490</Y>
-							<Label><X>-20</X><Y>-20</Y></Label>
+							<Label><X>0</X><Y>-20</Y></Label>
 							<PublicFlag>false</PublicFlag>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
@@ -627,7 +944,7 @@
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1394982657396</Id>
+					<Id>1767385543747</Id>
 					<Name><![CDATA[Smg]]></Name>
 					<Description><![CDATA[содержание глюкозы в мицелии?]]></Description>
 					<X>-390</X><Y>190</Y>
@@ -645,7 +962,7 @@
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1579717477729</Id>
+					<Id>1767385543749</Id>
 					<Name><![CDATA[W_flac_m]]></Name>
 					<Description><![CDATA[масса ферманта лаказы внутри мицелия гриба, которыая будет перетекать в опилку ]]></Description>
 					<Unit>грамм</Unit> 
@@ -664,7 +981,7 @@
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1579717477732</Id>
+					<Id>1767385543751</Id>
 					<Name><![CDATA[W_flac_с]]></Name>
 					<Description><![CDATA[масса ферманта лаказы внутри опилки
 для параметризации используем: maobing tu  hydrolyses of lygmyncellulose
@@ -697,7 +1014,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1579717477736</Id>
+					<Id>1767385543754</Id>
 					<Name><![CDATA[W_mon]]></Name>
 					<Description><![CDATA[масса мономеров, то есть разрушенных сахаросодержащих компонент, грамм]]></Description>
 					<X>-710</X><Y>1140</Y>
@@ -726,11 +1043,10 @@ Doctor of Philosophy ]]></Description>
 							</CustomExpression>
 						</Array>
 						<Shadow>
-							<Id>1579718752214</Id>
+							<Id>1767385624235</Id>
 							<Name><![CDATA[<W_mon>]]></Name>
-							<Description><![CDATA[глюкоза. грамм]]></Description>
-							<X>-590</X><Y>190</Y>
-							<Label><X>-70</X><Y>-40</Y></Label>
+							<X>-610</X><Y>190</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
 							<PublicFlag>false</PublicFlag>
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
@@ -738,7 +1054,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
-					<Id>1579717477740</Id>
+					<Id>1767385543758</Id>
 					<Name><![CDATA[W_pol]]></Name>
 					<Description><![CDATA[масса полимеров сахаросодержащих компонент, грамм]]></Description>
 					<X>-210</X><Y>1140</Y>
@@ -761,33 +1077,33 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1394982101372</Id>
+					<Id>1767385544018</Id>
 					<Name><![CDATA[Uc]]></Name>
-					<X>-590</X><Y>190</Y>
+					<X>-610</X><Y>190</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1579718752214" TargetId="1394982657396" External="false" Constant="false" Array="false">
+					<Properties SourceId="1767385624235" TargetId="1767385543747" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[Z*MC_Seff*(U*Sc-Sm)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>100</X><Y>0</Y></Point>
-							<Point><X>200</X><Y>0</Y></Point>
+							<Point><X>120</X><Y>0</Y></Point>
+							<Point><X>220</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1394982113124</Id>
+					<Id>1767385544020</Id>
 					<Name><![CDATA[Um]]></Name>
 					<X>-390</X><Y>190</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1394982657396" External="false" Constant="false" Array="false">
+					<Properties SourceId="1767385543747" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
@@ -799,7 +1115,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1579717477434</Id>
+					<Id>1767385544022</Id>
 					<Name><![CDATA[U_M_C_lyg_fer]]></Name>
 					<Description><![CDATA[поток ферента лакказы из мицелия в опилку]]></Description>
 					<X>-720</X><Y>610</Y>
@@ -807,7 +1123,7 @@ Doctor of Philosophy ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1579717477729" TargetId="1579717477732" External="false" Constant="false" Array="false">
+					<Properties SourceId="1767385543749" TargetId="1767385543751" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[kt_diff_CM*Z_flac_mc*(U__flac_mc*C_flac_m-C_flac_c)*MC_Seff]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
@@ -819,14 +1135,14 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1579717477451</Id>
+					<Id>1767385544025</Id>
 					<Name><![CDATA[U_cc]]></Name>
 					<X>-210</X><Y>1140</Y>
 					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1579717477740" TargetId="1579717477736" External="false" Constant="false" Array="true">
+					<Properties SourceId="1767385543758" TargetId="1767385543754" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[V_c*Vmax_lyg*C_c/(Ks05 + C_c)]]></Formula>
 						<Color/>
 						<Array>
@@ -851,14 +1167,14 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1579721052878</Id>
+					<Id>1767385544027</Id>
 					<Name><![CDATA[U_flacc_m]]></Name>
 					<X>-830</X><Y>610</Y>
 					<Label><X>-30</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TargetId="1579717477729" External="false" Constant="false" Array="false">
+					<Properties TargetId="1767385543749" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[Math.max(dWm, 0.0)*MF_flacc_m]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
@@ -870,7 +1186,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394983172605</Id>
+					<Id>1767385543761</Id>
 					<Name><![CDATA[YGm]]></Name>
 					<Description><![CDATA[Эффективность роста мицелия (граммов мицелия из грамма сахаров)]]></Description>
 					<X>-490</X><Y>60</Y>
@@ -886,7 +1202,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.83]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394983172603</Id>
+							<Id>1767385543759</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -895,7 +1211,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394983187577</Id>
+					<Id>1767385543764</Id>
 					<Name><![CDATA[Mm]]></Name>
 					<Description><![CDATA[Базовый коэффициент дыхания поддержания для мицелия]]></Description>
 					<Unit>1/час</Unit> 
@@ -912,7 +1228,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.041/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394983187575</Id>
+							<Id>1767385543762</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -921,7 +1237,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394985410272</Id>
+					<Id>1767385543767</Id>
 					<Name><![CDATA[U]]></Name>
 					<Description><![CDATA[Предельно достижимое соотношение концентраций сахаров в мицелии и в опилках]]></Description>
 					<X>-460</X><Y>290</Y>
@@ -937,7 +1253,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[10]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394985410270</Id>
+							<Id>1767385543765</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -946,7 +1262,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394985441362</Id>
+					<Id>1767385543770</Id>
 					<Name><![CDATA[Z]]></Name>
 					<Description><![CDATA[Коэффициент диффузии сахаров из опилок в мицелий]]></Description>
 					<Unit>метр/час</Unit> 
@@ -963,7 +1279,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[1.329/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394985441360</Id>
+							<Id>1767385543768</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -972,7 +1288,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394986762729</Id>
+					<Id>1767385543773</Id>
 					<Name><![CDATA[k]]></Name>
 					<Description><![CDATA[Коэффициент экспоненциального распада  в уравнении роста спорофора]]></Description>
 					<Unit>1/час</Unit> 
@@ -989,7 +1305,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.24/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394986762726</Id>
+							<Id>1767385543771</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -998,7 +1314,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394986772305</Id>
+					<Id>1767385543776</Id>
 					<Name><![CDATA[a]]></Name>
 					<Description><![CDATA[Коэффициент в уравнении роста спорофора]]></Description>
 					<Unit>метр*метр/(грамм*час)</Unit> 
@@ -1015,7 +1331,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.000107/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394986772303</Id>
+							<Id>1767385543774</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1024,7 +1340,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1394986790574</Id>
+					<Id>1767385543779</Id>
 					<Name><![CDATA[h]]></Name>
 					<Description><![CDATA[Коэффициент в знаменателе уравнения роста спорофора]]></Description>
 					<Unit>метр*метр*метр/грамм</Unit> 
@@ -1041,7 +1357,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.0000556]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1394986790571</Id>
+							<Id>1767385543777</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1050,7 +1366,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1395068516572</Id>
+					<Id>1767385543782</Id>
 					<Name><![CDATA[Smcrit]]></Name>
 					<Description><![CDATA[Критическая концентрация сахаров внутри мицелия, при котором начинается рост спорофоров]]></Description>
 					<Unit>грамм/(метр*метр*метр)</Unit> 
@@ -1067,7 +1383,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[18000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1395068516570</Id>
+							<Id>1767385543780</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1076,7 +1392,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1395068742384</Id>
+					<Id>1767385543785</Id>
 					<Name><![CDATA[q]]></Name>
 					<Description><![CDATA[Коэффициент в уравнении роста мицелия]]></Description>
 					<Unit>метр*метр*метр/(грамм*час)</Unit> 
@@ -1093,7 +1409,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.000024/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1395068742382</Id>
+							<Id>1767385543783</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1102,7 +1418,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1395238254834</Id>
+					<Id>1767385543788</Id>
 					<Name><![CDATA[lambda]]></Name>
 					<Description><![CDATA[Коэффициент в формуле расчета интенсивности инициации роста нового спорофора]]></Description>
 					<Unit>метр*метр*метр/(грамм*грамм*час)</Unit> 
@@ -1119,7 +1435,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[3.2e-5/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1395238254832</Id>
+							<Id>1767385543786</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1128,7 +1444,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1395569640139</Id>
+					<Id>1767385543791</Id>
 					<Name><![CDATA[age_maturing]]></Name>
 					<X>-180</X><Y>480</Y>
 					<Label><X>-40</X><Y>20</Y></Label>
@@ -1143,7 +1459,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[5.6]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1395569640137</Id>
+							<Id>1767385543789</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1152,7 +1468,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1395569709464</Id>
+					<Id>1767385543794</Id>
 					<Name><![CDATA[ws_maturing]]></Name>
 					<X>-80</X><Y>480</Y>
 					<Label><X>-40</X><Y>20</Y></Label>
@@ -1167,7 +1483,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[4]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1395569709462</Id>
+							<Id>1767385543792</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1176,7 +1492,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1405517863092</Id>
+					<Id>1767385543797</Id>
 					<Name><![CDATA[alpha]]></Name>
 					<Description><![CDATA[Нечто странное и непонятное. Присвоим-ка пока это нулю]]></Description>
 					<X>-310</X><Y>120</Y>
@@ -1192,7 +1508,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[2000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1405517863075</Id>
+							<Id>1767385543795</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1201,7 +1517,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1413405625499</Id>
+					<Id>1767385543800</Id>
 					<Name><![CDATA[m_mode]]></Name>
 					<X>-130</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1216,7 +1532,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[false]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1413405625497</Id>
+							<Id>1767385543798</Id>
 							<EditorContolType>CHECK_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1225,7 +1541,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477588</Id>
+					<Id>1767385543803</Id>
 					<Name><![CDATA[U__flac_mc]]></Name>
 					<Description><![CDATA[максимально достижимая разница концентраций лакказы между мицелием и компостом? которая моделирует некоторую работу насосов]]></Description>
 					<X>-480</X><Y>720</Y>
@@ -1241,7 +1557,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[10]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477586</Id>
+							<Id>1767385543801</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1250,7 +1566,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477591</Id>
+					<Id>1767385543806</Id>
 					<Name><![CDATA[Z_flac_mc]]></Name>
 					<Description><![CDATA[Коэффициент диффузии лакказы из мицелия в опилки]]></Description>
 					<Unit>метр/час</Unit> 
@@ -1267,7 +1583,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.002]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477589</Id>
+							<Id>1767385543804</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1276,7 +1592,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477594</Id>
+					<Id>1767385543809</Id>
 					<Name><![CDATA[V_c]]></Name>
 					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
 					<Unit>метр*метр*метр</Unit> 
@@ -1293,7 +1609,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.11]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477592</Id>
+							<Id>1767385543807</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1302,7 +1618,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477597</Id>
+					<Id>1767385543812</Id>
 					<Name><![CDATA[Ro_с]]></Name>
 					<Description><![CDATA[плотность опилки]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
@@ -1319,7 +1635,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[520000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477595</Id>
+							<Id>1767385543810</Id>
 							<Label><![CDATA[Ro_с]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1329,7 +1645,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477600</Id>
+					<Id>1767385543815</Id>
 					<Name><![CDATA[Ro_m]]></Name>
 					<Description><![CDATA[плотность мицелия]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
@@ -1346,7 +1662,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[90000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477598</Id>
+							<Id>1767385543813</Id>
 							<Label><![CDATA[Ro_m]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1356,7 +1672,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477603</Id>
+					<Id>1767385543818</Id>
 					<Name><![CDATA[RoSq_M]]></Name>
 					<Description><![CDATA[Поверхностная плотность мицелия. Поставил от балды как для корней пшеницы]]></Description>
 					<Unit>грамм/метр*метр</Unit> 
@@ -1373,7 +1689,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[1000000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477601</Id>
+							<Id>1767385543816</Id>
 							<Label><![CDATA[RoSq_M]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1383,7 +1699,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477606</Id>
+					<Id>1767385543821</Id>
 					<Name><![CDATA[RoSq_C]]></Name>
 					<Description><![CDATA[Поверхностная плотность опилок. Пересчитал из обычной плотности в предположении, что одна опилка - это кубик со стороной 2 мм и все грани открыты. И получилось (8*0.52/24) * 100000 = 175000]]></Description>
 					<Unit>грамм/метр*метр</Unit> 
@@ -1400,7 +1716,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[175000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477604</Id>
+							<Id>1767385543819</Id>
 							<Label><![CDATA[RoSq_C]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1410,7 +1726,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477609</Id>
+					<Id>1767385543824</Id>
 					<Name><![CDATA[MF_flacc_m]]></Name>
 					<Description><![CDATA[весовой процент ферманта лакказы в мицелии]]></Description>
 					<X>-790</X><Y>540</Y>
@@ -1426,7 +1742,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[0.001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477607</Id>
+							<Id>1767385543822</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1435,7 +1751,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477612</Id>
+					<Id>1767385543827</Id>
 					<Name><![CDATA[MF_с]]></Name>
 					<Description><![CDATA[массовая доля сахаросодержащих компонент в компосте ( в опилке), безрамезрная]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
@@ -1447,7 +1763,7 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
+						<SdArray>false</SdArray>
 						<Dimension>
 							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
@@ -1456,7 +1772,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[{.2, .5}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477610</Id>
+							<Id>1767385543825</Id>
 							<Label><![CDATA[MF_с]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1466,7 +1782,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477624</Id>
+					<Id>1767385543830</Id>
 					<Name><![CDATA[K_pol_mon]]></Name>
 					<Description><![CDATA[Стехиометрическая константа разложения сахаросодержащих компонент (сколько граммов мономера получается из грамма полимера) , безразмерная]]></Description>
 					<X>-710</X><Y>1300</Y>
@@ -1477,7 +1793,7 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
+						<SdArray>false</SdArray>
 						<Dimension>
 							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
@@ -1486,7 +1802,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[{.5, 1}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477622</Id>
+							<Id>1767385543828</Id>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1495,7 +1811,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477632</Id>
+					<Id>1767385543833</Id>
 					<Name><![CDATA[Ks05]]></Name>
 					<Description><![CDATA[Коэффициент диссипации в уравнении Михаэлиса-Ментен, или константа михаэлиса, грам на метр кубический]]></Description>
 					<X>-630</X><Y>1080</Y>
@@ -1506,7 +1822,7 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
+						<SdArray>false</SdArray>
 						<Dimension>
 							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
@@ -1515,7 +1831,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[{14.1*1000, 0.031*1000000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477630</Id>
+							<Id>1767385543831</Id>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1524,7 +1840,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477641</Id>
+					<Id>1767385543836</Id>
 					<Name><![CDATA[K_error]]></Name>
 					<Description><![CDATA[в письме 4 в таблице описание]]></Description>
 					<X>-380</X><Y>980</Y>
@@ -1535,7 +1851,7 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
+						<SdArray>false</SdArray>
 						<Dimension>
 							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
@@ -1544,7 +1860,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[{.781*0.825*10, 0.001*100}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477639</Id>
+							<Id>1767385543834</Id>
 							<Label><![CDATA[Kerror_new]]></Label>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1554,7 +1870,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477647</Id>
+					<Id>1767385543839</Id>
 					<Name><![CDATA[Temperature]]></Name>
 					<Description><![CDATA[температура]]></Description>
 					<X>-540</X><Y>870</Y>
@@ -1570,7 +1886,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[25]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477645</Id>
+							<Id>1767385543837</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1579,7 +1895,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477656</Id>
+					<Id>1767385543842</Id>
 					<Name><![CDATA[K0_kin]]></Name>
 					<X>-540</X><Y>1050</Y>
 					<Label><X>-65</X><Y>0</Y></Label>
@@ -1589,7 +1905,7 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>true</SdArray>
+						<SdArray>false</SdArray>
 						<Dimension>
 							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
@@ -1598,7 +1914,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[{15e-6*60*24*1000, 43*24*60*1000}]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477654</Id>
+							<Id>1767385543840</Id>
 							<EditorContolType>HYPER_ARRAY_EDITOR</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1607,7 +1923,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477665</Id>
+					<Id>1767385543845</Id>
 					<Name><![CDATA[H]]></Name>
 					<X>-610</X><Y>1210</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
@@ -1622,7 +1938,7 @@ Doctor of Philosophy ]]></Description>
 							<Code><![CDATA[7]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477663</Id>
+							<Id>1767385543843</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1631,7 +1947,7 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477668</Id>
+					<Id>1767385543848</Id>
 					<Name><![CDATA[GH_diff_CM]]></Name>
 					<Description><![CDATA[энергия активации или энергия гибса реакции сорбции фермента в древесине/ Красный цвет- эта величина найдена в литературе:
 Implication off apparent  pseudo_Second_Order kinetics.
@@ -1657,7 +1973,7 @@ MAOBING TU   таблица 22]]></Description>
 							<Code><![CDATA[-7.46]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477666</Id>
+							<Id>1767385543846</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1666,7 +1982,7 @@ MAOBING TU   таблица 22]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579717477671</Id>
+					<Id>1767385543851</Id>
 					<Name><![CDATA[K0_diff_CM]]></Name>
 					<Description><![CDATA[константа при нулевой температуре.
 
@@ -1694,7 +2010,7 @@ MAOBING TU таблица 22]]></Description>
 							<Code><![CDATA[0.7421]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579717477669</Id>
+							<Id>1767385543849</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1703,7 +2019,7 @@ MAOBING TU таблица 22]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1579947006832</Id>
+					<Id>1767385543854</Id>
 					<Name><![CDATA[Wm0]]></Name>
 					<Description><![CDATA[Начальная масса мицелия]]></Description>
 					<Unit>грамм</Unit> 
@@ -1720,7 +2036,7 @@ MAOBING TU таблица 22]]></Description>
 							<Code><![CDATA[8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1579947006830</Id>
+							<Id>1767385543852</Id>
 							<Label><![CDATA[Wm0]]></Label>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
@@ -1731,11 +2047,11 @@ MAOBING TU таблица 22]]></Description>
 				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1394981990462" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543743" TargetId="1767385544020" Polarity="null">
 					<Height>26.033</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1579448666045</Id>
+					<Id>1767385543856</Id>
 					<Name><![CDATA[Wm - Um]]></Name>
 					<X>-390</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1746,11 +2062,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394982657396" TargetId="1394981936486" Polarity="null">
+				<Link SourceId="1767385543747" TargetId="1767385543612" Polarity="null">
 					<Height>-4.1644660350648192E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>100</Y></Direction>
-					<Id>1579448666049</Id>
+					<Id>1767385543858</Id>
 					<Name><![CDATA[Smg - Sm]]></Name>
 					<X>-390</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1761,11 +2077,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1581709276253" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543661" TargetId="1767385544020" Polarity="null">
 					<Height>1.0016019212789615</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>0</Y></Direction>
-					<Id>1579448666050</Id>
+					<Id>1767385543860</Id>
 					<Name><![CDATA[Am - Um]]></Name>
 					<X>-490</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1776,11 +2092,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1395238254834" TargetId="1395238597182" Polarity="null">
+				<Link SourceId="1767385543788" TargetId="1767385543614" Polarity="null">
 					<Height>0.721</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-50</X><Y>-50</Y></Direction>
-					<Id>1579448666051</Id>
+					<Id>1767385543862</Id>
 					<Name><![CDATA[lambda - initiationRate]]></Name>
 					<X>-140</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1791,11 +2107,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1394981926121" Polarity="null">
+				<Link SourceId="1767385543809" TargetId="1767385543610" Polarity="null">
 					<Height>-114.4</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-380</X><Y>-560</Y></Direction>
-					<Id>1579448666052</Id>
+					<Id>1767385543864</Id>
 					<Name><![CDATA[V_c - Sc]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1806,11 +2122,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981926121" TargetId="1394982101372" Polarity="null">
+				<Link SourceId="1767385543610" TargetId="1767385544018" Polarity="null">
 					<Height>2.1317565117076356</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>-100</Y></Direction>
-					<Id>1579448666053</Id>
+					<Id>1767385543866</Id>
 					<Name><![CDATA[Sc - Uc]]></Name>
 					<X>-590</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1821,11 +2137,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981936486" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543612" TargetId="1767385544020" Polarity="null">
 					<Height>40.045040527347766</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-170</Y></Direction>
-					<Id>1579448666054</Id>
+					<Id>1767385543868</Id>
 					<Name><![CDATA[Sm - Um]]></Name>
 					<X>-390</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1836,11 +2152,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1395068516572" TargetId="1395238597182" Polarity="null">
+				<Link SourceId="1767385543782" TargetId="1767385543614" Polarity="null">
 					<Height>-4.0011536415328659E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-100</Y></Direction>
-					<Id>1579448666055</Id>
+					<Id>1767385543870</Id>
 					<Name><![CDATA[Smcrit - initiationRate]]></Name>
 					<X>-190</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1851,11 +2167,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983172605" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543761" TargetId="1767385544020" Polarity="null">
 					<Height>2.8466161786509474</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>60</Y></Direction>
-					<Id>1579448666057</Id>
+					<Id>1767385543872</Id>
 					<Name><![CDATA[YGm - Um]]></Name>
 					<X>-490</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1866,11 +2182,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394985410272" TargetId="1394982101372" Polarity="null">
+				<Link SourceId="1767385543767" TargetId="1767385544018" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-30</X><Y>-100</Y></Direction>
-					<Id>1579448666058</Id>
+					<Id>1767385543874</Id>
 					<Name><![CDATA[U - Uc]]></Name>
 					<X>-460</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1881,11 +2197,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981936486" TargetId="1395238597182" Polarity="null">
+				<Link SourceId="1767385543612" TargetId="1767385543614" Polarity="null">
 					<Height>-72.119</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>200</X><Y>-100</Y></Direction>
-					<Id>1579448666059</Id>
+					<Id>1767385543876</Id>
 					<Name><![CDATA[Sm - initiationRate]]></Name>
 					<X>-390</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1896,13 +2212,13 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579718752214" TargetId="1394981926121" Polarity="null">
+				<Link SourceId="1767385624235" TargetId="1767385543610" Polarity="null">
 					<Height>-1.0100968893589197</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>100</Y></Direction>
-					<Id>1579448666060</Id>
+					<Direction><X>20</X><Y>100</Y></Direction>
+					<Id>1767385543878</Id>
 					<Name><![CDATA[<W_mon> - Sc]]></Name>
-					<X>-590</X><Y>190</Y>
+					<X>-610</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1911,11 +2227,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1405517863092" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543797" TargetId="1767385544020" Polarity="null">
 					<Height>-4.3277784285967731E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-80</X><Y>0</Y></Direction>
-					<Id>1579448666061</Id>
+					<Id>1767385543880</Id>
 					<Name><![CDATA[alpha - Um]]></Name>
 					<X>-310</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1926,11 +2242,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981990462" TargetId="1395238597182" Polarity="null">
+				<Link SourceId="1767385543743" TargetId="1767385543614" Polarity="null">
 					<Height>123.035</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>200</X><Y>190</Y></Direction>
-					<Id>1579448666064</Id>
+					<Id>1767385543882</Id>
 					<Name><![CDATA[Wm - initiationRate]]></Name>
 					<X>-390</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1941,11 +2257,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394985441362" TargetId="1394982101372" Polarity="null">
+				<Link SourceId="1767385543770" TargetId="1767385544018" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>50</X><Y>-100</Y></Direction>
-					<Id>1579448666066</Id>
+					<Id>1767385543884</Id>
 					<Name><![CDATA[Z - Uc]]></Name>
 					<X>-540</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1956,11 +2272,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981936486" TargetId="1394982101372" Polarity="null">
+				<Link SourceId="1767385543612" TargetId="1767385544018" Polarity="null">
 					<Height>10.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-100</X><Y>-100</Y></Direction>
-					<Id>1579448666068</Id>
+					<Id>1767385543886</Id>
 					<Name><![CDATA[Sm - Uc]]></Name>
 					<X>-390</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1971,11 +2287,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1395068742384" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543785" TargetId="1767385544020" Polarity="null">
 					<Height>-3.6745288544689581E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-90</X><Y>30</Y></Direction>
-					<Id>1579448666070</Id>
+					<Id>1767385543888</Id>
 					<Name><![CDATA[q - Um]]></Name>
 					<X>-300</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1986,11 +2302,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477729" TargetId="1579717477673" Polarity="null">
+				<Link SourceId="1767385543749" TargetId="1767385543616" Polarity="null">
 					<Height>-1.0100968893589197</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>110</Y></Direction>
-					<Id>1579717477464</Id>
+					<Id>1767385543890</Id>
 					<Name><![CDATA[W_flac_m - C_flac_m]]></Name>
 					<X>-720</X><Y>610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2001,11 +2317,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477676" TargetId="1579717477434" Polarity="null">
+				<Link SourceId="1767385543618" TargetId="1767385544022" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-220</X><Y>-110</Y></Direction>
-					<Id>1579717477466</Id>
+					<Id>1767385543892</Id>
 					<Name><![CDATA[C_flac_c - U_M_C_lyg_fer]]></Name>
 					<X>-320</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2016,11 +2332,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477673" TargetId="1579717477434" Polarity="null">
+				<Link SourceId="1767385543616" TargetId="1767385544022" Polarity="null">
 					<Height>2.1317565117076356</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>180</X><Y>-110</Y></Direction>
-					<Id>1579717477470</Id>
+					<Id>1767385543894</Id>
 					<Name><![CDATA[C_flac_m - U_M_C_lyg_fer]]></Name>
 					<X>-720</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2031,11 +2347,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477591" TargetId="1579717477434" Polarity="null">
+				<Link SourceId="1767385543806" TargetId="1767385544022" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>60</X><Y>-110</Y></Direction>
-					<Id>1579717477472</Id>
+					<Id>1767385543896</Id>
 					<Name><![CDATA[Z_flac_mc - U_M_C_lyg_fer]]></Name>
 					<X>-600</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2046,11 +2362,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477732" TargetId="1579717477676" Polarity="null">
+				<Link SourceId="1767385543751" TargetId="1767385543618" Polarity="null">
 					<Height>-4.1644660350648192E17</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>110</Y></Direction>
-					<Id>1579717477474</Id>
+					<Id>1767385543898</Id>
 					<Name><![CDATA[W_flac_с - C_flac_c]]></Name>
 					<X>-320</X><Y>610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2061,11 +2377,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477588" TargetId="1579717477434" Polarity="null">
+				<Link SourceId="1767385543803" TargetId="1767385544022" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-60</X><Y>-110</Y></Direction>
-					<Id>1579717477476</Id>
+					<Id>1767385543900</Id>
 					<Name><![CDATA[U__flac_mc - U_M_C_lyg_fer]]></Name>
 					<X>-480</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2076,11 +2392,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477597" TargetId="1579717477679" Polarity="null">
+				<Link SourceId="1767385543812" TargetId="1767385543620" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1579717477480</Id>
+					<Id>1767385543902</Id>
 					<Name><![CDATA[Ro_с - W_c]]></Name>
 					<X>-80</X><Y>730</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2091,11 +2407,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477679" Polarity="null">
+				<Link SourceId="1767385543809" TargetId="1767385543620" Polarity="null">
 					<Height>-1.023</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>130</X><Y>0</Y></Direction>
-					<Id>1579717477482</Id>
+					<Id>1767385543904</Id>
 					<Name><![CDATA[V_c - W_c]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2106,11 +2422,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477682" TargetId="1579717477673" Polarity="null">
+				<Link SourceId="1767385543624" TargetId="1767385543616" Polarity="null">
 					<Height>-104.26</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>230</Y></Direction>
-					<Id>1579717477484</Id>
+					<Id>1767385543906</Id>
 					<Name><![CDATA[V_m - C_flac_m]]></Name>
 					<X>-820</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2121,11 +2437,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477693" TargetId="1579717477434" Polarity="null">
+				<Link SourceId="1767385543630" TargetId="1767385544022" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1579717477486</Id>
+					<Id>1767385543908</Id>
 					<Name><![CDATA[MC_Seff - U_M_C_lyg_fer]]></Name>
 					<X>-540</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2136,11 +2452,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477600" TargetId="1579717477682" Polarity="null">
+				<Link SourceId="1767385543815" TargetId="1767385543624" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>100</Y></Direction>
-					<Id>1579717477497</Id>
+					<Id>1767385543910</Id>
 					<Name><![CDATA[Ro_m - V_m]]></Name>
 					<X>-820</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2151,11 +2467,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579720852671" TargetId="1579717477682" Polarity="null">
+				<Link SourceId="1767385669190" TargetId="1767385543624" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-100</X><Y>0</Y></Direction>
-					<Id>1579717477503</Id>
+					<Id>1767385543912</Id>
 					<Name><![CDATA[<Wm> - V_m]]></Name>
 					<X>-720</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2166,11 +2482,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477690" TargetId="1579717477693" Polarity="null">
+				<Link SourceId="1767385543628" TargetId="1767385543630" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>60</X><Y>0</Y></Direction>
-					<Id>1579717477515</Id>
+					<Id>1767385543914</Id>
 					<Name><![CDATA[Sq_M - MC_Seff]]></Name>
 					<X>-600</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2181,11 +2497,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477687" TargetId="1579717477693" Polarity="null">
+				<Link SourceId="1767385543626" TargetId="1767385543630" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-60</X><Y>0</Y></Direction>
-					<Id>1579717477517</Id>
+					<Id>1767385543916</Id>
 					<Name><![CDATA[Sq_wood_с - MC_Seff]]></Name>
 					<X>-480</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2196,11 +2512,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579720852671" TargetId="1579717477690" Polarity="null">
+				<Link SourceId="1767385669190" TargetId="1767385543628" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>120</X><Y>0</Y></Direction>
-					<Id>1579717477519</Id>
+					<Id>1767385543918</Id>
 					<Name><![CDATA[<Wm> - Sq_M]]></Name>
 					<X>-720</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2211,11 +2527,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477603" TargetId="1579717477690" Polarity="null">
+				<Link SourceId="1767385543818" TargetId="1767385543628" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>100</Y></Direction>
-					<Id>1579717477521</Id>
+					<Id>1767385543920</Id>
 					<Name><![CDATA[RoSq_M - Sq_M]]></Name>
 					<X>-600</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2226,11 +2542,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477679" TargetId="1579717477687" Polarity="null">
+				<Link SourceId="1767385543620" TargetId="1767385543626" Polarity="null">
 					<Height>-104.692</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-400</X><Y>-360</Y></Direction>
-					<Id>1579717477523</Id>
+					<Id>1767385543922</Id>
 					<Name><![CDATA[W_c - Sq_wood_с]]></Name>
 					<X>-80</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2241,11 +2557,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477606" TargetId="1579717477687" Polarity="null">
+				<Link SourceId="1767385543821" TargetId="1767385543626" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>100</Y></Direction>
-					<Id>1579717477525</Id>
+					<Id>1767385543924</Id>
 					<Name><![CDATA[RoSq_C - Sq_wood_с]]></Name>
 					<X>-480</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2256,11 +2572,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579720852671" TargetId="1579717477729" Polarity="null">
+				<Link SourceId="1767385669190" TargetId="1767385543749" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1579717477527</Id>
+					<Id>1767385543926</Id>
 					<Name><![CDATA[<Wm> - W_flac_m]]></Name>
 					<X>-720</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2271,11 +2587,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477609" TargetId="1579717477729" Polarity="null">
+				<Link SourceId="1767385543824" TargetId="1767385543749" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>70</X><Y>70</Y></Direction>
-					<Id>1579717477529</Id>
+					<Id>1767385543928</Id>
 					<Name><![CDATA[MF_flacc_m - W_flac_m]]></Name>
 					<X>-790</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2286,11 +2602,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477697" Polarity="null">
+				<Link SourceId="1767385543809" TargetId="1767385543633" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>180</Y></Direction>
-					<Id>1579717477531</Id>
+					<Id>1767385543930</Id>
 					<Name><![CDATA[V_c - C_pol]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2301,11 +2617,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477740" TargetId="1579717477697" Polarity="null">
+				<Link SourceId="1767385543758" TargetId="1767385543633" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-110</Y></Direction>
-					<Id>1579717477533</Id>
+					<Id>1767385543932</Id>
 					<Name><![CDATA[W_pol - C_pol]]></Name>
 					<X>-210</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2316,11 +2632,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477679" TargetId="1579717477740" Polarity="null">
+				<Link SourceId="1767385543620" TargetId="1767385543758" Polarity="null">
 					<Height>55.745</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-130</X><Y>290</Y></Direction>
-					<Id>1579717477535</Id>
+					<Id>1767385543934</Id>
 					<Name><![CDATA[W_c - W_pol]]></Name>
 					<X>-80</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2331,11 +2647,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>2</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477612" TargetId="1579717477740" Polarity="null">
+				<Link SourceId="1767385543827" TargetId="1767385543758" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-140</X><Y>0</Y></Direction>
-					<Id>1579717477537</Id>
+					<Id>1767385543936</Id>
 					<Name><![CDATA[MF_с - W_pol]]></Name>
 					<X>-70</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2346,11 +2662,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477722" TargetId="1579717477701" Polarity="null">
+				<Link SourceId="1767385543650" TargetId="1767385543636" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>80</X><Y>70</Y></Direction>
-					<Id>1579717477539</Id>
+					<Id>1767385543938</Id>
 					<Name><![CDATA[K0_Vmax - Vmax]]></Name>
 					<X>-540</X><Y>980</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2361,11 +2677,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>4</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477701" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1767385543636" TargetId="1767385544025" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>90</Y></Direction>
-					<Id>1579717477541</Id>
+					<Id>1767385543940</Id>
 					<Name><![CDATA[Vmax - U_cc]]></Name>
 					<X>-460</X><Y>1050</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2376,11 +2692,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477632" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1767385543833" TargetId="1767385544025" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>170</X><Y>60</Y></Direction>
-					<Id>1579717477543</Id>
+					<Id>1767385543942</Id>
 					<Name><![CDATA[Ks05 - U_cc]]></Name>
 					<X>-630</X><Y>1080</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2391,11 +2707,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477697" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1767385543633" TargetId="1767385544025" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-250</X><Y>110</Y></Direction>
-					<Id>1579717477545</Id>
+					<Id>1767385543944</Id>
 					<Name><![CDATA[C_pol - U_cc]]></Name>
 					<X>-210</X><Y>1030</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2406,11 +2722,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477676" TargetId="1579717477701" Polarity="null">
+				<Link SourceId="1767385543618" TargetId="1767385543636" Polarity="null">
 					<Height>-54.764</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-140</X><Y>330</Y></Direction>
-					<Id>1579717477547</Id>
+					<Id>1767385543946</Id>
 					<Name><![CDATA[C_flac_c - Vmax]]></Name>
 					<X>-320</X><Y>720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2421,11 +2737,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477740" TargetId="1579717477704" Polarity="null">
+				<Link SourceId="1767385543758" TargetId="1767385543638" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-250</X><Y>160</Y></Direction>
-					<Id>1579717477549</Id>
+					<Id>1767385543948</Id>
 					<Name><![CDATA[W_pol - Sh_lyg]]></Name>
 					<X>-210</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2436,11 +2752,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477736" TargetId="1579717477704" Polarity="null">
+				<Link SourceId="1767385543754" TargetId="1767385543638" Polarity="null">
 					<Height>-42.434</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>250</X><Y>160</Y></Direction>
-					<Id>1579717477551</Id>
+					<Id>1767385543950</Id>
 					<Name><![CDATA[W_mon - Sh_lyg]]></Name>
 					<X>-710</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2451,11 +2767,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1767385543809" TargetId="1767385544025" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-245</X><Y>290</Y></Direction>
-					<Id>1579717477553</Id>
+					<Id>1767385543952</Id>
 					<Name><![CDATA[V_c - U_cc]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2466,11 +2782,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477624" TargetId="1579717477736" Polarity="null">
+				<Link SourceId="1767385543830" TargetId="1767385543754" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-160</Y></Direction>
-					<Id>1579717477555</Id>
+					<Id>1767385543954</Id>
 					<Name><![CDATA[K_pol_mon - W_mon]]></Name>
 					<X>-710</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2481,11 +2797,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477624" TargetId="1579717477704" Polarity="null">
+				<Link SourceId="1767385543830" TargetId="1767385543638" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>250</X><Y>0</Y></Direction>
-					<Id>1579717477557</Id>
+					<Id>1767385543956</Id>
 					<Name><![CDATA[K_pol_mon - Sh_lyg]]></Name>
 					<X>-710</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2496,11 +2812,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477641" TargetId="1579717477701" Polarity="null">
+				<Link SourceId="1767385543836" TargetId="1767385543636" Polarity="null">
 					<Height>-1.603</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-80</X><Y>70</Y></Direction>
-					<Id>1579717477559</Id>
+					<Id>1767385543958</Id>
 					<Name><![CDATA[K_error - Vmax]]></Name>
 					<X>-380</X><Y>980</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2511,11 +2827,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477704" TargetId="1579717477709" Polarity="null">
+				<Link SourceId="1767385543638" TargetId="1767385543642" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-80</Y></Direction>
-					<Id>1579717477561</Id>
+					<Id>1767385543960</Id>
 					<Name><![CDATA[Sh_lyg - K_lability]]></Name>
 					<X>-460</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2526,11 +2842,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477709" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1767385543642" TargetId="1767385544025" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-80</Y></Direction>
-					<Id>1579717477563</Id>
+					<Id>1767385543962</Id>
 					<Name><![CDATA[K_lability - U_cc]]></Name>
 					<X>-460</X><Y>1220</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2541,11 +2857,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477736" TargetId="1579717477713" Polarity="null">
+				<Link SourceId="1767385543754" TargetId="1767385543645" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-110</Y></Direction>
-					<Id>1579717477565</Id>
+					<Id>1767385543964</Id>
 					<Name><![CDATA[W_mon - C_mon]]></Name>
 					<X>-710</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2556,11 +2872,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477713" Polarity="null">
+				<Link SourceId="1767385543809" TargetId="1767385543645" Polarity="null">
 					<Height>-72.633</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-500</X><Y>180</Y></Direction>
-					<Id>1579717477567</Id>
+					<Id>1767385543966</Id>
 					<Name><![CDATA[V_c - C_mon]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2571,11 +2887,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477671" TargetId="1579717477717" Polarity="null">
+				<Link SourceId="1767385543851" TargetId="1767385543647" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-90</X><Y>0</Y></Direction>
-					<Id>1579717477569</Id>
+					<Id>1767385543968</Id>
 					<Name><![CDATA[K0_diff_CM - kt_diff_CM]]></Name>
 					<X>-450</X><Y>780</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2586,11 +2902,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477668" TargetId="1579717477717" Polarity="null">
+				<Link SourceId="1767385543848" TargetId="1767385543647" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>90</X><Y>0</Y></Direction>
-					<Id>1579717477571</Id>
+					<Id>1767385543970</Id>
 					<Name><![CDATA[GH_diff_CM - kt_diff_CM]]></Name>
 					<X>-630</X><Y>780</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2601,11 +2917,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477717" TargetId="1579717477434" Polarity="null">
+				<Link SourceId="1767385543647" TargetId="1767385544022" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-170</Y></Direction>
-					<Id>1579717477573</Id>
+					<Id>1767385543972</Id>
 					<Name><![CDATA[kt_diff_CM - U_M_C_lyg_fer]]></Name>
 					<X>-540</X><Y>780</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2616,11 +2932,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477647" TargetId="1579717477717" Polarity="null">
+				<Link SourceId="1767385543839" TargetId="1767385543647" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-90</Y></Direction>
-					<Id>1579717477575</Id>
+					<Id>1767385543974</Id>
 					<Name><![CDATA[Temperature - kt_diff_CM]]></Name>
 					<X>-540</X><Y>870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2631,11 +2947,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477656" TargetId="1579717477722" Polarity="null">
+				<Link SourceId="1767385543842" TargetId="1767385543650" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-70</Y></Direction>
-					<Id>1579717477579</Id>
+					<Id>1767385543976</Id>
 					<Name><![CDATA[K0_kin - K0_Vmax]]></Name>
 					<X>-540</X><Y>1050</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2646,11 +2962,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477647" TargetId="1582900557488" Polarity="null">
+				<Link SourceId="1767385543839" TargetId="1767385543663" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>60</Y></Direction>
-					<Id>1579717477581</Id>
+					<Id>1767385543978</Id>
 					<Name><![CDATA[Temperature - T_depend_Ucc]]></Name>
 					<X>-540</X><Y>870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2661,11 +2977,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477665" TargetId="1579717477725" Polarity="null">
+				<Link SourceId="1767385543845" TargetId="1767385543652" Polarity="null">
 					<Height>-1.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>70</X><Y>0</Y></Direction>
-					<Id>1579717477583</Id>
+					<Id>1767385543980</Id>
 					<Name><![CDATA[H - error_Vmax_ph]]></Name>
 					<X>-610</X><Y>1210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2676,11 +2992,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>3</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477725" TargetId="1579717477451" Polarity="null">
+				<Link SourceId="1767385543652" TargetId="1767385544025" Polarity="null">
 					<Height>-1.414</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>80</X><Y>-70</Y></Direction>
-					<Id>1579717477585</Id>
+					<Id>1767385543982</Id>
 					<Name><![CDATA[error_Vmax_ph - U_cc]]></Name>
 					<X>-540</X><Y>1210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2691,11 +3007,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>4</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477736" TargetId="1579719290689" Polarity="null">
+				<Link SourceId="1767385543754" TargetId="1767385543655" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-150</X><Y>0</Y></Direction>
-					<Id>1579719422550</Id>
+					<Id>1767385543984</Id>
 					<Name><![CDATA[W_mon - Share_mon]]></Name>
 					<X>-710</X><Y>1140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2706,11 +3022,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579719290689" TargetId="1579717477736" Polarity="null">
+				<Link SourceId="1767385543655" TargetId="1767385543754" Polarity="null">
 					<Height>-78.134</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>150</X><Y>0</Y></Direction>
-					<Id>1579719508101</Id>
+					<Id>1767385543986</Id>
 					<Name><![CDATA[Share_mon - W_mon]]></Name>
 					<X>-860</X><Y>1140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2721,11 +3037,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477682" TargetId="1394981936486" Polarity="null">
+				<Link SourceId="1767385543624" TargetId="1767385543612" Polarity="null">
 					<Height>39.534</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>430</X><Y>-200</Y></Direction>
-					<Id>1579720437921</Id>
+					<Id>1767385543988</Id>
 					<Name><![CDATA[V_m - Sm]]></Name>
 					<X>-820</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2736,11 +3052,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983172605" TargetId="1579721301639" Polarity="null">
+				<Link SourceId="1767385543761" TargetId="1767385543657" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>100</X><Y>0</Y></Direction>
-					<Id>1579721355939</Id>
+					<Id>1767385543990</Id>
 					<Name><![CDATA[YGm - dWm]]></Name>
 					<X>-490</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2751,11 +3067,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394981990462" TargetId="1579721301639" Polarity="null">
+				<Link SourceId="1767385543743" TargetId="1767385543657" Polarity="null">
 					<Height>-24.614</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>60</Y></Direction>
-					<Id>1579721366882</Id>
+					<Id>1767385543992</Id>
 					<Name><![CDATA[Wm - dWm]]></Name>
 					<X>-390</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2766,11 +3082,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394982113124" TargetId="1579721301639" Polarity="null">
+				<Link SourceId="1767385544020" TargetId="1767385543657" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-60</Y></Direction>
-					<Id>1579721371710</Id>
+					<Id>1767385543994</Id>
 					<Name><![CDATA[Um - dWm]]></Name>
 					<X>-390</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2781,11 +3097,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579721301639" TargetId="1394981990462" Polarity="null">
+				<Link SourceId="1767385543657" TargetId="1767385543743" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-60</Y></Direction>
-					<Id>1579721409754</Id>
+					<Id>1767385543996</Id>
 					<Name><![CDATA[dWm - Wm]]></Name>
 					<X>-390</X><Y>60</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2796,11 +3112,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579721771697" TargetId="1579721052878" Polarity="null">
+				<Link SourceId="1767385715923" TargetId="1767385544027" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>-60</Y></Direction>
-					<Id>1579721861323</Id>
+					<Id>1767385543998</Id>
 					<Name><![CDATA[<dWm> - U_flacc_m]]></Name>
 					<X>-790</X><Y>670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2811,11 +3127,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477609" TargetId="1579721052878" Polarity="null">
+				<Link SourceId="1767385543824" TargetId="1767385544027" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>70</Y></Direction>
-					<Id>1579721866115</Id>
+					<Id>1767385544000</Id>
 					<Name><![CDATA[MF_flacc_m - U_flacc_m]]></Name>
 					<X>-790</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2826,11 +3142,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579947006832" TargetId="1394981990462" Polarity="null">
+				<Link SourceId="1767385543854" TargetId="1767385543743" Polarity="null">
 					<Height>1.042</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>0</X><Y>80</Y></Direction>
-					<Id>1579947140971</Id>
+					<Id>1767385544002</Id>
 					<Name><![CDATA[Wm0 - Wm]]></Name>
 					<X>-390</X><Y>-80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -2841,11 +3157,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983187577" TargetId="1394982113124" Polarity="null">
+				<Link SourceId="1767385543764" TargetId="1767385544020" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-90</X><Y>60</Y></Direction>
-					<Id>1580409802655</Id>
+					<Id>1767385544004</Id>
 					<Name><![CDATA[Mm - Um]]></Name>
 					<X>-300</X><Y>60</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2856,11 +3172,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1394983187577" TargetId="1579721301639" Polarity="null">
+				<Link SourceId="1767385543764" TargetId="1767385543657" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-90</X><Y>0</Y></Direction>
-					<Id>1580409880348</Id>
+					<Id>1767385544006</Id>
 					<Name><![CDATA[Mm - dWm]]></Name>
 					<X>-300</X><Y>60</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2871,11 +3187,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477594" TargetId="1579717477676" Polarity="null">
+				<Link SourceId="1767385543809" TargetId="1767385543618" Polarity="null">
 					<Height>-35.066</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-110</X><Y>-130</Y></Direction>
-					<Id>1581457637337</Id>
+					<Id>1767385544008</Id>
 					<Name><![CDATA[V_c - C_flac_c]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2886,11 +3202,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1581868806332" TargetId="1581709276253" Polarity="null">
+				<Link SourceId="1767385589662" TargetId="1767385543661" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>90</X><Y>0</Y></Direction>
-					<Id>1581709318681</Id>
+					<Id>1767385544010</Id>
 					<Name><![CDATA[<W_c> - Am]]></Name>
 					<X>-580</X><Y>120</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2901,11 +3217,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1579717477693" TargetId="1394982101372" Polarity="null">
+				<Link SourceId="1767385543630" TargetId="1767385544018" Polarity="null">
 					<Height>12.879</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>50</X><Y>-300</Y></Direction>
-					<Id>1581935553225</Id>
+					<Id>1767385544012</Id>
 					<Name><![CDATA[MC_Seff - Uc]]></Name>
 					<X>-540</X><Y>490</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2916,11 +3232,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1582900557488" TargetId="1582970938655" Polarity="null">
+				<Link SourceId="1767385543663" TargetId="1767385543665" Polarity="null">
 					<Height>-34.912</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-70</X><Y>60</Y></Direction>
-					<Id>1582901198895</Id>
+					<Id>1767385544014</Id>
 					<Name><![CDATA[T_depend_Ucc - kt_er_ucc]]></Name>
 					<X>-540</X><Y>930</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2931,11 +3247,11 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1582970938655" TargetId="1579717477722" Polarity="null">
+				<Link SourceId="1767385543665" TargetId="1767385543650" Polarity="null">
 					<Height>-0.627</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>70</X><Y>-10</Y></Direction>
-					<Id>1582971351664</Id>
+					<Id>1767385544016</Id>
 					<Name><![CDATA[kt_er_ucc - K0_Vmax]]></Name>
 					<X>-610</X><Y>990</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
@@ -2949,7 +3265,7 @@ MAOBING TU таблица 22]]></Description>
 			</Dependences>
 			<AgentLinks>
 				<AgentLink>
-					<Id>1579448666071</Id>
+					<Id>1767385544029</Id>
 					<Name><![CDATA[connections]]></Name>
 					<X>50</X><Y>-50</Y>
 					<Label><X>15</X><Y>0</Y></Label>
@@ -2969,16 +3285,30 @@ MAOBING TU таблица 22]]></Description>
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1767385800440</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[model9]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 			<EmbeddedObjects>
 				<EmbeddedObject>
-					<Id>1396454239872</Id>
+					<Id>1767385543740</Id>
 					<Name><![CDATA[harvested_Mushroom]]></Name>
 					<X>-250</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<PresentationId>1396454244679</PresentationId>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
 						<ClassName><![CDATA[Harvested_Mushroom]]></ClassName>
@@ -2999,7 +3329,7 @@ MAOBING TU таблица 22]]></Description>
 					<EnvironmentCode><![CDATA[basket]]></EnvironmentCode>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<StatisticsItem>
-						<Id>1767378125408</Id>
+						<Id>1767385543741</Id>
 						<Name><![CDATA[totalHarvestedWeight]]></Name>
 						<Type>sum</Type>
 						<Expression><![CDATA[item.ws]]></Expression>
@@ -3044,7 +3374,7 @@ MAOBING TU таблица 22]]></Description>
 
 			<Presentation>
 				<Level>
-					<Id>1579448667486</Id>
+					<Id>1767385543669</Id>
 					<Name><![CDATA[level]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -3057,7 +3387,7 @@ MAOBING TU таблица 22]]></Description>
 
 			<Presentation>
 				<Oval>
-					<Id>1579946417350</Id>
+					<Id>1767385543671</Id>
 					<Name><![CDATA[oval]]></Name>
 					<X>-210</X><Y>850</Y>
 					<Label><X>0</X><Y>0</Y></Label>
@@ -3079,7 +3409,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Oval>
 				<Rectangle>
-					<Id>1396454349410</Id>
+					<Id>1767385543673</Id>
 					<Name><![CDATA[basket]]></Name>
 					<X>700</X><Y>0</Y>
 					<Label><X>10</X><Y>10</Y></Label>
@@ -3101,7 +3431,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Rectangle>
-					<Id>1395329279085</Id>
+					<Id>1767385543675</Id>
 					<Name><![CDATA[rectangle]]></Name>
 					<X>0</X><Y>110</Y>
 					<Label><X>10</X><Y>10</Y></Label>
@@ -3124,7 +3454,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Rectangle>
-					<Id>1395335873620</Id>
+					<Id>1767385543677</Id>
 					<Name><![CDATA[maxColor]]></Name>
 					<X>-560</X><Y>-40</Y>
 					<Label><X>10</X><Y>10</Y></Label>
@@ -3146,7 +3476,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Rectangle>
-					<Id>1395335931276</Id>
+					<Id>1767385543679</Id>
 					<Name><![CDATA[minColor]]></Name>
 					<X>-600</X><Y>-40</Y>
 					<Label><X>10</X><Y>10</Y></Label>
@@ -3168,7 +3498,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Rectangle>
-					<Id>1395336524632</Id>
+					<Id>1767385543681</Id>
 					<Name><![CDATA[rectangle1]]></Name>
 					<X>0</X><Y>400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
@@ -3191,7 +3521,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Rectangle>
-					<Id>1395337724977</Id>
+					<Id>1767385543683</Id>
 					<Name><![CDATA[maxColor1]]></Name>
 					<X>-520</X><Y>-40</Y>
 					<Label><X>10</X><Y>10</Y></Label>
@@ -3213,7 +3543,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1395337882648</Id>
+					<Id>1767385543685</Id>
 					<Name><![CDATA[text]]></Name>
 					<X>10</X><Y>511</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3234,7 +3564,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1395337882650</Id>
+					<Id>1767385543687</Id>
 					<Name><![CDATA[text1]]></Name>
 					<X>125</X><Y>512</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3256,7 +3586,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1395337989119</Id>
+					<Id>1767385543689</Id>
 					<Name><![CDATA[text2]]></Name>
 					<X>230</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3277,7 +3607,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1395338061708</Id>
+					<Id>1767385543691</Id>
 					<Name><![CDATA[text3]]></Name>
 					<X>230</X><Y>430</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3298,7 +3628,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1395485890759</Id>
+					<Id>1767385543693</Id>
 					<Name><![CDATA[text4]]></Name>
 					<X>-200</X><Y>400</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3319,7 +3649,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<EmbeddedObjectPresentation>
-					<Id>1396454244679</Id>
+					<Id>1767385543695</Id>
 					<Name><![CDATA[harvested_Mushroom_презентация]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -3338,7 +3668,7 @@ MAOBING TU таблица 22]]></Description>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
 				<Text>
-					<Id>1396454407101</Id>
+					<Id>1767385543697</Id>
 					<Name><![CDATA[text5]]></Name>
 					<X>730</X><Y>10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3359,7 +3689,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1413404520081</Id>
+					<Id>1767385543699</Id>
 					<Name><![CDATA[text6]]></Name>
 					<X>950</X><Y>230</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3380,7 +3710,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1413404542254</Id>
+					<Id>1767385543701</Id>
 					<Name><![CDATA[text7]]></Name>
 					<X>920</X><Y>260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3401,7 +3731,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
     			<TimePlot>
-					<Id>1395070668053</Id>
+					<Id>1767385543707</Id>
 					<Name><![CDATA[plot]]></Name>
 					<X>660</X><Y>280</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3454,7 +3784,7 @@ MAOBING TU таблица 22]]></Description>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[Substrate Density in Compost]]></Title>
-					<Id>1767378125211</Id>
+					<Id>1767385543702</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-8097537</Color>
 					<Expression2><![CDATA[Sc]]></Expression2>
@@ -3464,7 +3794,7 @@ MAOBING TU таблица 22]]></Description>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Substrate Density in Mycelium Storage]]></Title>
-					<Id>1767378125212</Id>
+					<Id>1767385543703</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-60269</Color>
 					<Expression2><![CDATA[Sm]]></Expression2>
@@ -3474,7 +3804,7 @@ MAOBING TU таблица 22]]></Description>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Sm_crit]]></Title>
-					<Id>1767378125213</Id>
+					<Id>1767385543704</Id>
 					<Expression><![CDATA[my_dataset2]]></Expression>
 					<Color>-16777216</Color>
 					<Expression2><![CDATA[Smcrit]]></Expression2>
@@ -3488,7 +3818,7 @@ MAOBING TU таблица 22]]></Description>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
     			<TimePlot>
-					<Id>1579717783937</Id>
+					<Id>1767385543712</Id>
 					<Name><![CDATA[plot1]]></Name>
 					<X>10</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3541,7 +3871,7 @@ MAOBING TU таблица 22]]></Description>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[Концентрация лакказы в мицелии (г/м3)]]></Title>
-					<Id>1767378125215</Id>
+					<Id>1767385543708</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-6632142</Color>
 					<Expression2><![CDATA[C_flac_m]]></Expression2>
@@ -3551,7 +3881,7 @@ MAOBING TU таблица 22]]></Description>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Концентрация лакказы в опилках (г/м3) * 100]]></Title>
-					<Id>1767378125216</Id>
+					<Id>1767385543709</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-8388608</Color>
 					<Expression2><![CDATA[C_flac_c*100]]></Expression2>
@@ -3565,7 +3895,7 @@ MAOBING TU таблица 22]]></Description>
 					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
     			</TimePlot>
     			<TimePlot>
-					<Id>1579717783952</Id>
+					<Id>1767385543717</Id>
 					<Name><![CDATA[plot2]]></Name>
 					<X>640</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3618,7 +3948,7 @@ MAOBING TU таблица 22]]></Description>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[Масса полимерного лигнина (г)]]></Title>
-					<Id>1767378125218</Id>
+					<Id>1767385543713</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-8388608</Color>
 					<Expression2><![CDATA[W_pol.get(1)]]></Expression2>
@@ -3628,7 +3958,7 @@ MAOBING TU таблица 22]]></Description>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Масса мономерного лигнина (г)]]></Title>
-					<Id>1767378125219</Id>
+					<Id>1767385543714</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-16744320</Color>
 					<Expression2><![CDATA[W_mon.get(1)]]></Expression2>
@@ -3642,7 +3972,7 @@ MAOBING TU таблица 22]]></Description>
 					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
     			</TimePlot>
     			<TimePlot>
-					<Id>1579717783965</Id>
+					<Id>1767385543722</Id>
 					<Name><![CDATA[plot3]]></Name>
 					<X>20</X><Y>1020</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3695,7 +4025,7 @@ MAOBING TU таблица 22]]></Description>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[Масса полимерной целлюлозы(г)]]></Title>
-					<Id>1767378125221</Id>
+					<Id>1767385543718</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-8388608</Color>
 					<Expression2><![CDATA[W_pol.get(2)]]></Expression2>
@@ -3705,7 +4035,7 @@ MAOBING TU таблица 22]]></Description>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Масса мономерной целлюлозы - то есть глюкозы(г)]]></Title>
-					<Id>1767378125222</Id>
+					<Id>1767385543719</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-16744320</Color>
 					<Expression2><![CDATA[W_mon.get(2)]]></Expression2>
@@ -3719,7 +4049,7 @@ MAOBING TU таблица 22]]></Description>
 					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
     			</TimePlot>
 				<Oval>
-					<Id>1579946515364</Id>
+					<Id>1767385543724</Id>
 					<Name><![CDATA[oval1]]></Name>
 					<X>-750</X><Y>1400</Y>
 					<Label><X>0</X><Y>0</Y></Label>
@@ -3741,7 +4071,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Oval>
 				<Text>
-					<Id>1579946535066</Id>
+					<Id>1767385543726</Id>
 					<Name><![CDATA[text10]]></Name>
 					<X>-720</X><Y>1390</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3762,7 +4092,7 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Oval>
-					<Id>1579947415303</Id>
+					<Id>1767385543728</Id>
 					<Name><![CDATA[oval2]]></Name>
 					<X>-390</X><Y>-80</Y>
 					<Label><X>0</X><Y>0</Y></Label>
@@ -3784,7 +4114,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Oval>
     			<TimePlot>
-					<Id>1579948028107</Id>
+					<Id>1767385543732</Id>
 					<Name><![CDATA[plot4]]></Name>
 					<X>640</X><Y>1020</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
@@ -3837,7 +4167,7 @@ MAOBING TU таблица 22]]></Description>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[Масса мицелия]]></Title>
-					<Id>1767378125227</Id>
+					<Id>1767385543729</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-16776961</Color>
 					<Expression2><![CDATA[Wm]]></Expression2>
@@ -3851,7 +4181,7 @@ MAOBING TU таблица 22]]></Description>
 					<LabelFormat>SHORT_DATE_ONLY</LabelFormat>
     			</TimePlot>
 				<Oval>
-					<Id>1582987673165</Id>
+					<Id>1767385543734</Id>
 					<Name><![CDATA[oval3]]></Name>
 					<X>-610</X><Y>1210</Y>
 					<Label><X>0</X><Y>0</Y></Label>
@@ -3873,7 +4203,7 @@ MAOBING TU таблица 22]]></Description>
 					<FillMaterial>null</FillMaterial>
 				</Oval>
 				<Oval>
-					<Id>1582993950449</Id>
+					<Id>1767385543736</Id>
 					<Name><![CDATA[oval4]]></Name>
 					<X>-540</X><Y>870</Y>
 					<Label><X>0</X><Y>0</Y></Label>
@@ -3901,7 +4231,7 @@ MAOBING TU таблица 22]]></Description>
 
 		</ActiveObjectClass>
 	</ActiveObjectClasses>	
-	<DifferentialEquationsMethod>RK4</DifferentialEquationsMethod>
+	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
 	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
 	<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
@@ -3909,8 +4239,8 @@ MAOBING TU таблица 22]]></Description>
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>1280</Width>
-		<Height>1024</Height>
+		<Width>1000</Width>
+		<Height>600</Height>
 	</Frame>
 	<Database>
 		<Logging>false</Logging>
@@ -3922,19 +4252,19 @@ MAOBING TU таблица 22]]></Description>
 		</ExportSettings>
 	</Database>
 	
-	<RunConfiguration ActiveObjectClassId="1394978861120">
-		<Id>1579448667010</Id>
+	<RunConfiguration ActiveObjectClassId="1767385310006">
+		<Id>1767385310018</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
 		<MaximumMemory>512</MaximumMemory>
 		<ModelTimeProperties>
 			<StopOption><![CDATA[Stop at specified time]]></StopOption>
-			<InitialDate><![CDATA[1394978861159]]></InitialDate>	
+			<InitialDate><![CDATA[1767312000000]]></InitialDate>	
 			<InitialTime><![CDATA[0.0]]></InitialTime>	
-			<FinalDate><![CDATA[1401026861159]]></FinalDate>	
-			<FinalTime><![CDATA[70.0]]></FinalTime>	
+			<FinalDate><![CDATA[1769990400000]]></FinalDate>	
+			<FinalTime><![CDATA[100.0]]></FinalTime>	
 		</ModelTimeProperties>
 		<AnimationProperties>
-			<StopNever>false</StopNever>
+			<StopNever>true</StopNever>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
 			<RealTimeScale>1.0</RealTimeScale>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -3948,444 +4278,60 @@ MAOBING TU таблица 22]]></Description>
 	</RunConfiguration>
 	<Experiments>	
 		<!--   =========   Simulation Experiment   ========  -->
-		<SimulationExperiment ActiveObjectClassId="1394978861120">
-			<Id>1394978861170</Id>
+		<SimulationExperiment ActiveObjectClassId="1767385310006">
+			<Id>1767385310015</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>1024</MaximumMemory>
-			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
 			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
-			<Variables>
-				<Variable Class="PlainVariable">
-					<Id>1413405891137</Id>
-					<Name><![CDATA[m_mode]]></Name>
-					<X>-100</X><Y>50</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[boolean]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[true]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1413406113622</Id>
-					<Name><![CDATA[age_maturing]]></Name>
-					<X>-100</X><Y>100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[4.6]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1413406116080</Id>
-					<Name><![CDATA[ws_maturing]]></Name>
-					<X>-100</X><Y>150</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[4]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1413406623728</Id>
-					<Name><![CDATA[rate]]></Name>
-					<X>-100</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-					</Properties>
-				</Variable>
-			</Variables>
 
 			<Presentation>
 				<Text>
-					<Id>1767378125495</Id>
+					<Id>1767385310017</Id>
 					<Name><![CDATA[text]]></Name>
-					<X>40</X><Y>30</Y>
+					<X>50</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[ModelMushroomsTopaj
-]]></Text>
-					<Font>
-						<Name>Serif</Name>
-						<Size>28</Size>
-						<Style>1</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Text>
-					<Id>1767378125496</Id>
-					<Name><![CDATA[text1]]></Name>
-					<X>40</X><Y>63</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[Страница настроек эксперимента]]></Text>
-					<Font>
-						<Name>Serif</Name>
-						<Size>16</Size>
-						<Style>2</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Group>
-					<Id>1413405414614</Id>
-					<Name><![CDATA[group1]]></Name>
-					<X>130</X><Y>290</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-
-			<Presentation>
-				<Rectangle>
-					<Id>1413405334316</Id>
-					<Name><![CDATA[rectangle]]></Name>
-					<X>-80</X><Y>-20</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>0</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>170</Width>
-					<Height>60</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
-				<Text>
-					<Id>1413405269301</Id>
-					<Name><![CDATA[text2]]></Name>
-					<X>-80</X><Y>-50</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[Harvesting Trigger]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>14</Size>
-						<Style>1</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Control Type="RadioButtons">
-				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1413405158684</Id>
-					<Name><![CDATA[radio]]></Name>
-					<X>-80</X><Y>-20</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<BasicProperties Width="180" Height="60">
-                        <EmbeddedIcon>false</EmbeddedIcon>	
-						<TextColor/>
-						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[m_mode = (radio.getValue()==0)   ]]></ActionCode>
-					</BasicProperties>
-					<ExtendedProperties>
-						<Font Name="Dialog" Size="14" Style="0"/>
-						<Orientation>VERTICAL</Orientation>
-						<Button><![CDATA[Mushroom Age]]></Button>
-						<Button><![CDATA[MushroomWeight]]></Button>
-						<LinkTo>false</LinkTo>
-					</ExtendedProperties>
-				</Control>
-			</Presentation>
-
-				</Group>
-				<Text>
-					<Id>1413406000979</Id>
-					<Name><![CDATA[text3]]></Name>
-					<X>50</X><Y>370</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[0]]></Text>
+					<Color>-12490271</Color>
+					<Text><![CDATA[Model9]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
-						<Size>14</Size>
+						<Size>24</Size>
 						<Style>0</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Text>
-					<Id>1413406045723</Id>
-					<Name><![CDATA[text4]]></Name>
-					<X>380</X><Y>370</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[10]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>14</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Text>
-					<Id>1413406320707</Id>
-					<Name><![CDATA[text5]]></Name>
-					<X>260</X><Y>290</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[text]]></Text>
-					<TextCode><![CDATA[(m_mode) ? " = "+age_maturing+" days" : " = "+ws_maturing+" g."]]></TextCode>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>14</Size>
-						<Style>1</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Control Type="Button">
-				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1767378125497</Id>
-					<Name><![CDATA[button]]></Name>
-					<X>50</X><Y>120</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<BasicProperties Width="510" Height="30">
-                        <EmbeddedIcon>false</EmbeddedIcon>	
-						<TextColor/>
-						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[if ( getState() == IDLE )
-	run();
-getEngine().getExperimentHost().setPresentable( getEngine().getRoot() );]]></ActionCode>
-					</BasicProperties>
-					<ExtendedProperties>
-						<Font Name="Dialog" Size="14" Style="0"/>
-						<LabelText><![CDATA[Запустить модель и открыть презентацию класса Main]]></LabelText>
-						<LabelCode><![CDATA[getState() == IDLE ?
-	"Запустить модель" :
-	"Открыть презентацию"]]></LabelCode>
-					</ExtendedProperties>
-				</Control>
-				<Control Type="Slider">
-				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1413405449432</Id>
-					<Name><![CDATA[slider]]></Name>
-					<X>50</X><Y>350</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<BasicProperties Width="350" Height="30">
-                        <EmbeddedIcon>false</EmbeddedIcon>	
-						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[if (m_mode)
-  age_maturing = rate / 10.0;
-else  
-  ws_maturing = rate / 10.0;]]></ActionCode>
-					</BasicProperties>
-					<ExtendedProperties>
-						<DefaultValueCode><![CDATA[46]]></DefaultValueCode>
-						<Orientation>HORIZONTAL</Orientation>
-						<MinValue><![CDATA[0]]></MinValue>
-						<MaxValue><![CDATA[100]]></MaxValue>
-						<LinkTo>true</LinkTo>
-						<Link>rate</Link>
-					</ExtendedProperties>
-				</Control>
 			</Presentation>
 
 			<Parameters>			
-				<Parameter>
-					<ParameterName><![CDATA[YGm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Mm]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[k]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[a]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[h]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Smcrit]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[q]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Wm0]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[lambda]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[age_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[age_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[ws_maturing]]></ParameterName>
-					<ParameterValue Class="CodeValue">
-						<Code><![CDATA[ws_maturing]]></Code>
-					</ParameterValue>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[alpha]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[m_mode]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[U__flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Z_flac_mc]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[V_c]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ro_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_M]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[RoSq_C]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_flacc_m]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[MF_с]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_pol_mon]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Ks05]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[Temperature]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_kin]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[H]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[GH_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K0_diff_CM]]></ParameterName>
-				</Parameter>
-				<Parameter>
-					<ParameterName><![CDATA[K_error]]></ParameterName>
-				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<Title><![CDATA[ModelMushroomsVigont : Simulation]]></Title>	
+				<Title><![CDATA[Model9 : Simulation]]></Title>	
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>1.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
-				<StopOption><![CDATA[Stop at specified time]]></StopOption>
-				<InitialDate><![CDATA[1394978861159]]></InitialDate>	
+				<StopOption><![CDATA[Never]]></StopOption>
+				<InitialDate><![CDATA[1767312000000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1412546861000]]></FinalDate>	
-				<FinalTime><![CDATA[4880.0]]></FinalTime>	
+				<FinalDate><![CDATA[1769990400000]]></FinalDate>	
+				<FinalTime><![CDATA[100.0]]></FinalTime>	
 			</ModelTimeProperties>
-			<BypassInitialScreen>false</BypassInitialScreen>
+			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
 	</Experiments>
     <RequiredLibraryReference>
