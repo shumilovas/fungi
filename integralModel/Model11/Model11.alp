@@ -636,12 +636,12 @@
 						<Color>-16711936</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[W_pol[Fractions]/V_c]]></Expression>
@@ -665,12 +665,12 @@
 						<Color>-6632142</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[K0_Vmax[Fractions]*C_flac_c*K_error[Fractions]]]></Expression>
@@ -709,12 +709,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 									<ItemName><![CDATA[Lygnin]]></ItemName>
 								</Coordinate>
@@ -722,7 +722,7 @@
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 									<ItemName><![CDATA[Cellulose]]></ItemName>
 								</Coordinate>
@@ -746,12 +746,12 @@
 						<Color>-16711936</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[W_mon[Fractions]/V_c]]></Expression>
@@ -790,12 +790,12 @@
 						<Color>-256</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[kt_er_ucc * K0_kin[Fractions] ]]></Expression>
@@ -833,12 +833,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[W_mon.sum()>0 ? W_mon[Fractions]/W_mon.sum() : 0.5]]></Expression>
@@ -1031,19 +1031,19 @@ Doctor of Philosophy ]]></Description>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[U_cc[Fractions]*K_pol_mon[Fractions]-Uc*Share_mon[Fractions]]]></Expression>
 							</CustomExpression>
 						</Array>
 						<Shadow>
-							<Id>1767385624235</Id>
+							<Id>1767454418455</Id>
 							<Name><![CDATA[<W_mon>]]></Name>
 							<X>-610</X><Y>190</Y>
 							<Label><X>0</X><Y>-20</Y></Label>
@@ -1070,7 +1070,7 @@ Doctor of Philosophy ]]></Description>
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 						</Array>
@@ -1084,7 +1084,7 @@ Doctor of Philosophy ]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1767385624235" TargetId="1767385543747" External="false" Constant="false" Array="false">
+					<Properties SourceId="1767454418455" TargetId="1767385543747" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[Z*MC_Seff*(U*Sc-Sm)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
@@ -1147,12 +1147,12 @@ Doctor of Philosophy ]]></Description>
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+								<PackageName><![CDATA[model9]]></PackageName>
 								<ClassName><![CDATA[Fractions]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+									<PackageName><![CDATA[model9]]></PackageName>
 									<ClassName><![CDATA[Fractions]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[(V_c*K_lability[Fractions]*Vmax[Fractions]*C_pol[Fractions]/(Ks05[Fractions] + C_pol[Fractions])) * error_Vmax_ph]]></Expression>
@@ -1763,9 +1763,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+							<PackageName><![CDATA[model9]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1793,9 +1793,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+							<PackageName><![CDATA[model9]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1822,9 +1822,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+							<PackageName><![CDATA[model9]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1851,9 +1851,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+							<PackageName><![CDATA[model9]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -1905,9 +1905,9 @@ Doctor of Philosophy ]]></Description>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[HyperArray]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
+						<SdArray>true</SdArray>
 						<Dimension>
-							<PackageName><![CDATA[modelmushroomstopajcomplex]]></PackageName>
+							<PackageName><![CDATA[model9]]></PackageName>
 							<ClassName><![CDATA[Fractions]]></ClassName>
 						</Dimension>
 						<DefaultValue Class="CodeValue">
@@ -2212,7 +2212,7 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1767385624235" TargetId="1767385543610" Polarity="null">
+				<Link SourceId="1767454418455" TargetId="1767385543610" Polarity="null">
 					<Height>-1.0100968893589197</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>20</X><Y>100</Y></Direction>
@@ -3648,25 +3648,6 @@ MAOBING TU таблица 22]]></Description>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<EmbeddedObjectPresentation>
-					<Id>1767385543695</Id>
-					<Name><![CDATA[harvested_Mushroom_презентация]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>POSITION_WITH_OFFSET</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
 				<Text>
 					<Id>1767385543697</Id>
 					<Name><![CDATA[text5]]></Name>
