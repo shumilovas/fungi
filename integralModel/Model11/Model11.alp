@@ -183,34 +183,10 @@
 							<Name><![CDATA[Z]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[k]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[a]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[h]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[Smcrit]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[q]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[lambda]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[age_maturing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[ws_maturing]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[alpha]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[m_mode]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[U__flac_mc]]></Name>
@@ -344,34 +320,10 @@
 							<Name><![CDATA[Z]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[k]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[a]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[h]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[Smcrit]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[q]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[lambda]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[age_maturing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[ws_maturing]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[alpha]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[m_mode]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[U__flac_mc]]></Name>
@@ -505,34 +457,10 @@
 							<Name><![CDATA[Z]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[k]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[a]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[h]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[Smcrit]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[q]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[lambda]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[age_maturing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[ws_maturing]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[alpha]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[m_mode]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[U__flac_mc]]></Name>
@@ -844,20 +772,6 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[Smg/V_m]]></Formula>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1767385543614</Id>
-					<Name><![CDATA[initiationRate]]></Name>
-					<X>-190</X><Y>190</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Sm > Smcrit) ? lambda*(Sm-Smcrit)*Wm : 0]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -1651,110 +1565,6 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1767385543773</Id>
-					<Name><![CDATA[k]]></Name>
-					<Description><![CDATA[Коэффициент экспоненциального распада  в уравнении роста спорофора]]></Description>
-					<Unit>1/час</Unit> 
-					<X>-180</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.24/24]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543771</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1767385543776</Id>
-					<Name><![CDATA[a]]></Name>
-					<Description><![CDATA[Коэффициент в уравнении роста спорофора]]></Description>
-					<Unit>метр*метр/(грамм*час)</Unit> 
-					<X>-130</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.000107/24]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543774</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1767385543779</Id>
-					<Name><![CDATA[h]]></Name>
-					<Description><![CDATA[Коэффициент в знаменателе уравнения роста спорофора]]></Description>
-					<Unit>метр*метр*метр/грамм</Unit> 
-					<X>-80</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.0000556]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543777</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1767385543782</Id>
-					<Name><![CDATA[Smcrit]]></Name>
-					<Description><![CDATA[Критическая концентрация сахаров внутри мицелия, при котором начинается рост спорофоров]]></Description>
-					<Unit>грамм/(метр*метр*метр)</Unit> 
-					<X>-190</X><Y>290</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[18000]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543780</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1767385543785</Id>
 					<Name><![CDATA[q]]></Name>
 					<Description><![CDATA[Коэффициент в уравнении роста мицелия]]></Description>
@@ -1781,80 +1591,6 @@ Doctor of Philosophy ]]></Description>
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1767385543788</Id>
-					<Name><![CDATA[lambda]]></Name>
-					<Description><![CDATA[Коэффициент в формуле расчета интенсивности инициации роста нового спорофора]]></Description>
-					<Unit>метр*метр*метр/(грамм*грамм*час)</Unit> 
-					<X>-140</X><Y>240</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[3.2e-5/24]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543786</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1767385543791</Id>
-					<Name><![CDATA[age_maturing]]></Name>
-					<X>-180</X><Y>480</Y>
-					<Label><X>-40</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[5.6]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543789</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1767385543794</Id>
-					<Name><![CDATA[ws_maturing]]></Name>
-					<X>-80</X><Y>480</Y>
-					<Label><X>-40</X><Y>20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[4]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543792</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
 					<Id>1767385543797</Id>
 					<Name><![CDATA[alpha]]></Name>
 					<Description><![CDATA[Нечто странное и непонятное. Присвоим-ка пока это нулю]]></Description>
@@ -1873,30 +1609,6 @@ Doctor of Philosophy ]]></Description>
 						<ParameterEditor>
 							<Id>1767385543795</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1767385543800</Id>
-					<Name><![CDATA[m_mode]]></Name>
-					<X>-130</X><Y>540</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[boolean]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[false]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1767385543798</Id>
-							<EditorContolType>CHECK_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -2479,21 +2191,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1767385543788" TargetId="1767385543614" Polarity="null">
-					<Height>0.721</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-50</X><Y>-50</Y></Direction>
-					<Id>1767385543862</Id>
-					<Name><![CDATA[lambda - initiationRate]]></Name>
-					<X>-140</X><Y>240</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1767385543809" TargetId="1767385543610" Polarity="null">
 					<Height>-114.4</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2539,21 +2236,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1767385543782" TargetId="1767385543614" Polarity="null">
-					<Height>-4.0011536415328659E17</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-100</Y></Direction>
-					<Id>1767385543870</Id>
-					<Name><![CDATA[Smcrit - initiationRate]]></Name>
-					<X>-190</X><Y>290</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1767385543761" TargetId="1767385544020" Polarity="null">
 					<Height>2.8466161786509474</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2584,21 +2266,6 @@ MAOBING TU таблица 22]]></Description>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1767385543612" TargetId="1767385543614" Polarity="null">
-					<Height>-72.119</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>200</X><Y>-100</Y></Direction>
-					<Id>1767385543876</Id>
-					<Name><![CDATA[Sm - initiationRate]]></Name>
-					<X>-390</X><Y>290</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1767454418455" TargetId="1767385543610" Polarity="null">
 					<Height>-1.0100968893589197</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2621,21 +2288,6 @@ MAOBING TU таблица 22]]></Description>
 					<Id>1767385543880</Id>
 					<Name><![CDATA[alpha - Um]]></Name>
 					<X>-310</X><Y>120</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767385543743" TargetId="1767385543614" Polarity="null">
-					<Height>123.035</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>200</X><Y>190</Y></Direction>
-					<Id>1767385543882</Id>
-					<Name><![CDATA[Wm - initiationRate]]></Name>
-					<X>-390</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3944,27 +3596,6 @@ MAOBING TU таблица 22]]></Description>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1767385543693</Id>
-					<Name><![CDATA[text4]]></Name>
-					<X>-200</X><Y>400</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[Параметры роста гриба]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>14</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Text>
 					<Id>1767385543697</Id>
 					<Name><![CDATA[text5]]></Name>
 					<X>730</X><Y>10</Y>
@@ -4098,16 +3729,6 @@ MAOBING TU таблица 22]]></Description>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[Sm_crit]]></Title>
-					<Id>1767385543704</Id>
-					<Expression><![CDATA[my_dataset2]]></Expression>
-					<Color>-16777216</Color>
-					<Expression2><![CDATA[Smcrit]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>CIRCLE</PointStyle>
-						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<SamplesToKeep>400</SamplesToKeep>
 					<TimeWindowExpression><![CDATA[70]]></TimeWindowExpression>
