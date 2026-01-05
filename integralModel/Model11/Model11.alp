@@ -4659,7 +4659,7 @@ MAOBING TU таблица 22]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Smg/V_m]]></Formula>
+						<Formula><![CDATA[Smg.sum()/V_m]]></Formula>
 						<Color/>
 					</Properties>
 
@@ -4769,7 +4769,7 @@ MAOBING TU таблица 22]]></Description>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(Um-Wm*Mm)*YGm]]></Formula>
+						<Formula><![CDATA[(Um.sum()-Wm*Mm)*YGm]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -4826,13 +4826,19 @@ MAOBING TU таблица 22]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="false">
+					<Properties Array="true">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[Uc-Um-Us]]></Expression>
-						<InitialValue><![CDATA[0.0]]></InitialValue>
+						<InitialValue><![CDATA[{0.0,0.0}]]></InitialValue>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model9]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -4883,9 +4889,23 @@ MAOBING TU таблица 22]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1767563870989" TargetId="1767563470163" External="false" Constant="false" Array="false">
+					<Properties SourceId="1767563870989" TargetId="1767563470163" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[Z*MC_Seff*(U*Sc-Sm)]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model9]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model9]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Cellulose]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[Z*MC_Seff*(U*Sc-Sm)]]></Expression>
+							</CustomExpression>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -4902,9 +4922,23 @@ MAOBING TU таблица 22]]></Description>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1767563470163" External="false" Constant="false" Array="false">
+					<Properties SourceId="1767563470163" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Formula>
 						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model9]]></PackageName>
+								<ClassName><![CDATA[Fractions]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model9]]></PackageName>
+									<ClassName><![CDATA[Fractions]]></ClassName>
+									<ItemName><![CDATA[Cellulose]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[(Wm*q*Sm*(Am-Wm)/Am)/YGm + Mm*Wm/(1+alpha/Sm)]]></Expression>
+							</CustomExpression>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
