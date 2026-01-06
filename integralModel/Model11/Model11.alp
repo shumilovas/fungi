@@ -4948,7 +4948,7 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1767712425739</Id>
-			<Name><![CDATA[NutritionBox1]]></Name>
+			<Name><![CDATA[Compost]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1767712425734</Id>
@@ -5057,7 +5057,7 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					<Id>1767712425745</Id>
 					<Name><![CDATA[C_flac_c]]></Name>
 					<Description><![CDATA[Концентрация (грамм фермента на кубический метр  ммцелия) ферманта лаказы внутри мицелия гриба, который будет выделять фермент в опилку  грамм/метр*метр*метр]]></Description>
-					<X>-320</X><Y>720</Y>
+					<X>-280</X><Y>430</Y>
 					<Label><X>-15</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5090,7 +5090,7 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					<Name><![CDATA[W_c]]></Name>
 					<Description><![CDATA[масса сухой древесины]]></Description>
 					<Unit>грамм</Unit> 
-					<X>-441</X><Y>282</Y>
+					<X>-380</X><Y>420</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5106,7 +5106,7 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					<Name><![CDATA[V_c]]></Name>
 					<Description><![CDATA[Обьем компоста (опилки)]]></Description>
 					<Unit>метр*метр*метр</Unit> 
-					<X>-210</X><Y>850</Y>
+					<X>-160</X><Y>450</Y>
 					<Label><X>5</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5159,7 +5159,7 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					<Name><![CDATA[Ro_с]]></Name>
 					<Description><![CDATA[плотность опилки]]></Description>
 					<Unit>грамм/метр*метр*метр</Unit> 
-					<X>-441</X><Y>162</Y>
+					<X>-380</X><Y>300</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5183,110 +5183,6 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1767712425901" Polarity="null">
-					<Height>-114.4</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-380</X><Y>-560</Y></Direction>
-					<Id>1767712425939</Id>
-					<Name><![CDATA[V_c - ]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767712425745" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-220</X><Y>-110</Y></Direction>
-					<Id>1767712425945</Id>
-					<Name><![CDATA[C_flac_c - ]]></Name>
-					<X>-320</X><Y>720</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link TargetId="1767712425745" Polarity="null">
-					<Height>-4.1644660350648192E17</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>110</Y></Direction>
-					<Id>1767712425951</Id>
-					<Name><![CDATA[ - C_flac_c]]></Name>
-					<X>-320</X><Y>610</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767712425901" Polarity="null">
-					<Height>-1.023</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>130</X><Y>0</Y></Direction>
-					<Id>1767712425957</Id>
-					<Name><![CDATA[V_c - ]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>120</Y></Direction>
-					<Id>1767712425959</Id>
-					<X>-540</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767712425749" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-60</X><Y>0</Y></Direction>
-					<Id>1767712425961</Id>
-					<Name><![CDATA[Sq_wood_с - ]]></Name>
-					<X>-480</X><Y>490</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link TargetId="1767712425749" Polarity="null">
-					<Height>-104.692</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-400</X><Y>-360</Y></Direction>
-					<Id>1767712425963</Id>
-					<Name><![CDATA[ - Sq_wood_с]]></Name>
-					<X>-80</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1767712425907" TargetId="1767712425749" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -5302,86 +5198,13 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1767712425901" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>180</Y></Direction>
-					<Id>1767712425967</Id>
-					<Name><![CDATA[V_c - ]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>3</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link Polarity="null">
-					<Height>55.745</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-130</X><Y>290</Y></Direction>
-					<Id>1767712425971</Id>
-					<X>-80</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>2</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-140</X><Y>0</Y></Direction>
-					<Id>1767712425973</Id>
-					<X>-70</X><Y>1140</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color>-65536</Color>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767712425745" Polarity="null">
-					<Height>-54.764</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-140</X><Y>330</Y></Direction>
-					<Id>1767712425983</Id>
-					<Name><![CDATA[C_flac_c - ]]></Name>
-					<X>-320</X><Y>720</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767712425901" Polarity="null">
-					<Height>0.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-245</X><Y>290</Y></Direction>
-					<Id>1767712425989</Id>
-					<Name><![CDATA[V_c - ]]></Name>
-					<X>-210</X><Y>850</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1767712425901" Polarity="null">
+				<Link SourceId="1767712425901" TargetId="1767712876085" Polarity="null">
 					<Height>-72.633</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-500</X><Y>180</Y></Direction>
+					<Direction><X>-220</X><Y>-30</Y></Direction>
 					<Id>1767712426003</Id>
-					<Name><![CDATA[V_c - ]]></Name>
-					<X>-210</X><Y>850</Y>
+					<Name><![CDATA[V_c - W_c]]></Name>
+					<X>-160</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5393,10 +5216,10 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 				<Link SourceId="1767712425901" TargetId="1767712425745" Polarity="null">
 					<Height>-35.066</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-110</X><Y>-130</Y></Direction>
+					<Direction><X>-120</X><Y>-20</Y></Direction>
 					<Id>1767712426027</Id>
 					<Name><![CDATA[V_c - C_flac_c]]></Name>
-					<X>-210</X><Y>850</Y>
+					<X>-160</X><Y>450</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5411,7 +5234,22 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					<Direction><X>0</X><Y>120</Y></Direction>
 					<Id>1767712876073</Id>
 					<Name><![CDATA[Ro_с - W_c]]></Name>
-					<X>-441</X><Y>162</Y>
+					<X>-380</X><Y>300</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1767712876085" TargetId="1767712425749" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-100</X><Y>70</Y></Direction>
+					<Id>1767713455142</Id>
+					<Name><![CDATA[W_c - Sq_wood_с]]></Name>
+					<X>-380</X><Y>420</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5461,7 +5299,7 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 				<Oval>
 					<Id>1767712425792</Id>
 					<Name><![CDATA[oval]]></Name>
-					<X>-210</X><Y>850</Y>
+					<X>-160</X><Y>450</Y>
 					<Label><X>0</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5523,25 +5361,6 @@ W_mon.set(W_mon.get(2)-dyf_w_mon.get(1), 2);]]></Action>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<EmbeddedObjectPresentation>
-					<Id>1767712425850</Id>
-					<Name><![CDATA[biomass_presentation]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
